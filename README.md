@@ -14,4 +14,16 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 
 ## :bomb: Table of Contents
 
-* [Intro to Cybersecurity](./intro_to_cybersecurity/README.md)
+#### Introductory
+
+* [Intro to Cybersecurity](./intro_to_cybersecurity)
+
+#### Offensive Security
+
+* [What is an Ethical Hacker?](./offensive)
+* [What is a Bug Bounty?](./offensive/bug-bounty)
+* [Source Code Review](./offensive/code-review)
+* [Architecture Review](./offensive/architectuer-review)
+
+#### Vulnerabilities
+
