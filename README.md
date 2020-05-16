@@ -26,4 +26,21 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [Architecture Review](./offensive/architectuer-review)
 * [Threat Modeling](./offensive/threat-modeling)
 
-#### Vulnerabilities
+#### Web Vulnerabilities (Alphabetical order A-Z)
+
+* [Intro to Web Security](./vulnerabilities/web-sec)
+* [Auth-Z: Forced Browsing/Improper Authorization](./vulnerabilities/auth-z)
+* [Content Sniffing](./vulnerabilities/content-sniffing)
+* [CSRF](./vulnerabilities/csrf)
+* [XSS](./vulnerabilities/xss)
+
+#### Glossary
+
+Some must know terms related to protocols, technology, etc...
+
+* [Cookies](./glossary/cookies)
+* [Encryption](./glossary/encryption)
+  * [Public-Key](./glossary/encryption/public-key)
+* [SOP: Same-Origin-Policy](./glossary/sop)
+* [HTML](./glossary/html)
+* [HTTP](./glossary/http)
