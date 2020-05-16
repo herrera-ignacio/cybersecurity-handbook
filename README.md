@@ -24,6 +24,6 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [What is a Bug Bounty?](./offensive/bug-bounty)
 * [Source Code Review](./offensive/code-review)
 * [Architecture Review](./offensive/architectuer-review)
+* [Threat Modeling](./offensive/threat-modeling)
 
 #### Vulnerabilities
-
