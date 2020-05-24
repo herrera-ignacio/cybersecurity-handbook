@@ -9,8 +9,8 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 ## :memo: How To Use
 
 * Each section tries to give a practical introduction to the topic it concerns.
-* Lots of sections encourages practice on your own, which is needed if you want to make a profession out of this and not here just for curiosity.
-* Most topics won't be coverages in depth but rather let you know if you are interested it in further research or not.
+* Each topic is only described in an introductory way, so you can understand the underlying concept. Learning how to apply those concepts in real-life scenarios is up to you to research and experiment.
+* Most sections encourages/require practice on your own, this is needed if you want to make a profession out of this and it's not just for curiosity.
 
 ## :bomb: Table of Contents
 
@@ -26,7 +26,7 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [Architecture Review](./offensive/architectuer-review)
 * [Threat Modeling](./offensive/threat-modeling)
 
-#### Web Vulnerabilities (Alphabetical order A-Z)
+#### Web Vulnerabilities Glossary (Alphabetical order A-Z)
 
 * [Intro to Web Security](./vulnerabilities/web-sec)
 * [Auth-Z: Forced Browsing/Improper Authorization](./vulnerabilities/auth-z)
@@ -34,13 +34,14 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [CSRF](./vulnerabilities/csrf)
 * [XSS](./vulnerabilities/xss)
 
-#### Glossary
+#### Network/System Glossary
 
 Some must know terms related to protocols, technology, etc...
 
 * [Cookies](./glossary/cookies)
 * [Encryption](./glossary/encryption)
   * [Public-Key](./glossary/encryption/public-key)
-* [SOP: Same-Origin-Policy](./glossary/sop)
 * [HTML](./glossary/html)
 * [HTTP](./glossary/http)
+* [OSI - Open Systems Interconnection](./glossary/osi)
+* [SOP: Same-Origin-Policy](./glossary/sop)
