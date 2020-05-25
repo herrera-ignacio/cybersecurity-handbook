@@ -49,6 +49,7 @@ Some must know terms related to protocols, technology, etc...
 
 * [Common Network Prot Numbers](https://www.utilizewindows.com/list-of-common-network-port-numbers/)
 * [Cookies](./glossary/cookies)
+* [CORB - Cross-Origin Read Blocking](./glossary/corb)
 * [CORS - Cross-Origin Resource Sharing](./glossary/cors)
 * [DOM: Document Object Model](./glossary/dom)
 * [Encryption](./glossary/encryption)
