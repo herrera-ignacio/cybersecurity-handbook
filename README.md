@@ -38,7 +38,6 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 #### Web Vulnerabilities Glossary (Alphabetical order A-Z)
 
 * [Auth-Z: Forced Browsing/Improper Authorization](./vulnerabilities/auth-z)
-* [Content Sniffing](./vulnerabilities/content-sniffing)
 * [CSRF - Cross-Site Request Forgery](./vulnerabilities/csrf)
 * [MIME Sniffing](./vulnerabilities/mime-sniffing)
 * [XSS](./vulnerabilities/xss)
@@ -51,6 +50,7 @@ Some must know terms related to protocols, technology, etc...
 * [Cookies](./glossary/cookies)
 * [CORB - Cross-Origin Read Blocking](./glossary/corb)
 * [CORS - Cross-Origin Resource Sharing](./glossary/cors)
+* [CSP - Content Security Policy](./glossary/csp)
 * [DOM: Document Object Model](./glossary/dom)
 * [Encryption](./glossary/encryption)
   * [Public-Key](./glossary/encryption/public-key)

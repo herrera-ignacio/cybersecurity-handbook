@@ -2,7 +2,10 @@
 
 CORS is a standarized technique to relax _Same Origin Policy_. It allows restricted resources on a web page to be requested from another domain outside the domain from which the resource was served.
 
-Because of SOP, a web page may freely embed cross-origin images, stylesheets, scripts, iframes and videos, but certain "cross-domain" erquests, notably Ajax requests, are forbidden by default. CORS then defines a way in which a browser and server can interact tod etermine whether it is safe to allow the cross-origin request. It allows more freedom than purely same-origin requests, but is more secure than simply allowing all cross-origin requests.
+Because of SOP, a web page may freely embed cross-origin images, stylesheets, scripts, iframes and videos, but certain "cross-domain" requests, notably Ajax requests, are forbidden by default. CORS then defines a way in which a browser and server can interact to determine whether it is safe to allow the cross-origin request. It allows more freedom than purely same-origin requests, but is more secure than simply allowing all cross-origin requests.
+
+* [Cross-origin fetches from Google Chrome Developers](https://www.youtube.com/watch?v=vfAHa5GBLio)
+* [CORS by Example](https://www.youtube.com/watch?v=Ka8vG5miErk)
 
 ## CORS Specification
 

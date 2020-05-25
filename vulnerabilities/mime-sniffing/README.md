@@ -57,7 +57,7 @@ Let's assume that an attacker can upload text files on `example.com`. The attack
 
 Even if the server sets `Content-Type` response header as `text/plain`, a browser may MIME Sniff the response and parse the text file content as JavaScript. CSP will not mitigate an attack in this case because `example.com` is a whitelisted domain.
 
-In the above scenarios, if the developer deploy the `XCTO` header and specify the correct value of the `Content-Type` resposne header, XSS attack will be mitigated.
+In the above scenarios, if the developer deploy the `X-Content-Type-Options` header and specify the correct value of the `Content-Type` response header, XSS attack will be mitigated.
 
 ## What Should Developers Do?
 

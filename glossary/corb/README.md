@@ -6,7 +6,9 @@ CORB reduces the risk of leaking sensitive data by keping it further from cross-
 
 In browsers with _Site Isolation_, it can keep such data out of untrusted renderer processes entirely, helping even against side channel attacks.
 
-[Read More in GoogleSource](https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md).
+* [Read More in GoogleSource](https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md).
+
+* [Great Video Summary from Google Chrome Developers here](https://www.youtube.com/watch?v=_5rX6pt0A_k).
 
 ## The Problem
 
