@@ -2,7 +2,7 @@
 
 Under the poliy, a web browser permits scripts contained in a first web page to access data in a second web page, but only if both web pages have the same _origin_.
 
-This policy prevnets a malicious script on one page from obtaining access to sensitive data on another web page through that page's DOM.
+This policy prevents a malicious script on one page from obtaining access to sensitive data on another web page through that page's DOM.
 
 It's very important to remember that SOP _applies only to scripts_. This means that resource such as images, CSS, and dynamically-loaded scrips can be accessed across origins via the corresponding HTML tags (with fonts being a notable exception).
 

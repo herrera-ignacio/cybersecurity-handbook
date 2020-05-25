@@ -61,3 +61,4 @@ Some must know terms related to protocols, technology, etc...
 * [Proxy Server](./glossary/proxy-server)
 * [SOP - Same-Origin-Policy](./glossary/sop)
 * [User Agent](./glossary/user-agent)
+* [WHATWG](./glossary/whatwg)
