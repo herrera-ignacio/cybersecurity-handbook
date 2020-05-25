@@ -57,6 +57,7 @@ Some must know terms related to protocols, technology, etc...
 * [HTTP Headers](./glossary/http-headers)
 * [HTTP Requests](./glossary/http-requests)
 * [MIME Types](./glossary/mime-types)
+* [Mime Sniffing](./glossary/mime-sniffing)
 * [OSI - Open Systems Interconnection](./glossary/osi)
 * [Proxy Server](./glossary/proxy-server)
 * [SOP - Same-Origin-Policy](./glossary/sop)

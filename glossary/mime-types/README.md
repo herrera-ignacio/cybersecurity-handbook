@@ -2,6 +2,8 @@
 
 A Media Type, also known as a __Multipurpose Internet Mail Extensions/MIME type, is a standard that indicates the nature and format of a ducment, file, or assortment of bytes.
 
+The HTTP `Content-Type` Header field is intentded to indicate te MIME type of an HTTP resposne.
+
 It is defined and standardized in IETF's [RFC 6838](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types).
 
 The __IANA, Internet Assigned Nubmers Authority__ is responsible for all offiial MIME types, and you can find the most up-to-date and complete list at their [Media Types Page](https://www.iana.org/assignments/media-types/media-types.xhtml). There's also a [MDN Common MIME types page](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types).
@@ -20,7 +22,7 @@ The __subtype__ identifies the exact kind of data of the specified type the MIME
 
 Each type has its own set of possible subtypes, and a MIME type always has both a type and a subtype.
 
-An __optional parameter__ can be added ot provide additonal details:
+An __optional parameters__ can be added ot provide additonal details, as an _ordered map_ whose keys and values are ASCII strings:
 
 ```
 type/subtype;parameter=value
