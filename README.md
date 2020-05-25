@@ -40,6 +40,7 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [Auth-Z: Forced Browsing/Improper Authorization](./vulnerabilities/auth-z)
 * [Content Sniffing](./vulnerabilities/content-sniffing)
 * [CSRF - Cross-Site Request Forgery](./vulnerabilities/csrf)
+* [MIME Sniffing](./vulnerabilities/mime-sniffing)
 * [XSS](./vulnerabilities/xss)
 
 #### Network/System Glossary
