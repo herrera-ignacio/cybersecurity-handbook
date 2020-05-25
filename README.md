@@ -39,21 +39,25 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 
 * [Auth-Z: Forced Browsing/Improper Authorization](./vulnerabilities/auth-z)
 * [Content Sniffing](./vulnerabilities/content-sniffing)
-* [CSRF](./vulnerabilities/csrf)
+* [CSRF - Cross-Site Request Forgery](./vulnerabilities/csrf)
 * [XSS](./vulnerabilities/xss)
 
 #### Network/System Glossary
 
 Some must know terms related to protocols, technology, etc...
 
-* [Cookies](./glossary/cookies)
 * [Common Network Prot Numbers](https://www.utilizewindows.com/list-of-common-network-port-numbers/)
+* [Cookies](./glossary/cookies)
+* [CORS - Cross-Origin Resource Sharing](./glossary/cors)
+* [DOM: Document Object Model](./glossary/dom)
 * [Encryption](./glossary/encryption)
   * [Public-Key](./glossary/encryption/public-key)
 * [HTML](./glossary/html)
 * [HTTP](./glossary/http)
 * [HTTP Headers](./glossary/http-headers)
 * [HTTP Requests](./glossary/http-requests)
+* [MIME Types](./glossary/mime-types)
 * [OSI - Open Systems Interconnection](./glossary/osi)
 * [Proxy Server](./glossary/proxy-server)
-* [SOP: Same-Origin-Policy](./glossary/sop)
+* [SOP - Same-Origin-Policy](./glossary/sop)
+* [User Agent](./glossary/user-agent)
