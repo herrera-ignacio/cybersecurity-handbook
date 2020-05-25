@@ -18,6 +18,14 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 
 * [Intro to Cybersecurity](./intro_to_cybersecurity)
 
+#### Bug Bounty Programs
+
+* [Hackerone](https://www.hackerone.com/)
+
+### Learning Communities & Sites
+
+* [Hacker101](https://www.hacker101.com/)
+
 #### Offensive Security
 
 * [What is an Ethical Hacker?](./offensive)
@@ -25,10 +33,10 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [Source Code Review](./offensive/code-review)
 * [Architecture Review](./offensive/architectuer-review)
 * [Threat Modeling](./offensive/threat-modeling)
+* [Intro to Web Security](./offensive/web-sec)
 
 #### Web Vulnerabilities Glossary (Alphabetical order A-Z)
 
-* [Intro to Web Security](./vulnerabilities/web-sec)
 * [Auth-Z: Forced Browsing/Improper Authorization](./vulnerabilities/auth-z)
 * [Content Sniffing](./vulnerabilities/content-sniffing)
 * [CSRF](./vulnerabilities/csrf)
@@ -39,6 +47,7 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 Some must know terms related to protocols, technology, etc...
 
 * [Cookies](./glossary/cookies)
+* [Common Network Prot Numbers](https://www.utilizewindows.com/list-of-common-network-port-numbers/)
 * [Encryption](./glossary/encryption)
   * [Public-Key](./glossary/encryption/public-key)
 * [HTML](./glossary/html)

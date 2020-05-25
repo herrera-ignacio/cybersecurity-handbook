@@ -12,3 +12,13 @@ OWASP also lists current top vulnerabilities, which could be for example:
 * Data breach
 * Remote file inclsion
 * Code injection
+
+## Must Have Tools
+
+#### [Burp Proxy](https://portswigger.net/burp)
+
+Watch and intercept HTTP(S) communication, modify request and replay existing ones.
+
+#### Firefox
+
+Firefox allows you to set proxy settings specifically in the browser, rather than system-wide. This is extremely helpful to isolate an aplication.
