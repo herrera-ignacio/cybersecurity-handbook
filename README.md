@@ -52,5 +52,8 @@ Some must know terms related to protocols, technology, etc...
   * [Public-Key](./glossary/encryption/public-key)
 * [HTML](./glossary/html)
 * [HTTP](./glossary/http)
+* [HTTP Headers](./glossary/http-headers)
+* [HTTP Requests](./glossary/http-requests)
 * [OSI - Open Systems Interconnection](./glossary/osi)
+* [Proxy Server](./glossary/proxy-server)
 * [SOP: Same-Origin-Policy](./glossary/sop)
