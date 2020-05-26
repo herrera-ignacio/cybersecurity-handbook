@@ -10,6 +10,7 @@ With a little help of social engineering (such as sending a link via email or ch
   * How to Review Code
   * How to Test
   * How to Prevent
+* [CSRF Introduction and what is SOP](https://www.youtube.com/watch?v=KaEj_qZgiKY).
 
 #### Also known As
 * XSRF
@@ -141,8 +142,72 @@ function put() {
 <body onload="put()">
 ```
 
-Fortunally __those requests won't be executed__ by modern web browsers thanks to __SOP__ restrictions, that is enabled by default unless the target web site explicitly opens up cross-origin requests from the attacker's (or everyone's) origin using CORS:
+## Mitigation
+
+#### SOP
+
+Fortunally PUT/DELETE inter-origin and cross origin requests __won't be executed__ by modern web browsers thanks to __SOP__ restrictions, that is enabled by default unless the target web site explicitly opens up cross-origin requests from the attacker's (or everyone's) origin using CORS:
 
 ```
 Access-Control-Allow-Origin: *
 ```
+
+#### CSRF Token / Synchronizer Token Pattern (STP)
+
+STP is a technique where a token, secret and unique for each request, is embedded by the web application in all HTML forms and verified server side.
+
+Attacker is unable to place a correct token in their requests to authenticate them.
+
+```html
+<input type="hidden" name="csrfmiddlewaretoken" value="KbyUmhTLMpYj7CD2di7JKP1P3qmLlkPt" />
+```
+
+#### CSRF Token / Cookie-to-header Token
+
+Technique that relies on SOP.
+
+On an initial visit without an associated server session, web application sets a cookie containing a random token that remains the same for the whole session:
+
+```
+Set-Cookie: Csrf-token=i8XNjC4b8KVok4uw5RftR38Wgp2BFwql; expires=Thu, 23-Jul-2015 10:25:33 GMT; Max-Age=31449600; Path=/
+```
+
+JavaScript operating on the client side reads its valeu and coies it into a custom HTTP header sent with each transactino request:
+
+```
+X-Csrf-Token: i8XNjC4b8KVok4uw5RftR38Wgp2BFwql
+```
+
+Server validates presence and integrity of the token.
+
+Even though in an CSRF attack, the csrf-token cookie will be automatically sent with the forged request, the server will be still exepcting a valid `X-Csrf-Token` header.
+
+#### Double Submit Cookie
+
+A Clien can set a CSRF token as a cookie and also isnert it as a hidden ifeld in each HTML form sent to the client. SOP prevents an attacker from reading or setting cookies on the target domain, so they cannot put a vaid token in their crafted form.
+
+The advantage of this technique over _STP_ is that token does not need to be stored on the server.
+
+#### `SameSite` cookie attribute
+
+`SameSite` attribute can be included when the server sets a cookie, instructing the browser on whether to attach the cookie to cross-site requests. If set to `SameSite: strict`, then the cookie will only be sent on same-origin reqeusts, making CSRF ineffective.
+
+#### Client-side safeguards
+
+Browser extensions such as RequestPolicy (for Mozilla Firefox) or uMatrix (for both Firefox and Google Chrome/Chromium) can prevent CSRF by providing a default-deny policy for cross-site requests. However, this can significantly interfere with the normal operation of many websites. The CsFire extension (also for Firefox) can mitigate the impact of CSRF with less impact on normal browsing, by removing authentication information from cross-site requests.
+
+The NoScript extension for Firefox mitigates CSRF threats by distinguishing trusted from untrusted sites, and removing authentication & payloads from POST requests sent by untrusted sites to trusted ones. The Application Boundary Enforcer module in NoScript also blocks requests sent from internet pages to local sites (e.g. localhost), preventing CSRF attacks on local services (such as uTorrent) or routers.
+
+The Self Destructing Cookies extension for Firefox does not directly protect from CSRF, but can reduce the attack window, by deleting cookies as soon as they are no longer associated with an open tab.
+
+#### Origin/Referer HTTP Headers (NO!)
+
+Verifying that requests' headers `Referer` and/or `Origin` matches whitelisted domains or same origin. However this is insecure as browser plugins/redirects can allow an attacker to provide custom HTTP headers on a request to any wesite.
+
+#### POST Requests (NO!)
+
+POST request method can now easily be executed using `XMLHttpRequest`. But it is more secure that GET requests hat can be done using image URLs and link addresses through `script` `a` `img` tags.
+
+## Bypass
+
+Cross-site scripting (__XSS__) vulnerabilities allow attackers to bypass eentially all CSRF preventions.

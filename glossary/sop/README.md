@@ -8,9 +8,12 @@ It's very important to remember that SOP _applies only to scripts_. This means t
 
 __Attackers take advantage of the fact that SOP does not apply to HTLM tags__.
 
+* [CSRF Introduction and what is SOP](https://www.youtube.com/watch?v=KaEj_qZgiKY).
+
 ## TOC:
 
 * Origin
+* Details
 * SOP Implementation 
 * Origin determination rules
 * Security Application
@@ -30,6 +33,12 @@ An origin is defined as a combination of
 * URI Scheme
 * Host Name
 * Port Number
+
+## Details
+
+The same-origin policy restricts which network messages one origin can send to another. For example, the same-origin policy allows inter-origin HTTP requests with GET and POST methods but denies inter-origin PUT and DELETE requests.
+
+Additionally, origins can use custom HTTP headers when sending requests to themselves but cannot use custom headers when sending requests to other origins.
 
 ## Implementation
 
