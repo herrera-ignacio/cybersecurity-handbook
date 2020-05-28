@@ -42,13 +42,24 @@ Input from a user is inserted into the page's DOM without proper handling, enabl
 
 We usually want a simple payload to work, such as `<script>alert(1);</script>`, then we can work further.
 
-### Example Attribute Tag
+## XSS Cheat Sheet
+
+Couple quick things to try when testing for XSS:
+
+* `"><h1>test</h1>`
+* `+alert(1)+`
+* `"onmouseover="alert(1)`
+* `http://"onmouseover="alert(1)`
+
+## Examples
+
+### Attribute Tag example
 
 Suppose a text link "Check out http://google.com" gets automatically parsed into `Check out <a href="http://google.com">http://google.com</a>`, notice that wrapping `"` did not get into the resulting output. 
 
 We can trigger DOM events, for example: `http://"onmouseover="alert(1);`, giving you: `<a href="http://"onmouseover="alert(1);">
 
-### Example Script Tag
+### Script Tag example
 
 If for example, we are in the following scenario:
 
