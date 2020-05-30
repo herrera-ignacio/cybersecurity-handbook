@@ -17,12 +17,13 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 #### Introductory
 
 * [Intro to Cybersecurity](./intro_to_cybersecurity)
+* [OWASP Foundation](./intro_to_cybersecurity/owasp)
 
 #### Bug Bounty Programs
 
 * [Hackerone](https://www.hackerone.com/)
 
-### Learning Communities & Sites
+#### Learning Communities & Sites
 
 * [Hacker101](https://www.hacker101.com/)
 
@@ -39,6 +40,7 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 #### Web Vulnerabilities Glossary (Alphabetical order A-Z)
 
 * [Auth-Z: Forced Browsing/Improper Authorization](./vulnerabilities/auth-z)
+* [Command Injection](./vulnerabilities/command-injection)
 * [CSRF - Cross-Site Request Forgery](./vulnerabilities/csrf)
 * [MIME Sniffing](./vulnerabilities/mime-sniffing)
 * [Path Traversal](./vulnerabilities/path-traversal)
