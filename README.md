@@ -34,12 +34,14 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [Architecture Review](./offensive/architectuer-review)
 * [Threat Modeling](./offensive/threat-modeling)
 * [Intro to Web Security](./offensive/web-sec)
+* [OWASP Testing Guide](https://github.com/OWASP/wstg/tree/master/document)
 
 #### Web Vulnerabilities Glossary (Alphabetical order A-Z)
 
 * [Auth-Z: Forced Browsing/Improper Authorization](./vulnerabilities/auth-z)
 * [CSRF - Cross-Site Request Forgery](./vulnerabilities/csrf)
 * [MIME Sniffing](./vulnerabilities/mime-sniffing)
+* [Path Traversal](./vulnerabilities/path-traversal)
 * [XSS - Cross-Site Scripting](./vulnerabilities/xss)
 
 #### Network/System Glossary
