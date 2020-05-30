@@ -44,6 +44,8 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [CSRF - Cross-Site Request Forgery](./vulnerabilities/csrf)
 * [MIME Sniffing](./vulnerabilities/mime-sniffing)
 * [Path Traversal](./vulnerabilities/path-traversal)
+* [SQLi - Data Exfiltration](./vulnerabilities/sql-exfiltration)
+* [SQLi - SQL Injection](./vulnerabilities/sql-injection)
 * [XSS - Cross-Site Scripting](./vulnerabilities/xss)
 
 #### Network/System Glossary
