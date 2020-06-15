@@ -14,20 +14,21 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 
 ## :bomb: Table of Contents
 
-#### Introductory
+### Introductory
 
-* [Intro to Cybersecurity](./intro_to_cybersecurity)
+* [Cybersecurity Intro](./intro_to_cybersecurity)
 * [OWASP Foundation](./intro_to_cybersecurity/owasp)
+* [Cryptography Intro](./crypto)
 
-#### Bug Bounty Programs
+### Bug Bounty Programs
 
 * [Hackerone](https://www.hackerone.com/)
 
-#### Learning Communities & Sites
+### Learning Communities & Sites
 
 * [Hacker101](https://www.hacker101.com/)
 
-#### Offensive Security
+### Offensive Security
 
 * [What is an Ethical Hacker?](./offensive)
 * [What is a Bug Bounty?](./offensive/bug-bounty)
@@ -37,7 +38,7 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [Intro to Web Security](./offensive/web-sec)
 * [OWASP Testing Guide](https://github.com/OWASP/wstg/tree/master/document)
 
-#### Web Vulnerabilities Glossary (Alphabetical order A-Z)
+### Web Vulnerabilities Glossary (Alphabetical order A-Z)
 
 * [Auth-Z: Forced Browsing/Improper Authorization](./vulnerabilities/auth-z)
 * [Command Injection](./vulnerabilities/command-injection)
@@ -48,7 +49,7 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [SQLi - SQL Injection](./vulnerabilities/sql-injection)
 * [XSS - Cross-Site Scripting](./vulnerabilities/xss)
 
-#### Network/System Glossary
+### Network/System Glossary
 
 Some must know terms related to protocols, technology, etc...
 
