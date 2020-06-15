@@ -47,6 +47,7 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [Message Authentication Code (MAC)](./crypto/mac)
 * [Mortal Sins of Crypto](./crypto/mortal-sins)
 * [Padding](./crypto/padding)
+* [Password Storage](./crypto/pwd-storage)
 
 ### Web Vulnerabilities Glossary (A-Z)
 
