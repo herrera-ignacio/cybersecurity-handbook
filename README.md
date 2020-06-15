@@ -38,7 +38,7 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [Intro to Web Security](./offensive/web-sec)
 * [OWASP Testing Guide](https://github.com/OWASP/wstg/tree/master/document)
 
-### Web Vulnerabilities Glossary (Alphabetical order A-Z)
+### Web Vulnerabilities Glossary (A-Z)
 
 * [Auth-Z: Forced Browsing/Improper Authorization](./vulnerabilities/auth-z)
 * [Command Injection](./vulnerabilities/command-injection)
@@ -49,9 +49,11 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [SQLi - SQL Injection](./vulnerabilities/sql-injection)
 * [XSS - Cross-Site Scripting](./vulnerabilities/xss)
 
-### Crypto Attacks
+### Crypto Attacks (A-Z))
 
 * [ECB Block Reordering](./crypto/ecb-block-reordering)
+* [Hash Extension](./crypto/hash-extension)
+* [Padding Oracle](./crypto/padding-oracle)
 * [Stream Cipher Reuse](./crypto/stream-cipher-reuse)
 
 ### Network/System Glossary
