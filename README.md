@@ -18,7 +18,6 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 
 * [Cybersecurity Intro](./intro_to_cybersecurity)
 * [OWASP Foundation](./intro_to_cybersecurity/owasp)
-* [Cryptography Intro](./crypto)
 
 ### Bug Bounty Programs
 
@@ -38,6 +37,16 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [Intro to Web Security](./offensive/web-sec)
 * [OWASP Testing Guide](https://github.com/OWASP/wstg/tree/master/document)
 
+### Cryptograpgy
+
+[Introduction to Cryptography](./crypto)
+
+* [Ciphers - Asymmetric](./crypto/ciphers/asymmetric)
+* [Ciphers - Symmetric](./crypto/ciphers/symmetric)
+* [Hashes](./crypto/hashes)
+* [Message Authentication Code (MAC)](./crypto/mac)
+* [Padding](./crypto/padding)
+
 ### Web Vulnerabilities Glossary (A-Z)
 
 * [Auth-Z: Forced Browsing/Improper Authorization](./vulnerabilities/auth-z)
@@ -51,10 +60,10 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 
 ### Crypto Attacks (A-Z))
 
-* [ECB Block Reordering](./crypto/ecb-block-reordering)
-* [Hash/Length Extension](./crypto/hash-extension)
-* [Padding Oracle](./crypto/padding-oracle)
-* [Stream Cipher Reuse](./crypto/stream-cipher-reuse)
+* [ECB Block Reordering](./crypto/attacks/ecb-block-reordering)
+* [Hash/Length Extension](./crypto/attacks/hash-extension)
+* [Padding Oracle](./crypto/attacks/padding-oracle)
+* [Stream Cipher Reuse](./crypto/attacks/stream-cipher-reuse)
 
 ### Network/System Glossary
 
