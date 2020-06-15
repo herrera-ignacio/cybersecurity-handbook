@@ -52,7 +52,7 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 ### Crypto Attacks (A-Z))
 
 * [ECB Block Reordering](./crypto/ecb-block-reordering)
-* [Hash Extension](./crypto/hash-extension)
+* [Hash/Length Extension](./crypto/hash-extension)
 * [Padding Oracle](./crypto/padding-oracle)
 * [Stream Cipher Reuse](./crypto/stream-cipher-reuse)
 

@@ -1,4 +1,4 @@
-# Hash Extension
+# Hash Extension / Length Extension Attack
 
 With MD5, SHA1, and other Merkle-Damgard construction hashes, the digest that's returned is really just the internal state of the hash algorithm.
 

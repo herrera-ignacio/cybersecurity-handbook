@@ -1,5 +1,7 @@
 # Padding Oracle
 
+> Through a Padding Oracle Attack, an attacker is able to decrypt information, without knowing the encryption key.
+
 Padding oracle attacks come into play when you have __CBC-mode__ data that is __padded with PKCS#7__.
 
 If the server behaves differently when decrypting improperly padded data than properly padded data, this is an __oracle__, you can send it data and know whether or not it's correctly padded.
