@@ -49,6 +49,10 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [SQLi - SQL Injection](./vulnerabilities/sql-injection)
 * [XSS - Cross-Site Scripting](./vulnerabilities/xss)
 
+### Crypto Attacks
+
+* [Stream Cipher Reuse](./crypto/stream-cipher-reuse)
+
 ### Network/System Glossary
 
 Some must know terms related to protocols, technology, etc...
