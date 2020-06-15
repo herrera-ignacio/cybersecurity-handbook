@@ -51,6 +51,7 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 
 ### Crypto Attacks
 
+* [ECB Block Reordering](./crypto/ecb-block-reordering)
 * [Stream Cipher Reuse](./crypto/stream-cipher-reuse)
 
 ### Network/System Glossary

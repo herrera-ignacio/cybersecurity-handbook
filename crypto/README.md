@@ -17,6 +17,7 @@ We can break down the types of ciphers in use today into two families:
 
 * __Hashes__: constructs that take in an arbitrary blob of data and generate a fixed-size output.
 * __Message Authentication Codes (MACs)__: allows message authentication.
+* __Padding__: block encryption requires padding.
 
 ### Symmetric - Stream Ciphers
 
@@ -71,3 +72,24 @@ The most well-lnown MAC is called __HMAC__. It is based around a hash algorithm 
 ```txt
 HMAC(key, message) = hash(key + hash(key + message))
 ```
+
+### Padding
+
+Most commonly, data encrypted with a block cipher will not fall neatly on a block boundary and even if it does, there's nothing stopping you from chopping blocks off the end, the data will be truncated, but will decrypt properly.
+
+So we always pad data, even if it's a multiple of the block size.
+
+Now, padding has to be validated during decryption so that you can ensure that the data was received properly, if there's a mismatch, something went wrong.
+
+#### PCKS#7
+
+The most common padding system you'll see in use, and it's extraordinarily simple. If you need a byte of padding, it's a single 01 byte. If you need two bytes of padding, it's two 02 bytes, etc...
+
+So if you have a block size of 8, here are some samples:
+
+```txt
+daeken => daeken\x02\x02
+hacker101 => hacker101\0x07\0x07\0x07\0x07\0x07\0x07\0x07
+```
+
+You can simply look at the last byte of the last block, and see how many padding bytes there are, then check that those all matches.
