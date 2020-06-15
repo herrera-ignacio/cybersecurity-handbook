@@ -37,7 +37,7 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [Intro to Web Security](./offensive/web-sec)
 * [OWASP Testing Guide](https://github.com/OWASP/wstg/tree/master/document)
 
-### Cryptograpgy
+### Cryptograpgy Glossary (A-Z)
 
 [Introduction to Cryptography](./crypto)
 
@@ -45,6 +45,7 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [Ciphers - Symmetric](./crypto/ciphers/symmetric)
 * [Hashes](./crypto/hashes)
 * [Message Authentication Code (MAC)](./crypto/mac)
+* [Mortal Sins of Crypto](./crypto/mortal-sins)
 * [Padding](./crypto/padding)
 
 ### Web Vulnerabilities Glossary (A-Z)
@@ -58,7 +59,7 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [SQLi - SQL Injection](./vulnerabilities/sql-injection)
 * [XSS - Cross-Site Scripting](./vulnerabilities/xss)
 
-### Crypto Attacks (A-Z))
+### Crypto Attacks (A-Z)
 
 * [ECB Block Reordering](./crypto/attacks/ecb-block-reordering)
 * [Hash/Length Extension](./crypto/attacks/hash-extension)
