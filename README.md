@@ -52,6 +52,7 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 ### Web Vulnerabilities Glossary (A-Z)
 
 * [Auth-Z: Forced Browsing/Improper Authorization](./vulnerabilities/auth-z)
+* [Clickjacking](./vulnerabilities/clickjacking)
 * [Command Injection](./vulnerabilities/command-injection)
 * [CSRF - Cross-Site Request Forgery](./vulnerabilities/csrf)
 * [MIME Sniffing](./vulnerabilities/mime-sniffing)
