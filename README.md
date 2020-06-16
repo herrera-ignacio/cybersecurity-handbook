@@ -55,6 +55,7 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [Clickjacking](./vulnerabilities/clickjacking)
 * [Command Injection](./vulnerabilities/command-injection)
 * [CSRF - Cross-Site Request Forgery](./vulnerabilities/csrf)
+* [File Inclusion](./vulnerabilities/file-inclusion)
 * [MIME Sniffing](./vulnerabilities/mime-sniffing)
 * [Path Traversal](./vulnerabilities/path-traversal)
 * [SQLi - Data Exfiltration](./vulnerabilities/sql-exfiltration)
