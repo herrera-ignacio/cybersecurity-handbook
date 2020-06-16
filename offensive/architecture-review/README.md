@@ -1,7 +1,7 @@
 # Architecture Review
 
 > A Secure Architecture is, at its core, one that acknowledges that bugs invariable exist and seek to limit their impact and value.
-
+---
 > By accepting that all code is fallible, the priority can shift to minimizing damage when a component is compromised.
 
 Rather tan determine how attackers could get in, you assume that they already have and determine what they can access.
@@ -19,7 +19,7 @@ For each component in a system, starting with externally-facing components and w
 * Principle of Least Privilege
 * Auditability
 
-### Maximize Isolation 
+### Maximize Isolation
 
 If webserver and database are both on one machine, this sustantially drops the amount of effort required for an attacker to compromise data. As such, splitting these up can help limit attackers' access.
 
