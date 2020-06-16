@@ -62,6 +62,8 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [Path Traversal](./vulnerabilities/path-traversal)
 * [SQLi - Data Exfiltration](./vulnerabilities/sql-exfiltration)
 * [SQLi - SQL Injection](./vulnerabilities/sql-injection)
+* [SSRF - Server-Side Request Forgery](./vulnerabilities/ssrf)
+* [Unchecked Redirects](./vulnerabilities/unchecked-redirects)
 * [XSS - Cross-Site Scripting](./vulnerabilities/xss)
 
 ### Crypto Attacks (A-Z)

@@ -11,7 +11,7 @@ Because of SOP, a web page may freely embed cross-origin images, stylesheets, sc
 
 CORS specification is included as part of the [WHATWG's Fetch Living Standard](https://en.wikipedia.org/wiki/WHATWG), which describes how CORS is currently implemented in browsers.
 
-## How it works?
+## How it works
 
 This standard extends HTTP with a new `Origin` request header and a new `Access-Control-Allow-Origin` response header.
 
