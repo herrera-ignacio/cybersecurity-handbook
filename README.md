@@ -54,6 +54,7 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [Auth-Z: Forced Browsing/Improper Authorization](./vulnerabilities/auth-z)
 * [Clickjacking](./vulnerabilities/clickjacking)
 * [Command Injection](./vulnerabilities/command-injection)
+* [Cookie Tampering](./vulnerabilities/cookie-tampering)
 * [CSRF - Cross-Site Request Forgery](./vulnerabilities/csrf)
 * [File Inclusion](./vulnerabilities/file-inclusion)
 * [File Upload](.vulnerabilities/file-upload)
@@ -65,6 +66,7 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [SSRF - Server-Side Request Forgery](./vulnerabilities/ssrf)
 * [Unchecked Redirects](./vulnerabilities/unchecked-redirects)
 * [XSS - Cross-Site Scripting](./vulnerabilities/xss)
+* [XXE - XML External Entities](./vulnerabilities/xml-entities)
 
 ### Crypto Attacks (A-Z)
 
