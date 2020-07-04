@@ -87,6 +87,8 @@ Some must know terms related to protocols, technology, etc...
 * [DOM: Document Object Model](./glossary/dom)
 * [Encryption](./glossary/encryption)
   * [Public-Key](./glossary/encryption/public-key)
+  * [SSL](./glossary/encryption/ssl)
+  * [TLS](./glossary/encryption/tls)
 * [HTML](./glossary/html)
 * [HTTP](./glossary/http)
 * [HTTP Headers](./glossary/http-headers)
