@@ -26,6 +26,7 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 ### Learning Communities & Sites
 
 * [Hacker101](https://www.hacker101.com/)
+* [Acunetix WVS](http://testphp.vulnweb.com/)
 
 ### Offensive Security
 
@@ -36,6 +37,11 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [Threat Modeling](./offensive/threat-modeling)
 * [Intro to Web Security](./offensive/web-sec)
 * [OWASP Testing Guide](https://github.com/OWASP/wstg/tree/master/document)
+
+### Burp Suite Series
+
+* [Configure Burp suite](./burp/configure.md)
+* [XSS](./burp/xss)
 
 ### Cryptograpgy Glossary (A-Z)
 

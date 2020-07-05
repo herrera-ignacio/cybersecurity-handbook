@@ -1,4 +1,4 @@
-# XSS - Cross-Site Scripting
+# XSS: Cross-Site Scripting
 
 XSS attacks enable attackers to _inject client-side scripts_ into web pages viewed by other users.
 
@@ -41,6 +41,12 @@ Input from a user is inserted into the page's DOM without proper handling, enabl
 * Figure out how __special characters__ are handled: A good way is too input something like `<>:;`
 
 We usually want a simple payload to work, such as `<script>alert(1);</script>`, then we can work further.
+
+## Exploitation
+
+1. URL Redirection (`document.location.href`)
+2. Phishing (insert `iframe`)
+3. Cookie stealing (`document.cookie`)
 
 ## XSS Cheat Sheet
 
