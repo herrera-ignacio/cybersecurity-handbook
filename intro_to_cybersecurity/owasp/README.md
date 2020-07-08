@@ -1,4 +1,4 @@
-# OWASP - Open Web Application Security Project
+# OWASP: Open Web Application Security Project
 
 OWASP is a nonprofit foundation that works to improve the security of software.
 
