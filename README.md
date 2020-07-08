@@ -42,6 +42,7 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 
 * [Configure Burp suite](./burp/configure.md)
 * [XSS](./burp/xss)
+* [Host-header attack](./burp/host-header)
 
 ### Cryptograpgy Glossary (A-Z)
 
@@ -64,6 +65,7 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [CSRF: Cross-Site Request Forgery](./vulnerabilities/csrf)
 * [File Inclusion](./vulnerabilities/file-inclusion)
 * [File Upload](.vulnerabilities/file-upload)
+* [Host Header](./vulnerabilities/host-header)
 * [MIME Sniffing](./vulnerabilities/mime-sniffing)
 * [Null Termination](./vulnerabilities/null-termination)
 * [Path Traversal](./vulnerabilities/path-traversal)
