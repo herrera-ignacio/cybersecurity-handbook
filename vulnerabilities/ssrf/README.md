@@ -1,6 +1,8 @@
-# SSRF - Server Side Request Forgery
+# SSRF: Server Side Request Forgery
 
 Many web applications will take a URL from a user and so something with it.
+
+SSRF refers to an attack where an attacker is able to send a crafter request from a vulnerable web application.
 
 ## Example
 
@@ -18,9 +20,19 @@ Server could make requests to internal services for yu, things that you would ne
 
 If you can control the port on which requests are made, you can pretty trivially do port scans of the internal network.
 
-## Difficulty
+## Hunting & Difficulty
 
 SSRF bugs are simple in concept, but can be surprisingly difficult to find in practice. This is because they often require traversing many levels of indirection.
+
+You have to find any parameter that may have some kind of external interaction, such as external domains.
+
+## Impact
+
+* Abuse trust e.g. RFI attack
+* Bypass ip whitelisting
+* Bypass host based authentication
+* Read resource
+* Scan internal network
 
 ## Mitigation
 
