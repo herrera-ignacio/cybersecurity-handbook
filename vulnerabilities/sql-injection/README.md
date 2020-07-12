@@ -4,9 +4,9 @@ SQLi attack consists of __injection of a SQL Query via the input data from the c
 
 Successful SQLi explot can read sensitive data from database, modify it, execute administration operations (suh as shutdown the DBMS), recover the content of a given ifle present on the DBMS file system, and in some cases, issue commands to the operating system.
 
-* [OWASP - SQL Injection](https://owasp.org/www-community/attacks/SQL_Injection)
+* [OWASP: SQL Injection](https://owasp.org/www-community/attacks/SQL_Injection)
 * [SQLWiki Netspi](https://sqlwiki.netspi.com/#mysql)
-* [OWASP - Testing for SQLi](https://github.com/OWASP/wstg/blob/master/document/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05-Testing_for_SQL_Injection.md)
+* [OWASP: Testing for SQLi](https://github.com/OWASP/wstg/blob/master/document/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05-Testing_for_SQL_Injection.md)
 * [SQL Injection Knowedge Base](https://www.websec.ca/kb/sql_injection#MySQL_Testing_Injection)
 * [Bobby Tables XKCD](https://stackoverflow.com/questions/332365/how-does-the-sql-injection-from-the-bobby-tables-xkcd-comic-work)
 
@@ -160,3 +160,9 @@ This method can also be used to __extract database's server related information_
 
 Error-Based injections are exploited through triggering errors in the database when invalid inputs are passed to it. The error messages can be used to return the full query results, or gain information on how to restructure the query for further exploitation.
 
+## Tools
+
+* Burp Suite
+* SQL Map
+* [SQL Map + Burp: Exploiting SQL Injection](https://www.youtube.com/watch?v=kuSS7Rd_e54)
+* [Blind SQLi attack, manually with Burp and Automatically with SQL Map](https://www.youtube.com/watch?v=TjRK3aVEC60)

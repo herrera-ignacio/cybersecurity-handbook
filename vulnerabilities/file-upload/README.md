@@ -1,5 +1,9 @@
 # File Upload
 
+First step in many attacks is to get some code to the system to be attacked. Then the attacker only needs to a find a way to get the code executed. Using a file upload helps to accomplish the first step.
+
+The consequences of unrestricted file upload can vary, including complete system takeover, overloaded file system or database, forwarding attacks to backend systems, client-side attacks, or simple defacemenet.
+
 ## Filenames
 
 If you see an uploaded file retain the original name, or a derivative thereof, chances are good that you can manipulate it.

@@ -7,3 +7,10 @@ You may claim subdomains with the help of external services. This attack is prac
 Suppose a company that points a subdomain to a new service for example zendesk, then stops using it but does not remove the subdomain redirection. An attacker may sign up for the service and claim the domain as his, no verification is done by the service provider, and the dns-setup is already correctly setup.
 
 Then an attacker can build a complete clone, add login forms, steal credentials, cookies, or seriously affect business credibility.
+
+## Hunting
+
+Find a subdomain pointing to a third party service that is inactive, cancelled or expired. Go to that service, register as a client and point to that subdomain.
+
+* HostileSubBruteforcer
+

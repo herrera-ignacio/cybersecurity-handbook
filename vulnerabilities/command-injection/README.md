@@ -4,9 +4,9 @@ Attack in which the goal is __execution of arbitrary commands on the host operat
 
 Command Injection attacks are possible when an application passes unsafe user supplied data (forms, cookies, HTTP headers, etc) to a system shell.
 
-Attacker-supplied operating system commands are usualy executed with the privilegs of the vulnerable application.
+Attacker-supplied operating system commands are usualy executed with the privilege of the vulnerable application.
 
-[OWASP - Command Injection](https://owasp.org/www-community/attacks/Command_Injection)
+[OWASP: Command Injection](https://owasp.org/www-community/attacks/Command_Injection)
 
 #### Not Code Injection
 
@@ -14,7 +14,7 @@ This attack differs from _Code Injection_, in that code injection allows the att
 
 ## Example
 
-#### Example 1
+### Example 1
 
 The following code prints the content of a file to standard output:
 
@@ -56,7 +56,7 @@ catWrapper*             misnull.c               strlength.c             useFree.
 commandinjection.c      nodefault.c             trunc.c                 writeWhatWhere.c
 ```
 
-#### Example 2
+### Example 2
 
 The following code uses the environment variable $APPHOME to execute an initialization script in that directory.
 
@@ -75,7 +75,7 @@ The following code uses the environment variable $APPHOME to execute an initiali
 An attacker can modify the environment variable $APPHOME to specify a different path containing a malicious version of INITCMD.
 
 
-#### Example 3
+### Example 3
 
 The following allows users to change their passwords. The password update process under NIS includes running `make` in the /var/yp directory. Note that since the program updates password records, it has been installed setuid root.
 
