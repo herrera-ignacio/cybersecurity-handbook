@@ -76,6 +76,7 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [SQLi: Data Exfiltration](./vulnerabilities/sql-exfiltration)
 * [SQLi: SQL Injection](./vulnerabilities/sql-injection)
 * [SSRF: Server-Side Request Forgery](./vulnerabilities/ssrf)
+* [Subdomain Takeover](./vulnerabilities/subdomain-takeover)
 * [Unchecked Redirects](./vulnerabilities/unchecked-redirects)
 * [XSS: Cross-Site Scripting](./vulnerabilities/xss)
 * [XXE: XML External Entities](./vulnerabilities/xml-entities)
