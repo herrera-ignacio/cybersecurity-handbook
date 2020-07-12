@@ -104,3 +104,10 @@ Give us a final script of:
 <script> var token = '</script><script>alert(1);</script>'; </script>
 ```
 
+## Interesting exploits
+
+```js
+let script = document.createElement('script');
+script.src = `http://another.com/weather.json?callback=gotWeather`;
+document.body.append(script);
+```

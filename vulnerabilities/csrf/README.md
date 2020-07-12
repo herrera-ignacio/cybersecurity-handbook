@@ -12,7 +12,7 @@ With a little help of social engineering (such as sending a link via email or ch
   * How to Prevent
 * [CSRF Introduction and what is SOP](https://www.youtube.com/watch?v=KaEj_qZgiKY).
 
-## Also known As
+## Also, known As
 
 * XSRF
 * Sea Surf
@@ -128,7 +128,7 @@ PUT http://bank.com/transfer.do HTTP/1.1
 `{ "acct":"BOB", "amount":100 }`
 ```
 
-Such requests can be executed with JaaScript embedded into an exploit page:
+Such requests can be executed with JavaScript embedded into an exploit page:
 
 ```html
 <script>
@@ -147,11 +147,13 @@ function put() {
 
 ### SOP
 
-Fortunally PUT/DELETE inter-origin and cross origin requests __won't be executed__ by modern web browsers thanks to __SOP__ restrictions, that is enabled by default unless the target web site explicitly opens up cross-origin requests from the attacker's (or everyone's) origin using CORS:
+Fortunally PUT/DELETE inter-origin and cross origin requests __won't be executed__ by modern web browsers thanks to __SOP__ restrictions, that is enabled by default unless the target web site explicitly opens up cross-origin requests from the attacker's (or everyone's) origin using CORS.
 
 ```txt
 Access-Control-Allow-Origin: *
 ```
+
+Additionally, origins can use custom HTTP headers when sending requests to themselves but cannot use custom headers when sending requests to other origins.
 
 ### CSRF Token / Synchronizer Token Pattern (STP)
 

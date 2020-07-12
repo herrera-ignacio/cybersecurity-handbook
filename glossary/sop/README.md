@@ -10,6 +10,27 @@ __Attackers take advantage of the fact that SOP does not apply to HTLM tags__.
 
 * [CSRF Introduction and what is SOP](https://www.youtube.com/watch?v=KaEj_qZgiKY).
 
+SOP allows simple cross-origin requests (GET/POST/HEAD) with a set of allowed custom headers only:
+
+* Accept
+* Accept-Language
+* Content-Language
+* Content-Type
+  * application/x-www-form-urlencoded
+  * multipart/form-data
+  * text/palin
+
+Also, for cross-origin request, by default JavaScript may only access so-called 'simple' response headers:
+
+* Cache-Control
+* Content-Language
+* Content-Type
+* Expires
+* Last-Modified
+* Pragma
+
+Any 'non-simple' requests, the browser does not make such requests right away. Before, it sends a preliminary, so-called 'preflight' request `OPTIONS`, asking for permission (is at this point that CORS gets involved).
+
 ## TOC:
 
 * Origin
