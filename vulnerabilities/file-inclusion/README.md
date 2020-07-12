@@ -12,7 +12,7 @@ Suppose you change it to `?page=http://demoseen.com/test`. Suddenly it's making 
 
 ## How it works
 
-Any time you're inclding code on the fly based on user input without _very_ strict whitelisting, you're likely to run into _File inclusion_ bugs.
+Any time you're including code on the fly based on user input without _very_ strict whitelisting, you're likely to run into _File inclusion_ bugs.
 
 In many cases, PHP (and other languages/frameworks) will be configured to not allow web requests from an `include()` and the like. When they're possible, you have __Remote File Inclusion (RFI)__, when they're not, you're looking at __Local File Inclusion (LFI)__.
 
