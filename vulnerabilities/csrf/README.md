@@ -1,12 +1,12 @@
-# CSRF - Cross Site Request Forgery
+# CSRF: Cross Site Request Forgery
 
 CSRF is an attack that forces an end user to execute unwanted actions on a web application in which they're currently authenticated.
 
-CSRF attacks specifically __target state-changing requests__, not theft of data, since the attacker has no way to see the response to the forged request.
+Those attacks specifically __target state-changing requests__, not theft of data, since the attacker has no way to see the response to the forged request.
 
 With a little help of social engineering (such as sending a link via email or chat), an attacker may trick the user of a web application into executing actions of the attacker's choosing. If the victim is a normal user, a successful CSRF attack can force the user to perform state changing requests like transferring funds, changing their email address, and so forth. If the victim is an administrative account, CSRF can compromise the entire web application.
 
-* [OWASP - CSRF](https://owasp.org/www-community/attacks/csrf)
+* [OWASP: CSRF](https://owasp.org/www-community/attacks/csrf)
   * How to Review Code
   * How to Test
   * How to Prevent
@@ -71,7 +71,7 @@ If GET requests are used to transfer parameters and execute actions, the money t
 GET http://bank.com/transfer.do?acct=BOB&amount=100 HTTP/1.1
 ```
 
-Maria constructs he following url:
+Maria constructs the following url:
 
 ```txt
 GET http://bank.com/transfer.do?acct=MARIA&amount=100000 HTTP/1.1

@@ -4,14 +4,19 @@ A Path traversal attack, also known as _directory traversal_ aims to __access fi
 
 By manipulating variables that reference file wit `../` sequences and its variations, or by using absolute file pahs, it may be possible to access arbitrary files and directories stored on file system including applicatino source code, or configuration and critical system files.
 
-* [OWASP - Path Traversal](https://owasp.org/www-community/attacks/Path_Traversal)
+* [OWASP: Path Traversal](https://owasp.org/www-community/attacks/Path_Traversal)
 
-#### Other Names
+## Other Names
 
 * Directory traversal
 * Directory climbing
 * Backtracking
 * dot-dot-slash
+
+## Impact
+
+* Source Code Disclosure
+* Critical file found
 
 ## Identifying
 
