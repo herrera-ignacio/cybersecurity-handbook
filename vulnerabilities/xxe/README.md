@@ -1,8 +1,8 @@
-# XXE - XML External Entities
+# XXE: XML External Entity Injection
 
 XML lets you define new entities. Normally, these are simple text replacements but _they can reference external files_.
 
-XXE attacks take advantage of the ability to read arbitrary files and URIs to enable a variety of attack scenarios.
+XXE attacks take advantage of the ability to read arbitrary files and URIs to enable a variety of attack scenarios. The injection of unintended XML content and/or structures into an XML message can alter the intended logic of the application.
 
 * [Twiter XXE Report](https://hackerone.com/reports/248668)
 
@@ -24,6 +24,12 @@ Perform network requests behind the firewall. Web server will make a connection 
 ## Oracles
 
 Often, you will not see the data that you upload/fetch. In such a case, XXE can often be used as an oracle to determine if a file exists or a URI can be resolved.
+
+## Hunting
+
+* Attempt to inject XML or reserved characteres into input parameters and observed if XML parsing errors are generated.
+
+* For web services, check each input parameter specified in the WSDL document for those of type XML.
 
 ## Mitigation
 
