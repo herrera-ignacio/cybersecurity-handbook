@@ -62,6 +62,7 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [Clickjacking](./vulnerabilities/clickjacking)
 * [Command Injection](./vulnerabilities/command-injection)
 * [Cookie Tampering](./vulnerabilities/cookie-tampering)
+* [CORS insecure configuration](./vulnerabilities/cors-insecure)
 * [CSRF: Cross-Site Request Forgery](./vulnerabilities/csrf)
 * [File Inclusion](./vulnerabilities/file-inclusion)
 * [File Upload](.vulnerabilities/file-upload)
