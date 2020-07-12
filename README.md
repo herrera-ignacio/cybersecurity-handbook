@@ -69,6 +69,7 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [MIME Sniffing](./vulnerabilities/mime-sniffing)
 * [Null Termination](./vulnerabilities/null-termination)
 * [Path Traversal](./vulnerabilities/path-traversal)
+* [Parameter Tampering](./vulnerabilities/parameter-tampering)
 * [SQLi: Data Exfiltration](./vulnerabilities/sql-exfiltration)
 * [SQLi: SQL Injection](./vulnerabilities/sql-injection)
 * [SSRF: Server-Side Request Forgery](./vulnerabilities/ssrf)
