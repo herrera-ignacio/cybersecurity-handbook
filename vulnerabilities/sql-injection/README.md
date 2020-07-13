@@ -163,6 +163,6 @@ Error-Based injections are exploited through triggering errors in the database w
 ## Tools
 
 * Burp Suite
-* SQL Map
+* [SQL Map](./sql-map.md)
 * [SQL Map + Burp: Exploiting SQL Injection](https://www.youtube.com/watch?v=kuSS7Rd_e54)
 * [Blind SQLi attack, manually with Burp and Automatically with SQL Map](https://www.youtube.com/watch?v=TjRK3aVEC60)
