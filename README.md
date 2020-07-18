@@ -52,6 +52,7 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 
 ### Security Glossary
 
+* [CID Triad](./sec-glossary/cid)
 * [Defense in Depth](sec-glossary/did)
 
 ### Burp Suite Series
