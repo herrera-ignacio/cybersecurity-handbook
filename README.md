@@ -35,9 +35,12 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 
 
 * [Advanced IP Scanner](https://www.advanced-ip-scanner.com/es/)
+* [Exploit DB](https://www.exploit-db.com/google-hacking-database)
+* [HunterIO](https://hunter.io/)
+* [OSINT Framework](https://osintframework.com/)
 * [Shodan: search engine for internet-connected devices](https://www.shodan.io)
 
-### Offensive Security
+### Offensive Security Glossary
 
 * [What is an Ethical Hacker?](./offensive)
 * [What is a Bug Bounty?](./offensive/bug-bounty)
@@ -46,6 +49,10 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [Threat Modeling](./offensive/threat-modeling)
 * [Intro to Web Security](./offensive/web-sec)
 * [OWASP Testing Guide](https://github.com/OWASP/wstg/tree/master/document)
+
+### Security Glossary
+
+* [Defense in Depth](sec-glossary/did)
 
 ### Burp Suite Series
 
