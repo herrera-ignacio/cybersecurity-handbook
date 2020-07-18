@@ -36,11 +36,11 @@ All cookies, even the secret ones, will be submitted with every request.
 
 The misconception is that since the attacker cannot construct a malicious link, a CSRF attack cannot be executed. This logic is incorrect.
 
-There are numerous methods in which an attacker can trick a victim into submitting a forged POST request, such as a simple form hosted in an attacker's Website with hidden values. This form can be triggered automatically by JavaScript or can be triggered by the victim who thinks the form will do somethnig else.
+There are numerous methods in which an attacker can trick a victim into submitting a forged POST request, such as a simple form hosted in an attacker's Website with hidden values. This form can be triggered automatically by JavaScript or can be triggered by the victim who thinks the form will do something else.
 
 ### Multi-Step Transactions
 
-As long as an attacker can predict or deduce each step of the complted transacation, then CSRF is possible.
+As long as an attacker can predict or deduce each step of the completed transacation, then CSRF is possible.
 
 ### URL Rewriting (including session ID)
 
@@ -175,7 +175,7 @@ On an initial visit without an associated server session, web application sets a
 Set-Cookie: Csrf-token=i8XNjC4b8KVok4uw5RftR38Wgp2BFwql; expires=Thu, 23-Jul-2015 10:25:33 GMT; Max-Age=31449600; Path=/
 ```
 
-JavaScript operating on the client side reads its valeu and coies it into a custom HTTP header sent with each transactino request:
+JavaScript operating on the client side reads its valeu and copies it into a custom HTTP header sent with each transaction request:
 
 ```txt
 X-Csrf-Token: i8XNjC4b8KVok4uw5RftR38Wgp2BFwql
@@ -187,7 +187,7 @@ Even though in an CSRF attack, the csrf-token cookie will be automatically sent 
 
 ### Double Submit Cookie
 
-A Clien can set a CSRF token as a cookie and also isnert it as a hidden ifeld in each HTML form sent to the client. SOP prevents an attacker from reading or setting cookies on the target domain, so they cannot put a vaid token in their crafted form.
+A Client can set a CSRF token as a cookie and also insert it as a hidden field in each HTML form sent to the client. SOP prevents an attacker from reading or setting cookies on the target domain, so they cannot put a valid token in their crafted form.
 
 The advantage of this technique over _STP_ is that token does not need to be stored on the server.
 

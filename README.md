@@ -16,7 +16,10 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 
 ### Introductory
 
+* []
 * [Cybersecurity Intro](./intro_to_cybersecurity)
+  * Career Paths
+  * Responsibilities & Roles
 * [OWASP Foundation](./intro_to_cybersecurity/owasp)
 
 ### Bug Bounty Programs
@@ -27,6 +30,12 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 
 * [Hacker101](https://www.hacker101.com/)
 * [Acunetix WVS](http://testphp.vulnweb.com/)
+
+### Tools
+
+
+* [Advanced IP Scanner](https://www.advanced-ip-scanner.com/es/)
+* [Shodan: search engine for internet-connected devices](https://www.shodan.io)
 
 ### Offensive Security
 
