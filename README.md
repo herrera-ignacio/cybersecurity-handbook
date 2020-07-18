@@ -33,12 +33,15 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 
 ### Tools
 
-
-* [Advanced IP Scanner](https://www.advanced-ip-scanner.com/es/)
-* [Exploit DB](https://www.exploit-db.com/google-hacking-database)
-* [HunterIO](https://hunter.io/)
-* [OSINT Framework](https://osintframework.com/)
-* [Shodan: search engine for internet-connected devices](https://www.shodan.io)
+* [binwalk](./tools/binwalk)
+* [exiftool](./tools/exiftool)
+* [Exploit DB](./tools/exploitdb)
+* [HunterIO](./tools/hunterio)
+* [IP Scanner](https://www.advanced-ip-scanner.com/es/)
+* [msfvenom](./tools/msfvenom)
+* [OSINT](./tools/osint)
+* [Shodan](./tools/shodan)
+* [Zenmap](./tools/zenmap)
 
 ### Offensive Security Glossary
 
