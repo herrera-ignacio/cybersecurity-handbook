@@ -25,6 +25,10 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 
 ## :bomb: Research Material
 
+## Lectures
+
+* [Defcon 23, Jason Haddix, How to Shot Web (2015)](./lectures/d23-how-to-shoot-web)
+
 ## Glossaries (A-Z)
 
 ### Cryptograpgy
@@ -123,8 +127,9 @@ Some must know terms related to protocols, technology, etc...
 * [Architecture Review](./offensive/architectuer-review)
 * [Bug Bounty](./offensive/bug-bounty)
 * [Code Review (Source Code)](./offensive/code-review)
-* [Threat Modeling](./offensive/threat-modeling)
 * [Ethical Hacking](./offensive/ethical-hacking)
+* [Recon](./offensive/recon)
+* [Threat Modeling](./offensive/threat-modeling)
 * [Web Security](./offensive/web-sec)
 
 ### Tools
