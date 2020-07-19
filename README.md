@@ -9,18 +9,10 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 ## :memo: How To Use
 
 * Each section tries to give a practical introduction to the topic it concerns.
-* Each topic is only described in an introductory way, so you can understand the underlying concept. Learning how to apply those concepts in real-life scenarios is up to you to research and experiment.
+* Each topic is only described in an introductory level, so you can understand the underlying concept. Learning how to apply those concepts in real-life scenarios is up to you to research and experiment.
 * Most sections encourages/require practice on your own, this is needed if you want to make a profession out of this and it's not just for curiosity.
 
-## :bomb: Table of Contents
-
-### Introductory
-
-* [Cybersecurity Intro](./intro_to_cybersecurity)
-  * Career Paths
-  * Responsibilities & Roles
-* [OWASP Foundation](./intro_to_cybersecurity/owasp)
-* [OWASP Testing Guide](https://github.com/OWASP/wstg/tree/master/document)
+## Useful Links
 
 ### Bug Bounty Programs
 
@@ -31,7 +23,11 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [Hacker101](https://www.hacker101.com/)
 * [Acunetix WVS](http://testphp.vulnweb.com/)
 
-### Cryptograpgy Glossary (A-Z)
+## :bomb: Research Material
+
+## Glossaries (A-Z)
+
+### Cryptograpgy
 
 [Introduction to Cryptography](./crypto)
 
@@ -43,7 +39,14 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [Padding](./crypto/padding)
 * [Password Storage](./crypto/pwd-storage)
 
-### Web Vulnerabilities Glossary (A-Z)
+### Crypto Attacks
+
+* [ECB Block Reordering](./crypto/attacks/ecb-block-reordering)
+* [Hash/Length Extension](./crypto/attacks/hash-extension)
+* [Padding Oracle](./crypto/attacks/padding-oracle)
+* [Stream Cipher Reuse](./crypto/attacks/stream-cipher-reuse)
+
+### Web Vulnerabilities
 
 * [Auth-Z: Forced Browsing/Improper Authorization](./vulnerabilities/auth-z)
 * [Clickjacking](./vulnerabilities/clickjacking)
@@ -68,18 +71,7 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [XSS: Cross-Site Scripting](./vulnerabilities/xss)
 * [XXE: XML External Entities](./vulnerabilities/xml-entities)
 
-### Crypto Attacks (A-Z)
-
-* [ECB Block Reordering](./crypto/attacks/ecb-block-reordering)
-* [Hash/Length Extension](./crypto/attacks/hash-extension)
-* [Padding Oracle](./crypto/attacks/padding-oracle)
-* [Stream Cipher Reuse](./crypto/attacks/stream-cipher-reuse)
-
-### Pentesting vulnerabilities (A-Z)
-
-* [Shellshock](./pentesting/shellshock)
-
-### Network/System Glossary
+### Network & Systems
 
 Some must know terms related to protocols, technology, etc...
 
@@ -107,12 +99,18 @@ Some must know terms related to protocols, technology, etc...
 * [User Agent](./glossary/user-agent)
 * [WHATWG](./glossary/whatwg)
 
-### Security Glossary
+### System Vulnerabilities
+
+* [Shellshock](./pentesting/shellshock)
+
+### Cybersecurity 
 
 * [CID Triad](./sec-glossary/cid)
-* [Defense in Depth](sec-glossary/did)
+* [Cybersecurity](./sec-glossary/cybersecurity)
+* [Defense in Depth](./sec-glossary/did)
+* [OWASP](./sec-glossary/owasp)
 
-### Offensive Security Glossary
+### Offensive Security
 
 * [Architecture Review](./offensive/architectuer-review)
 * [Bug Bounty](./offensive/bug-bounty)
@@ -135,7 +133,7 @@ Some must know terms related to protocols, technology, etc...
 * [Shodan](./tools/shodan)
 * [Zenmap](./tools/zenmap)
 
-### Burp Suite Series
+#### Burp Suite
 
 * [Configure Burp suite](./burp/configure.md)
 * [XSS](./burp/xss)
