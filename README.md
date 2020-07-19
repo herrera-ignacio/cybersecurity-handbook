@@ -71,7 +71,7 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [XSS: Cross-Site Scripting](./vulnerabilities/xss)
 * [XXE: XML External Entities](./vulnerabilities/xml-entities)
 
-### Network & Systems
+### Networking
 
 Some must know terms related to protocols, technology, etc...
 
@@ -92,7 +92,9 @@ Some must know terms related to protocols, technology, etc...
 * [MIME Types](./glossary/mime-types)
 * [Mime Sniffing](./glossary/mime-sniffing)
 * [OSI: Open Systems Interconnection](./glossary/osi)
+* [Packets](./glossary/packets)
 * [Proxy Server](./glossary/proxy-server)
+* [Routing Protocols](./glossary/routing-protocols)
 * [SOP: Same-Origin-Policy](./glossary/sop)
 * [SPF: Sender Policy Framework](./glossay/spf)
 * [TCP/IP Protocol Suite](https://github.com/herrera-ignacio/tcp-ip)
