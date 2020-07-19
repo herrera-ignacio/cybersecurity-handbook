@@ -12,7 +12,7 @@ __You will never find every bug, especially under time pressure__. This means yo
 
 ## Attacker Goals
 
-First you'd want to have a rough list of all application's functioanlities.
+First you'd want to have a rough list of all application's functionalities.
 
 Then, think if you were an attacker, what would your goal be?
 

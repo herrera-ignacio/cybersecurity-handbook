@@ -16,11 +16,11 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 
 ### Introductory
 
-* []
 * [Cybersecurity Intro](./intro_to_cybersecurity)
   * Career Paths
   * Responsibilities & Roles
 * [OWASP Foundation](./intro_to_cybersecurity/owasp)
+* [OWASP Testing Guide](https://github.com/OWASP/wstg/tree/master/document)
 
 ### Bug Bounty Programs
 
@@ -30,41 +30,6 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 
 * [Hacker101](https://www.hacker101.com/)
 * [Acunetix WVS](http://testphp.vulnweb.com/)
-
-### Tools
-
-* [binwalk](./tools/binwalk)
-* [exiftool](./tools/exiftool)
-* [Exploit DB](./tools/exploitdb)
-* [HunterIO](./tools/hunterio)
-* [IP Scanner](./tools/ip-scanner)
-* [md5deep](./tools/md5deep)
-* [Metasploit](./tools/metasploit)
-* [msfvenom](./tools/msfvenom)
-* [OSINT](./tools/osint)
-* [Shodan](./tools/shodan)
-* [Zenmap](./tools/zenmap)
-
-### Offensive Security Glossary
-
-* [What is an Ethical Hacker?](./offensive)
-* [What is a Bug Bounty?](./offensive/bug-bounty)
-* [Source Code Review](./offensive/code-review)
-* [Architecture Review](./offensive/architectuer-review)
-* [Threat Modeling](./offensive/threat-modeling)
-* [Intro to Web Security](./offensive/web-sec)
-* [OWASP Testing Guide](https://github.com/OWASP/wstg/tree/master/document)
-
-### Security Glossary
-
-* [CID Triad](./sec-glossary/cid)
-* [Defense in Depth](sec-glossary/did)
-
-### Burp Suite Series
-
-* [Configure Burp suite](./burp/configure.md)
-* [XSS](./burp/xss)
-* [Host-header attack](./burp/host-header)
 
 ### Cryptograpgy Glossary (A-Z)
 
@@ -141,3 +106,37 @@ Some must know terms related to protocols, technology, etc...
 * [TCP/IP Protocol Suite](https://github.com/herrera-ignacio/tcp-ip)
 * [User Agent](./glossary/user-agent)
 * [WHATWG](./glossary/whatwg)
+
+### Security Glossary
+
+* [CID Triad](./sec-glossary/cid)
+* [Defense in Depth](sec-glossary/did)
+
+### Offensive Security Glossary
+
+* [Architecture Review](./offensive/architectuer-review)
+* [Bug Bounty](./offensive/bug-bounty)
+* [Code Review (Source Code)](./offensive/code-review)
+* [Threat Modeling](./offensive/threat-modeling)
+* [Ethical Hacking](./offensive/ethical-hacking)
+* [Web Security](./offensive/web-sec)
+
+### Tools
+
+* [binwalk](./tools/binwalk)
+* [exiftool](./tools/exiftool)
+* [Exploit DB](./tools/exploitdb)
+* [HunterIO](./tools/hunterio)
+* [IP Scanner](./tools/ip-scanner)
+* [md5deep](./tools/md5deep)
+* [Metasploit](./tools/metasploit)
+* [msfvenom](./tools/msfvenom)
+* [OSINT](./tools/osint)
+* [Shodan](./tools/shodan)
+* [Zenmap](./tools/zenmap)
+
+### Burp Suite Series
+
+* [Configure Burp suite](./burp/configure.md)
+* [XSS](./burp/xss)
+* [Host-header attack](./burp/host-header)
