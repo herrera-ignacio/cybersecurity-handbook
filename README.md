@@ -89,6 +89,7 @@ Some must know terms related to protocols, technology, etc...
 * [HTTP](./glossary/http)
 * [HTTP Headers](./glossary/http-headers)
 * [HTTP Requests](./glossary/http-requests)
+* [IP Addressing](./glossary/ipaddressing)
 * [MIME Types](./glossary/mime-types)
 * [Mime Sniffing](./glossary/mime-sniffing)
 * [OSI: Open Systems Interconnection](./glossary/osi)
