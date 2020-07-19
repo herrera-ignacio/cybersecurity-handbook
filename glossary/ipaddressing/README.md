@@ -12,12 +12,13 @@
 ## IPv4
 
 * Public and Private Addressing
-* Private Address Classes (Reserved for internal network addressing)
-	* A: 10.0.0.0, 10.255.255.255 (16,777,216 host addresses)
-	* B: 172.16.0.0, 172.31.255.255 (1,048,576 host addresses)
-	* C: 192.168.0.0, 192.168.255.255 (most common, 65,536 host addresses)
 * 32 bit addresses
 * Each section is called an 'octet', which is a decimal representation of an 8-digit binary number, and sectons are separed with a dot (.).
+* Private Address Classes (Reserved for internal network addressing), we look at the first octet to know to which class it belongs to.
+	* A: 10.0.0.0, (1-127).255.255.255 (127 networks, 16,777,216 host addresses per network)
+	* B: 172.16.0.0, (128-191).(0-255).255.255 (1,048,576 host addresses)
+	* C: 192.168.0.0, (192-223).(0-255).(0-255).255 (most common, 65,536 host addresses)
+* Each class has a default submask. Research subnetting for more details.
 * Running out of addresses
 
 ## IPv6

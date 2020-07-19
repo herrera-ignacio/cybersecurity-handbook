@@ -92,6 +92,10 @@ Some must know terms related to protocols, technology, etc...
 * [IP Addressing](./glossary/ipaddressing)
 * [MIME Types](./glossary/mime-types)
 * [Mime Sniffing](./glossary/mime-sniffing)
+* [Network Communication](./glossary/network-communication)
+  * Unicast
+  * Broadcast
+  * Multicast
 * [OSI: Open Systems Interconnection](./glossary/osi)
 * [Packets](./glossary/packets)
 * [Proxy Server](./glossary/proxy-server)
