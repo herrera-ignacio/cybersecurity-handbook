@@ -37,7 +37,9 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [exiftool](./tools/exiftool)
 * [Exploit DB](./tools/exploitdb)
 * [HunterIO](./tools/hunterio)
-* [IP Scanner](https://www.advanced-ip-scanner.com/es/)
+* [IP Scanner](./tools/ip-scanner)
+* [md5deep](./tools/md5deep)
+* [Metasploit](./tools/metasploit)
 * [msfvenom](./tools/msfvenom)
 * [OSINT](./tools/osint)
 * [Shodan](./tools/shodan)
@@ -107,6 +109,10 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 * [Hash/Length Extension](./crypto/attacks/hash-extension)
 * [Padding Oracle](./crypto/attacks/padding-oracle)
 * [Stream Cipher Reuse](./crypto/attacks/stream-cipher-reuse)
+
+### Pentesting vulnerabilities (A-Z)
+
+* [Shellshock](./pentesting/shellshock)
 
 ### Network/System Glossary
 
