@@ -98,6 +98,7 @@ Some must know terms related to protocols, technology, etc...
 * [Routing Protocols](./glossary/routing-protocols)
 * [SOP: Same-Origin-Policy](./glossary/sop)
 * [SPF: Sender Policy Framework](./glossay/spf)
+* [Subnetting](./glossary/subnetting)
 * [TCP/IP Model](/glossary/tcp-ip)
 * [User Agent](./glossary/user-agent)
 * [WHATWG](./glossary/whatwg)
