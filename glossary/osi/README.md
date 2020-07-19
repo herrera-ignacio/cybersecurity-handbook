@@ -1,10 +1,10 @@
-# OSI  - Open Systems Interconnection
+# OSI: Open Systems Interconnection
 
 Conceptual model created by ISO (International Organizaton for Standarization) which enables diverse communication systems to communicate using standard protocols.
 
 The OSI model can be seen as a universal language for computer networking. It's based on the concept of splitting up a communication system into seven abstract layers, each one stacked upon the last.
 
-![osi layers](./layers.png)
+![layers overview](./layers-overview.png)
 
 Each layer handles a specific jo and communicates with the layers above and below itself.
 
@@ -17,6 +17,8 @@ Although the modern Internet doesn't strictly follow the OSI model (it more clos
 If the problem can be narrowed down to one specific layer of the model, a lot of unnecessary work can be avoided.
 
 ## Seven Layers of the OSI model
+
+![osi layers](./layers.png)
 
 ### 7. Application Layer
 
@@ -64,6 +66,8 @@ The Transport Layer on the receiving deice is responsible for __reassembling the
 
 This layer is also responsible for __flow control and error control__. Flow control determines an optimal speed of transmission to ensure that a sender with a fast connection doesn't overwhelm a receiver with a slow connection. Error control on the receiving end ensures that the data received is complete, and requests a retransmission if it isn't.
 
+The best known examples are TCP and UDP.
+
 ### 3. Network Layer
 
 ![network layer](./3.png)
@@ -71,6 +75,8 @@ This layer is also responsible for __flow control and error control__. Flow cont
 This layer is responsible for __facilitating data transfer between two different networks__. If the two devices communicating are on the same network, then this layer is unnecesary.
 
 The Network Layer __breaks up segments from the transport layer into smaller units, called _packets_, on the sender's device, and reassembling these packets on the receiving device__. This Network Layer also __finds the best physical path for the data to reach its destination__, this is known as __routing__.
+
+The best known example is IP.
 
 ### 2. Data Link Layer
 

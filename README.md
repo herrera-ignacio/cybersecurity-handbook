@@ -97,7 +97,7 @@ Some must know terms related to protocols, technology, etc...
 * [Routing Protocols](./glossary/routing-protocols)
 * [SOP: Same-Origin-Policy](./glossary/sop)
 * [SPF: Sender Policy Framework](./glossay/spf)
-* [TCP/IP Protocol Suite](https://github.com/herrera-ignacio/tcp-ip)
+* [TCP/IP Model](/glossary/tcp-ip)
 * [User Agent](./glossary/user-agent)
 * [WHATWG](./glossary/whatwg)
 
@@ -140,3 +140,7 @@ Some must know terms related to protocols, technology, etc...
 * [Configure Burp suite](./burp/configure.md)
 * [XSS](./burp/xss)
 * [Host-header attack](./burp/host-header)
+
+## Certifications
+
+* [Network+](./certs/net+)
