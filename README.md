@@ -155,3 +155,4 @@ Some must know terms related to protocols, technology, etc...
 ## Certifications
 
 * [Network+](./certs/net+)
+  * Network Troubleshooting and Tools

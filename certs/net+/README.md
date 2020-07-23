@@ -9,7 +9,7 @@
 * Common Ports
 	* DNS, DHCP, Telnet, SSH, HTTPS
 
-## Network Troubleshooting
+## [Network Troubleshooting](./troubleshooting)
 
 1. Identify problem
 2. Gather infomration
