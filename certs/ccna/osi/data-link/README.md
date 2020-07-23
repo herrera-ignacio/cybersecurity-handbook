@@ -6,6 +6,19 @@ In the CISCO world, whenever you see a thunderbolt being drawn, it means it is a
 
 Suppose you have two routers connected through a serial connection, that is your Local Data Link.
 
+## TOC
+
+* How Data Looks in this layer
+	* MAC
+	* PDU: Protocol Data Unit -> Frame
+* How Frame Travels
+	* Flood vs Broadcast
+* Ethernet
+* Broadcast and Collision Domains
+* VLANs
+
+---
+
 ## How Data Looks
 
 Data is put into a set structure, __Protocol Data Unit (PDU)__, called a __Frame__.
@@ -32,6 +45,8 @@ The PDU at Data Link Layer is __Frame__.
 * Frame Check Sequence (FCS): houses Cyclic Redundancy Check (CRC) 
 	* CRC: Before device transmitting a frame, it performs a calculation and stores the resulting number inside CRC. The receiving device performs the same calculation and compares results. This is used to check for data corrumption.
 
+---
+
 ## How Frame Traveles
 
 Switchs learn MAC address, and populate their MAC tables, by looking at Frames' Source field.
@@ -46,6 +61,8 @@ Switchs don't store all F's in their MAC table, as this address is reserved for 
 
 The end result is just like a Flood behavior, but the difference is that in our example, the Flooding is happening due to an Unicast communication where the Switch doesn't know which device holds Destination MAC.
 
+----
+
 ## Ethernet
 
 Layer 2 protocol that runs at 10 Megabits/s Half-Duplex with CSMA/CD, which stands for __Carrier Sense Multiple Access with Collision Detection__.
@@ -55,6 +72,8 @@ Half-Duplex means that __bi-directional communication__ is possible but only in 
 Full-Duplex, in opoosition, means that bi-directional communication is possible, in more than one direction at a time (simultaneously, like a phone call).
 
 CSMA/CD comes into play when two devices transmit at the same time and frames can collide. CSMA/CD is constantly listening in on the wire for collitions. When this collition happening, it sends out a jamming signal to all devices, and asks to devices to stop transmitting for a random period (everyone can receive different times), then the chances are lessened that they will retransmit at the same time, and hence the collision avoidance comes in.
+
+---
 
 ## Broadcast and Collision Domains
 
@@ -79,6 +98,44 @@ Ports on a Switch, by default, run in Full-Duplex mode, and you don't need CSMA/
 A Hub is a one Collision Domain and by defualt, runs in Half-Duplex mode.
 
 An example problem, would be if you connect a Hub with multiple devices to a Switch port, collisions will happen.
+
+---
+
+## VLANs: Virtual Local Area Networks
+
+Virtual 'Switches' inside the same physical Switch, so you can create a logical separation without the need of a physical one.
+
+* Save money.
+* Can transverse different switches, so distance constraint between different switches can be overcomed if you use a same virtual network.
+* Switches come with default VLANS (1, and 1002 to 1005) that cannot be deleted.
+* By default, all ports on a Switch, belong to VLAN 1.
+* VLAN ranges between 1 and 4094 on a switch depending on the platform.
+	* 1 to 1005 are considered _Normal_.
+	* 1006 to 4094 are considered _Extended_.
+
+### VLAN Configuration
+
+#### Old way
+
+```
+Switch# vlandatabase
+
+Switch(Vlan)# VLAN 50 name test
+Switch(Vlan)# exit
+
+Switch# show vlan brief
+```
+
+#### New way
+
+```
+Swith(config)# vlan/00
+Switch(config-vlan)# name test
+Switch(config-vlan)# exit
+Switch(config)# do show vlan brief
+```
+
+---
 
 ## Tools
 
