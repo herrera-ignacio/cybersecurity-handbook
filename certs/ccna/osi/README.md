@@ -47,7 +47,7 @@ Multi-port repeater.
 
 A Hub take signal from one port and flood the signal out to every other port (devices) except the port that originated the signal.
 
-### 2. Data Link
+### 2. [Data Link](./data-link)
 
 ### 3. Network
 

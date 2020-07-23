@@ -84,6 +84,7 @@ Some must know terms related to protocols, technology, etc...
 * [CORB: Cross-Origin Read Blocking](./glossary/corb)
 * [CORS: Cross-Origin Resource Sharing](./glossary/cors)
 * [CSP: Content Security Policy](./glossary/csp)
+* [Devices](./glossary/devices)
 * [DOM: Document Object Model](./glossary/dom)
 * [Encryption](./glossary/encryption)
   * [Public-Key](./glossary/encryption/public-key)

@@ -1,0 +1,57 @@
+# Layer 2: Data Link
+
+> Controls communication between one device and the next immediately connected device, on the immediate physical link.
+
+In the CISCO world, whenever you see a thunderbolt being drawn, it means it is a _serial connection_, which in a router is your _Wide Area link_.
+
+Suppose you have two routers connected through a serial connection, that is your Local Data Link.
+
+## How Data Looks
+
+Data is put into a set structure, __Protocol Data Unit (PDU)__, called a __Frame__.
+
+You need an addressing scheme, most commonly __Media Access Control (MAC) Address__:
+	* Source address: from which the stream is sent from
+	* Destionation address: adress which the stream is sent to
+
+### MAC: Media Access Control
+
+* 48 bits in length.
+* Written in hexadecimal.
+* __Universal Local (UL) Bit__ are the 7 most significant bits of the address (leftmost)
+	* If those are turned off (MAC started with 00), it means MAC address should be universally unique.
+	* If MAC address is locally assigned, those bits must be turned on.
+
+### PDU: Protocol Data Unit
+
+The PDU at Data Link Layer is __Frame__.
+
+* Destination: MAC
+* Source: MAC
+* Data
+* Frame Check Sequence (FCS): houses Cyclic Redundancy Check (CRC) 
+	* CRC: Before device transmitting a frame, it performs a calculation and stores the resulting number inside CRC. The receiving device performs the same calculation and compares results. This is used to check for data corrumption.
+
+### How Frame Traveles
+
+Switchs learn MAC address, and populate their MAC tables, by looking at Frames' Source field.
+
+Whenever a device tries to send a Frame, Switch will try to find a device with Destination MAC, if not found, it will Flood the Packet to anywhere trying to find the MAC address.
+
+#### Flood vs Broadcast
+
+A Broadcast Frame, has al F's (all 1s), in the Destination field. This is a one to everyone transmition (opposite of Unicast).
+
+Switchs don't store all F's in their MAC table, as this address is reserved for Broadcasting.
+
+The end result is just like a Flood behavior, but the difference is that in our example, the Flooding is happening due to an Unicast communication where the Switch doesn't know which device holds Destination MAC.
+
+## Tools
+
+### CISCO Packet Tracer
+
+Connect to switch
+```
+en
+show mac address-table
+```
