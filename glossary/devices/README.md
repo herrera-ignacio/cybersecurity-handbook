@@ -12,6 +12,10 @@ Port Multiplier. It takes a 'handoff' connection, like a Router, and then create
 
 Its job it to take receiving packets, and forward them to other network devices in the Local Area Network, but it cannot make a connection from LAN to WAN (Internet), so it needs Routing capabilities to send packets to the Internet.
 
+### Transparent Bridging
+
+From the point of view of devices connected to a Switch, it doesn't exist, it is 'transparent' to them.
+
 ### Routers vs Switchs
 
 Lot of today Routers, come with Switch ports built-in.
