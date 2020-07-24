@@ -105,6 +105,8 @@ An example problem, would be if you connect a Hub with multiple devices to a Swi
 
 Virtual 'Switches' inside the same physical Switch, so you can create a logical separation without the need of a physical one.
 
+### Advantages
+
 * Save money.
 * Can transverse different switches, so distance constraint between different switches can be overcomed if you use a same virtual network.
 * Switches come with default VLANS (1, and 1002 to 1005) that cannot be deleted.
@@ -112,6 +114,11 @@ Virtual 'Switches' inside the same physical Switch, so you can create a logical 
 * VLAN ranges between 1 and 4094 on a switch depending on the platform.
 	* 1 to 1005 are considered _Normal_.
 	* 1006 to 4094 are considered _Extended_.
+* More secure, connectivity is only available with devices on the same VLAN.
+
+### Cautions
+
+* Default VLAN (VLAN 1) can be used by an attacker to gain access to otherwise inaccesible areas of your network. This is why it is considered a best practice to remove all interfaces from default VLAN.
 
 ---
 

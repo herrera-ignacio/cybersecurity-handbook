@@ -171,7 +171,7 @@ no exec-time
 end
 ```
 
-### Config VLAN
+### Set VLAN devices
 
 Name
 
@@ -184,7 +184,11 @@ exit
 do show vlan brief
 ```
 
-Move Ports from Roter into VLAN
+Move Ports from Roter into VLAN, we need to explicitly configuring the ports as __Access__ ports.
+
+The ports on Cisco switches are set to auto-negotiate their __Switchport Mode__ to either __Access__ or __Trunk__ using the __Dynamic Trunking Protocol (DTP)__. 
+
+According to Cisco, it is always a good practice to explicitly configure the Switchport.
 
 ```
 en
@@ -204,7 +208,7 @@ en
 show interface faceEthernet 0/24 switchport
 ```
 
-Another way
+Another way, create VLAN if not exists
 ```
 en
 interface f 0/24
@@ -212,4 +216,80 @@ switchport mode access
 switchport access vlan <num> // creates vlan if not exists
 exit
 show vlan brief
+```
+
+### Voice VLAN
+
+Voice requires special considerations because of its nature as a payload and because of its sensitivity from both a quality of service both as a privacy standpoint. As such, CISCO has developed a special type of VLAN that accommodates the needs of voice.
+
+Modern voice and data networks only require one port per workstation as most phones have a network port into which a computer can be connected. This way, only one network port is necessary to equip a workstation with both a telephone and a computer. Transmitting voice and data over a single connection while at the same time maintaining the quality of service and security demand VLAN mechanisms appropriate to accommodate such requirements.
+
+```
+configure terminal
+vlan 50
+name Voice
+exit
+vlan 60
+name Data
+exit
+```
+
+Then for adding devices we'll do the following
+```
+configure terminal
+interface f 1/0/12
+switchport mode access
+switchport access vlan 60
+switchport voice vlan 50
+end
+```
+
+### Remove Default VLANS
+
+It is not possible to shut down or delete VLAN 1. There is no harm in having VLAN 1 active as long as __there are no ports assigned to it__.
+
+Create a new VLAN with an id of 99 called `null` that will be assigned to all inactive and unused interfaces.
+
+```
+en
+configure terminal
+vlan 99
+name null
+end
+```
+
+Determine which interfaces are currently inactive and which VLANs they are assigned to:
+
+```
+show inteface status
+// look for notconnected
+```
+
+Assign all inactive interfaces to VLAN 99
+
+```
+enable
+configure terminal
+interface range fastethernet 1/0/3 - 21, fastEthernet 1/0/23
+switchport access vlan 00
+exit
+interface range gigabitethernet 1/0/1 - 2
+switchport access vlan 99
+end
+```
+
+Always verify changes:
+
+```
+show vlan brief
+```
+
+You cannot deactivate default VLAN 1.
+
+```
+configure terminal
+vlan 1
+shutdown // won't work
+exit
+no vlan 1 // won't work
 ```
