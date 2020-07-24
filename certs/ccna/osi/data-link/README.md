@@ -113,27 +113,11 @@ Virtual 'Switches' inside the same physical Switch, so you can create a logical 
 	* 1 to 1005 are considered _Normal_.
 	* 1006 to 4094 are considered _Extended_.
 
-### VLAN Configuration
+---
 
-#### Old way
+## [Cisco IOS](./ios)
 
-```
-Switch# vlandatabase
-
-Switch(Vlan)# VLAN 50 name test
-Switch(Vlan)# exit
-
-Switch# show vlan brief
-```
-
-#### New way
-
-```
-Swith(config)# vlan/00
-Switch(config-vlan)# name test
-Switch(config-vlan)# exit
-Switch(config)# do show vlan brief
-```
+* VLAN Configuration
 
 ---
 
