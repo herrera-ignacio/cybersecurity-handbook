@@ -23,6 +23,8 @@ Suppose you have two routers connected through a serial connection, that is your
 	* BDPU
 	* STP Convergence Process
 	* STP Decision Process
+	* PVST: Per VLAN Spanning Tree
+	* Enhancements
 
 ---
 
@@ -247,9 +249,45 @@ From switch power up:
 	* Designated Ports are put in 'forwarding'.
 	* Non-designated ports become 'alternate ports' and are put into 'blocked'.
 
+### PVST: Per VLAN STP
+
+CISCO devices run what is called PVST.
+
+If I have 5 VLANs in my network, I will have 5 Spanning Trees running per switch in my network.
+
+In this case, there's a modification to __Bridge ID__, instead of having 16 bits for Priority, we now have:
+
+```
+Bridge ID = 4 bits VLAN ID + 12 bits priority + MAC
+```
+
+#### Why CISCO does this?
+
+* Better loadbalancing
+* Better bandwith utilization (you can make it so that at least one VLAN uses a link)
+
+### SPT Enchancements
+
+#### Port Fast
+
+__Immediately transitions the port from blocking to forwarding__.
+
+It takes 50 seconds for STP to converge and put the ports from blocking to forwarding (20s blocking, 15s listening, and 15s learning).
+
+Other devices than Switch, for example PCs, that don't understand Spaning Tree BDPU's need to wait 50 seconds for the switch to converge STP and start communication with each others UNLESS you use the _Port Fast_ features on those ports.
+
+#### BPDU Guard
+
+It is used in conjunction with the Port Fast Feature.
+
+Suppose we disconnect one of the end host PCs and connect our own Switch to that port. With the correct VLAN information, we could get all the traffic running between PCs.
+
+As soon as BDPU's are received from a port (because a new Switch powering up will send BDPUs), it will be put in _Error Disable Mode_ (Shutdown).
+
 ---
 
 ## [Cisco IOS](./ios)
 
 * VLAN Configuration
 * Trunking
+* Spanning Tree

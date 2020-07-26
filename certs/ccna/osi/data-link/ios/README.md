@@ -347,3 +347,26 @@ switchport trunk native vlan 150
 do show start
 copy running-config startup config
 ```
+
+## Spanning Tree
+
+Show info about Root ID, and current Bridge ID.
+
+```
+show vlan brief
+show spanning tree vlan <num>
+```
+
+### Port Fast
+
+```
+config terminal
+interface f0/24
+spanning tree portfast
+```
+
+Save work
+
+```
+do wr
+```
