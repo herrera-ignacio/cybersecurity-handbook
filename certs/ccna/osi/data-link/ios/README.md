@@ -293,3 +293,57 @@ shutdown // won't work
 exit
 no vlan 1 // won't work
 ```
+
+## Trunking
+
+### Overview
+
+We have two trunking protocols, one is _Inter Switch Link_ which is CISCO proprietary, and the other one, _Open Standard_ is _IEEE 802.1q_.
+
+### Config
+
+#### Administrative Mode
+
+```
+configure terminal
+interface fastEthernet 0/1
+do show interface fastEthernet 0/1 switchport
+```
+
+If ports by default are in `Administrative Mode: Dynamic Auto mode`, ports won't try to initate trunking. For ports to initiate trunking, they need to be setup to _Dynamic Desirable_.
+
+You won't see anything from `do show interface trunk`
+
+```
+switchport mode dynamic desirable
+do show interface trunk
+```
+
+Or if don't want it to be dynamical/negotiable
+
+```
+switchport mode trunk
+switchport no negotiate
+```
+
+#### Allowed VLANs
+
+Don't let all VLANs allowed (security).
+
+```
+switchport trunk allowed vlan 1,150,200-220
+do show interface trunk
+```
+
+#### Native VLAN
+
+```
+switchport trunk native vlan 150
+```
+
+#### Save configuration
+
+```
+do show start
+copy running-config startup config
+```

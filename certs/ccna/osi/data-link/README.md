@@ -16,6 +16,9 @@ Suppose you have two routers connected through a serial connection, that is your
 * Ethernet
 * Broadcast and Collision Domains
 * VLANs
+* Links on a Switch
+	* Access Ports
+	* Trunk Ports
 
 ---
 
@@ -103,7 +106,11 @@ An example problem, would be if you connect a Hub with multiple devices to a Swi
 
 ## VLANs: Virtual Local Area Networks
 
-Virtual 'Switches' inside the same physical Switch, so you can create a logical separation without the need of a physical one.
+Virtual 'Switches' (they can traverse Switches), so you can create a logical separation without the need of a physical one.
+
+A VLAN is a way to provide connectivity for subnets on a network, without making physical network changes.
+
+On a practical level, this both prevents certain devices from interacting and allows other to connect more efficiently.
 
 ### Advantages
 
@@ -122,18 +129,63 @@ Virtual 'Switches' inside the same physical Switch, so you can create a logical 
 
 ---
 
-## [Cisco IOS](./ios)
+## Links on a Switch
 
-* VLAN Configuration
+* Access Ports
+* Trunk Ports
 
 ---
 
-## Tools
+## Access Ports
 
-### CISCO Packet Tracer
+An Access Port is a __conneciton on a Switch that transmits data from a specific VLAN__. Because an access port is only assigned to a single VLAN, it sends and receives frames that aren't tagged and only have the access VLAN value.
 
-Connect to switch
-```
-en
-show mac address-table
-```
+### Configuration
+
+1. Create a VLAN
+2. Assign VLAN to port
+3. As soon as VLAN becomes part of that single VLAN, it becomes an Access Port.
+
+## Trunk Ports
+
+A Trunk Port can __transmit data from multiple VLANs__.
+
+In constrat to an Access Port, it must use _Frame Tagging_ in order to allow signals to get to the correct endpoint.
+
+### Frame Tagging / Trunking Protocols
+
+* ISL: Inter Switch Link (CISCO proprietary)
+* dot1q: IEEE 802.iq
+
+#### ISL: Inter Switch Link
+
+Takes original _Frame_ and encapsulates it into a new Frame with a different header, with a field that identifies the VLAN the frame belongs to. This inclues a new __26 bytes header__, meaning more overhead that _dot1q_ protocol.
+
+#### dot1q: IEEE 802.iq
+
+Inserts a __4 bytes field__ in original frame that identifies the VLAN the frame belongs to.
+
+This protocol has a feature called "_Native VLAN_", this VLAN is not tagged over the trunk.
+
+### Dynamic Trunking Protocol (DTP)
+
+Performs automatic trunk negotation between switches that are connected on ports.
+
+Can run in one of three modes:
+
+* __Dynamic Desirable__: it will send DTP frames and it will respond to DTP frames.
+	* Port initiates trunking.
+	* Usually default for CISCO devices ending in 50.
+* __Dynamic Auto__: port will respond to DTP frames from the other send, but it will not send.
+	* Port will not initiate trunking.
+	* Usually default for CISCO devices ending in 60.
+* __ON__: set port to trunking unconditionally (it doesn't care about the other side).
+
+The only scenario where you don't automatically get a Trunk, is if two sides have _Dynamic Auto_.
+
+---
+
+## [Cisco IOS](./ios)
+
+* VLAN Configuration
+* Trunking
