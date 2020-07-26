@@ -19,6 +19,10 @@ Suppose you have two routers connected through a serial connection, that is your
 * Links on a Switch
 	* Access Ports
 	* Trunk Ports
+* Spanning Tree Protocol (STP 802.1d)
+	* BDPU
+	* STP Convergence Process
+	* STP Decision Process
 
 ---
 
@@ -146,6 +150,8 @@ An Access Port is a __conneciton on a Switch that transmits data from a specific
 2. Assign VLAN to port
 3. As soon as VLAN becomes part of that single VLAN, it becomes an Access Port.
 
+---
+
 ## Trunk Ports
 
 A Trunk Port can __transmit data from multiple VLANs__.
@@ -182,6 +188,64 @@ Can run in one of three modes:
 * __ON__: set port to trunking unconditionally (it doesn't care about the other side).
 
 The only scenario where you don't automatically get a Trunk, is if two sides have _Dynamic Auto_.
+
+---
+
+## Spanning Tree Protocol (STP 802.1d)
+
+Prevents loops or frames from looping around a network when Redundant Links are present between switches, what's called a layer 2 loop or _Broadcast Storm_, which is related to other problems as _Trashing the MAC table_.
+
+We have a Redundant Link when you can access a device from more than one link.
+
+STP is __on by default__ on all switches and it is highly recommended. You may turn it off under certain circunstances.
+
+### BDPU: Bridge Protocol Data Unit
+
+Spannig Tree Protocol shuts down redundant links.
+
+When switches power up, by default, they start sending each other _Spanning Tree Protocol Frames_ called __BDPU's__. BDPU's are sent every 2 seconds out to all ports, then the STP initialization begins following the STP Decision Process.
+
+BDPU's have four fields:
+
+* Root Bridge ID: Priority field (16 bits) plus your MAC address (48 bits)
+* Root Path Cost: 
+* Sender Bridge ID
+* Sender Port ID
+
+### STP Initialization (Convergence Process)
+
+STP initializes in 3 steps:
+
+1. Elect 1 Root Bridge per Layer 2 domain (Lowest Bridge ID)
+2. Elect 1 Root Port per Non Root Switch (STP Decision Process)
+3. Elect 1 Designated Port per Segment (link between two swi tches)
+	* Lowest Rooth Path Cost -> Lowest Sender Port ID
+
+### STP Decision Process
+
+Four step process, done for each switch.
+
+1. Lowest Bridge ID
+	* When switch receives a BDPU from another switch with a lower bridge ID, it stops sending its own BDPU's and starts ringling those superior BDPU's.
+2. Lowest Root Path Cost
+	* Distance for each link speed, 10mbps = 100, 100mbps = 19, 1000mbps = 4.
+	* Root Path cost inside of a BDPU is incremented when a BPDU enters a switch.
+	* If costs are the same, then we move to the next step.
+3. Lowest Sender Bridge ID
+	* If sender bridges IDs are the same, then we move to the next step.
+4. Lowest Sender Port ID
+
+### STP Port States
+
+From switch power up:
+
+1. Blocking (20 segs)
+2. Listening, Spanning Tree Forward Delay (15 segs)
+3. Learning, Spanning Tree Forward Delay (15 segs)
+	* To reduce flooding, once forwarding starts, you try to populate the MAC-table as much as possible.
+4. Forwarding
+	* Designated Ports are put in 'forwarding'.
+	* Non-designated ports become 'alternate ports' and are put into 'blocked'.
 
 ---
 
