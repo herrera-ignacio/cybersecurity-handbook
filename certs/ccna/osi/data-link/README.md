@@ -25,6 +25,8 @@ Suppose you have two routers connected through a serial connection, that is your
 	* STP Decision Process
 	* PVST: Per VLAN Spanning Tree
 	* Enhancements
+* Router on a Stick Topology
+* Inter-VLAN using SVIs
 
 ---
 
@@ -132,6 +134,10 @@ On a practical level, this both prevents certain devices from interacting and al
 ### Cautions
 
 * Default VLAN (VLAN 1) can be used by an attacker to gain access to otherwise inaccesible areas of your network. This is why it is considered a best practice to remove all interfaces from default VLAN.
+
+### CISCO
+
+VLANs on your Switches are stored in a file in flash called `vlan.dat`.
 
 ---
 
@@ -286,8 +292,122 @@ As soon as BDPU's are received from a port (because a new Switch powering up wil
 
 ---
 
+## VTP: VLAN Trunking Protocol
+
+VTP employs a __server-client mechanism__, so that if you make one Switch the VTP Server, and the rest as Clients, if you create VLANs on the Server Switch, Client Switchs will be listening and automatically create those VLANs too.
+
+This has nothing to do with bringing up trunks. It is named like this because it __only works over trunked ports/links__.
+
+VTP can modify `vlan.dat`, with modifications that are carried downstream from the Server Switch in VTP advertisements.
+
+* Creating VLAN
+* Deleting VLAN
+* Modifying VLAN (name, MTU)
+
+### Modes
+
+1. __VTP Server Mode__: will send its modifications to other devices, and also listen to other servers.
+2. __VTP Client Mode__: vlan modifications are not allowed if not received from server.
+3. __VTP Transparent Mode__: will relay VTP advertisements, but it will not apply the modifications to itself. It is allowed to make its own modifications.
+
+### Versions
+
+* 1: default
+* 2: supports token-ring VLANs.
+
+---
+
+## Router on a Stick Topology
+
+Setup that consists of a _Router_ and a _Switch_ connected using one Ethernet link configured as an 802.1q Trunk Link. The _Switch_ is configured with multiple VLANs and the _Router_ performs all routing between the different networks/VLANs.
+
+![router-on-a-stick](http://www.firewall.cx/images/stories/tk-cisco-routers-on-stick-1.jpg)
+
+### Trunk link on Router
+
+1. You need to create a subinterface.
+	* `interface x/y.sub`, for example `FastEthernet 0/0.10`, to create subinterface 10 on FastEthernet 0/0 physical interface.
+	* It is best practice to use VLAN ID.
+2. Assign encapsulation to subinterface.
+	* `encapsulation dot1q x`, for example `encapsulation dot1q 10`.
+3. Each subinterface will be assigned the first IP address in each subnet.
+
+#### Full example
+
+```
+YEDGE1#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+NYEDGE1(config)#interface gigabitethernet 0/0.16
+NYEDGE1(config-subif)#encapsulation dot1q 16
+NYEDGE1(config-subif)#ip address 192.168.16.1 255.255.255.0
+NYEDGE1(config-subif)#interface gigabitethernet 0/0.17
+NYEDGE1(config-subif)#encapsulation dot1q 17
+NYEDGE1(config-subif)#ip address 192.168.17.1 255.255.255.0
+NYEDGE1(config-subif)#interface gigabitethernet 0/0.18
+NYEDGE1(config-subif)#encapsulation dot1q 18
+NYEDGE1(config-subif)#ip address 192.168.18.1 255.255.255.0
+NYEDGE1(config-subif)#interface gigabitethernet 0/0
+NYEDGE1(config-if)#no shutdown
+NYEDGE1(config-if)#exit
+NYEDGE1(config)#exit
+NYEDGE1#
+```
+
+### Troubleshooting
+
+1. Physical Layer: Physical cabling and connectivity
+2. Data Link Layer: Encapsulation or VLAN ID mismatch
+	* `show run interface`
+	* `show interface trunk`
+3. Data Link Layer: Misconfiguration of the subinterfaces
+	* Compare router configuration to that of its interfaces, `show running-configuration`
+	* `show interface`
+4. Network Layer: Misconfiguration of the IP addresses
+	* `show ip interface brief`
+
+---
+
+## Inter-VLAN routing using SVI, Switched Virtual Interfaces
+
+In sites with a larger LAN, network designers choose to use Layer 3 switches for most inter-VLAN routing.
+
+A Layer 3 switch (also called a multilayer switch) is one device, but it executes logic at two layers: Layer 2 LAN switching and Layer 3 IP routing. The Layer 2 switch function forwards frames inside each VLAN, but it will not forward frames between VLANs. The Layer 3 forwarding (routing) logic forwards IP packets between VLANs.
+
+![svi](https://ptgmedia.pearsoncmg.com/images/chap17_9780135792735/elementLinks/2735_17fig03_alt.jpg)
+
+There are many benefits to configuring inter-VLAN routing using a layer 3 switch rather than a router on a stick topology whenever possible. Some of these include fewer single points of failure, elimination of bottlenecks as well as elegance of configuration.
+
+### Configuration
+
+1. Create three SVIs, one per subnet and VLAN combination.
+	* `interface vlan <VLAN ID>`
+	* `ip address 192.168.<vlanID>.1 <subnet>`
+2. Check proper creation
+	* `show ip interface brief`
+3. Enable routing, as layer 3 switches don't have it enabled by default.
+	* `ip routing`
+
+### Troubleshooting
+
+* __VLANs__: Make sure you have configured the VLANs correctly on the access ports that connect the end devices as well as on any trunk ports, in cases where more than one switch is involved.
+* __SVIs__: Make sure you have configured the SVIs correctly and with the appropriate IP addresses.
+
+1. Examine related VLAN access ports.
+	* `show interface status`
+2. Check the VLAN of SVIs
+	* `shop ip instances brief`
+3. Confirm _trunk_ between switches passes all of the VLANs that are routed
+	* `show interfaces trunk`
+4. Examine IP addresses of SVIs.
+	* `show ip interface brief`
+5. Determine if routing is enabled as it should.
+	* `show ip route`
+
+---
+
 ## [Cisco IOS](./ios)
 
 * VLAN Configuration
 * Trunking
-* Spanning Tree
+* Spanning Tree Protocol
+	* Port Fast

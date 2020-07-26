@@ -114,6 +114,26 @@ write memory // equals
 wr //equals
 ```
 
+## Troubleshooting
+
+### Show interfaces
+
+```
+show interfaces brief
+```
+
+### Ping
+
+```
+ping <destinationIP>
+```
+
+### IP Route Table
+
+```
+show ip route
+```
+
 ## VLAN Config
 
 ### Creation
@@ -302,7 +322,7 @@ We have two trunking protocols, one is _Inter Switch Link_ which is CISCO propri
 
 ### Config
 
-#### Administrative Mode
+### Administrative Mode (dynamic/trunk)
 
 ```
 configure terminal
@@ -326,12 +346,20 @@ switchport mode trunk
 switchport no negotiate
 ```
 
+#### Trunk protocol
+
+```
+switchport trunk encapsulation ?
+switchport trunk encapsulation dot1q
+```
+
 #### Allowed VLANs
 
 Don't let all VLANs allowed (security).
 
 ```
 switchport trunk allowed vlan 1,150,200-220
+runk allowed vlan none // remove all
 do show interface trunk
 ```
 
@@ -370,3 +398,44 @@ Save work
 ```
 do wr
 ```
+
+---
+
+## VTP: VLAN Trunking Protocol
+
+Make a Switch, VTP Server. By default all CISCO devices are set as Servers.
+
+All Switches in your network, if using VTP, must be in the same domain, otherwise they will not talk VTP with each others.
+
+```
+config terminal
+vtp mode ?
+vtp mode server
+
+vtp domain ?
+vtp domain <name>
+vtp password <name>
+
+do show vtp status
+// Configuration Revision, is a count of the modifications made to vlan.dat file
+vtp version 2  // needed to actually ve running in version 2
+vtp version 1
+```
+
+Set another switch as transparent/client
+
+```
+config terminal
+vtp mode transparent/client
+vtp domain <name>
+vtp password <pwd>
+```
+
+Save work on Server switch
+
+```
+do wr
+```
+
+---
+
