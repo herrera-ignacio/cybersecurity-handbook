@@ -3,6 +3,9 @@
 * 32 bits length
 * 4 fields of 8 bits separated by a dot (_Dotted Decimal Format_)
     * Max value of 255 (decimal) per octet
+* Classful IP Addressing
+    * Subnets
+* Classless IP Addressing
 
 ## Classful IP Addressing
 
@@ -37,9 +40,23 @@ For any bit in the IP address, if the corresponding bit in the subnet mask is on
 
 You can then __deduce number of hosts__ with `2^n - 1` where `n` is the number of bits in host portion of the address
 
-    ### Must Know
+### Must Know
 
 * You cannot use the first address x.x.x.0 and the last address x.x.x.255 in any network for your PC.
     * First address x.x.x.0 is for the network.
     * Last address x.x.x.255 is the broadcast address.
     * Then you can only assign from x.x.x.1 to x.x.x.254
+
+## Classless IP Addressing
+
+Classful IP addressing is unsuitable if we want to 'buy' less than 254 addresses, so if a company needs 30 addresses, how do we do that?
+
+Let's see this with an example.
+
+Suppose we have `150.101.45.0/27` in CIDR notatation, we know its submask will be `255.255.255.224`. We only needed to look at the last octet to know this, which in binary is `1110 0000 = 128 + 64 + 32 + 0 0 0 0 0 = 224`.
+
+The last bit indicates our '_block size_', so we have network addresses at `150.101.45.0`, `150.101.45.32`, `150.101.45.64`, `150.101.45.96`, `150.101.45.128`, all the way to `x.x.x.255`.
+
+The hosts are the reamining `0`s. We also know that the remaining bits for the hosts can only get up to 31 in decimal, also, that the first address `150.101.45.0` is reserved for the _Network Address_, and the last one `150.101.45.31` is reserved for _Broadcast_, so we end up with a range of `150.101.45.1` to `150.101.45.30` 30 valid addresses.
+
+Then if you get asked to buy 30 addresses, you need to buy an IP addresses with a `/27` mask or a `255.255.255.224` mask.
