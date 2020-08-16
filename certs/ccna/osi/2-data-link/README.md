@@ -32,6 +32,7 @@ Suppose you have two routers connected through a serial connection, that is your
 * [VTP: VLAN Trunking Protocol](./vtp)
 * [Router on a Stick Topology](./router-on-a-stick)
 * [Inter-VLAN using SVIs](./svis)
+* [Point to Point Protocol](./ptp)
 * [Cisco IOS](./ios)
 	* Basic commands
 	* Troubleshooting
