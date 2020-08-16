@@ -54,3 +54,12 @@ Usually repeaters mean that the network wasn't properly designed.
 Multi-port repeater.
 
 A Hub take signal from one port and flood the signal out to every other port (devices) except the port that originated the signal.
+
+## Router Boot Sequence
+
+1. Router performs a Power ON self test to verify all hardware function.
+2. Program in ROM (called Bootstrap) looks for the IOS (default Flash) and loads it.
+3. IOS is expanded into RAM and startup config in NVRAM is loaded.
+4. Config from NVRAM is loaded into RAM as the running-config.
+5. If start-up config not present look for TFTP server.
+6. If TFTP not found go into config dialogue.

@@ -19,3 +19,11 @@ Protocol Data Unit at layer is callaed a _Packet_.
 * [ARP: Adress Resolution Protocol](./arp)
 * [Serial Connections](./serial)
 * [IP Routing Theory](./iprouting)
+  * Dynamic Routing
+    * RIP
+    * EIGRP
+    * OSPF
+    * Hot Standby Routing Protocol
+  * Static Routing
+* [IPv6](./ipv6)
+  * NDP: Neighbor Discovery Protocol

@@ -33,6 +33,7 @@ Suppose you have two routers connected through a serial connection, that is your
 * [Router on a Stick Topology](./router-on-a-stick)
 * [Inter-VLAN using SVIs](./svis)
 * [Point to Point Protocol](./ptp)
+* [Frame Relay](./frame-relay)
 * [Cisco IOS](./ios)
 	* Basic commands
 	* Troubleshooting

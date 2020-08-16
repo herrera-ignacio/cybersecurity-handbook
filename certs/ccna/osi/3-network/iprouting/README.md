@@ -110,4 +110,16 @@ Each OSPF network that is divided into different areas must follow these rules:
 * ASBR Summary LSA
 * Internal LSA
 
+## [FHRP: First Hop Redundancy Protocols](https://en.wikipedia.org/wiki/Category:First-hop_redundancy_protocols)
 
+Protocol which is designed to protect the default gateway used on a subnetwork by allowing two or more routers to provide backup for that address. In the event of failure of an active router, the babkup router will take over the address, usually between a few seconds.
+
+### HSRP: Hot Standby Routing Protocol
+
+CISCO's proprietary alternative for establishing a fault-tolerat default gateway. This protocol establishes an association between gateways in order to achieve default gateway failover if the primary gateway becomes inaccessible. HSRP gateways send multicast _hello_ messages to other gateways to notify them of their priorities and current status.
+
+### GLBP: Gateway Load Balancing Protocol
+
+CISCO's proprietray protocol that attempts to overcome the limitations of existing redundant router protocols by adding basic _Load Balancing_ functionality.
+
+In addition to being able to set priorities on different gateway routers, GLBP allows a weighting parameter to be set. Based on this weighting, ARP requests will be answered with MAC addresses pointing to different routers. Thus, by default, load balancing is not based on traffic load, but rather on the number of hosts that will use each gateway router. GLBP load balances in __Round-Robin__ fashion by default.
