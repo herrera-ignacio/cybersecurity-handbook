@@ -60,3 +60,7 @@ The last bit indicates our '_block size_', so we have network addresses at `150.
 The hosts are the reamining `0`s. We also know that the remaining bits for the hosts can only get up to 31 in decimal, also, that the first address `150.101.45.0` is reserved for the _Network Address_, and the last one `150.101.45.31` is reserved for _Broadcast_, so we end up with a range of `150.101.45.1` to `150.101.45.30` 30 valid addresses.
 
 Then if you get asked to buy 30 addresses, you need to buy an IP addresses with a `/27` mask or a `255.255.255.224` mask.
+
+## Resources
+
+http://www.subnettingquestions.com
