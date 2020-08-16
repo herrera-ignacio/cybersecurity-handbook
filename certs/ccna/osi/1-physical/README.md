@@ -1,7 +1,10 @@
 # 1. Physical Layer
 
+The physical layer defines the means of transmitting raw bits over a physical data link connecting network nodes.
+
+The bitstream may be grouped into code words or symbols and converted to a physical signal that is transmitted over a transmission medium. The physical layer provides an electrical, mechanical, and procedural interface to the transmission medium. The shapes and properties of the electrical connectors, the frequencies to broadcast on, the line code to use and similar low-level parameters, are specified by the physical layer.
+
 * Cables
-	
 * Repeaters
 * Hubs
 

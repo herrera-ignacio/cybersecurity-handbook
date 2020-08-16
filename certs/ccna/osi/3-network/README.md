@@ -6,9 +6,12 @@ So if you wanna go from one broadcast domain to another, you need layer 3. Speci
 
 There's broadcast domains on layer 2 (VLANs) and on layer 3.
 
+# PDU: Packet
+
+Protocol Data Unit at layer is callaed a _Packet_.
+
 ## TOC
 
-* [PDU: Packet](./pdu)
 * [Addressing Scheme: IP Address](./ip)
   * Classful
   * Classless

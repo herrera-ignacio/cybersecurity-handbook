@@ -1,6 +1,6 @@
 # Layer 2: Data Link
 
-> Controls communication between one device and the next immediately connected device, on the immediate physical link.
+Controls communication between one device and the next immediately connected device, on the immediate physical link.
 
 In the CISCO world, whenever you see a thunderbolt being drawn, it means it is a _serial connection_, which in a router is your _Wide Area link_.
 

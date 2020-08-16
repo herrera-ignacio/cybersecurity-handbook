@@ -4,11 +4,28 @@
 
 ### 1. [Physical](./1-physical)
 
+The physical layer defines the means of transmitting raw bits over a physical data link connecting network nodes.
+
 ### 2. [Data Link](./2-data-link)
+
+Controls communication between one device and the next immediately connected device, on the immediate physical link.
+
+* PDU: Frame
+* Addressing Scheme: MAC
 
 ### 3. [Network](./3-network)
 
-### 4. Transport
+Controls communication between broadcast domains.
+
+* PDU: Packet
+* Addressing Scheme: IP
+
+### 4. [Transport](./4-transport)
+
+Controls communication between end hosts/devices, which can be either reliable or not.
+
+* PDU: Segment
+* Addressing Scheme: Ports
 
 ### 5. Session
 
