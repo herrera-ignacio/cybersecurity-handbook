@@ -13,5 +13,6 @@ There's broadcast domains on layer 2 (VLANs) and on layer 3.
   * Classful
   * Classless
   * Subnetting
-* [ARP](./arp)
-
+* [ARP: Adress Resolution Protocol](./arp)
+* [Serial Connections](./serial)
+* [IP Routing Theory](./iprouting)
