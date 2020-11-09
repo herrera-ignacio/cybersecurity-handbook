@@ -1,16 +1,10 @@
-# Cybersecurity Guidelines
+# Cybersecurity Handbook
 
 ## :pushpin: Description
 
-This attemps to be a guideline for Cybersecurity knowledge. I believe this is the kinds of topics that encourages you to persue your curiosity and lets you decide how depth to dive in a specific subject.
+This attemps to be a collection of Cybersecurity knowledge. I seek to encourage you to persue your curiosity. It's up to you how deep you want to dive in any subject.
 
-One problem with Cybersecurity nowadays is that there might not be a clear path if you want to make a career, neither a lot of information of which paths are available right now. There's not limited ways to become a Cybersecurity expert, neither required certifications or degrees, but I intend to put some lights into your road at least, which you may find helpful whenever you don't know where to start or where to go next.
-
-## :memo: How To Use
-
-* Each section tries to give a practical introduction to the topic it concerns.
-* Each topic is only described in an introductory level, so you can understand the underlying concept. Learning how to apply those concepts in real-life scenarios is up to you to research and experiment.
-* Most sections encourages/require practice on your own, this is needed if you want to make a profession out of this and it's not just for curiosity.
+Each topic is only described in an introductory level, so you can understand the underlying concept. Learning how to apply those concepts in real-life scenarios is up to you to research and experiment.
 
 ## Useful Links
 
@@ -27,7 +21,13 @@ One problem with Cybersecurity nowadays is that there might not be a clear path 
 
 ## Lectures
 
+### Pentesting & Bug hunter
+
 * [Defcon 23, Jason Haddix, How to Shot Web (2015)](./lectures/d23-how-to-shoot-web)
+
+### Cybersecurity
+
+* [Cyber threat intelligence](./lectures/cyber-threat-intelligence)
 
 ## Glossaries (A-Z)
 
@@ -153,7 +153,7 @@ Some must know terms related to protocols, technology, etc...
 * [XSS](./burp/xss)
 * [Host-header attack](./burp/host-header)
 
-## Certifications
+## Certifications guidelines
 
 * [Network+](./certs/net+)
-  * Network Troubleshooting and Tools
+* [Security+](./certs/security+)
