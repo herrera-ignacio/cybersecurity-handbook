@@ -29,7 +29,20 @@ Each topic is only described in an introductory level, so you can understand the
 
 * [Cyber threat intelligence](./lectures/cyber-threat-intelligence)
 
-## Glossaries (A-Z)
+## Topics (A-Z)
+
+### Burp Suite
+
+* [Configure Burp suite](./burp/configure.md)
+* [XSS](./burp/xss)
+* [Host-header attack](./burp/host-header)
+
+### Cybersecurity 
+
+* [CID Triad](./sec-glossary/cid)
+* [Cybersecurity](./sec-glossary/cybersecurity)
+* [Defense in Depth](./sec-glossary/did)
+* [OWASP](./sec-glossary/owasp)
 
 ### Cryptograpgy
 
@@ -49,31 +62,6 @@ Each topic is only described in an introductory level, so you can understand the
 * [Hash/Length Extension](./crypto/attacks/hash-extension)
 * [Padding Oracle](./crypto/attacks/padding-oracle)
 * [Stream Cipher Reuse](./crypto/attacks/stream-cipher-reuse)
-
-### Web Vulnerabilities
-
-* [Auth-Z: Forced Browsing/Improper Authorization](./vulnerabilities/auth-z)
-* [Clickjacking](./vulnerabilities/clickjacking)
-* [Command Injection](./vulnerabilities/command-injection)
-* [Cookie Tampering](./vulnerabilities/cookie-tampering)
-* [CORS insecure configuration](./vulnerabilities/cors-insecure)
-* [CSRF: Cross-Site Request Forgery](./vulnerabilities/csrf)
-* [File Inclusion](./vulnerabilities/file-inclusion)
-* [File Upload](.vulnerabilities/file-upload)
-* [Host Header](./vulnerabilities/host-header)
-* [HTML Injection](./vulnerabilities/html-injection)
-* [Insuficient SPF](./vulnerabilities/insuficient-spf)
-* [MIME Sniffing](./vulnerabilities/mime-sniffing)
-* [Null Termination](./vulnerabilities/null-termination)
-* [Path Traversal](./vulnerabilities/path-traversal)
-* [Parameter Tampering](./vulnerabilities/parameter-tampering)
-* [SQLi: Data Exfiltration](./vulnerabilities/sql-exfiltration)
-* [SQLi: SQL Injection](./vulnerabilities/sql-injection)
-* [SSRF: Server-Side Request Forgery](./vulnerabilities/ssrf)
-* [Subdomain Takeover](./vulnerabilities/subdomain-takeover)
-* [Unchecked Redirects](./vulnerabilities/unchecked-redirects)
-* [XSS: Cross-Site Scripting](./vulnerabilities/xss)
-* [XXE: XML External Entities](./vulnerabilities/xml-entities)
 
 ### Networking
 
@@ -112,17 +100,6 @@ Some must know terms related to protocols, technology, etc...
 * [User Agent](./glossary/user-agent)
 * [WHATWG](./glossary/whatwg)
 
-### System Vulnerabilities
-
-* [Shellshock](./pentesting/shellshock)
-
-### Cybersecurity 
-
-* [CID Triad](./sec-glossary/cid)
-* [Cybersecurity](./sec-glossary/cybersecurity)
-* [Defense in Depth](./sec-glossary/did)
-* [OWASP](./sec-glossary/owasp)
-
 ### Offensive Security
 
 * [Architecture Review](./offensive/architectuer-review)
@@ -132,6 +109,10 @@ Some must know terms related to protocols, technology, etc...
 * [Recon](./offensive/recon)
 * [Threat Modeling](./offensive/threat-modeling)
 * [Web Security](./offensive/web-sec)
+
+### System Vulnerabilities
+
+* [Shellshock](./pentesting/shellshock)
 
 ### Tools
 
@@ -147,11 +128,35 @@ Some must know terms related to protocols, technology, etc...
 * [Shodan](./tools/shodan)
 * [Zenmap](./tools/zenmap)
 
-#### Burp Suite
+### Web Vulnerabilities
 
-* [Configure Burp suite](./burp/configure.md)
-* [XSS](./burp/xss)
-* [Host-header attack](./burp/host-header)
+* [Auth-Z: Forced Browsing/Improper Authorization](./vulnerabilities/auth-z)
+* [Clickjacking](./vulnerabilities/clickjacking)
+* [Command Injection](./vulnerabilities/command-injection)
+* [Cookie Tampering](./vulnerabilities/cookie-tampering)
+* [CORS insecure configuration](./vulnerabilities/cors-insecure)
+* [CSRF: Cross-Site Request Forgery](./vulnerabilities/csrf)
+* [File Inclusion](./vulnerabilities/file-inclusion)
+* [File Upload](.vulnerabilities/file-upload)
+* [Host Header](./vulnerabilities/host-header)
+* [HTML Injection](./vulnerabilities/html-injection)
+* [Insuficient SPF](./vulnerabilities/insuficient-spf)
+* [MIME Sniffing](./vulnerabilities/mime-sniffing)
+* [Null Termination](./vulnerabilities/null-termination)
+* [Path Traversal](./vulnerabilities/path-traversal)
+* [Parameter Tampering](./vulnerabilities/parameter-tampering)
+* [SQLi: Data Exfiltration](./vulnerabilities/sql-exfiltration)
+* [SQLi: SQL Injection](./vulnerabilities/sql-injection)
+* [SSRF: Server-Side Request Forgery](./vulnerabilities/ssrf)
+* [Subdomain Takeover](./vulnerabilities/subdomain-takeover)
+* [Unchecked Redirects](./vulnerabilities/unchecked-redirects)
+* [XSS: Cross-Site Scripting](./vulnerabilities/xss)
+* [XXE: XML External Entities](./vulnerabilities/xml-entities)
+
+### Windows Security
+
+* [MBSA - Microsoft Baseline Security Analyser](./windows-sec/mbsa)
+* [Windows Security Infrastructure](./windows-sec/infrastructure)
 
 ## Certifications guidelines
 
