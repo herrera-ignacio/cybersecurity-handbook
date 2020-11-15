@@ -27,7 +27,10 @@ Each topic is only described in an introductory level, so you can understand the
 
 ### Cybersecurity
 
+#### SOC Analyst
+
 * [Cyber threat intelligence](./lectures/cyber-threat-intelligence)
+* [Vulnerabity Management Fundamentals](./lectures/vuln-management-fundamentals)
 
 ## Topics (A-Z)
 
