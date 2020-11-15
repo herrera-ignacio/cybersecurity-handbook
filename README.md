@@ -46,6 +46,7 @@ Each topic is only described in an introductory level, so you can understand the
 * [CID Triad](./sec-glossary/cid)
 * [Cybersecurity](./sec-glossary/cybersecurity)
 * [Defense in Depth](./sec-glossary/did)
+* [IOC: Indicator of Compromise](./sec-glossary/ioc)
 * [OWASP](./sec-glossary/owasp)
 
 ### Cryptograpgy
