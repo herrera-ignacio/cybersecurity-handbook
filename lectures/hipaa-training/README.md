@@ -8,6 +8,8 @@
 * Most common issues
 * HIPAA Violations
 * Covered entities
+* Cyber Attacks
+* HIPAA Breach Notification Rule
 * SRA Tool
 
 ## What is HIPAA?
@@ -145,4 +147,17 @@ Entities that process nonstandard information they receive from another entity i
 
 A person or organization (other than a member of covered entity's workforce) using or disclosing individually identifiable health information to perform or provide functions, activities, or services for a covered entity. These functions, activities, or services include claims processing, data anyltics, utilziation review, and billing.
 
+### Cyber Attacks
 
+* Know different types of malwares.
+* Know different types of malware delivery (phishing, malvertising, insidet threats, removable devices)
+
+### HIPAA Breach Notification Rules
+
+According to HHS, a breach is any type of impermissible use or disclosure under Privacy Rule (PHI/PII).
+
+There is different levels of breach notifications based on data involved on the breach:
+
+* Individual
+* Media (> 500 individuals affected)
+* HHS Secretary
