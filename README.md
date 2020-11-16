@@ -33,6 +33,10 @@ Each topic is only described in an introductory level, so you can understand the
 * [Vulnerabity Management Fundamentals](./lectures/vuln-management-fundamentals)
 * [Malware Threats](./lectures/malware-threats)
 
+#### HIPAA
+
+* [HIPAA Training](./lectures/hipaa-training)
+
 ## Topics (A-Z)
 
 ### Burp Suite
