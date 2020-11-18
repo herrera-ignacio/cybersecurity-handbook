@@ -161,3 +161,7 @@ There is different levels of breach notifications based on data involved on the 
 * Individual
 * Media (> 500 individuals affected)
 * HHS Secretary
+ 
+### SRA Tool
+
+You can get SRA tool from _www.healthit.gov_ by looking for hipaa security risk assessment tool.

@@ -20,3 +20,8 @@
 * Vulnerability Scanning.
 * Types of vulnerabilities.
 
+## 1. IOC and Malware
+
+> Recommended lecture: [Malware Threats](../../lectures/../../lectures/malware-threats)
+
+IOC are artifacts observed on a network or OS that with high confidence indicates a computer intrusion.
