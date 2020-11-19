@@ -26,9 +26,11 @@
 
 IOC are artifacts observed on a network or OS that with high confidence indicates a computer intrusion.
 
-## Attack Types
+## 2. Attack Types
 
 1. Social Engineering
+2. Application/service attacks
+3. Crypto attacks
 
 ### 1. Social Engineering
 
@@ -83,3 +85,45 @@ Variants, such as _SMiShing_.
 * "Trust, but verify"
 * "If you see something, say something"
 
+### 2. Application/service attacks
+
+* __Buffer overflow__: A program, while writting data to a buffer, can overrun the buffer's boundary and overwrite adjacent memory locations.
+* __Injection__: Occurs when untrusted data is sent to an interpreted as part of a command or query (examples are SQL Injection, OS, LDAP, XML).
+* __Cross-site scripting (XSS)__: XSS occurs whenever an application process untrusted data withour proper validation or escaping.
+* __Cross-site request forgery (CSRF)__: Attack that forces an end user to execute unwanted actions on an application. Also known as _session riding_ or _one-click-attack_.
+* __Privilege escalation__: Act of exploiting a bug, design flaw or configuration oversight in an application to gain elevated access to resources that are normally protected from an application or user.
+* __Zero Day Exploits__: Attack that exploits a previously unknown security vulnerability. It may take advantage of a security vulnerability on the same day that the vulnerability becomes generally known (Stuxnet is an example of this).
+* __Impersonation/Masquerading__: Act pretending to be someone or something to gain unauthorized access to a system.
+* __Replay__: Capturing network traffic via eavesdropping, then reestablishing a session by replaying captured traffic using spoofed authentication credentials.
+* __Driver manipulation__:
+  * _Driver_: program that controls a device (printers, media, keyboards, etc).
+  * _Shimming_: creating a library to bypass a driver and perform a function other than the one for which the API was created.
+  * _Refactoring_: set of techniques used to identify the flow and then modify the internal structure of code without changing the code's visible behavior.
+
+#### Prevention
+
+* Good coding practices - OWASP.
+* Filter and validate any user input.
+* Use a _Web Application Firewall_ (WAF).
+* Build security into the _Software Development Lifecycle_ (SDLC) 
+* Have an Incident Response plan in place.
+* 0-day exploits:
+  * Defense in depth
+  * Patch
+  * Keep anti-virus up-to-date.
+* Replay attacks
+  * Token authentication (Kerberos)
+  * MFA/TFA
+  * Encryption
+  * Sequenced session identification
+
+### 3. Crypto attacks
+
+* __Birthday__: Attack on cryptographic hash that looks for hash collisions (exploiting the _1-to-1_ nature of hashing functions).
+* __Known plain text/cipher text__: Attacker attempts to derive a cryptographic key by using pairs of known plain text along with the corresponding cipher text.
+* __Frequency analysis__: Looking at the blocks of an encrypted message to determine if any common pattern exists.
+* Password Attacks
+  * __Dictionary__: Systematically entering each word in a dictionary as a password.
+  * __Brute Force__: Systematically attempting all possible combinations of letters, numbers, and symbols.
+  * __Rainbow tables__: All possible password hashes are computed in advance and those hash values are compared with the password database.
+  * __Pass the hash__: Attacker attempts to authenticate to a remote service by intercepting password hashes on a network.
