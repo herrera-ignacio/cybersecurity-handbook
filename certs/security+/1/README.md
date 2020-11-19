@@ -31,6 +31,7 @@ IOC are artifacts observed on a network or OS that with high confidence indicate
 1. Social Engineering
 2. Application/service attacks
 3. Crypto attacks
+4. Network & Wireless Attacks
 
 ### 1. Social Engineering
 
@@ -127,3 +128,42 @@ Variants, such as _SMiShing_.
   * __Brute Force__: Systematically attempting all possible combinations of letters, numbers, and symbols.
   * __Rainbow tables__: All possible password hashes are computed in advance and those hash values are compared with the password database.
   * __Pass the hash__: Attacker attempts to authenticate to a remote service by intercepting password hashes on a network.
+
+### 4. Network & Wireless attacks
+
+#### Hijacking and related
+
+* __Clickjacking__: tricking a web user into clicking a spoofed button or graphic.
+* __Session hijacking (Cookie)__: exploiting a valid computer session, or session key, to gain unauthorized access to services.
+* __URL hijacking / Typo squatting__: act of registering domains that are similar to those for a known entity but based on a misspelling or typographical error.
+
+#### Network Hijacking
+
+* __MAC Spoofing__: _Media Access Control_ address is a hard-coded number on a _Network Interface Controller_ (NIC). Many drivers allow the MAC address to be changed.
+* __IP Spoofing__: Technique used to gain unauthorized access to machines, whereby an attacker illicitly impersonates another machine by manipulating IP packets. IP Spoofing involves modifying the packet header with a forged (spoofed) source IP address, a checksum, and the order value.
+* __ARP Spoofing__: Attacker sends fake ARP (_Address Resolution Protocol_) messages over a LAN (_Local Area Network). This results in the linking of an attacker's MAC address with the IP address of a legitimate computer or server on the network.
+* __Man-in-the-Middle (MITM)__: Attacker secretly relays and possibly alters the communication between two parties who believe they are directly communicating with each other.* __Denial of Service (DoS)__: Preventing access to resources by users authorized to use those recourses. Attacking systems _availability_.
+* __Distributed Denial of Service (DDoS)__: DoS attack utilizing multiple compromised systems as sources of attack traffic.
+* __Amplification Attacks__: Attacker attempts to get a response to their request in a greater that 1:1 ratio so that the additional bandwith traffic works to congest and slow the responding server down. The ratio achieved is known as the _amplification factor_, and high numbers are possible with UDP based protocols such as NTP, CharGen, and DNS. Usually employed as part of a DDoS attack.
+* __Resolution Attacks (Domain Hijacking / DNS Poisoning / DNS Spoofing)__:
+  * _Poisoning_: Attacker alters the _domain-name-to-IP-address_ mappings in a DNS system to redirect traffic to a rogue system or perform DoS attack.
+  * _Spoofing_: Attacker sends false replies to a requesting system in place of a valid DNS response.
+
+#### Wireless Attacks
+
+* __Evil twin__: Rogue wireless access point poses as a legitimate wireless service provider to intercept information that users transmit.
+* __Rogue AP__: Any wireless access point added to your network that has not been authorized.
+* __Initialization Vector (IV) / nounce__: Arbitrary number that can be used along with a secret key for data encryption. If the IV is weak, as in WEP, it may be reused.
+* __Jamming__: Causing interference with a wireless signal.
+* __Bluejacking__: Sending of unsolicited messages over a Bluetooth connection.
+* __Bluesnarfing__: Gaining of unauthorized access/intercepting data through a Bluetooth connection.
+
+#### DoS & DDoS Prevention
+
+* Work with your ISP / network provider.
+* Border protection / Intrusion Detection & Protection System.
+* Update Network Appliances, OS and Applications.
+* End users' systems are up-to-date and deploy anti-virus/bot prevention.
+* Resolution Attacks prevention
+  * Protect any internal DNS servers
+  * USe authoritative DNS sources only
