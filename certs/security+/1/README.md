@@ -20,11 +20,24 @@
 * Vulnerability Scanning.
 * Types of vulnerabilities.
 
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+
 ## 1. IOC and Malware
 
 > Recommended lecture for different types of malware: [Malware Threats](../../lectures/../../lectures/malware-threats)
 
 IOC are artifacts observed on a network or OS that with high confidence indicates a computer intrusion.
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+
+### OSINT: Open-Source Intelligence
+
+Websites and tools that allow you to gather information on current threats or specific security issues.
+
+* ThreatCrowd
+* OpenPhish
+* OSINT Framework
+* Shodan
 
 ## 2. Attack Types
 
@@ -167,3 +180,28 @@ Variants, such as _SMiShing_.
 * Resolution Attacks prevention
   * Protect any internal DNS servers
   * USe authoritative DNS sources only
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+
+## 3. Threat Actors
+
+A __threat__ is a potential occurrence that can result in an undesirable outcome.
+
+A __threat actor__ is a subject (person or entity) that is responsible for an event that impacts, or has the potential to impact, the security of another subject.
+
+### Types of actors
+
+1. __Script Kiddies__: Derogatory term for people who use hacking techniques but have limited skills. Often such attackers rely almost entirely on automated tools from other authors.
+2. __Hacktivist__: Person who uses hacking techniques to accomplish some activist or political goal.
+3. __Organized crime__: Organized groups seeking to steal money, identities, or corporate secrets.
+4. __Nation states__: Countries sponsoring illegal or fraudulent actions.
+5. __ATP: Advanced Persistent Threat__: Attacker gains access to system and stays there undetected for a long period of time. The intention of ATP is to steal data rather than to cause damage.
+6. Insiders
+7. __Competitors__: Outside organizations seeking to commit corporate espionage for financial or market gain.
+
+### Attributes of actors
+
+* __Internal / external__: Entity's level of access.
+* __Level of sophistication__: Knowledge entity needs to have to exploit the vulnerability.
+* __Resources / funding__: Resources the entity needs to have to exploit the vulenrability.
+* __Intent / motivation__: Why is the entity performing the attack?
