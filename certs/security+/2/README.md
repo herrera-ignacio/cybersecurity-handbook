@@ -278,3 +278,159 @@ SIEM tools collect, correlate, and display data feeds that support response acti
 #### HSM: Hardware Security Module
 
 Hardware-based encryption that manages digital keys, accelerates cryptographic processes, and provides strong access authentication. _Trusted Platform Module (TPM)_ is used to assist with cryptographic key generation.
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+
+## 2. Security Assessment Tools
+
+* Protocol Analyzers / Packet Sniffers.
+* Network Scanners / Mappers.
+* Vulnerability Scanner.
+* Exploitation Frameworks.
+* Wireless Scanners.
+* Configuration Compliance Applications.
+* Banner Grabbing.
+* Password Crackers.
+* Honeypots / Honeynets.
+* Steganography.
+* Data Sanitization Tools.
+
+### Protocol Analyzers / Packet Sniffers
+
+Gathering packet-level information on a network.
+
+* Wireshark.
+* TCPDump.
+
+### Network Scanners / Mappers
+
+Network enumeration.
+
+* Nmap
+* ZenMap
+* Fing (iOS & Android)
+
+### Vulnerability Scanner
+
+Software utility that scans a range of IP Addresses and tests for the presence of known vulnerabilities in software configuration and accessible services. It relies upon a database of known vulnerabilities.
+
+* Nessus (Tenable)
+* OpenVAS (Linux)
+* Nexpose Community Edition
+* Burp Suite
+* OWASP ZAP (Web Apps)
+
+### Exploitation Frameworks
+
+Platforms used for penetration testing and risk assessments. Frameworks contains a set of exploits for known vulnerabilities.
+
+* Kali Linux
+* Social Engineering Toolkit (SET)
+* Metasploit
+* Canvas
+* Core Impact
+* BeEF: Browser Exploitation Framework (web vulnerabilities)
+
+#### Kali Linux
+
+Debian-derived Linux distribution, designed for digital forensics and penetration testing, which is preinstalled with numerous toolkits.
+
+#### Social Engineering Toolkit (SET)
+
+Searchable information resource for people wishing to learn more about the psychological, physical and historical aspects of social engineering.
+
+You will find typical social engineering attacks, specifically designed to target the human element during a penetration test.
+
+#### Metasploit
+
+Utilizing an ever growing database of exploits, you can safely simulate attacks on your network and train yourself/your team.
+
+You can run its own exploitable machine as a VM, _Metasploitable_, and run exploits against it.
+
+### Wireless Scanners
+
+* Gather information about Wi-Fi networks.
+* Detect AP (Rogue or valids).
+* Break encryption keys.
+
+Examples of this are:
+
+* Aerodump
+* Kismet/KisMAC
+* Netstumbler
+* Vistumber
+* inSSIDer
+
+### Configuration Compliance Applications
+
+* __Microsoft Baseline Security Analyzer (MBSA)__: Software vulnerability scanner to analyze targeted Microsoft systems, to detect whether software security patches or baseline configuration settings are missing.
+* __Center for Internet Security (CIS)__
+* __Nessus__.
+
+### Banner Grabbing
+
+Technique used to identify OS, applications and services on a system. It helps to __narrow vulnerability searches__.
+
+* Netcat
+
+### Password Crackers
+
+Used to disclose passwords and assess password strength. Online password-cracking tools enable you to type in the hash and get the password returned in plain text.
+
+* Brutus
+* Cain and Able
+* John the Ripper
+* THC Hydra
+
+### Honeypots / Honeynets
+
+Systems or networks exposed to capture malicious activity. They help gathering investigation evidence & study attack strategies.
+
+### Steganography
+
+Means "_hidden writing_", hidding messages, often in other media, so that unintended recipients are not even aware of any messaage.
+
+There are different approaches:
+
+* Least significant bit insertion.
+* Masking and filtering.
+* Algorithms and transformations.
+
+Common steganography tools include:
+
+* OpenPuff
+* Camouflage
+* Steghide
+* rSteg
+
+### Data Sanitization Tools
+
+Sanitization is the process of removing contents from a device or media.
+
+* DBAN
+* BCWipe
+* Cryptographic erase (CE)
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+
+## 3. Troubleshooting
+
+You should be proficient with the following CLI Tools:
+
+* man
+* ping
+* netstat
+* tracert
+* nslookup / dig
+* arp
+* ipconfig / ip / ifconfig
+* tcpdump
+* nmap
+* netcat
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+
+## 4. Security Technologies
+
+You should be able to interpret output from the following technologies.
+
