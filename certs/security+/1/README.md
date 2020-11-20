@@ -205,3 +205,122 @@ A __threat actor__ is a subject (person or entity) that is responsible for an ev
 * __Level of sophistication__: Knowledge entity needs to have to exploit the vulnerability.
 * __Resources / funding__: Resources the entity needs to have to exploit the vulenrability.
 * __Intent / motivation__: Why is the entity performing the attack?
+
+## 4. Penetration Testing
+
+Authorized, simulated attack on a system, performed to evaluate the security of the system by actively exploiting found vulnerabilities.
+
+1. Information gathering
+2. Threat modeling
+3. Vulnerability Analysis
+4. Exploitation
+5. Post Exploitation
+6. Reporting
+
+This is not the same that:
+
+* __Vulnerability scanning__: allows tester to identify specific vulnerabilities in a system. Most penetration testers will start with this procedure so that they can identify likely targets to attack.
+* __Risk Assessment__: allows an organization to understand cybersecurity risk to organizational operations (mission, functions, image, or reputation), organizational assets, systems or individuals.
+
+### Requirements
+
+* Scope document of what will be tested.
+* Permission to test.
+* Skills to attack resources limiting harm or collateral damage.
+* Plan of attack / steps.
+* Resources & access to conduct the test.
+
+### Information Gathering / Discovery / Reconnaissance
+
+* __Passive reconnaissance__: attempt to gain information about targeted computers/networks without actively engaging with the systems.
+  * Collecting information from public databases.
+  * Talking to employees/partners.
+  * Dumpster diving
+  * etc...
+* __Active reconnaissance__: attempt to gain information about targeted systems by actively engaging with them. Directly focuses on the system to identify weaknesses that could be used to launch an attack.
+  * Port scans
+  * Traceroute information
+  * Network mapping
+  * Vulnerability scanning
+
+### Types of testing
+
+* __Black box__: tester has absolutelty no knowledge of the system and is functioning in the same manner as an outsider attacker.
+* __White box__: tester has significant knowledge of the system and simulates an attack from an insider (such as a rogue employee).
+* __Gray box__: tester has limited knowledge of the target system.
+* __Nonintrisuve tests__: involve passively testing of security controls, performing vulnerability scans, and probing for weaknesses but not exploitintg them.
+* __Intrusive tests__: involve actually trying to exploit vulnerabilities to break into the network.
+
+### Testing activities
+
+* __Initial exploitation__: gain a foothold on a system. This is often with lesser privileges or access.
+* __Pivot (island hopping)__: attacking a system using another, compromised system, that's trusted to the one you are attacking.
+* __Persistence__: maintaing access for a period of time / hiding.
+* __Escalation of privilege__: gaining elevated privileged access to resources that are normally protected from an application/user.
+
+## 5. Vulnerability Testing
+
+A __vulnerability__ is a flaw in a system that can leave it open to an attack or information exposed to a threat.
+
+__Vulnerability scanning__ is an inspection of the potential points of exploit on a system to identify security holes. It detects and classifies system weaknesses in computers, networks, and communications equipment, and predicts the effectiveness of countermeasures.
+
+### Scanning / Assessment
+
+We seek to identify:
+
+* System, network, or application weaknesses.
+* Unpatched or not-updated systems/applications.
+* Common misconfigurations (system settings, policies, or rule sets).
+* A flaw or lack of security controls.
+
+### Scanning / Assessment Types
+
+* __Intrusive__: directly engaging on the target system.
+* __Non intrussive__: gain vulnerability information without actively engaging with systems (i.e. Qualys SSL Labs)
+* __Credentialed vs non-credentialed__: whether or not authentication credentials are used in scanning. Credentialed has lesser risks and may provide more information, but isn't as realistic.
+* __False positive__: occurs when scan mistakenly identifies a vulnerabiltiy when it is not.
+
+### Tools
+
+* OpenVAS (included in Kali Linux)
+
+## 6. Vulnerability Types & Impact
+
+### Overall vulnerabilities
+
+* __Race condition/hazard__: behavior of electronics, software, or other systems where the output is dependent on the sequence or timing of other uncontrollable events, when events do not happen in the order the programmer intended.
+
+* __Improper input handling__: system does not validate input propery, thus, attacker is able to craft input in a form that is not expected by the rest of the application. This will lead to parts of the system receiving unintended input, which may result in altered control flow, arbitrary control of a resource, or arbitrary code execution.l
+
+* __Improper error handling__: system generates an error message that includes sensitive information about its environment, users, or associated data.
+
+* __Misconfiguration/weak configuration__: using insecure configuration or control settings (i.e, browsers, system policies, wi-fi).
+
+* __Weak cipher suites__: use of older or less robust cryptographic algorithms for encrypting data (i.e. DES, WEP).
+
+* __Improper certificate and key management__: allowing unauthorized access to encryption keys or certificates. Allows sensitive data to be decrypted. Also, allowing digital certificates to expire.
+
+* __Improperly configured accounts__: accounts have greater privileges that is needed to perform a function. Solved by Least Privilege Principle.
+
+* __Resource exhaustion__: simple DoS condition that happens when the resources required to execute an action are entirely expended, preventing that action from occurring.
+
+* __Vulnerable business processess__: silently altering parts of specific business processes, or machines facilitating these processes, in order to access systems or altering their behavior.
+
+* __System sprawl / undocumented assets__: allowing unchecked systems or devices on an internal network. Lack of an internal inventory system.
+
+* __Architecture/design weaknesses__: insecurely designed network or system architecture (i.e, not segmenting systems on an internal network).
+
+### Vulnerabilities by system internals
+
+* End-of-life (EOL) systems.
+* Embedded systems.
+* Lack of vendor support.
+
+### Memory/buffer vulnerabilities
+
+Impact on system availability, or code execution. Preventing these attacks begin with _Secure Coding Practices_ and with regularly patching systems.
+
+* Memory leak
+* Integer/Buffer overflow
+* Pointer dereference
+* DLL Injection

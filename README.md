@@ -137,6 +137,12 @@ Some must know terms related to protocols, technology, etc...
 * [Shodan](./tools/shodan)
 * [Zenmap](./tools/zenmap)
 
+#### Vulnerability Scanning
+
+* OpenVAS
+* Volatility (Memory)
+* SQLMap
+
 ### Web Vulnerabilities
 
 * [Auth-Z: Forced Browsing/Improper Authorization](./vulnerabilities/auth-z)
