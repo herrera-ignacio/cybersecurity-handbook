@@ -430,7 +430,114 @@ You should be proficient with the following CLI Tools:
 
 --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
 
-## 4. Security Technologies
+## 4. Security Technology Output
 
-You should be able to interpret output from the following technologies.
+You should be able to analyze & interpret output from the following technologies.
 
+* Host-based FW
+* Host-based HIDS/HIPS
+* Antivirus / Anti-malware
+* File Integrity Checker
+* Application Whitelisting
+* Data Loss Prevention
+* Removable Media Control
+* Patch Management
+* Data Execution Prevention (DEP)
+
+### Host-based Firewalls
+
+* Firewalls
+  * Windows: type `wf.msc`
+  * Linux: `ufw` or `iptables`
+* Firewall configuration
+  * End users shouldn't be allowed to disable the firewall
+  * Monitor both cincoming and outgoing network traffic
+* Output depends on the FW application and OS
+  * Windows Event Viewer
+  * Linux logging `/var/log`
+
+### Host-based HIDS/HIPS
+
+* Sensors on each host relay to a centralized management console
+  * Compiles data to identify distributed trends
+* May be included with Host FW or AntiVirus solution
+* Issues
+  * False positives
+  * False negatives
+  * Matching traffic identified as an attack with the actual network traffic
+* NIST SP 800-94
+  * Guide to IDPS
+
+### Antivirus / Anti-malware
+
+* End-user pop-up warning
+* Centralized management console warning
+* Quarantine vs Removal
+* Issues
+  * AV not updated / outdated signatures
+  * False positives
+  * May be ignored or not seen
+  * Incorrect decision
+  * Malware may still be present
+* Solutions
+  * Auto update
+  * Detach system from the network
+  * Use multiple AV products
+  * Manual removal (_hunting malware with SysInternals_)
+  * Reimage the system
+
+### File Integrity Checker
+
+* Computes a cryptographic hash such as SHA-1 or MD5 for all selected files and creates a database of the hashes.
+* Hashes are periodically recalculated and compared to the hashes in the database, to check for modification.
+* Output to a centralized server.
+* For alerts, determine what changed and why.
+
+### Application Whitelisting
+
+* Organization approves / permits software applications. All others are not allowed by default.
+* _Windows AppLocker_
+  * Publisher, for digitally signed files.
+  * Path, which identifies an application by its location.
+  * File hash, which uses a system-computed cryptographic hash.
+
+### Data Loss Prevention (DLP)
+
+* Prevent sensitive information from physically or logically leaving corporate systems.
+* Designed to detect and prevent unauthorized use and transmission of confidential information.
+* Should include corporate data stored in the cloud.
+* _Network_: Content-filtering (proxy).
+* _System_: Application white-listing.
+* _Hardware_: USB blocking.
+
+### Removable Media Control
+
+* Detects or prevents the use of removable media.
+* Local or network.
+* Set by corporate policy.
+* Exception handling.
+* Use only corporate owned / secured devices.
+* Scan removable media on each use.
+* Encryption.
+
+### Patch Management
+
+* Automatic updates when possible
+* Patching process
+  * Vendor notification
+  * Testing
+  * Staged deployment
+  * Reporting
+* Alerting on failed patches
+* Patching all applications / systems
+
+#### Patch Management Services
+
+* Microsoft System Center Configuration Manager (SCCM) / Systems Management Server (SMS)
+* Linux RPM (Red Hat Package Manager)
+
+### Data Execution Prevention (DEP)
+
+* Hardware or Software.
+* Prevents malware from executing in memory space that is reserved for OS processes.
+* Both AMD and Intel platforms have DEP hardware capabilities.
