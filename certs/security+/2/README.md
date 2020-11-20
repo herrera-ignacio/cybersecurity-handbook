@@ -658,3 +658,88 @@ The administration of mobile devices in an organization.
   * Company has complete control over the device
 * __VDI: Virtual Desktop Infrastructure__
 
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+
+## 6. Security Protocols
+
+* Web (SSL/TLS, HTTPS)
+* DNSSEC
+* SSH
+* Secure Email (S/MIME, POP3S and IMAPS)
+* FTPS & SFTP
+* SRTP: Secure Realtime Transport Protocol
+* LDAPS
+* SNMPv3: Simple Network Management Protocol
+
+### Web
+
+* __SSL: Secure Sockets Layer__
+  * Deprecated by the IETF.
+  * Uses certificates for authentication and encryption form essage integrity and confidentiality.
+  * Establishes a stateful connection.
+
+* __TLS__
+  * Based on SSL latest version 3.0.
+  * Provices privacy (asymmetric encryption), message integrity (Message Authentication Code), and authentication (PKI digital certificates).
+  * Forward secrecy ensuring that any future disclosure of encryption keys cannot be used to decrypt any TLS communications recorded in the past.
+
+* __HTTPS__
+  * Uses SSL/TLS to secure web-based communications.
+  * X.509 digital certificates.
+  * 256-bit encryption keys.
+
+### DNSSEC: Domain Name Service Security
+
+* Suite of IETF specifications
+* Protects aginast DNS Cache Poisoning
+* DNS extensions provide DNS clients (resolvers) origin authentication of DNS data, authenticated denial of existence, and data integrity.
+
+### SSH: Secure Shell
+
+* Replaces telnet for remote communications
+* Establishes a session between client and host computers using an authenticated and encrypted connection
+* Uses the asymmetric (public key) RSA cryptography for both connection and authentication
+* Other protocols can tunnel through SSH
+
+### Secure Email
+
+* __Secure/Multipurpose Internet Mail Extensions (S/MIME)__
+  * Standard for encryption (confidentiality) and signing (authentication) of MIME (email) data
+  * Requires PKI and uses Certificate Authorities (CA)
+  * Internal email
+
+* __POP3S__ and __IMAPS__
+  * Use SSL/TLS to secure emails in transit between a POP or an IMAP server and the client.
+  * External email
+
+### FTPS & SFTP, securing FTP
+
+* FTP (File Transfer Protocol) passes credentials in clear text
+* FTPS extension that adds SSL/TLS
+  * Mutual authentication of parties (certificates)
+  * Data confidentiality (encryption) and integrity (hashing)
+  * FTPS implicit over port 990
+  * FTPS explicit over port 21
+* SFTP (secure FTP) uses SSH to transfer files.
+
+### SRTP: Secure Realtime Transport Protocol
+
+* Secure voide and video transmissions
+* Voice and video calls are established with _Session Initiation Protocol (SIP)_ and data is transmitted with _Realtime Transfer Protocol (RTP)_.
+* Extension to __RTP__, in both unicast and multicast applications, intended to provide:
+  * Encryption
+  * Message Authentication
+  * Integrity
+  * Replay Attack Protection
+
+### LDAPS
+
+* LDAP is a _Directory Protocol_ that contains sensitive unencrypted information about organizational systems and users
+* LDAPS over SSL/TLS
+* Uses TCP port 636
+
+### SNMPv3
+
+* SNMP (_Simple Network Management Protocol_) used to manage networks.
+* Each managed device has a software agent reporting configuration settings and alerts to a central SNMP Management Server.
+* SNMPv1 & SNMPv2 sent all data as clear text, whereas SNMPv3 __encrypts__ data.
