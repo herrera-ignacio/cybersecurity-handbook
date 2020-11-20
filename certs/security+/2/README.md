@@ -255,7 +255,7 @@ SIEM tools collect, correlate, and display data feeds that support response acti
 
 #### Data Loss Prevention . Data Leakage Protection (DLP)
 
-* Prevent sensitive information from physically or logically leaving corporate systems.
+* Prevent sensitive information from physically or logically leaving corporate systems by monitoring, detecting and blocking sensitive data while in use (endpoint actions), in motion (network traffic), and at rest (data storage).
 * Designed to detect and prevent unauthorized use and transmission of confidential information.
 * Network: _Content-filtering_ (proxy).
 * System: _Application white-lising_.
@@ -503,12 +503,9 @@ You should be able to analyze & interpret output from the following technologies
 
 ### Data Loss Prevention (DLP)
 
-* Prevent sensitive information from physically or logically leaving corporate systems.
-* Designed to detect and prevent unauthorized use and transmission of confidential information.
-* Should include corporate data stored in the cloud.
-* _Network_: Content-filtering (proxy).
-* _System_: Application white-listing.
-* _Hardware_: USB blocking.
+Prevent sensitive information from physically or logically leaving corporate systems by monitoring, detecting and blocking sensitive data while in use (endpoint actions), in motion (network traffic), and at rest (data storage).
+
+* Logging to a centralized system.
 
 ### Removable Media Control
 
@@ -541,3 +538,123 @@ You should be able to analyze & interpret output from the following technologies
 * Hardware or Software.
 * Prevents malware from executing in memory space that is reserved for OS processes.
 * Both AMD and Intel platforms have DEP hardware capabilities.
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+
+## 5. Mobile Device Security
+
+* Connection methods
+* Mobile Device Management concepts
+* Enforcement and monitoring
+* Deployment models
+
+### Connection methods
+
+* Cellular
+* Wi-Fi
+* Bluetooth
+* NFC (Near-Field Communications)
+* SATCOM (Satellite Communications)
+* ANT (Proprietary Multicast Wireless)
+* Infrared (Using light in the infrared spectrum)
+* USB / Firewire
+
+#### Celullar communications
+
+* Components
+  * Cellular layout (towers)
+  * Base station (connects to the tower)
+  * Mobile switching office (centerpiece of the operation)
+  * Public switched telephone network (PSTN)
+* Voice technologies
+  * Long-Term Evolution (LTE)
+  * Code Division Multiple Access (CDMA)
+  * Global Systems Mobile (GSM)
+
+#### Bluetooth
+
+* _Personal-Area Network (PAN)_, sohrt-range wireless conectivity.
+* If needed, set to __nondiscoverable__.
+
+#### NFC (Near-Filed Communications)
+
+* Standards for contactless communication between devices.
+* Chips generate electromagnetic fields.
+* Modes of operation
+  * _Perr-to-peer mode_: two mobilde devices exchange data.
+  * _Read/write mode_: active device receives data from a passive device.
+  * _Card emulation_: device is used as a contactless credit car.
+
+### Mobile Device Management
+
+The administration of mobile devices in an organization.
+
+* Software used to inventory, monitor, manage, and secure employees' mobile devices, deployed across multiple mobile service providers and across multiple mobile OS.
+* Device enrollment, provisioning and inventory.
+* Configuration management / updating.
+* Managing applications.
+* Enforcing policies.
+
+#### Objetives
+
+* Separate personal and business content.
+* _Storage segmentation_: segregate business and personal storage.
+* _Containerization_: separate sensitive corporate information from the user's personal use of the device & isolate apps functions.
+* _Remote wipe / sanitization_: sending a command from a centralized management server to remotely clear data, useful when device is lost, stolen, or employee terminates.
+* Full device / application encryption.
+* Screen locks / lockout after specific time.
+* Passwords and pins based on corporate policy.
+* Biometrics.
+* _Context-aware authentication_: additional criteria used for authentication or device usage, such as location, time or activity.
+
+#### Capabilities
+
+* __Mobile Application Management (MAM)__
+  * Restricting applications
+  * Digitally signing applications
+  * Distribution from a centralized, controlled source
+  * Managed through _whitelisting_ or _blacklisting_
+* __Mobile Content Management (MCM)__
+  * Controlling access to data and file storage
+* __Push notitication services__
+  * Brief message or alert
+  * OS Push Notification Service (OSPNS)
+  * Allows auto-updating base OS and client apps
+* __Geolocation__
+  * Uses the devices GPS
+  * Some apps already include this (Maps, Foursquare)
+* __Geofencing__
+  * Defining a greographic permiter
+* __Containerization__
+  * Control access to file storage and sharing capabilities of services
+
+### Enforcement and Monitoring
+
+* __Third-party Apps__
+  * Restrict based on policy
+  * Whitelist applications
+* __Rooting__ (Android) / __Jailbreaking__ (Apple)
+  * Should be forbidden for corporate devices
+* __Sideloading__
+  * Transfer data between two devices (side-channel)
+* __USB On-the-Go (OTG)__
+  * Standard that enables mobile devices communication using a USB cable
+* __Custom firmware__
+  * Valid use: Forensics acquisition
+  * Invalid use: Bypass policy
+* __Carrier unlocking__
+  * Modifying device to use difference cell carrier without having to purchase a new device.
+* __Firmware OTA updates__
+  * Automatically update device when attached to corporate Wi-Fi or computers.
+
+### Deployment Models
+
+* __BYOD: Bring your own device__
+  * Highest risk
+  * Adherence with company policies
+* __CYOD: Choose your own device__
+  * Employees chose from a list of approved devices
+* __COPE: Copmany Owned Provided Equipment__
+  * Company has complete control over the device
+* __VDI: Virtual Desktop Infrastructure__
+
