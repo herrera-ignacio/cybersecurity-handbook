@@ -7,6 +7,7 @@
 4. Explain the importance of secure staging deployment concepts.
 5. Explain the security implications of embedded systems.
 6. Summarize secure application development and deployment concepts.
+7. Summarize cloud and virtualization concepts.
 
 --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
 
@@ -341,4 +342,62 @@ Control and manage software changes is needed for quality and security.
 * __Memory management__
   * Vulnerabilities may explot improper memory utilization (buffer overflow)
 * __Server-side vs client-side execution and validation__
-  * Server-side protects against malicious attemps by user to bypass validation before sending data to server. 
+  * Server-side protects against malicious attemps by user to bypass validation before sending data to server.
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+
+## 7. Summarize cloud and virtualization concepts
+
+_NIST SP800-145_: "Cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources that can be rapidly provisioned and released with minimal management effort or service provider interaction.
+
+* Cloud Computing Types
+* Essential Characteristics
+* Cloud Computing Service Models
+* Cloud Storage - Network Storage
+* Virtualization
+  * Security for Virtualization
+
+### Cloud Computing Types
+
+* __On-Premise__: Servers at organization's location.
+* __Hosted__: Servers outsourced to an external provider.
+* __Cloud__: Using shared servers.
+
+### Essential Characteristics
+
+* On-demand self-service
+* Broad network access
+* Resource pooling
+* Rapid elasticity or expansion
+* Measured service
+
+### Cloud Computing Service Models
+
+* __Software as a Service (SaaS)__: Capability provided to the consumer is to use the provider's applications running on a cloud infrastructure. Applications are accessible from various client devices through either a thin client interface, or a program interface. Consumer does not maage or control the underlying cloud infrastructure, or even individual application capabilities, with the possible exception of limited user-specific application configuration settings.
+
+* __Platform as a Service (PaaS)__: Capability provided to the consumer is to deploy onto the cloud infrastructure consumer-created or acquired applications created using programming languages, libraries, services, and tools supported by the provider. Consumer does not manage or control the underlying cloud infrastructure, but has control over the deployed applications and possibly configuration settings for the application-hosting environment.
+
+* __Infrastructure as a Service (IaaS)__: Capability provided to the consumer is to provision processing, storage, networks, and other fundamental computing resources where the consumer is able to deploy and run arbitrary software, which can include OS and applications. Consumer does not manage or control the underlying clod unfrastructure but has control over OS, sotrage, and deployed applications, and possibly limited control of selecting networking components (i.e., host firewalls).
+
+#### Cloud Storage - Network Storage
+
+* DAS: Direct attached storage
+* NAS: Network area storage
+* SANs: Storage area networks
+
+### Virtualization
+
+* __Hypervisors__: Underlying technology that creates and runs virtual machines. Presents the guest operating systems with a virtual operating platform and manages the execution of the guest operating systems.
+    * __Native/bare-metal__: works directly on top of hardware.
+    * __Hosted__: works directly on top of OS.
+* __Containers__: Lightweight, stand-alone, executable package of software that includes everything needed to run it: code, runtime, system tools, system libraries, settings.
+    * Replacing or used with hypervisors.
+* __VDE: Virtual Desktop Environment__: Desktop virtualization.
+* __VDI: Virtual Desktop Infrastructure__: User's desktop is running inside a virtual machine that resides on a server. A form of VDE that enables fully personalized desktops for each user.
+
+#### Security for Virtualization
+
+* __VM Escape Protection__: leaving an assigned VM.
+* __VM Sprawl Avoidance__: overusing shared resources.
+* __CASB: Cloud Access Security Broker__: security policy enforcement points.
+* __Security as a service__: subscription-based business model for acquiring and managing security functions (virtual SOC).
