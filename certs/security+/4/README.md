@@ -2,6 +2,7 @@
 
 1. Compare and contrast identity and access management concepts.
 2. Given a scenario, install and configure identity and access services.
+3. Given a scenario, implement identity and access management controls.
 
 --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
 
@@ -210,3 +211,82 @@ In a __transitive trust__, if Domain A trusts Domain B, and Domain B trusts Doma
 * Used for consumer SSO.
 * OpenID Connect implements authentication as an extension to the OAuth 2.0 authorization process. Provides additional security (signing, encryption of identity data, and session management).
 * Uses an ID token structure including the authentication of an end user via a _JSON Web Token (JWT)_, to prove that an authentic source created the originating data.
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+
+## 3. Identity and Access Management Controls
+
+* Access Control Methods
+* Physical Access Controls
+  * Certificate-based authentication
+* Biometric Factors (See 4.1 - biometrics)
+* Tokens
+* File System security
+* Database security
+
+### Access Control Methods
+
+* __MAC (Mandatory Access Control)__:
+    * Assigning labels to resources and accounts (objects)
+    * Users and system accounts (subjects) are assigned a classification level (SECRET, CONFIDENTIAl, PROPRIETARY, PUBLIC)
+    * Subjects access rights must be above the objects classification
+    * Access is nondiscretionary
+    * Used in government / military
+    * Rigid and most secure
+* __DAC (Discretionary Access Control)__:
+  * Access rights at the discretion of the system or information owner / security principal
+  * Owner assigns security access / has flexibility in accessing information or systems
+  * Allows dynamic sharing
+  * Increased risk of unauthorized disclosure or access
+* __ABAC (Attribute-based access control)__: NIST 800-162
+  * Attributes are characteristics that define specific aspects of the subject, object, environment conditions, and/or requested actions that are predefined and preassigned by an authority.
+  * Considers all of the various attributes associated with the subject and object in making the access control decision
+  * Dynamic access control method
+  * Based on _Extensible Access Control Markup Language (XACML)_
+* __RBAC (Role-based access control)__:
+  * Access control based on established roles or job functions in an organization
+  * Group-based permissions
+  * Reduces effect of permissions creep
+* __RBAC (Rule-based access control)__:
+  * Uses the settings in preconfigured security policies to make all access decisions
+  * Includes controls such as the time of day, week, specific terminal access, and geolocation
+  * Implemented with Access Control Lists (ACLs)
+
+### Physical Access Controls
+
+* Use embedded microchips
+* Also use certifiates (PIV & CAC)
+* Proximity cards
+  * Hold little information
+  * Determines access by matching card identification number to access database information
+* Smart cards
+  * Provides an authenticating cryptographic key to its reader
+  * May include other information on a programable chip (biometrics, certificates)
+
+#### Certificate-based authenticatoon: PIV/CAC/Smart Card
+
+* __PIV: Personal Identity Verifaction__ cards: contactless smart card used by US Federal Workers
+* __CAC: Common Access Card__: credit card-sized "smart" card used by US DoD workers, inserted into a smart ard reader authenticated with a PIN
+* * Certificate based network authentication that allows only authorized devices to connect.
+
+### Tokens
+
+* Physical device used for access
+* Software or hardware based
+* OTP: One-time passwords
+  * HOTP - HMAC OTP: uses a hash
+  * TOPT: time-based, limited time availability
+* Contains a _digital certificate_ and/or _static password token_
+
+### File System Security (aka "Flat files")
+
+* Leverage access controls, encryption and RAID.
+* Microsft NTF allows file-level access control where FAT allows only share-level access.
+* Consider using encryption for sensitive directories/media.
+
+### Database Security
+
+* Store organizations most sensitive / critical data
+* Leverage network security & access controls within the _Database Management System (DBMS)_
+* _Transparent Data Encryption (TDE) for data
+* Crypto Key Management
