@@ -3,6 +3,7 @@
 1. Compare and contrast identity and access management concepts.
 2. Given a scenario, install and configure identity and access services.
 3. Given a scenario, implement identity and access management controls.
+4. Given a scenario, differentiate common account management practices.
 
 --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
 
@@ -290,3 +291,54 @@ In a __transitive trust__, if Domain A trusts Domain B, and Domain B trusts Doma
 * Leverage network security & access controls within the _Database Management System (DBMS)_
 * _Transparent Data Encryption (TDE) for data
 * Crypto Key Management
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+
+## 4. Account Best Practices
+
+* General concepts
+* Account types
+* Account Policy Enforcement
+
+### General Concepts
+
+* Onboarding/offboarding policies & procedures
+* Standard naming conventions (for user ids)
+* Least Privilege Principle
+* Time-of-day restrictions
+* Location-based policies
+* Group-based access control
+* Account maintenance / privilege audit
+* Recertification / permission creep (determine if given accounts continue to require a set of privileges)
+* Permission auditing and review
+* Usage auditing and acess review
+
+### Account Types
+
+* __User__ accounts (human users)
+* __Guest__ accounts
+  * Should be disabled by defualt or with minimal privileges and time limits
+* __Shared and Generic__ accounts (conference rooms)
+  * No repudiation
+  * Restrict as much as possible
+* __Default__ system accounts
+  * Change names / disable / restrict.
+* __Service__ accounts
+  * Systems/applications
+  * Restrict human usage, access rights and authorization
+  * Set a complex password
+* __Privileged/Administrator__ accounts 
+  * Each user should have a separate administrator account
+  * Run as a general user and only increase privileges as/when needed
+    * Windows UAC (User Account Control)
+    * Linux `sudo`
+  * Restrict authorization & increase logging
+
+### Account Policy Enforcement
+
+* Credential management
+* Group policy
+* Password policies / complexity
+* Expiration
+* Recovery
+* Disablement / Locking policies
