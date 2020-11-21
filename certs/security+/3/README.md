@@ -8,6 +8,7 @@
 5. Explain the security implications of embedded systems.
 6. Summarize secure application development and deployment concepts.
 7. Summarize cloud and virtualization concepts.
+8. Explain how resiliency and automation strategies reduce risk.
 
 --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
 
@@ -401,3 +402,63 @@ _NIST SP800-145_: "Cloud computing is a model for enabling ubiquitous, convenien
 * __VM Sprawl Avoidance__: overusing shared resources.
 * __CASB: Cloud Access Security Broker__: security policy enforcement points.
 * __Security as a service__: subscription-based business model for acquiring and managing security functions (virtual SOC).
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+
+## 3.8 Resiliency and Automation strategies
+
+* Automation/scripting
+* Frameworks and Templates
+* Master Image
+* Manging Cloud Risk
+* Fault Tolerance
+* RAID Storage
+
+### Automation/scripting
+
+* Reduces risk through repeatable processes and automated courses of action.
+* __Continuous monitoring__: Leveraging sophisticated monitors and sensors.
+* Configuration validation.
+* OS scripting languages (Bash, PowerShell).
+
+### Frameworks and Templates
+
+* See 3.1 for common Frameworks (NIST, ISO, PCI DSS).
+* System baselines using standard templates.
+* Compare current state against a desired state.
+
+### Master Image
+
+* aka "Gold" image.
+* Creating a model OS verified as "clean".
+* Used for system restores.
+* Needs to be secured.
+
+### Managing Cloud Risk
+
+* __Nonpersistence__: Temporary system images. Snapshot of known, good state.
+* __Elasticity / Scalability__: Adjusting resources as needed.
+* __High Availability__: Measures, such as redundancy, failover, and mirroring, used to keep services and systems operational.
+* __Redundancy__: Replicating systems usually at multiple sites. Associated with failover.
+* __Distributive allocation / Load balancing__:dDistributing burden across multiple systems.
+
+### Fault Tolerance
+
+Ability of a system to sustain operations in the event of a component failure.
+
+* Two key components
+  * Spare parts
+  * Electrical power
+    * Surge protection
+    * _Uniterruptible Power Supply (UPS)_
+    * Backup power / generators
+
+### RAID Storage
+
+* __Redundant Array of Inexpensive Disks__.
+* Focuses on _availability_ of data.
+* RAID Types
+  1. Disk striping
+  2. Disk mirroring
+  3. Disk striping with a parity disk
+  4. Disk striping with parity
