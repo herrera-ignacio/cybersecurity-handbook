@@ -4,6 +4,10 @@
    * Understand regulations such as GDPR, HIPAA, GLBA
 2. Given a scenario, implement secure network architecture concepts.
 3. Given a scenario, implement secure systems design.
+4. Explain the importance of secure staging deployment concepts.
+5. Explain the security implications of embedded systems.
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
 
 ## 1. Frameworks, best practices, & secure configurations.
 
@@ -106,6 +110,8 @@ General purpose guides for securing OS, networks and applications.
 * __Vendor Diversity__: Addressing a security concern using multiple vendor products, that don't depend on each other.
 * __User Training__: Reduces the imapct of threats & vulnerabilities.
 
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+
 ## 2. Network Architecture
 
 * Security Zones / Topologies
@@ -172,6 +178,8 @@ The SDN architecture is:
 
 Systems or networks exposed to capture malicious activity, gather investigation evidence, and study attack strategies. Separated from any business network.
 
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+
 ## 3. Secure System Design
 
 * Hardware / Firmware security
@@ -213,3 +221,55 @@ Systems or networks exposed to capture malicious activity, gather investigation 
 * Disable default accounts/passwords
 * Application whitelisting
 * Patch management process
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+
+## 4. Secure Staging & Deployment
+
+* Secure baseline in compliance with security standards and benchmarks
+* Environments
+* Integrity Measurement, monitory systems, against the baseline for any deviatons.
+  * Tripwire
+  * Hash checking
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+
+## 5. Embedded Systems
+
+One that has software embedded within the computer hardware, usually within _Read Only Memory (ROM)_. A computer system with a dedicated function within a larger mechanical or electrical system.
+
+* __SoC: System on a Chip__: integrated circuit that integrates all components of a computer or other electroc systems on a single computer chip.
+* __Real-Time OS (RTOSs)__: OS intended to serve real-time applications that process data as it comes in, typically without buffer delays. Designed to have zero latency.
+* __Internet of Things (IoT)__: system of interrelated computing devices, mechanical and digital machines, objects, animals, or people that are provided with unique identifiers (UIDs) and the ability to transfer data over a network without requiring human-to-human or human-to-computer interaction.
+* __Smart devices__:
+  * Wearable technology (watches, medical devices), often communicate through Bluetooth.
+  * Home automation (security, cameras, locks, lights, thermostats, sound systems, personal assistants), often communicate through wi-fi.
+* __ICS: Industrial Control Systems__: several types of control systems and associated instrumentation used for industrial process control.
+* __SCADA: Supervisor Control and Data Acquisition__: collects data from factories, plants, or other remote locations and forwards it to a central computer that manages / controls the system.
+* __PLC: Programmable Logic Controllers__: single use computers used in manufacturing.
+* __HVAC: Heating, Ventilation and Air Conditioning Systems__: regulate air flow and temperature.
+* __Security__:
+  * Network partitioning / segmentation
+  * Access Control
+  * Monitoring
+* __Printers / Multi-function devices (MFDs)__
+  * Used for networked printing, scanning and copying
+  * Web accessible
+  * Generally little access controls
+* __Special Purpose Devices__
+  * Medical devices (Pacemakers, Insulin pumps)
+  * Vehicles (Trucks & Autos)
+  * Aircraft / Unmanned Areal Vehicles (UAV)
+
+### Securing Embedded Devices
+
+* Secure by design and default
+* Security integrated into the technology
+* System hardening
+* Shielded from electromagnetic interference
+* Network security, encryption using TLS
+* Security verification
+* Automated patching
+* Anomaly alerts
+* 
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
