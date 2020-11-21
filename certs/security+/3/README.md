@@ -1,7 +1,9 @@
 # Domain 3: Architecture & Design
 
 1. Explain use cases & purposes for frameworks, best practices, and secure configurations guides.
-2. Understand regulations such as GDPR, HIPAA, GLBA
+   * Understand regulations such as GDPR, HIPAA, GLBA
+2. Given a scenario, implement secure network architecture concepts.
+3. Given a scenario, implement secure systems design.
 
 ## 1. Frameworks, best practices, & secure configurations.
 
@@ -104,3 +106,110 @@ General purpose guides for securing OS, networks and applications.
 * __Vendor Diversity__: Addressing a security concern using multiple vendor products, that don't depend on each other.
 * __User Training__: Reduces the imapct of threats & vulnerabilities.
 
+## 2. Network Architecture
+
+* Security Zones / Topologies
+* Security device placement
+* VPN / Tunneling
+* SDN: Software Defined Network
+* Honeypots / Honeynets
+
+### Security Zones / Topologies
+
+Each zone on a network is separated based on organizational role or level of security (_Segregation, Segmentation & Isolation_).
+
+* __DMZ__
+  * Network segment located between protected (internal) and unprotected (public) networks.
+  * Provides a buffer zone / defense-in-depth.
+  * Usually set-up using firewalls.
+  * Contains hardened systems that need to reach each network segment (i.e, email, web, or DNS servers)
+* __Extranet / Intranet__
+  * Extranet is a private network that uses Internet technology and public telecommunication system to securely share part of a business's information or operations with suppliers, vendors, partners, customers, or other businesses.
+  * Intranet, is websites/applications that are only accessible within the organization's network.
+* __Wireless segmentation__
+  * Separating wireless access on an internal network / creating a buffer between wireless and wired networks.
+  * Separating guest wireless access from internal networks. Often allows only internet access.
+  * Controlled by 801.1X Port-based access control.
+  * MAC filtering, restricting access based on the devices.
+
+### Security device placement
+
+Where should security devices be on a corporate network.
+
+* Firewalls / UTM
+* IDS/IPS
+* VPN
+* Proxies
+* Load balancers
+* SIEM, log collection / correlation
+* DDoS mitigation (border router)
+
+### VPN / Tunneling
+
+* Private network connection through an unsecured public network.
+* Use to connect LANS
+* Remote devices appear as if they are local.
+* Methods:
+  * Site-to-site (connect LANs across the internet)
+  * Remote access (connect users or devices to a corporate network)
+  * Remote Access Server (RAS)
+
+### SDN: Software Defined Network
+
+* Entire network is virtualized
+* Allows for easier network segmentation
+* Allows administrators to place virtualized security devices anywhere
+
+The SDN architecture is:
+
+* Directly programmable
+* Agile
+* Centrally managed
+* Programmatically configured
+* Open standards-based and vendor-neutral
+
+### Honeypots / Honeynets
+
+Systems or networks exposed to capture malicious activity, gather investigation evidence, and study attack strategies. Separated from any business network.
+
+## 3. Secure System Design
+
+* Hardware / Firmware security
+* OS Types
+* OS Security hardening
+
+### Hardware / Firmware security
+
+* __FDE: Full Disk Encryption__
+  * Bitlocker
+  * Veracrypt
+* __SED: Self-Encrypting Drive__
+  * Automatically encrypts / decrypts a drive
+  * Media Encryption Key (MEK)
+  * Key Encryption Key (KEK), supplied by user
+* __TPM: Trusted Platform Modules__: specialized chip on an endpoint device that stores encryption keys specific to the host system for hardware authentication. Usually on the system motherboard.
+* __HSM: Hardware Security Modules__: physical computing device that safeguards and manages digital keys for strong authentication and provides crypto processing. These modules traiditionally come in the form of a plug-in card or an external device that attaches directly to a computer or network server.
+ * __BIOS: Basic Input/Output System__: boot up configuration.
+ * __UEFI: Unified Extensible Firmware Interface__: modern boot-up configuration.
+ * __Secure boot and attestation__: creates a cryptographic hash of the BIOS/UEFI OS boot loader and drivers and compares that against a stored hash. This is done to prevent rootkits and boot sector viruses.
+ * __RoT: Root of Trust__: highly reliable hardware, firmware, and software components that perform specific, critical functions.
+ * __Suply Chain__: confirming the origin of hardware is secure.
+
+### OS Types
+
+* Network (CISCO)
+* Server (Windows Server / Linux)
+* Workstation
+* Appliance (IoT)
+* Kiosk (public computer)
+* Mobile OS
+
+### OS Security hardening
+
+* Trusted OS baseline
+* Secure configurations
+* Least functionality / single purpose
+* Disabling unnecesary ports and services
+* Disable default accounts/passwords
+* Application whitelisting
+* Patch management process
