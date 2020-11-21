@@ -6,6 +6,7 @@
 3. Given a scenario, implement secure systems design.
 4. Explain the importance of secure staging deployment concepts.
 5. Explain the security implications of embedded systems.
+6. Summarize secure application development and deployment concepts.
 
 --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
 
@@ -273,3 +274,71 @@ One that has software embedded within the computer hardware, usually within _Rea
 * Anomaly alerts
 * 
 --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+
+## 6. Secure App Development
+
+* Secure DevOps (DevSecOps)
+* Change Management / Version Control
+* Secure coding techniques
+
+### DevSecOps
+
+* Security integrated into all of your development operations, which includes database design, programming, and infrastructure.
+* Having security practices integrated into the entire software delivery cycle.
+* Address security concerns at the beginning of projects.
+* Add automated security testing techniques.
+
+#### Characteristics
+
+* __Continuous integration__: security in every step with updates from a centralized, controlled repository.
+* __Security automation__: repeatable, scripted tasks.
+* __Baselining__: reference points that require completion and approval of a set of predifined project requirements to prevent uncontrolled change and lesson vulnerabilities.
+* __Immutable systems__: no changing to systems in place. They maintain a known, documented, and repeatable configuration.
+* __Infrastructure As Code (IaC)__: programmable infrastructure. Infrastructure configuration is included with application code.
+
+### Change Management / Version Control
+
+Control and manage software changes is needed for quality and security.
+
+* Prevents tampering or changing the source code or executables.
+* Tracks software file changes or application code changes.
+  * Historical data on changes to files.
+  * Traceability.
+* Uses distributed storage for code.
+* Branchng and merging capabiltiies.
+
+### Secure coding techniques
+
+* __Authentication__
+  * No hard-coding credentials into code.
+  * Use of cookies.
+* __Proper error handling__
+  * Errors should be generic / not divulge specific system or application information.
+  * Comments should not be visible in the end-product.
+* __Product input validation__
+  * Scrub & validate input from outside / untrusted sources.
+  * Use of default values and character limitations.
+* __Normalization__
+  * Conversion of data to its anticipated, simplest known form.
+* __Stored procedures__
+  * Associated with database queries / precompiled SQL statements.
+* __Code reuse/dead code__
+  * Reusing existing software modules should be validated for vulnerabilities.
+  * Dead code (no longer provides useful function) should be purged.
+* __Use of third-party libraries and SDKs__
+  * Use trusted sources.
+  * Check for CVE.
+* __Code signing__
+  * Signing executable code using a certificate-based signature to prove the author's identity and provide code integrity.
+* __Data exposure__
+  * Encryption of sensitive data at all times (in transit and at rest)
+* __Encryption__
+  * Standard encryption algorithms, hashing, and digital signatures.
+  * TLS for data in transit.
+* __Obfuscation/camouflage__
+  * Hiding back-end code
+  * Prevents code from being reverse-engineered
+* __Memory management__
+  * Vulnerabilities may explot improper memory utilization (buffer overflow)
+* __Server-side vs client-side execution and validation__
+  * Server-side protects against malicious attemps by user to bypass validation before sending data to server. 
