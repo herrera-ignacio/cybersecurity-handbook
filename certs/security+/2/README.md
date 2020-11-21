@@ -164,6 +164,8 @@ Configured to specify computers, programs, services, ports, or protocols.
 
 Like a burglar alamr, identify unauthorized activity, access or anomalies. They can be network-based or host-based.
 
+* Snort (Windows & Linux)
+
 IDS and IPS differs in whether to focus on _detection_ or _protection_:
 
 * __Passive response (detection)__:
@@ -527,6 +529,7 @@ Prevent sensitive information from physically or logically leaving corporate sys
   * Reporting
 * Alerting on failed patches
 * Patching all applications / systems
+  * _WSUS: Windows Server Update Services_: deploy updates to domain-joined Windows servers and workstation in a corporate network.
 
 #### Patch Management Services
 

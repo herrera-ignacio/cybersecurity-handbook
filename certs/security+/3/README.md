@@ -456,6 +456,8 @@ Ability of a system to sustain operations in the event of a component failure.
 
 ### RAID Storage
 
+Windows has a built-in capability to set up a software RAID that combines multiple disk drive components into a single logical unit for purpose of providing fault tolerance or enhance the performance of your storage subsystem.
+
 * __Redundant Array of Inexpensive Disks__.
 * Focuses on _availability_ of data.
 * RAID Types
