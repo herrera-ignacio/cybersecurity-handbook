@@ -9,6 +9,7 @@
 6. Summarize secure application development and deployment concepts.
 7. Summarize cloud and virtualization concepts.
 8. Explain how resiliency and automation strategies reduce risk.
+9. Explain the importance of physical security controls.
 
 --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
 
@@ -462,3 +463,177 @@ Ability of a system to sustain operations in the event of a component failure.
   2. Disk mirroring
   3. Disk striping with a parity disk
   4. Disk striping with parity
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+
+## 9. Physical Security & Environmental Controls
+
+* Concepts
+* Lighting
+* Perimter Security
+* Safes / Locking Cabinets
+* Locks
+* Physical Access Control
+* Faraday Cage / Shielding
+* Personnel Access Controls
+  * Site Access Controls (Key Card)
+  * Biometric Access Controls
+* Detection
+* Environmental Controls
+* Fire Prevention, Detection & Suppresion
+* Video Surveillance / Cameras
+
+### Concepts
+
+We try to accomplish a layering / defense-in-depth security.
+
+* __Protection__
+    * Locks
+    * Barriers: Walls, Fences
+* __Deterrence__
+  * Guards / Dogs
+  * Lighting (should be in protected, locked, and centralized areas).
+* __Delay__
+  * Barricades / Bollards
+* __Detection__
+  * Cameras
+  * Motion Detection
+
+### Lighting
+
+* _Continuous lighting_: even amount of illumination across an area.
+* _Controlled lighting_: such a way that does not blind its neighbors or any passing vehicles.
+* _Standby lighting_: configured to turn on/off at different times, so that potential intruders think that different areas of the facility are popualted.
+* _Redundant or backup lightning_: should be available in case of power failures or emergencies.
+* _Response Area Illumination_: takes place when an IDS detects suspicious activities and turns on lights within the specified area.
+
+### Perimeter Security
+
+* Fencing, Gates and Cages.
+* Varying heights, gauge, and mesh.
+* Natural landscaping.
+* _CPTED: Crime Prevention Through Environmental Design_.
+
+### Safes / Locking Cabinets
+
+* Safes
+  * Control access
+  * Fireproof
+  * Tamper resistant and evident
+* Locking cabinets for paper & electronics
+* Computer cable locks
+* Key management
+  * Who has keys
+  * Where are they stored
+  * Key duplication
+
+### Locks
+
+* Combination locks > keys
+* Cipher locks / electronic locks
+* Lock grades
+    1. Comercial
+    2. Heavy duty residential / light commercial
+    3. Residential throw away locks
+* Cylinder categories
+  * Low: no pick or drill resistance provided
+  * Medium: a little pick resistance
+  * High: higher degree of pick resistance
+
+### Physical Access Control
+
+* Turnstiles
+* Mantrap
+  * Double doors, where only one can be opened at a time.
+  * Used to control personnel access.
+  * Manually operated or automatic.
+  * Only room for one person.
+
+### Faraday Cage / Shielding
+
+__Shielding__ is the process of preventing electronic emissions from your computer systems from being used to gather intelligence and preventing outside electronic emissions from disrupting information-rpocessing abilitiesl.
+
+__Faraday Cage/Shield__ is an enclosure used to block electromagnetic fields. It may be foremd by a continuous covering of conductivem aterial or by a mesh of such materials.
+
+### Personnel Access Controls
+
+Different technologies to grant access to a building.
+
+* __User activated__: user does something (Swipe cards, biometrics).
+* __Proximity devices/transponders__: system recognizes the presence of an object.
+
+#### Site Access Controls (Key Cards)
+
+* Centralized access control (card readers, central computer, and electronic door latches).
+* Pros: easy to use, provides an audit record, easy to change access permissions.
+* Cons: can be used by others if lost, people may "tailgate".
+
+#### Biometric Access Controls
+
+* Based upon a specific biometric measurement.
+* Fingerprints, iris scan, retina scan, hand scan, voice, facial recognition, others.
+* Greater confidence of claimed identity.
+
+### Detection
+
+* __Motion detection__: location monitoring and alarms based on movement.
+* __Infrared detection__: detects changes in infrared radation, thermal heat.
+
+### Environmental Controls
+
+* HVAC: Heating, Ventilation, Air Conditioning
+  * Redundancy
+  * Backup power / UPS
+  * Zone-based heating & cooling
+* Hot and cold aisles
+* Fire suppression
+
+### Fire Prevention, Detection & Suppression
+
+* Fire _Prevention_ includes training employees on how to react, supplying the right equipment, enabling fire suppresion supply, proper storage of combustible elements, etc.
+* Fire _Detection_ includes alarms, manual detection pull boxes, automatic detection response systems with sensors, etc.
+* Fire _Suppression_ is the use of a suppression agent to put out a fire.
+  * Fire extinguishers
+  * Fixed systems
+  * Water
+  * Halon and halon substitutes
+  * Foams
+  * Dry Powders
+  * CO2
+  * Soda Acid
+
+#### Fire Extinguisher Ratings
+
+* A: Wood and paper
+* B: Flammable liquids
+* C: Electrical
+* D: Flammable metals
+
+#### Sprinkler Systems
+
+* _Wet pipe_: filled with pressurized water.
+* _Dry pipe_: fills with water only when activated.
+* _Deluge_: discharges water from all sprinklers when activated.
+* _Pre-Action_: dry pipe that converts to a wet pipe when an alarm is activated.
+* _Foam water sprinkler_: uses water and fire-retardant foam.
+* _Gaseous fire suprresion_: displaces oxygen.
+
+### Video Surveillance / Cameras
+
+* Supplements security guards and other monitoring mechanisms.
+* Provide PoV (Point of view) not easily achieved with guards.
+* Locations
+  * Entrances
+  * Exits
+  * Loading bays
+  * Stairwells
+  * Refuse collection areas
+
+#### CCTV (Closed circuits television) considerations
+
+* Purpose: detect, assess, and/or identify intruders.
+* CCTV environment can be internal or external.
+* Field of view: area to be monitored.
+* Illumination: lighting, natural or artificial.
+* Integration with other security controls.
+
