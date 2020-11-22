@@ -3,6 +3,7 @@
 1. Explain the importance of policies, plans and procedures related to organizational security.
 2. Summarize business impact analysis concepts.
 3. Explain risk management processes and concepts.
+4. Given a scenario, follow incident response procedures.
 
 --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
 
@@ -230,3 +231,117 @@ Structured process used to identify and evaluate various risks or threats that a
 * Provides visibility into the risk components.
 * Vulnerability assessments.
 * Pentration tests.
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+
+## 4. Incident Response
+
+__Incident__ (NIST) is an ocurrence that actually or potentially jeopardizes the confidentiality, integrity, or availability of an information system or the information the system processes, stores, or transmits, or that constitutes a violation or inminent threat of violeation of security policies, procedures, or use policies.
+
+It can be concived as an unplanned disruption or degration of a service.
+
+* Incident Response Process
+* Incident Response Plan
+* Cyber Incident Response Teams
+* Reporting requirements/escalation
+* Training
+* Incident Preparation
+* Incident Detection/Identification/Analysis
+
+### NIST Incident Response Process
+
+1. Preparation
+2. Detection & Analysis
+3. Containment, Eradication & Recovery (go back to 2 if needed)
+4. Post Incident Activity (go back to 1)
+
+### Incident Response Plan (IRP)
+
+Documentation of a predetermined set of instructions or procedures to detect, respond to, and limit consequences of a malicious attack against an organization's information system(s).
+
+NIST _Computer Security Incident Handling Huide (SP 800-61)_ provides guidance on exact elements to include:
+
+* Mission, strategies, and goals of incident response.
+* Senior management aproval.
+* Approach to incident response.
+* Resposne team communications.
+* Metrics for measuring response capabilities and effectiveness.
+* Roadmap for maturing response capability.
+* How the incident response program fits into the organization.
+* Document incident types/category definitions
+  * Natural
+  * Mechanical
+  * Accidental / Human error
+  * Malicious / Compromise
+  * Policy violation
+* Roles & responsibilities
+  * Granting clear authority for actions to be taken during an incident.
+  * Who can / does perform IRP activities:
+    * Incident alerting
+    * Identification / Triage
+    * Decisions making (organizational executive)
+    * Equipment collection / confiscation
+    * Forensics (independence / segregation of duties)
+    * Repair / Recovery
+    * Reporting
+    * Communicating
+
+### Cyber-incident Response Teams
+
+* Computer Emergency Response Team (CERT)
+* Cyber Incident Response Team (CIRT)
+* Computer Security Incident Response Team (CSIRT)
+
+#### Types
+
+* Formalized, standing or ad-hoc
+* Internal or external
+* Central, distributed or coordinating
+
+#### Personnel
+
+* Systems, network, database administrators
+* Legal
+* HR
+* Management
+
+### Reporting requirements/escalation
+
+* Documents
+* Included in many help desk systems
+* Collecting evidence (physical, virtual, etc)
+* Reporting / disclosing to:
+  * Internal Management (Legal, HR, CEO, CFO)
+  * Legal authorities, law enforcment (local, international)
+  * Affected organizations, clients or costumers
+  * CERT (www.cert.org)
+  * Internet Crime Complaint Center (IC3, www.ic3.org)
+  * Insurance
+
+### Testing, exercises & training
+
+* Be prepared
+* Prepare each role with training
+* Practice using real world scenarios
+* Test systems and processes to find issues
+
+### Incident Preparation
+
+* Creating the Incident Response Plan
+* Hardware / Software / Communications
+* Testing & exercises
+* Creating checklists (technical, procedures, contacts)
+
+### Incident Detection/Identification/Analysis
+
+* Alerting
+  * Logs (IDS, SIEM, AV)
+  * Humans
+* Incident triage / validation
+* Determine incident scope
+  * What and who is affected
+  * Identification of incident type (system, data, personnel, etc)
+* Analysis, impact and recoverability effort
+* Escalation
+* Documentation & Notification
+
