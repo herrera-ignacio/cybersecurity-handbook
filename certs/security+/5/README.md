@@ -6,6 +6,7 @@
 4. Given a scenario, follow incident response procedures.
 5. Summarize basic concepts of forensics
 6. Explain disaster recovery and continuity of operations concepts
+7. Compare and contrast various types of controls
 
 --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
 
@@ -481,8 +482,9 @@ Preservation on all forms of relevant information when litigation is reasonable 
 * Planning documents
 * Recovery sites
 * Order of restoration
+* Types of backups
 * Geographic considerations
-* Continuity of operations planning
+* Continuity of operations planning (COOP)
 
 ### Planning documents
 
@@ -501,3 +503,94 @@ Locations for recovering systems and/or business operations.
 * _Warm site_: some equipment in place/online that requires administrators to install and configure systems to resume operations.
 
 * _Cold site_: facility isn't immediately ready to use and may need to bring your own equipment.
+
+### Order of restoration
+
+* Prioritized restore sequence
+* Based on _Business Impact Assessment (BIA)_
+* Most critical systems restored first
+* __RTO__: maximum amount of time that a process or service is allowed to be down and the consequences still to be considered acceptable.
+* __RPO__: point last known good data prior to an outage that is used to recover systems.
+
+### Types of backups
+
+* _Full_: complete backup of all data (most time and resource intesive)
+* _Incremental_: capture what has changed since the last incremental backup. Requires each incremental backup along with the full backup for complete restoration.
+* _Differential_: saves data that has changed since last full backup. Requires full backup and most recent differential backup.
+* _Copies and snapshots_: Like a full backup.
+
+### Geographic considerations
+
+* Alternate site planning
+* Location for recovery
+* Utilities
+* Proximity to main site
+* Personnel
+* Legal implications
+* Use of cloud services
+
+### Continuity of operations planning (COOP)
+
+* Policies and procedures designed to ensure that an organization can recover from a potentially destructive incident and resume operations as quickly as possible following that event.
+* Ensures systems, data, and personnel availability.
+* Failover, system redundancy.
+* Availability of alternate processing, work sites and facilities.
+* Alternate business practices.
+* Testing, training and exercises.
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+
+## 7. Security Controls
+
+Controls are defenses or countermeasures put in places to manage risk.
+
+> ISACA: Means of managing risk, including policies, procedures, guidelines, practices, or organizational structures, which can be of an administrative, technical, management, or legal nature.
+
+* Technical/Logical
+* Administrative/Management
+* Physical/Operational
+* Categorization by functionality
+
+### Technical/Logical controls
+
+* Implemented through technology.
+* Patching, Firewalls, IDS/IPS, Access Controls.
+
+### Administrative/Management
+
+* Documents policies, procedures and guidelines.
+  * Acceptable Use Policy
+  * Incident Response Plan
+* People / personnel
+  * SOC
+  * Guards/Surveillance
+  * Security awareness training
+
+### Physical/Operational
+
+Reduce the risk of harm coming to physical property, systems or other assets.
+
+* Hardened facilities
+* Locks
+* Badges
+
+### Categorization by functionality
+
+They can be clasiffied based on functionality:
+
+* __Deterrent__: Discourage individuals from intentionally violating security (highly visible).
+* __Preventive__: Stop an unwanted event with proactive measures.
+  * Access, authentication, authorization, verification
+  * Separation of duties
+  * Technical standards
+  * Network security (Firewalls, IPS, Internet Filtering)
+* __Detective__: Reactive (automated or manual), warning of anomalies or violations.
+  * Cameras
+  * Motion sensor
+  * IDS / SIEM
+  * Audits
+* __Corrective__: Measures to lessen harmful effects or restore system. Mostly reactive measures.
+  * Patching / upgrades
+  * Hardening (physical & logical)
+  * Process improvements
+* __Compensating__: Alternative controls that are intended to reduce the risk of an existing or potential control weakness.
