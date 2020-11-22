@@ -3,6 +3,7 @@
 1. Compare and contrast basic concepts of cryptography.
 2. Explain cryptography algorithms and their basic characteristics.
 3. Given a scenario, install and configure wireless security settings.
+4. Given a scenario, implement public key infrastructure.
 
 --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
 
@@ -316,6 +317,7 @@ Procesess used to take a weak key and make it stronger, usually by kaing it long
   * WPA
   * WPA2
 * Authentication Protocols
+* Certificate Revocation
 
 ### Wireless Access Methods
 
@@ -369,4 +371,121 @@ Standard to simplify _Wireless Access Point (AP)_ set-up for home users.
     * EAP-TLS
     * EAP-TTLS (Tunneled TLS)
     * EAP-FAST (Flexible Authentication via Secure Tunneling)
+* __IEEE 802.1x__: Standard for port-based network access control.
+* __RADIUS Federation__
+  * Using RADIUS to authenticate between entities.
+  * As part of PEAP negotiation, client establishes A TLS session with a RADIUS server.
 
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+
+## 4. PKI: Public Key Infrastructure
+
+* Public and Private Keys
+* Digital Certificate
+  * X.509 Certificate Types
+* Certificate Authority (CA)
+* Registration Authorities (RA)
+* Certificate Trust Models
+* Key Escrow
+* Pinning
+
+### Public and Private keys
+
+Encrypt a document with the recipient's public key. Only their private key needs to be kept secret and only it can decrypt the message.
+
+### Digital Certificate
+
+A digitally signed block of data used to prove the ownership of a public key issued issued by a _Certificate Authority_.
+
+* Information about the key
+* Information about the identity of its owner (subject)
+* Information about digital signature of an entity that has verified the certificate's content (issuer)
+
+The _X.509 v3 standard_ defines the certificate formats and fields for public keys.
+
+#### Digital Certificate Components
+
+* _Version_: X.509 version
+* _Serial Number_: uniquely identifies certificate
+* _Signature Algorithm ID_: names of specific Public Key Algorithms that CA has used to sign scertificate (i.e., RSA with SHA-1)
+* _Issuer (CA) x.500 Name_: identity of CA Server who issued the certificate
+* _Validity Period_: period of time which certificate is valid with start date and expiration date
+* _Subject X.500 Name_: owner's identity with X.500 directory format
+* _Subject Public Key Info_
+  * Algorithm ID
+  * Public Key Value
+* _Issuer Unique ID_: information used to identify the issuer of the certificate
+* _Subject Unique ID_: information used to identify the owner of the certificate
+* _Extension_: additional information like Alternate name, CRL Distribution Point (CDP)
+* _CA Digital Signature_: atual digital signature of the CA
+
+#### X.509 Certificate Types
+
+* __Root certificates__: for root authorities, usually self-signed by that authority and often kept off-line.
+* __Domain Validation (DV)__: includes only the domain name.
+* __Organizational Validation (OV)__: organizations are vetted against official government sources (common four public-fancing websites).
+* __Extended Validation (EV)__: highest level of trust, requires a comprehensive validation of the business.
+* __Wildcard Certificates__: allows subdomains for a single registered domain (*.example.com).
+* __Subject Alternate Name (SAN)__: special X.509 that allows additional items (IP addresses, domain names, and so on).
+* __Code signing certificates__: used to sign computer code.
+* __Machine/computer certificates__: X.509 certificates assigned to a specific computer.
+* __Email certificates__: securing email (S/MIME).
+* __User certificates__: for individual users.
+
+### Certificate Authority (CA)
+
+* Trusted entities
+* Internal (aka, self signed)
+* External / Third party (Symantec, GoDaddy, etc)
+* Duties:
+  * Issues certificates
+  * Verifies holder of a digital certificate
+  * Ensures that holders of certificates are who they claim to be
+* __Certificate-Signing Request (CSR)__
+  * Request from applicant to CA to apply for a digital certificate
+  * Applicant's public key
+  * Fully qualified domain name
+  * Legally incorporated name of the company
+  * Address
+
+### Registration Authorities (RA)
+
+* Offload work from the CA
+* Validate user's or end-point's identities
+* Distribute keys
+* DOES NOT issue certificates
+
+### Certificate Revocation
+
+* Certificate revocation is the process of invalidating a certificate before it's expiration date, often due to private key loss or compromise.
+* __Certificate Revocation List (CRL)__
+  * Method for distributing certificate revocation information list. Must be often updated/maintained.
+  * Certificate compared against CRL.
+* __Online Certificate Status Protocol (OCSP)__
+  * Checks certificate status in real time.
+  * _OSCP Stapling_
+    * Reduces load on CA.
+    * Allows web server to "_staple_" a time-stamped OCSP response as part of the TLS handshake with the client.
+    * The web server is now responsible for handling OCSP requests instead of the CA.
+
+### Certificate Trust Models
+
+* __Single CA__: simplest, no redundancy, self-signed certificate.
+* __Hierarchical model__:
+  * Root CA, toop of the hierarchy, may be offline.
+  * Intermediate CA, subordinate CAs provide redundancy and load balancing.
+* __Certificate chaining__.
+* __Web of Trust__: cross-certification model, a peer-to-pee trust relationship with other CAs.
+* __Bridge CA__: cross-certification model using a central point of trust.
+
+### Key Escrow
+
+* Trusted third party maintains keys.
+* Addresses the possibility that a cryptographic key may be lost: if key is lost, then data is lost.
+* _Key Recovery Agent_ is an entity that has the ability to recover a key, key components, or plain-text messages as needed.
+
+### Pinning
+
+* Hashes of public keys for popular web servers are included with applications such as web browsers.
+* Mitigates the use of fraudulent certificates.
+* __HTTP Public Key Pinning (HPKP)__, uses public key pins, which are essentially hashed values of the public key communicated to the browser client from the server in the HTTP header.
