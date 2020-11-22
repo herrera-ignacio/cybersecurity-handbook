@@ -2,6 +2,7 @@
 
 1. Compare and contrast basic concepts of cryptography.
 2. Explain cryptography algorithms and their basic characteristics.
+3. Given a scenario, install and configure wireless security settings.
 
 --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
 
@@ -303,3 +304,69 @@ Procesess used to take a weak key and make it stronger, usually by kaing it long
   * Provides an adaptative hash function based on key factor.
 * __PBKDF2: Password-Based Key Derivation Function 2__
   * Algortihm applies a pseudo-random function to the password, combined with a salt of at least 64 bits, and then repeats the process at least 1000 times.
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+
+## 3. Wireless Security
+
+* Wireless Access Methods
+* WPS: Wi-Fi Protected Setup
+* Wireless Cryptographic Protocols
+* Wi-FI Protected Access
+  * WPA
+  * WPA2
+* Authentication Protocols
+
+### Wireless Access Methods
+
+* __Open Authentication__: only need to know network name / SSID.
+  * _Captive Portal_: web page that is launched first when connecting through a network.
+* __Shared Authentication__: client and wireless AP must negotiate and share a key prior to initiating communications.
+  * _PSK (Pre-shared key)_: each user uses same key to connect to the Wi-Fi network.
+* __Enterprise__: server handles distribution of cryptographic keys and/or digital certificates.
+  * _EAP (Extensible Authentication Protocol)_
+
+### WPS: Wi-Fi Protected Setup
+
+Standard to simplify _Wireless Access Point (AP)_ set-up for home users.
+
+#### WPS Modes
+
+* PIN entry
+* PBC: Push-button configuration
+* NFC: Near Field Communication
+
+### Wireless Cryptographic Protocols
+
+* __WEP (Wired Equivalent Privcay)__: original wireless encryption standard that should not be used anymore.
+* __WPA (Wi-Fi Protected Access)__: developed in response to security concerns over WEP.
+* __WPA2__: required for Wi-Fi certified devices.
+  * Uses AES for encryption.
+  * Based on IEE 802.11i standard.
+
+#### WPA (Wi-FI Protected Access)
+
+* __WPA-PSK (Personal)__: Uses a pre-shared key to authenticate and validate users on a wireless LAN/WLAN or Wi-Fi connection.
+* __WPA-802.1X (Enterprise)__: Increased security for larger organization, required RADIUS authentication server.
+* __TKIP (Temporal Key Integrity Protocol)__: Based on RC4, uses a unique key with each packet. (deprecated)
+
+#### WPA2
+
+* _Counter Mode_ with _CCMP (Cipher Block Chaining Message Authentication Code Protocol)_
+  * Replaced TKIP
+  * Based on AES encryption cipher
+  * CCM combines CTR for confidentiality and CBC-MAC for authentication and integrity
+* Fully implements the _IEEE 802.11i-2004_ Wi-Fi security standards.
+
+### Authentication Protocols
+
+* __EAP__
+  * Requires authentication server
+  * Allows authentication methods beyond username/password
+  * Provides support for __public certifiactions__
+  * Four modes
+    * PEAP - Protected EAP
+    * EAP-TLS
+    * EAP-TTLS (Tunneled TLS)
+    * EAP-FAST (Flexible Authentication via Secure Tunneling)
+
