@@ -5,6 +5,7 @@
 3. Explain risk management processes and concepts.
 4. Given a scenario, follow incident response procedures.
 5. Summarize basic concepts of forensics
+6. Explain disaster recovery and continuity of operations concepts
 
 --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
 
@@ -398,6 +399,8 @@ Process of restoring and returning affected systems and devices back into your b
 * Data acquisition
 * Network traffic & logs
 * Record time offset
+* Take Hashes
+* Documentation
 
 ### Strategic intelligence / Counterintelligence
 
@@ -457,3 +460,44 @@ Preservation on all forms of relevant information when litigation is reasonable 
 
 * Coordinating time to accurately track events (time zone differences)
 * NTP: Network Time Protocol
+
+### Take Hashes
+
+* Hash as unique "fingerprint" of system files or data.
+* Tracks integirty or any changes.
+
+### Documentation
+
+* Document everything
+* Written narrative
+* When and what was done
+* Evidence
+* Images / Videos
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+
+## 6. Disaster Recovery / Business Continuity
+
+* Planning documents
+* Recovery sites
+* Order of restoration
+* Geographic considerations
+* Continuity of operations planning
+
+### Planning documents
+
+Should be determined and written prior to an incident, and include a contingency plan.
+
+* _Business Continuity Plan (BCP)_: ensure the restoration of organizational functions in the shortest possible time, even if services resume at a reduced level of effectiveness or availability.
+
+* _Disaster Recovery Plan (DRP)_: ensure a full recovery of operational capacity following a disaster (natural or man-made).
+
+### Recovery sites
+
+Locations for recovering systems and/or business operations.
+
+* _Hot site_: servers, networks, and telecommunications equipment in place & on-line to reestablish service.
+
+* _Warm site_: some equipment in place/online that requires administrators to install and configure systems to resume operations.
+
+* _Cold site_: facility isn't immediately ready to use and may need to bring your own equipment.
