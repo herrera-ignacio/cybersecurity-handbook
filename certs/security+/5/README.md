@@ -4,6 +4,7 @@
 2. Summarize business impact analysis concepts.
 3. Explain risk management processes and concepts.
 4. Given a scenario, follow incident response procedures.
+5. Summarize basic concepts of forensics
 
 --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
 
@@ -247,6 +248,10 @@ It can be concived as an unplanned disruption or degration of a service.
 * Training
 * Incident Preparation
 * Incident Detection/Identification/Analysis
+* Incident Containment
+* Eradication
+* Incident Recovery
+* Post Incident
 
 ### NIST Incident Response Process
 
@@ -345,3 +350,110 @@ NIST _Computer Security Incident Handling Huide (SP 800-61)_ provides guidance o
 * Escalation
 * Documentation & Notification
 
+### Incident Containment
+
+* Ensuring incident doesn't continue or spread
+* Securing scene, limitating access, isolating systems (quarantine)
+  * Physical
+  * Network
+  * Logical
+* Gathering evidence
+
+### Eradication
+
+* Find and eliminate root cause
+* AV clean-up
+* Patching/updating software
+* Re-imaging systems
+* Restoring from backup
+
+### Incident Recovery
+
+Process of restoring and returning affected systems and devices back into your business environment.
+
+* Repair
+  * Restoring from backup
+  * Patching
+  * Hardening systems
+  * Access control
+  * Authentication
+* Procedural changes
+* Documentation
+
+### Post Incident
+
+* Lessons learned
+* After-action meeting with all Incident Response Team members
+* Capture actions such as the cause, cost, and recommendations for preventing future incidents
+* Regulatory or legal requirements
+* Update Incident Response Plan
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+
+## 5. Forensics
+
+* Strategic intelligence / Counterintelligence
+* Order of volatility
+* Chain of custody
+* Data acquisition
+* Network traffic & logs
+* Record time offset
+
+### Strategic intelligence / Counterintelligence
+
+* Gathering information regarding an incident
+* Nature of the threat actor / source / vector
+* Pull from multiple data sources (internal/external)
+* Use of active logging
+
+### Order of volatility
+
+* Order for collecting evidence (incident identification)
+* Volatile data is easily or quickly lost
+  * Resident computer memory
+  * Caches / temporary storage
+  * Physical media (USB)
+* Capture data that will be lost first
+
+### Chain of custody
+
+Provides a clear record of the path that evidence takes from acquisition to disposal. Any items taken must be secured to preserve its integrity.
+
+Documentation / tracking / evidence must be:
+
+* Admissible
+* Authentic
+* Complete
+* Reliable
+* Believable
+
+#### Legal hold
+
+Preservation on all forms of relevant information when litigation is reasonable anticipated. Do not destroy what might be relevant to a legal matter.
+
+### Data Acquisition
+
+* Capture system image in its exploited state
+  * Disk to disk
+  * Disk to an image file
+  * Image file to disk
+  * Tools: Encase, Forensics Toolkit, Native Linux (`dd`)
+* Network traffic & logs
+* Record time offset
+* System hashes
+* Screenshots
+* Interview witnesses
+
+### Network traffic & logs
+
+* Capture logs from static network systems
+  * VMs
+  * Firewalls, IDS, VPN, routers, switches
+  * Servers
+  * Security Incident & Event Management (SIEM) / Centralized logging systems
+* Active network scanning (Wireshark)
+
+### Record time offset
+
+* Coordinating time to accurately track events (time zone differences)
+* NTP: Network Time Protocol
