@@ -4,9 +4,10 @@
 2. Summarize business impact analysis concepts.
 3. Explain risk management processes and concepts.
 4. Given a scenario, follow incident response procedures.
-5. Summarize basic concepts of forensics
-6. Explain disaster recovery and continuity of operations concepts
-7. Compare and contrast various types of controls
+5. Summarize basic concepts of forensics.
+6. Explain disaster recovery and continuity of operations concepts.
+7. Compare and contrast various types of controls.
+8. Given a scenario, carry out data security and privacy practices.
 
 --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
 
@@ -594,3 +595,75 @@ They can be clasiffied based on functionality:
   * Hardening (physical & logical)
   * Process improvements
 * __Compensating__: Alternative controls that are intended to reduce the risk of an existing or potential control weakness.
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+
+## 8. Data Security and Privacy
+
+* Data sensitivity labeling and handling
+* Data sensitivity classifications
+* Sensitive Data Types (Legal)
+* Data Roles
+* Data Retention & Disposal
+* Data destruction and media sanitization
+
+### Data sensitivity labeling and handling
+
+Data is classified according to its value and level of sensitivity, so the appropriate level of security can be applied.
+
+Process should be:
+
+* Easy to apply
+* Consistent
+* Visible
+
+### Data sensitivity classifications
+
+There are common labels but classification terms and labeling is determined by the organization.
+
+* __Public / Unclassified__: No harm if disclosed.
+
+* __Confidential__: Limited harm if disclosed.
+
+* __Secret__: Grave harm if disclosed.
+
+* __Proprietary__: Limited to internal use only. Restricted externally.
+
+* __Private__: Information regarding people.
+
+### Sensitive Data Types (Legal)
+
+* __PII: Personally Identifiable Information__
+  * Data that identifies or is traceable to a specific individual.
+  * Name, Social Security Number, BIometrics, Address
+  * See NIST SP800-122
+* __PHI: Protected/Personal Health Information__
+    * HIPAA
+
+### Data Roles
+
+* Data Owner
+* Data Custodian
+* Privacy Officer
+
+### Data Retention & Disposal
+
+* Retention
+  * US Federal Rules of Civil Procedure (FRCP)
+  * Keep information for only as long as you need it and no longer
+  * Set in a _Data Protection Policy_
+* Disposal
+  * Properly disposing of data and associated hardware
+
+## Data destruction and media sanitization
+
+* Trusting third parties for destruction.
+* Observe transportation and destruction process.
+* Best practice is to combine multiple methods.
+  * _Burning_: not environmentally friendly.
+  * _Shredding_: reduces size of object but may still be re-assembled, it's costly.
+  * _Pulping_: reduces paper to liquid slurry and can be safely recycled.
+  * _Pulverizing_: hydraulic or neumatic action, it's costly.
+  * _Degaussing_: larget magnet to remove data from magnetic storage.
+  * _Purging / Sanitization_: removing files and all traces of data.
+  * _Wiping_: overwriting data with random 0's and 1's, and then removed.
