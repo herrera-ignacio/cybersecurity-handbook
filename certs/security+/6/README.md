@@ -488,4 +488,4 @@ The _X.509 v3 standard_ defines the certificate formats and fields for public ke
 
 * Hashes of public keys for popular web servers are included with applications such as web browsers.
 * Mitigates the use of fraudulent certificates.
-* __HTTP Public Key Pinning (HPKP)__, uses public key pins, which are essentially hashed values of the public key communicated to the browser client from the server in the HTTP header.
+* __HTTP Public Key Pinning (HPKP)__: uses public key pins, which are essentially hashed values of the public key communicated to the browser client from the server in the HTTP header.
