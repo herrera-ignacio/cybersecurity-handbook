@@ -12,3 +12,4 @@
 * [Domain 3 - Architecture & Design](./3)
 * [Domain 4 - Identity & Access Management](./4)
 * [Domain 5 - Risk Management](./5)
+* [Domain 6 - Cryptograpgy & PKI](./6)

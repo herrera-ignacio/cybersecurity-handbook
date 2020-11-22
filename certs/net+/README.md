@@ -1,5 +1,11 @@
 # Network+
 
+### Notes
+
+TODO
+
+### Cybrary Notes
+
 ## Networking Concepts
 
 * OSI vs TCP/IP Model
