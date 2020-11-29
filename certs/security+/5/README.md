@@ -180,7 +180,7 @@ Structured process used to identify and evaluate various risks or threats that a
 
 1. Identify assets
 2. Identify associated threats & vulnerabilities
-3. Determine likelihood of explit or compromise
+3. Determine likelihood of exploit or compromise
 4. Determine impact of exploit or compromise
 5. Prioritize risk activities / security controls
 
@@ -240,9 +240,9 @@ Structured process used to identify and evaluate various risks or threats that a
 
 ## 4. Incident Response
 
-__Incident__ (NIST) is an ocurrence that actually or potentially jeopardizes the confidentiality, integrity, or availability of an information system or the information the system processes, stores, or transmits, or that constitutes a violation or inminent threat of violeation of security policies, procedures, or use policies.
+__Incident__ (NIST) is an ocurrence that actually or potentially jeopardizes the confidentiality, integrity, or availability of an information system or the information the system processes, stores, or transmits, or that constitutes a violation or inminent threat of violation of security policies, procedures, or use policies.
 
-It can be concived as an unplanned disruption or degration of a service.
+It can be conceived as an unplanned disruption or degration of a service.
 
 * Incident Response Process
 * Incident Response Plan
@@ -260,14 +260,14 @@ It can be concived as an unplanned disruption or degration of a service.
 
 1. Preparation
 2. Detection & Analysis
-3. Containment, Eradication & Recovery (go back to 2 if needed)
+3. Containment, Erradication & Recovery (go back to 2 if needed)
 4. Post Incident Activity (go back to 1)
 
 ### Incident Response Plan (IRP)
 
 Documentation of a predetermined set of instructions or procedures to detect, respond to, and limit consequences of a malicious attack against an organization's information system(s).
 
-NIST _Computer Security Incident Handling Huide (SP 800-61)_ provides guidance on exact elements to include:
+NIST _Computer Security Incident Handling Guide (SP 800-61)_ provides guidance on exact elements to include:
 
 * Mission, strategies, and goals of incident response.
 * Senior management aproval.

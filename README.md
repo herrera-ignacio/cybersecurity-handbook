@@ -137,11 +137,21 @@ Some must know terms related to protocols, technology, etc...
 * [Shodan](./tools/shodan)
 * [Zenmap](./tools/zenmap)
 
+#### Network Hacking
+
+* [ifconfig/iwconfig](./tools/network/ifconfig)
+* [airodump-ng](./tools/network/airodump-ng)
+* [aireplay-ng](./tools/network/aireplay-ng)
+
 #### Vulnerability Scanning
 
 * OpenVAS
 * Volatility (Memory)
 * SQLMap
+
+#### Hashing
+
+* FCIV (Windows 10)
 
 ### Web Vulnerabilities
 

@@ -12,7 +12,7 @@ In browsers with _Site Isolation_, it can keep such data out of untrusted render
 
 ## The Problem
 
-SOP generally prevents one origin from reading arbitrary network resources from another origin. In practice, enforcing this policy is not as simple as blocking all cros-origin loads. Exceptions must be established for web features, like `<img>` or `<script>` which can target cross-origin resources for historical reasons, and for the CORS mechanism which allows some resources to be selectively read across origins.
+SOP generally prevents one origin from reading arbitrary network resources from another origin. In practice, enforcing this policy is not as simple as blocking all cross-origin loads. Exceptions must be established for web features, like `<img>` or `<script>` which can target cross-origin resources for historical reasons, and for the CORS mechanism which allows some resources to be selectively read across origins.
 
 Certain types of content, however, can be shown to be incompatible wih al of the historically-allowed permissive contexts. JSON is one such type. A JSON response will result in a decode error when targeted by the `<img>` tag, either a no-op or syntax error when targeted by the `<script>` tag, and so on. The only case where a web page can load JSON with oserable consequences is via `fetch()` or `XMLHttpRequest` which are moderated by CORS.
 
@@ -36,9 +36,9 @@ CORB can prevent this class of attacks when usd in tandem with _Site Isolation_,
 
 ## How does CORB "block" a response?
 
-When CORB decides that a response neds to be CORB-protected, it is modified as follows:
+When CORB decides that a response needs to be CORB-protected, it is modified as follows:
 
-* Response body is replaced wih an empy body.
+* Response body is replaced wih an empty body.
 * Response headers are reomved.
 
 ## Types of content protected by CORB
