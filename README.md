@@ -143,6 +143,10 @@ Some must know terms related to protocols, technology, etc...
 * [airodump-ng](./tools/network/airodump-ng)
 * [aireplay-ng](./tools/network/aireplay-ng)
 
+#### Utilities
+
+* [crunch (wordlists)](./tools/utilities/crunch)
+
 #### Vulnerability Scanning
 
 * OpenVAS
