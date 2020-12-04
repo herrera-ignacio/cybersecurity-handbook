@@ -137,6 +137,11 @@ Some must know terms related to protocols, technology, etc...
 * [Shodan](./tools/shodan)
 * [Zenmap](./tools/zenmap)
 
+#### Frameworks
+
+* [Metasploit](./tools/frameworks/metasploit)
+* [Nexpose](./tools/frameworks/nexpose)
+
 #### Network Hacking
 
 * [ifconfig/iwconfig](./tools/network/ifconfig)
