@@ -141,6 +141,7 @@ Some must know terms related to protocols, technology, etc...
 
 * [Metasploit](./tools/frameworks/metasploit)
 * [Nexpose](./tools/frameworks/nexpose)
+* [Veil](./tools/frameworks/veil)
 
 #### Network Hacking
 
