@@ -131,7 +131,6 @@ Some must know terms related to protocols, technology, etc...
 * [HunterIO](./tools/hunterio)
 * [IP Scanner](./tools/ip-scanner)
 * [md5deep](./tools/md5deep)
-* [Metasploit](./tools/metasploit)
 * [msfvenom](./tools/msfvenom)
 * [OSINT](./tools/osint)
 * [Shodan](./tools/shodan)
@@ -143,17 +142,29 @@ Some must know terms related to protocols, technology, etc...
 * [Nexpose](./tools/frameworks/nexpose)
 * [Veil](./tools/frameworks/veil)
 
-#### Network Hacking
+#### Network Monitoring & Hacking
 
 * [ifconfig/iwconfig](./tools/network/ifconfig)
 * [airodump-ng](./tools/network/airodump-ng)
 * [aireplay-ng](./tools/network/aireplay-ng)
 * [ARPSpoof](./tools/network/arpspoof)
 * [Bettercap](./tools/network/bettercap)
+* [Wireshark](./tools/network/wireshark)
 
 #### Utilities
 
-* [crunch (wordlists)](./tools/utilities/crunch)
+* [crunch](./tools/utilities/crunch): Wordlist generator.
+* [Request Analyzer](./request-analyzer): Send requests and get insight about its headers.
+* [Form Interactor](./form-interactor): Interact with web forms from your terminal.
+* [Tech Analyzer](./tech-analyzer): Detect technologies used in web pages.
+* [Wordpress Inspector](./wordpress-inspector): Inspect wordpress page's plugins, themes, and users.
+* [DNS Util](./dns-util): Get information about dns zones, subdomains, geolocalization, etc...
+* [Dump OS Info](./dump-os-info): Dump information about host os "secretly".
+* [Backdoor](./backdoor): Sample client-server backdoor (run shell).
+* [Shodan](./shodan): Wrapper around shodan.io for hosts discovery.
+* [Nmap](./nmap): Wrapper around nmap for services discovery.
+* [Bruteforce](./brute-force): Scripts to brute force ftp/ssh services.
+* [Proxy](./proxy): Proxy implementations.
 
 #### Vulnerability Scanning
 
