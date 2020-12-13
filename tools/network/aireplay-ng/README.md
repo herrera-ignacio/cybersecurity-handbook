@@ -1,6 +1,6 @@
 # aireplay-ng
 
-* Part of the _aircrack-ng_ suit.
+> [Official page](https://www.aircrack-ng.org/doku.php?id=aireplay-ng)
 
 ## Deauthentication Attack
 

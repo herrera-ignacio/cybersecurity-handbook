@@ -150,11 +150,13 @@ Some must know terms related to protocols, technology, etc...
 #### Network Monitoring & Hacking
 
 * [ifconfig/iwconfig](./tools/network/ifconfig)
-* [airodump-ng](./tools/network/airodump-ng)
-* [aireplay-ng](./tools/network/aireplay-ng)
-* [ARPSpoof](./tools/network/arpspoof)
-* [Bettercap](./tools/network/bettercap)
-* [Wireshark](./tools/network/wireshark)
+* [aircrack-ng](https://www.aircrack-ng.org): Suite of tools to assess WiFi network security.
+  * [airodump-ng](./tools/network/airodump-ng): Packet capturing of raw 802.11 frames.
+  * [aireplay-ng](./tools/network/aireplay-ng): Generate traffic for different attack vectors.
+* [ARPSpoof](./tools/network/arpspoof): ARP Spoofing.
+* [Bettercap](./tools/network/bettercap): Network reconnaissance and MITM attacks.
+* [Wireshark](./tools/network/wireshark): Packet analyzer.
+* [MANA Toolkit](./tools/network/mana-toolkit): Honeypot - MITM.
 
 #### Utilities
 

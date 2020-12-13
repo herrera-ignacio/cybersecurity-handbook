@@ -95,4 +95,10 @@ set hstshijack.payloads     <DOMAINS>:<PAYLOAD_LOCATION>,etc...
 set hstshijack.payloads     *:/usr/share/payloads/keylogger.js
 ```
 
+### Output sniff data
 
+You can also save sniffing output for a later analysis adding to your `.cap` configuration file:
+
+```
+set net.sniff.output <NAME.cap>
+```

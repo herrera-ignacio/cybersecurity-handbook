@@ -1,7 +1,6 @@
 # airodump-ng (Packet Sniffing)
 
-* Part of the _aircrack-ng_ suit.
-* Packet Sniffer.
+> [Official page](https://www.aircrack-ng.org/doku.php?id=airodump-ng)
 
 ```
 airodump-ng <monitor_interface>

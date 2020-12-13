@@ -15,4 +15,4 @@ bettercap -iface [INTERFACE] -caplet <LOG.CAP>
 ### Filtering
 
 * HTTP
-* 
+* POST request data
