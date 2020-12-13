@@ -139,7 +139,7 @@ Some must know terms related to protocols, technology, etc...
 * [msfvenom](./tools/msfvenom)
 * [OSINT](./tools/osint)
 * [Shodan](./tools/shodan)
-* [Zenmap](./tools/zenmap)
+
 
 #### Frameworks
 
@@ -161,6 +161,12 @@ Some must know terms related to protocols, technology, etc...
 #### Utilities
 
 * [crunch](./tools/utilities/crunch): Wordlist generator.
+
+#### Gaining Access Server Side
+
+* [Zenmap](./tools/access/zenmap): Gathering information.
+* Metasploit
+* Nexpose
 
 #### Scripts & Wrappers
 
