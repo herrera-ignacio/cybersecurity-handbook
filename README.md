@@ -168,6 +168,14 @@ Some must know terms related to protocols, technology, etc...
 * Metasploit
 * Nexpose
 
+#### Gaining Access Client Side
+
+* Veil
+
+#### Delivery
+
+* [Apache Webserver](./tools/delivery/apache): Apache server
+
 #### Scripts & Wrappers
 
 * [Request Analyzer](./tools/scripts/request-analyzer): Send requests and get insight about its headers.
