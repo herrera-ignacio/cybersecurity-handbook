@@ -174,7 +174,9 @@ Some must know terms related to protocols, technology, etc...
 
 #### Delivery
 
-* [Apache Webserver](./tools/delivery/apache): Apache server
+* [Apache](./tools/delivery/apache): Webserver.
+* [Evilgrade](./tools/delivery/evilgrade): DNS Spoofing for injecting payloads on software updates.
+* [bdfproxy](./tools/delivery/bdfproxy): Inject payloads on downloads on the fly.
 
 #### Scripts & Wrappers
 
