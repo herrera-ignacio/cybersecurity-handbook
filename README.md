@@ -17,6 +17,11 @@ Each topic is only described in an introductory level, so you can understand the
 * [Hacker101](https://www.hacker101.com/)
 * [Acunetix WVS](http://testphp.vulnweb.com/)
 
+### CTFs & Challenges
+
+* Hackerbox
+* TryHackMe
+
 ## :bomb: Research Material
 
 ## Lectures
@@ -154,17 +159,19 @@ Some must know terms related to protocols, technology, etc...
 #### Utilities
 
 * [crunch](./tools/utilities/crunch): Wordlist generator.
-* [Request Analyzer](./request-analyzer): Send requests and get insight about its headers.
-* [Form Interactor](./form-interactor): Interact with web forms from your terminal.
-* [Tech Analyzer](./tech-analyzer): Detect technologies used in web pages.
-* [Wordpress Inspector](./wordpress-inspector): Inspect wordpress page's plugins, themes, and users.
-* [DNS Util](./dns-util): Get information about dns zones, subdomains, geolocalization, etc...
-* [Dump OS Info](./dump-os-info): Dump information about host os "secretly".
-* [Backdoor](./backdoor): Sample client-server backdoor (run shell).
-* [Shodan](./shodan): Wrapper around shodan.io for hosts discovery.
-* [Nmap](./nmap): Wrapper around nmap for services discovery.
-* [Bruteforce](./brute-force): Scripts to brute force ftp/ssh services.
-* [Proxy](./proxy): Proxy implementations.
+
+#### Scripts & Wrappers
+
+* [Request Analyzer](./tools/scripts/request-analyzer): Send requests and get insight about its headers.
+* [Form Interactor](./tools/scripts/form-interactor): Interact with web forms from your terminal.
+* [Tech Analyzer](./tools/scripts/tech-analyzer): Detect technologies used in web pages.
+* [Wordpress Inspector](./tools/scripts/wordpress-inspector): Inspect wordpress page's plugins, themes, and users.
+* [DNS Util](./tools/scripts/dns-util): Get information about dns zones, subdomains, geolocalization, etc...
+* [Dump OS Info](./tools/scripts/dump-os-info): Dump information about host os "secretly".
+* [Backdoor](./tools/scripts//tools/scripts/shodan): Wrapper around shodan.io for hosts discovery.
+* [Nmap](./tools/scripts/nmap): Wrapper around nmap for services discovery.
+* [Bruteforce](./tools/scripts/brute-force): Scripts to brute force ftp/ssh services.
+* [Proxy](./tools/scripts/proxy): Proxy implementations.
 
 #### Vulnerability Scanning
 
@@ -203,10 +210,10 @@ Some must know terms related to protocols, technology, etc...
 
 ### Windows Security
 
-* [MBSA - Microsoft Baseline Security Analyser](./windows-sec/mbsa)
 * [Windows Security Infrastructure](./windows-sec/infrastructure)
 
 ## Certifications guidelines
 
 * [Network+](./certs/net+)
 * [Security+](./certs/security+)
+* OSCP

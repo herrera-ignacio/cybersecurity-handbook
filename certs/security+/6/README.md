@@ -41,7 +41,11 @@
 
 Cryptograpy is the process of converting ordinary plain text into unintelligeble text and vice-verse. It is a method of storing and transmitting data in a particular form so that only those for whom it is intended can read and process it.
 
-> Kercheroff's principle states: "Only secrecy of the key provides security".
+> Kerckhoffs's principle states: "Only secrecy of the key provides security".
+
+> Kerkhoff's principle: A cryptosystem should be secure even if everything about the system, except the key, is public knowledge.
+
+> Shanonon's maxim: "One ought to design systems under the assumption that the enemy will immediately gain full familiarity with them".
 
 ### Symmetric Encryption
 
