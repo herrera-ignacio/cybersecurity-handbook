@@ -146,6 +146,7 @@ Some must know terms related to protocols, technology, etc...
 * [Metasploit](./tools/frameworks/metasploit)
 * [Nexpose](./tools/frameworks/nexpose)
 * [Veil](./tools/frameworks/veil)
+* [BeEf](./tools/frameworks/beef)
 
 #### Network Monitoring & Hacking
 
@@ -161,6 +162,7 @@ Some must know terms related to protocols, technology, etc...
 #### Utilities
 
 * [crunch](./tools/utilities/crunch): Wordlist generator.
+* [Hybrid-Analysis](https://www.hybrid-analysis.com): Analyse threats/malware.
 
 #### Gaining Access Server Side
 
@@ -171,6 +173,7 @@ Some must know terms related to protocols, technology, etc...
 #### Gaining Access Client Side
 
 * Veil
+* BeEF (Browser Exploitation Framework)
 
 #### Delivery
 
