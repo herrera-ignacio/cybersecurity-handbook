@@ -186,6 +186,10 @@ Some must know terms related to protocols, technology, etc...
 * [Maltego](./tools/social-engineering/maltego): Information gathering tool.
 * [SendingBlue](./tools/social-engineering/sendingblue): SMTP email service.
 
+#### Post Exploitation
+
+* [Metasploitable > Meterpreter](./tools/post-exploitation/meterpreter)
+
 #### Scripts & Wrappers
 
 * [Request Analyzer](./tools/scripts/request-analyzer): Send requests and get insight about its headers.
@@ -238,7 +242,7 @@ Some must know terms related to protocols, technology, etc...
 
 * [Windows Security Infrastructure](./windows-sec/infrastructure)
 
-## Certifications guidelines
+## Certifications study notes
 
 * [Network+](./certs/net+)
 * [Security+](./certs/security+)
