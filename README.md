@@ -22,7 +22,8 @@ Each topic is only described in an introductory level, so you can understand the
 * Hackerbox
 * TryHackMe
 
-## :bomb: Research Material
+---
+# :bomb: Research Material
 
 ## Lectures
 
@@ -140,7 +141,6 @@ Some must know terms related to protocols, technology, etc...
 * [OSINT](./tools/osint)
 * [Shodan](./tools/shodan)
 
-
 #### Frameworks
 
 * [Metasploit](./tools/frameworks/metasploit)
@@ -177,6 +177,11 @@ Some must know terms related to protocols, technology, etc...
 * [Apache](./tools/delivery/apache): Webserver.
 * [Evilgrade](./tools/delivery/evilgrade): DNS Spoofing for injecting payloads on software updates.
 * [bdfproxy](./tools/delivery/bdfproxy): Inject payloads on downloads on the fly.
+
+#### Social Engineering
+
+* [Maltego](./tools/social-engineering/maltego): Information gathering tool.
+* [SendingBlue](./tools/social-engineering/sendingblue): SMTP email service.
 
 #### Scripts & Wrappers
 
