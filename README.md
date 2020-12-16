@@ -216,4 +216,5 @@ Some must know terms related to protocols, technology, etc...
 
 * [Network+](./certs/net+)
 * [Security+](./certs/security+)
+* [LPIC-1](https://github.com/herrera-ignacio/lpic-1)
 * OSCP
