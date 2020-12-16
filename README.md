@@ -22,7 +22,8 @@ Each topic is only described in an introductory level, so you can understand the
 * Hackerbox
 * TryHackMe
 
-## :bomb: Research Material
+---
+# :bomb: Research Material
 
 ## Lectures
 
@@ -139,26 +140,55 @@ Some must know terms related to protocols, technology, etc...
 * [msfvenom](./tools/msfvenom)
 * [OSINT](./tools/osint)
 * [Shodan](./tools/shodan)
-* [Zenmap](./tools/zenmap)
 
 #### Frameworks
 
 * [Metasploit](./tools/frameworks/metasploit)
 * [Nexpose](./tools/frameworks/nexpose)
 * [Veil](./tools/frameworks/veil)
+* [BeEf](./tools/frameworks/beef)
 
 #### Network Monitoring & Hacking
 
 * [ifconfig/iwconfig](./tools/network/ifconfig)
-* [airodump-ng](./tools/network/airodump-ng)
-* [aireplay-ng](./tools/network/aireplay-ng)
-* [ARPSpoof](./tools/network/arpspoof)
-* [Bettercap](./tools/network/bettercap)
-* [Wireshark](./tools/network/wireshark)
+* [aircrack-ng](https://www.aircrack-ng.org): Suite of tools to assess WiFi network security.
+  * [airodump-ng](./tools/network/airodump-ng): Packet capturing of raw 802.11 frames.
+  * [aireplay-ng](./tools/network/aireplay-ng): Generate traffic for different attack vectors.
+* [ARPSpoof](./tools/network/arpspoof): ARP Spoofing.
+* [Bettercap](./tools/network/bettercap): Network reconnaissance and MITM attacks.
+* [Wireshark](./tools/network/wireshark): Packet analyzer.
+* [MANA Toolkit](./tools/network/mana-toolkit): Honeypot - MITM.
 
 #### Utilities
 
 * [crunch](./tools/utilities/crunch): Wordlist generator.
+* [Hybrid-Analysis](https://www.hybrid-analysis.com): Analyse threats/malware.
+
+#### Gaining Access Server Side
+
+* [Zenmap](./tools/access/zenmap): Gathering information.
+* Metasploit
+* Nexpose
+
+#### Gaining Access Client Side
+
+* Veil
+* BeEF (Browser Exploitation Framework)
+
+#### Delivery
+
+* [Apache](./tools/delivery/apache): Webserver.
+* [Evilgrade](./tools/delivery/evilgrade): DNS Spoofing for injecting payloads on software updates.
+* [bdfproxy](./tools/delivery/bdfproxy): Inject payloads on downloads on the fly.
+
+#### Social Engineering
+
+* [Maltego](./tools/social-engineering/maltego): Information gathering tool.
+* [SendingBlue](./tools/social-engineering/sendingblue): SMTP email service.
+
+#### Post Exploitation
+
+* [Metasploitable > Meterpreter](./tools/post-exploitation/meterpreter)
 
 #### Scripts & Wrappers
 
@@ -212,7 +242,7 @@ Some must know terms related to protocols, technology, etc...
 
 * [Windows Security Infrastructure](./windows-sec/infrastructure)
 
-## Certifications guidelines
+## Certifications study notes
 
 * [Network+](./certs/net+)
 * [Security+](./certs/security+)

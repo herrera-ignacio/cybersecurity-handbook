@@ -15,6 +15,8 @@ exploit
 
 ## Exploits
 
+Download exploits from Rapid7 based on gathering information on target's services.
+
 ### Heartbleed
 
 Get data from the heap memory of a vulnerable machine (accepting and processing new SSL connections). Data depends largely on the timing of when the exploit is performed. Not getting something highly valuable does not equate to a failed exploit.
@@ -31,3 +33,7 @@ set VERBOSE true
 set RHOSTS 10.0.0.101
 run
 ```
+
+## Payloads
+
+Some exploits allow for injecting payloads, expanding our attack vectors, i.e. triggering reverse connections.
