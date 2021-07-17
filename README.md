@@ -80,7 +80,7 @@ Each topic is only described in an introductory level, so you can understand the
 
 ### Networking
 
-Some must know terms related to protocols, technology, etc...
+> Some must know terms related to protocols, technology, etc...
 
 * [Common Network Prot Numbers](https://www.utilizewindows.com/list-of-common-network-port-numbers/)
 * [Cookies](./glossary/cookies)
@@ -112,6 +112,7 @@ Some must know terms related to protocols, technology, etc...
 * [SPF: Sender Policy Framework](./glossay/spf)
 * [Subnetting](./glossary/subnetting)
 * [TCP/IP Model](/glossary/tcp-ip)
+* [Topologies](glossary/network-topologies)
 * [User Agent](./glossary/user-agent)
 * [WHATWG](./glossary/whatwg)
 
