@@ -98,6 +98,9 @@ Each topic is only described in an introductory level, so you can understand the
 * [Network Topologies](networking/general/network-topologies)
   * [Bus](networking/general/network-topologies/bus)
   * [Ring](networking/general/network-topologies/ring)
+  * [Star](networking/general/networking-topologies/star)
+  * [Extended Star](networking/general/networking-topologies/extended-star)
+  * [Mesh](networking/general/networking-topologies/mesh)
 * [User Agent](networking/general/user-agent)
 * [WHATWG](networking/general/whatwg)
 
