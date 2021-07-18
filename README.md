@@ -95,6 +95,7 @@ Each topic is only described in an introductory level, so you can understand the
 * [Proxy Server](networking/general/proxy-server)
 * [Subnetting](networking/general/subnetting)
 * [Network Topologies](networking/general/network-topologies)
+  * [Bus](networking/general/network-topologies/bus)
 * [User Agent](networking/general/user-agent)
 * [WHATWG](networking/general/whatwg)
 

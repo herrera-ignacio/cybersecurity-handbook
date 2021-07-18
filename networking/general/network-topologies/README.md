@@ -33,10 +33,5 @@ The physical topology of a network is determined by the capabilities of the netw
 
 Logical topologies are often closely associated with *Media Access Controll* methods and protocols.
 
-Some networks are able to dynamically change their logical topology through configuration changes to their routers and switches.
-
-## Bus Topology
-
-![](2021-07-17-22-18-25.png)
-
-Nodes are directly connected to a **common half-duplex link** called a **bus**.
+Some networks are able to dynamically .
+change their logical topology through configuration changes to their routers and switches.
