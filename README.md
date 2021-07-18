@@ -59,10 +59,13 @@ Each topic is only described in an introductory level, so you can understand the
 
 ### Cryptograpgy
 
-[Introduction to Cryptography](crypto)
-
+* [Cryptography](crypto)
 * [Ciphers: Asymmetric](crypto/ciphers/asymmetric)
 * [Ciphers: Symmetric](crypto/ciphers/symmetric)
+* [Encryption](glossary/encryption)
+  * [Public-Key](glossary/encryption/public-key)
+  * [SSL](glossary/encryption/ssl)
+  * [TLS](glossary/encryption/tls)
 * [Hashes](crypto/hashes)
 * [Message Authentication Code (MAC)](crypto/mac)
 * [Mortal Sins of Crypto](crypto/mortal-sins)
@@ -76,27 +79,24 @@ Each topic is only described in an introductory level, so you can understand the
 * [Padding Oracle](crypto/attacks/padding-oracle)
 * [Stream Cipher Reuse](crypto/attacks/stream-cipher-reuse)
 
-### Networking
+### Networking & Telecommunications
 
 #### General Concepts
 
-* [Devices](glossary/devices)
-* [Encryption](glossary/encryption)
-  * [Public-Key](glossary/encryption/public-key)
-  * [SSL](glossary/encryption/ssl)
-  * [TLS](glossary/encryption/tls)
-* [Mime Sniffing](glossary/mime-sniffing)
-* [Network Communication](glossary/network-communication)
+* [Devices](networking/general/devices)
+* [Duplex](networking/general/duplex)
+* [Mime Sniffing](networking/general/mime-sniffing)
+* [Network Communication](networking/general/network-communication)
   * Unicast
   * Broadcast
   * Multicast
-* [OSI: Open Systems Interconnection](glossary/osi)
-* [Packets](glossary/packets)
-* [Proxy Server](glossary/proxy-server)
-* [Subnetting](glossary/subnetting)
-* [Network Topologies](glossary/network-topologies)
-* [User Agent](glossary/user-agent)
-* [WHATWG](glossary/whatwg)
+* [OSI: Open Systems Interconnection](networking/general/osi)
+* [Packets](networking/general/packets)
+* [Proxy Server](networking/general/proxy-server)
+* [Subnetting](networking/general/subnetting)
+* [Network Topologies](networking/general/network-topologies)
+* [User Agent](networking/general/user-agent)
+* [WHATWG](networking/general/whatwg)
 
 #### Protocols and Technology Specifics
 
