@@ -78,25 +78,13 @@ Each topic is only described in an introductory level, so you can understand the
 
 ### Networking
 
-> Some must know terms related to protocols, technology, etc...
+#### General Concepts
 
-* [Common Network Prot Numbers](https://www.utilizewindows.com/list-of-common-network-port-numbers/)
-* [Cookies](glossary/cookies)
-* [CORB: Cross-Origin Read Blocking](glossary/corb)
-* [CORS: Cross-Origin Resource Sharing](glossary/cors)
-* [CSP: Content Security Policy](glossary/csp)
 * [Devices](glossary/devices)
-* [DOM: Document Object Model](glossary/dom)
 * [Encryption](glossary/encryption)
   * [Public-Key](glossary/encryption/public-key)
   * [SSL](glossary/encryption/ssl)
   * [TLS](glossary/encryption/tls)
-* [HTML](glossary/html)
-* [HTTP](glossary/http)
-* [HTTP Headers](glossary/http-headers)
-* [HTTP Requests](glossary/http-requests)
-* [IP Addressing](glossary/ipaddressing)
-* [MIME Types](glossary/mime-types)
 * [Mime Sniffing](glossary/mime-sniffing)
 * [Network Communication](glossary/network-communication)
   * Unicast
@@ -105,14 +93,29 @@ Each topic is only described in an introductory level, so you can understand the
 * [OSI: Open Systems Interconnection](glossary/osi)
 * [Packets](glossary/packets)
 * [Proxy Server](glossary/proxy-server)
+* [Subnetting](glossary/subnetting)
+* [Network Topologies](glossary/network-topologies)
+* [User Agent](glossary/user-agent)
+* [WHATWG](glossary/whatwg)
+
+#### Protocols and Technology Specifics
+
+* [Commonly Used Port Numbers](https://www.utilizewindows.com/list-of-common-network-port-numbers/)
+* [Cookies](glossary/cookies)
+* [CORB: Cross-Origin Read Blocking](glossary/corb)
+* [CORS: Cross-Origin Resource Sharing](glossary/cors)
+* [CSP: Content Security Policy](glossary/csp)
+* [DOM: Document Object Model](glossary/dom)
+* [HTML](glossary/html)
+* [HTTP](glossary/http)
+ * [HTTP Headers](glossary/http-headers)
+  * [HTTP Requests](glossary/http-requests)
+* [IP Addressing](glossary/ipaddressing)
+* [MIME Types](glossary/mime-types)
 * [Routing Protocols](glossary/routing-protocols)
 * [SOP: Same-Origin-Policy](glossary/sop)
 * [SPF: Sender Policy Framework](glossay/spf)
-* [Subnetting](glossary/subnetting)
 * [TCP/IP Model](/glossary/tcp-ip)
-* [Topologies](glossary/network-topologies)
-* [User Agent](glossary/user-agent)
-* [WHATWG](glossary/whatwg)
 
 ### Offensive Security
 
