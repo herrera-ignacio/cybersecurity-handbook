@@ -96,6 +96,7 @@ Each topic is only described in an introductory level, so you can understand the
 * [Subnetting](networking/general/subnetting)
 * [Network Topologies](networking/general/network-topologies)
   * [Bus](networking/general/network-topologies/bus)
+  * [Ring](networking/general/network-topologies/ring)
 * [User Agent](networking/general/user-agent)
 * [WHATWG](networking/general/whatwg)
 
