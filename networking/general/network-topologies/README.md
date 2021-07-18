@@ -2,14 +2,7 @@
 
 > https://en.wikipedia.org/wiki/Network_topology
 
-* Overview
-  * Physical Topology
-  * Logical Topology
-* Bus Topology
-
-## Overview
-
-![](2021-07-17-21-00-01.png)
+![](2021-07-18-14-41-51.png)
 
 *Network Topology* is the arrangement of the elements (links, nodes, etc.) of a communication network. It is the *topological* structure of a network and may be depicted **physically**, refering to the placement of the various components of a network (e.g., device location and cable installation) and concerned of the *physical layer* of the *OSI model*, or **logically**, which illustrates how data flows within a network.
 
@@ -17,7 +10,7 @@
 
 it is an application of *graph theory* wherein communicating devices are modeled as links or lines between the nodes.
 
-### Physical Topology
+## Physical Topology
 
 The **transmission medium layout** used to link devices is the physical topology of the network.
 
@@ -25,7 +18,7 @@ The **transmission medium layout** used to link devices is the physical topology
 
 The physical topology of a network is determined by the capabilities of the network access devices and media, the level of control or fault tolerance desired, and the cost associated with cabling or telecommunication circuits.
 
-### Logical Topology
+## Logical Topology
 
 *Logical Topology* is the way that the signals act on the network media, or the way that the data passes through the network from one device to the next without regard to the physical interconnection of the devices.
 

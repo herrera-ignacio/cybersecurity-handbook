@@ -93,6 +93,7 @@ Each topic is only described in an introductory level, so you can understand the
 * [OSI: Open Systems Interconnection](networking/general/osi)
 * [Packets](networking/general/packets)
 * [Proxy Server](networking/general/proxy-server)
+* [SPOF: Single Point of Failure](networking/general/spof)
 * [Subnetting](networking/general/subnetting)
 * [Network Topologies](networking/general/network-topologies)
   * [Bus](networking/general/network-topologies/bus)
