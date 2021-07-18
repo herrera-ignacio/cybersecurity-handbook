@@ -101,6 +101,7 @@ Each topic is only described in an introductory level, so you can understand the
   * [Star](networking/general/networking-topologies/star)
   * [Extended Star](networking/general/networking-topologies/extended-star)
   * [Mesh](networking/general/networking-topologies/mesh)
+  * [Tree](networking/general/networking-topologies/tree)
 * [User Agent](networking/general/user-agent)
 * [WHATWG](networking/general/whatwg)
 
