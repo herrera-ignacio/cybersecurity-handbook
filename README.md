@@ -6,56 +6,9 @@ This attemps to be a collection of Cybersecurity knowledge. I seek to encourage 
 
 Each topic is only described in an introductory level, so you can understand the underlying concept. Learning how to apply those concepts in real-life scenarios is up to you to research and experiment.
 
-## Useful Links
-
-### Bug Bounty Programs
-
-* [Hackerone](https://www.hackerone.com/)
-
-### Learning Communities & Sites
-
-* [Hacker101](https://www.hacker101.com/)
-* [Acunetix WVS](http://testphp.vulnweb.com/)
-
-### CTFs & Challenges
-
-* Hackerbox
-* TryHackMe
-
 ---
-# :bomb: Research Material
-
-## Lectures
-
-## Certifications study notes
-
-* [Network+](certs/net+)
-* [Security+](certs/security+)
-* [LPIC-1](https://github.com/herrera-ignacio/lpic-1)
-
-### Pentesting & Bug hunting
-
-* [Defcon 23, Jason Haddix, How to Shot Web (2015)](lectures/d23-how-to-shoot-web)
-
-### SOC Analyst
-
-* [Cyber threat intelligence](lectures/cyber-threat-intelligence)
-* [Vulnerabity Management Fundamentals](lectures/vuln-management-fundamentals)
-* [Malware Threats](lectures/malware-threats)
-
-### HIPAA
-
-* [HIPAA Training](lectures/hipaa-training)
 
 ## Topics (A-Z)
-
-### Cybersecurity 
-
-* [CID Triad](sec-glossary/cid)
-* [Cybersecurity](sec-glossary/cybersecurity)
-* [Defense in Depth](sec-glossary/did)
-* [IOC: Indicator of Compromise](sec-glossary/ioc)
-* [OWASP](sec-glossary/owasp)
 
 ### Cryptograpgy
 
@@ -78,6 +31,22 @@ Each topic is only described in an introductory level, so you can understand the
 * [Hash/Length Extension](crypto/attacks/hash-extension)
 * [Padding Oracle](crypto/attacks/padding-oracle)
 * [Stream Cipher Reuse](crypto/attacks/stream-cipher-reuse)
+
+### Cybersecurity 
+
+* [CID Triad](sec-glossary/cid)
+* [Cybersecurity](sec-glossary/cybersecurity)
+* [Defense in Depth](sec-glossary/did)
+* [IOC: Indicator of Compromise](sec-glossary/ioc)
+* [OWASP](sec-glossary/owasp)
+* Offensive Security
+  * [Architecture Review](offensive/architectuer-review)
+  * [Bug Bounty](offensive/bug-bounty)
+  * [Code Review (Source Code)](offensive/code-review)
+  * [Ethical Hacking](offensive/ethical-hacking)
+  * [Recon](offensive/recon)
+  * [Threat Modeling](offensive/threat-modeling)
+  * [Web Security](offensive/web-sec)
 
 ### Networking & Telecommunications
 
@@ -105,7 +74,7 @@ Each topic is only described in an introductory level, so you can understand the
 * [User Agent](networking/general/user-agent)
 * [WHATWG](networking/general/whatwg)
 
-#### Protocols and Technology Specifics
+### Protocols and Technology 
 
 * [Commonly Used Port Numbers](https://www.utilizewindows.com/list-of-common-network-port-numbers/)
 * [Cookies](glossary/cookies)
@@ -124,20 +93,6 @@ Each topic is only described in an introductory level, so you can understand the
 * [SPF: Sender Policy Framework](glossay/spf)
 * [TCP/IP Model](/glossary/tcp-ip)
 
-### Offensive Security
-
-* [Architecture Review](offensive/architectuer-review)
-* [Bug Bounty](offensive/bug-bounty)
-* [Code Review (Source Code)](offensive/code-review)
-* [Ethical Hacking](offensive/ethical-hacking)
-* [Recon](offensive/recon)
-* [Threat Modeling](offensive/threat-modeling)
-* [Web Security](offensive/web-sec)
-
-### System Vulnerabilities
-
-* [Shellshock](pentesting/shellshock)
-
 ### Tools
 
 * [binwalk](tools/binwalk)
@@ -149,19 +104,21 @@ Each topic is only described in an introductory level, so you can understand the
 * [msfvenom](tools/msfvenom)
 * [OSINT](tools/osint)
 * [Shodan](tools/shodan)
-
-#### Burp Suite
-
-* [Configure Burp suite](tools/burp/configure.md)
-* [XSS](tools/burp/xss)
-* [Host-header attack](tools/burp/host-header)
+* Windows
+  * [Windows Security Infrastructure](tools/windows-sec/infrastructure)
 
 #### Frameworks
 
+* [BeEf (Browser Exploitation Framework)](tools/frameworks/beef)
+* Burp
+  * [Configure Burp suite](tools/frameworks/burp/configure.md)
+  * [XSS](tools/frameworks/burp/xss)
+  * [Host-header attack](tools/frameworks/burp/host-header)
 * [Metasploit](tools/frameworks/metasploit)
 * [Nexpose](tools/frameworks/nexpose)
 * [Veil](tools/frameworks/veil)
-* [BeEf](tools/frameworks/beef)
+* [Zenmap](tools/zenmap): Gathering information.
+* 
 
 #### Network Monitoring & Hacking
 
@@ -178,17 +135,6 @@ Each topic is only described in an introductory level, so you can understand the
 
 * [crunch](tools/utilities/crunch): Wordlist generator.
 * [Hybrid-Analysis](https://www.hybrid-analysis.com): Analyse threats/malware.
-
-#### Gaining Access Server Side
-
-* [Zenmap](tools/access/zenmap): Gathering information.
-* Metasploit
-* Nexpose
-
-#### Gaining Access Client Side
-
-* Veil
-* BeEF (Browser Exploitation Framework)
 
 #### Delivery
 
@@ -228,31 +174,74 @@ Each topic is only described in an introductory level, so you can understand the
 
 * FCIV (Windows 10)
 
-### Web Vulnerabilities
+### Vulnerabilities Glossary
 
-* [Auth-Z: Forced Browsing/Improper Authorization](vulnerabilities/auth-z)
-* [Clickjacking](vulnerabilities/clickjacking)
-* [Command Injection](vulnerabilities/command-injection)
-* [Cookie Tampering](vulnerabilities/cookie-tampering)
-* [CORS insecure configuration](vulnerabilities/cors-insecure)
-* [CSRF: Cross-Site Request Forgery](vulnerabilities/csrf)
-* [File Inclusion](vulnerabilities/file-inclusion)
-* [File Upload](.vulnerabilities/file-upload)
-* [Host Header](vulnerabilities/host-header)
-* [HTML Injection](vulnerabilities/html-injection)
-* [Insuficient SPF](vulnerabilities/insuficient-spf)
-* [MIME Sniffing](vulnerabilities/mime-sniffing)
-* [Null Termination](vulnerabilities/null-termination)
-* [Path Traversal](vulnerabilities/path-traversal)
-* [Parameter Tampering](vulnerabilities/parameter-tampering)
-* [SQLi: Data Exfiltration](vulnerabilities/sql-exfiltration)
-* [SQLi: SQL Injection](vulnerabilities/sql-injection)
-* [SSRF: Server-Side Request Forgery](vulnerabilities/ssrf)
-* [Subdomain Takeover](vulnerabilities/subdomain-takeover)
-* [Unchecked Redirects](vulnerabilities/unchecked-redirects)
-* [XSS: Cross-Site Scripting](vulnerabilities/xss)
-* [XXE: XML External Entities](vulnerabilities/xml-entities)
+#### Web
+
+* [Auth-Z: Forced Browsing/Improper Authorization](vulnerabilities/web/auth-z)
+* [Clickjacking](vulnerabilities/web/clickjacking)
+* [Command Injection](vulnerabilities/web/command-injection)
+* [Cookie Tampering](vulnerabilities/web/cookie-tampering)
+* [CORS insecure configuration](vulnerabilities/web/cors-insecure)
+* [CSRF: Cross-Site Request Forgery](vulnerabilities/web/csrf)
+* [File Inclusion](vulnerabilities/web/file-inclusion)
+* [File Upload](.vulnerabilities/web/file-upload)
+* [Host Header](vulnerabilities/web/host-header)
+* [HTML Injection](vulnerabilities/web/html-injection)
+* [Insuficient SPF](vulnerabilities/web/insuficient-spf)
+* [MIME Sniffing](vulnerabilities/web/mime-sniffing)
+* [Null Termination](vulnerabilities/web/null-termination)
+* [Path Traversal](vulnerabilities/web/path-traversal)
+* [Parameter Tampering](vulnerabilities/web/parameter-tampering)
+* [SQLi: Data Exfiltration](vulnerabilities/web/sql-exfiltration)
+* [SQLi: SQL Injection](vulnerabilities/web/sql-injection)
+* [SSRF: Server-Side Request Forgery](vulnerabilities/web/ssrf)
+* [Subdomain Takeover](vulnerabilities/web/subdomain-takeover)
+* [Unchecked Redirects](vulnerabilities/web/unchecked-redirects)
+* [XSS: Cross-Site Scripting](vulnerabilities/web/xss)
+* [XXE: XML External Entities](vulnerabilities/web/xml-entities)
+
+#### Server
+
+* [Shellshock](vulnerabilities/server/shellshock)
 
 ### Windows Security
 
-* [Windows Security Infrastructure](windows-sec/infrastructure)
+---
+
+## :bomb: Other Resources & Lectures
+
+### Lectures
+
+#### Pentesting & Bug hunting
+
+* [Defcon 23, Jason Haddix, How to Shot Web (2015)](lectures/d23-how-to-shoot-web)
+
+#### SOC Analyst
+
+* [Cyber threat intelligence](lectures/cyber-threat-intelligence)
+* [Vulnerabity Management Fundamentals](lectures/vuln-management-fundamentals)
+* [Malware Threats](lectures/malware-threats)
+
+#### HIPAA
+
+* [HIPAA Training](lectures/hipaa-training)
+
+### Certifications study notes
+
+* [Network+](certs/net+)
+* [Security+](certs/security+)
+* [LPIC-1](https://github.com/herrera-ignacio/lpic-1)
+
+---
+
+### Useful Links
+
+* Bug Bounty Programs
+  * [Hackerone](https://www.hackerone.com/)
+* Learning Communities & Sites
+  * [Hacker101](https://www.hacker101.com/)
+  * [Acunetix WVS](http://testphp.vulnweb.com/)
+* CTFs & Challenges
+  * Hackerbox
+  * TryHackMe
