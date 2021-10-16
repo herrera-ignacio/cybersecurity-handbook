@@ -143,6 +143,7 @@ Each topic is only described in an introductory level, so you can understand the
   * [Windows Security Infrastructure](tools/windows-sec/infrastructure)
 * Web Applications
   * [SQLmap](tools/web/sqlmap)
+  * [sqlninja](tools/web/sqlninja)
 
 
 ### Vulnerabilities Glossary
