@@ -245,3 +245,4 @@ Each topic is only described in an introductory level, so you can understand the
 * CTFs & Challenges
   * Hackerbox
   * TryHackMe
+* OWASP WebGoat Project

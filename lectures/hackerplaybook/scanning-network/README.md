@@ -2,6 +2,7 @@
 
 * External Passive Discovery
 * External/Internal Active Discovery
+* Web Application Scanning
 
 ## External Passive Discovery
 
@@ -67,3 +68,27 @@ Some examples of pages that usually stand out as they usually result in compromi
 * Wikis
 * Pages with Copyright messages < 2012
 * VOIP page
+
+## Web Application Scanning
+
+* Burp Suite Pro
+* HP Fortify
+* Open source/free: ZAP, WebScarab, Nikto, w3af, etc.
+
+### The Process for Web Scanning
+
+1. Spider/Discovery/Scanning with Burp Pro
+2. Scanning with a web application scanner
+3. Manual parameter injection
+4. Session token analysis
+
+### Scanning with Burp Suite
+
+1. Configure your network proxy (Burp + Browser, you may use *Foxy Proxy* for Firefox)
+2. Enable Burp Suite
+3. Spider through the application
+4. Discover content (*Site map* -> Right click parent url -> *Engagement tools* -> *Dicover content* -> *Session is not running*)
+5. Run the Active Scanner (Start fuzzing input parameters)
+6. Exploit
+
+
