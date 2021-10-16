@@ -6,3 +6,4 @@
   * External Passive Discovery
   * External/Internal Active Discovery
   * Web Application Scanning
+2. [Exploiting Scanner findings](exploiting-scan)

@@ -99,11 +99,13 @@ Each topic is only described in an introductory level, so you can understand the
 * [exiftool](tools/exiftool)
 * [Exploit DB](tools/exploitdb)
 * [HunterIO](tools/hunterio)
-* [IP Scanner](tools/ip-scanner)
 * [md5deep](tools/md5deep)
 * [msfvenom](tools/msfvenom)
-* [OSINT](tools/osint)
-* [Shodan](tools/shodan)
+* Scanning
+  * [Shodan](tools/scanning/shodan)
+  * [OSINT](tools/scanning/osint)
+  * [IP Scanner](tools/scanning/ip-scanner)
+  * [Discover](tools/scanning/discover)
 * Windows
   * [Windows Security Infrastructure](tools/windows-sec/infrastructure)
 
