@@ -243,8 +243,10 @@ Each topic is only described in an introductory level, so you can understand the
   * [Hackerone](https://www.hackerone.com/)
 * Learning Communities & Sites
   * [Hacker101](https://www.hacker101.com/)
-  * [Acunetix WVS](http://testphp.vulnweb.com/)
-* CTFs & Challenges
+* CTFs, Challenges and Vulnerable Systems
   * Hackerbox
   * TryHackMe
-* OWASP WebGoat Project
+  * OWASP WebGoat Project
+  * [Acunetix WVS](http://testphp.vulnweb.com/)
+* Exploits, Payloads, Resources
+  * [Exploit DB](http://www.exploit-db.com/remote)
