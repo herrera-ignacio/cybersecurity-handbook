@@ -95,89 +95,55 @@ Each topic is only described in an introductory level, so you can understand the
 
 ### Tools
 
-* [binwalk](tools/binwalk)
-* [exiftool](tools/exiftool)
-* [HunterIO](tools/hunterio)
-* [md5deep](tools/md5deep)
-* [msfvenom](tools/msfvenom)
+> Some custom wrappers examples can be found [here](tools/scripts).
+
+* Delivery
+  * [Apache](tools/delivery/apache): Webserver.
+  * [Evilgrade](tools/delivery/evilgrade): DNS Spoofing for injecting payloads on software updates.
+  * [bdfproxy](tools/delivery/bdfproxy): Inject payloads on downloads on the fly.
+* Frameworks
+  * [BeEf (Browser Exploitation Framework)](tools/frameworks/beef)
+  * [Burp](tools/frameworks/burp)
+  * [Metasploit](tools/frameworks/metasploit)
+  * [Nexpose](tools/frameworks/nexpose)
+  * [Veil](tools/frameworks/veil)
+* Malware Analysis
+  * [Hybrid-Analysis](https://www.hybrid-analysis.com)
+  * [binwalk](tools/binwalk)
+  * [md5deep](tools/md5deep)
+  * [exiftool](tools/exiftool)
+* Scanning
+  * External Passive
+    * [Shodan](tools/scanning/external-passive/shodan)
+    * [OSINT](tools/scanning/external-passive/osint)
+    * [Discover](tools/scanning/external-passive/discover)
+    * [HunterIO](https://hunter.io/): Find email addresses.
+  * External Active
+    * [aircrack-ng](tools/scanning/external-active/aircrack-ng): Suite of tools to assess WiFi network security.
+    * [Zenmap](tools/scanning/external-active/zenmap)
+  * Internal
+    * [IP Scanner](https://www.advanced-ip-scanner.com/es/)
+    * [ARPSpoof](tools/scanning/internal/arpspoof): ARP Spoofing.
+    * [Bettercap](tools/scanning/internal/bettercap): Network reconnaissance and MITM attacks.
+    * [Wireshark](tools/scanning/internal/wireshark): Packet analyzer.
+    * [MANA Toolkit](tools/scanning/internal/mana-toolkit): Honeypot - MITM
+* Social Engineering
+  * [Maltego](tools/social-engineering/maltego): Information gathering tool.
+  * [SendingBlue](tools/social-engineering/sendingblue): SMTP email service.
 * Exploiting
   * [Exploit DB](tools/exploiting/exploitdb)
-* Scanning
-  * [Shodan](tools/scanning/shodan)
-  * [OSINT](tools/scanning/osint)
-  * [IP Scanner](tools/scanning/ip-scanner)
-  * [Discover](tools/scanning/discover)
+* Payloads
+  * [msfvenom](tools/payloads/msfvenom)
+* Post Exploitation
+  * [Meterpreter](tools/post-exploitation/meterpreter)
+* Utilities
+  * [crunch](tools/utilities/crunch): Wordlist generator.
+  * [ifconfig/iwconfig](tools/utilities/ifconfig)
 * Windows
   * [Windows Security Infrastructure](tools/windows-sec/infrastructure)
 * Web Applications
   * [SQLmap](tools/web/sqlmap)
 
-#### Frameworks
-
-* [BeEf (Browser Exploitation Framework)](tools/frameworks/beef)
-* Burp
-  * [Configure Burp suite](tools/frameworks/burp/configure.md)
-  * [XSS](tools/frameworks/burp/xss)
-  * [Host-header attack](tools/frameworks/burp/host-header)
-* [Metasploit](tools/frameworks/metasploit)
-* [Nexpose](tools/frameworks/nexpose)
-* [Veil](tools/frameworks/veil)
-* [Zenmap](tools/zenmap): Gathering information.
-* 
-
-#### Network Monitoring & Hacking
-
-* [ifconfig/iwconfig](tools/network/ifconfig)
-* [aircrack-ng](https://www.aircrack-ng.org): Suite of tools to assess WiFi network security.
-  * [airodump-ng](tools/network/airodump-ng): Packet capturing of raw 802.11 frames.
-  * [aireplay-ng](tools/network/aireplay-ng): Generate traffic for different attack vectors.
-* [ARPSpoof](tools/network/arpspoof): ARP Spoofing.
-* [Bettercap](tools/network/bettercap): Network reconnaissance and MITM attacks.
-* [Wireshark](tools/network/wireshark): Packet analyzer.
-* [MANA Toolkit](tools/network/mana-toolkit): Honeypot - MITM.
-
-#### Utilities
-
-* [crunch](tools/utilities/crunch): Wordlist generator.
-* [Hybrid-Analysis](https://www.hybrid-analysis.com): Analyse threats/malware.
-
-#### Delivery
-
-* [Apache](tools/delivery/apache): Webserver.
-* [Evilgrade](tools/delivery/evilgrade): DNS Spoofing for injecting payloads on software updates.
-* [bdfproxy](tools/delivery/bdfproxy): Inject payloads on downloads on the fly.
-
-#### Social Engineering
-
-* [Maltego](tools/social-engineering/maltego): Information gathering tool.
-* [SendingBlue](tools/social-engineering/sendingblue): SMTP email service.
-
-#### Post Exploitation
-
-* [Metasploitable > Meterpreter](tools/post-exploitation/meterpreter)
-
-#### Scripts & Wrappers
-
-* [Request Analyzer](tools/scripts/request-analyzer): Send requests and get insight about its headers.
-* [Form Interactor](tools/scripts/form-interactor): Interact with web forms from your terminal.
-* [Tech Analyzer](tools/scripts/tech-analyzer): Detect technologies used in web pages.
-* [Wordpress Inspector](tools/scripts/wordpress-inspector): Inspect wordpress page's plugins, themes, and users.
-* [DNS Util](tools/scripts/dns-util): Get information about dns zones, subdomains, geolocalization, etc...
-* [Dump OS Info](tools/scripts/dump-os-info): Dump information about host os "secretly".
-* [Backdoor](tools/scripts//tools/scripts/shodan): Wrapper around shodan.io for hosts discovery.
-* [Nmap](tools/scripts/nmap): Wrapper around nmap for services discovery.
-* [Bruteforce](tools/scripts/brute-force): Scripts to brute force ftp/ssh services.
-* [Proxy](tools/scripts/proxy): Proxy implementations.
-
-#### Vulnerability Scanning
-
-* OpenVAS
-* Volatility (Memory)
-* SQLMap
-
-#### Hashing
-
-* FCIV (Windows 10)
 
 ### Vulnerabilities Glossary
 
@@ -209,8 +175,6 @@ Each topic is only described in an introductory level, so you can understand the
 #### Server
 
 * [Shellshock](vulnerabilities/server/shellshock)
-
-### Windows Security
 
 ---
 
