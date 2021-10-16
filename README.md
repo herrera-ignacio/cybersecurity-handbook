@@ -97,10 +97,11 @@ Each topic is only described in an introductory level, so you can understand the
 
 * [binwalk](tools/binwalk)
 * [exiftool](tools/exiftool)
-* [Exploit DB](tools/exploitdb)
 * [HunterIO](tools/hunterio)
 * [md5deep](tools/md5deep)
 * [msfvenom](tools/msfvenom)
+* Exploiting
+  * [Exploit DB](tools/exploiting/exploitdb)
 * Scanning
   * [Shodan](tools/scanning/shodan)
   * [OSINT](tools/scanning/osint)
@@ -108,6 +109,8 @@ Each topic is only described in an introductory level, so you can understand the
   * [Discover](tools/scanning/discover)
 * Windows
   * [Windows Security Infrastructure](tools/windows-sec/infrastructure)
+* Web Applications
+  * [SQLmap](tools/web/sqlmap)
 
 #### Frameworks
 
