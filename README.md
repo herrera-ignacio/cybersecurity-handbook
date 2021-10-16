@@ -211,7 +211,11 @@ Each topic is only described in an introductory level, so you can understand the
 
 ## :bomb: Other Resources & Lectures
 
+* [The Hacker Playbook 1](lectures/hackerplaybook)
+
 ### Lectures
+
+* [HIPAA Training](lectures/hipaa-training)
 
 #### Pentesting & Bug hunting
 
@@ -222,10 +226,6 @@ Each topic is only described in an introductory level, so you can understand the
 * [Cyber threat intelligence](lectures/cyber-threat-intelligence)
 * [Vulnerabity Management Fundamentals](lectures/vuln-management-fundamentals)
 * [Malware Threats](lectures/malware-threats)
-
-#### HIPAA
-
-* [HIPAA Training](lectures/hipaa-training)
 
 ### Certifications study notes
 
