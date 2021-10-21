@@ -13,7 +13,7 @@ You can also run all these look-ups prior to an engagement to save you an immens
 > Sometimes with a little *Google* hacking and *Shodan* you'll evven actually find vulnerabilities before you even start testing.
 
 * *Open Source Intelligence (OSINT)* tools.
-* [Discover Scripts](../../../tools/scanning/discover-scripts) (previously *Backtrack Scripts*)
+* [Discover Scripts](../../../tools/scanning/external-passive/discover) (previously *Backtrack Scripts*)
 
 ## External/Internal Active Discovery
 
