@@ -8,29 +8,27 @@ Each topic is only described in an introductory level, so you can understand the
 
 - [Cybersecurity Handbook](#cybersecurity-handbook)
   - [:pushpin: Description](#pushpin-description)
-  - [Topics (A-Z)](#topics-a-z)
-    - [Cryptograpgy](#cryptograpgy)
-    - [Crypto Attacks](#crypto-attacks)
-    - [Cybersecurity](#cybersecurity)
-    - [Networking & Telecommunications](#networking--telecommunications)
-      - [General Concepts](#general-concepts)
+  - [Cryptograpgy](#cryptograpgy)
+  - [Crypto Attacks](#crypto-attacks)
+  - [Cybersecurity](#cybersecurity)
+  - [Networking & Telecommunications](#networking--telecommunications)
+  - [General Concepts](#general-concepts)
     - [Protocols and Technology](#protocols-and-technology)
-    - [Tools](#tools)
-    - [Vulnerabilities Glossary](#vulnerabilities-glossary)
-      - [Web](#web)
-      - [Server](#server)
+  - [Social Engineering](#social-engineering)
+  - [Tools](#tools)
+  - [Vulnerabilities Glossary](#vulnerabilities-glossary)
+    - [Web](#web)
+    - [Server](#server)
+  - [Useful Links](#useful-links)
   - [:bomb: Other Resources & Lectures](#bomb-other-resources--lectures)
     - [Lectures](#lectures)
       - [Pentesting & Bug hunting](#pentesting--bug-hunting)
       - [SOC Analyst](#soc-analyst)
     - [Certifications study notes](#certifications-study-notes)
-    - [Useful Links](#useful-links)
 
 ---
 
-## Topics (A-Z)
-
-### Cryptograpgy
+## Cryptograpgy
 
 * [Cryptography](crypto)
 * [Ciphers: Asymmetric](crypto/ciphers/asymmetric)
@@ -45,14 +43,14 @@ Each topic is only described in an introductory level, so you can understand the
 * [Padding](crypto/padding)
 * [Password Storage](crypto/pwd-storage)
 
-### Crypto Attacks
+## Crypto Attacks
 
 * [ECB Block Reordering](crypto/attacks/ecb-block-reordering)
 * [Hash/Length Extension](crypto/attacks/hash-extension)
 * [Padding Oracle](crypto/attacks/padding-oracle)
 * [Stream Cipher Reuse](crypto/attacks/stream-cipher-reuse)
 
-### Cybersecurity 
+## Cybersecurity 
 
 * [CID Triad](sec-glossary/cid)
 * [Cybersecurity](sec-glossary/cybersecurity)
@@ -68,9 +66,9 @@ Each topic is only described in an introductory level, so you can understand the
   * [Threat Modeling](offensive/threat-modeling)
   * [Web Security](offensive/web-sec)
 
-### Networking & Telecommunications
+## Networking & Telecommunications
 
-#### General Concepts
+## General Concepts
 
 * [Devices](networking/general/devices)
 * [Duplex](networking/general/duplex)
@@ -113,7 +111,21 @@ Each topic is only described in an introductory level, so you can understand the
 * [SPF: Sender Policy Framework](glossay/spf)
 * [TCP/IP Model](/glossary/tcp-ip)
 
-### Tools
+## Social Engineering
+
+* Impersonating
+* Eavesdropping
+* Shoulder surfing
+* Dumpster diving
+* Piggybacking
+* Tailgating
+* Vishing
+* Phishing
+* Spam
+* Fake security apps
+* Baiting
+
+## Tools
 
 > Some custom wrappers examples can be found [here](tools/scripts).
 
@@ -166,9 +178,9 @@ Each topic is only described in an introductory level, so you can understand the
   * [sqlninja](tools/web/sqlninja)
 
 
-### Vulnerabilities Glossary
+## Vulnerabilities Glossary
 
-#### Web
+### Web
 
 * [Auth-Z: Forced Browsing/Improper Authorization](vulnerabilities/web/auth-z)
 * [Clickjacking](vulnerabilities/web/clickjacking)
@@ -193,11 +205,25 @@ Each topic is only described in an introductory level, so you can understand the
 * [XSS: Cross-Site Scripting](vulnerabilities/web/xss)
 * [XXE: XML External Entities](vulnerabilities/web/xml-entities)
 
-#### Server
+### Server
 
 * [Shellshock](vulnerabilities/server/shellshock)
 
 ---
+
+## Useful Links
+
+* Bug Bounty Programs
+  * [Hackerone](https://www.hackerone.com/)
+* Learning Communities & Sites
+  * [Hacker101](https://www.hacker101.com/)
+* CTFs, Challenges and Vulnerable Systems
+  * Hackerbox
+  * TryHackMe
+  * OWASP WebGoat Project
+  * [Acunetix WVS](http://testphp.vulnweb.com/)
+* Exploits, Payloads, Resources
+  * [Exploit DB](http://www.exploit-db.com/remote)
 
 ## :bomb: Other Resources & Lectures
 
@@ -225,16 +251,4 @@ Each topic is only described in an introductory level, so you can understand the
 
 ---
 
-### Useful Links
 
-* Bug Bounty Programs
-  * [Hackerone](https://www.hackerone.com/)
-* Learning Communities & Sites
-  * [Hacker101](https://www.hacker101.com/)
-* CTFs, Challenges and Vulnerable Systems
-  * Hackerbox
-  * TryHackMe
-  * OWASP WebGoat Project
-  * [Acunetix WVS](http://testphp.vulnweb.com/)
-* Exploits, Payloads, Resources
-  * [Exploit DB](http://www.exploit-db.com/remote)
