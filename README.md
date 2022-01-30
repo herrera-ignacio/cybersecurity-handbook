@@ -139,6 +139,14 @@ Each topic is only described in an introductory level. Learning how to apply tho
   * [Metasploit](tools/frameworks/metasploit)
   * [Nexpose](tools/frameworks/nexpose)
   * [Veil](tools/frameworks/veil)
+* Inteligence
+  * OSINT
+  * SOCMINT
+  * HUMIT
+  * OWISAM
+  * OWASP
+  * PTES
+  * OSSTM
 * Malware Analysis
   * [Hybrid-Analysis](https://www.hybrid-analysis.com)
   * [binwalk](tools/binwalk)
