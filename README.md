@@ -33,7 +33,7 @@ Each topic is only described in an introductory level. Learning how to apply tho
 * [Cryptography](crypto)
 * [Ciphers: Asymmetric](crypto/ciphers/asymmetric)
 * [Ciphers: Symmetric](crypto/ciphers/symmetric)
-* [Encryption](crypto/encryption)
+* [Encryption: Introduction](crypto/encryption)
   * [Public-Key](crypto/encryption/public-key)
   * [SSL](crypto/encryption/ssl)
   * [TLS](crypto/encryption/tls)
