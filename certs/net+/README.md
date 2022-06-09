@@ -1,12 +1,61 @@
 # Network+
 
-### Notes
+- [Network+](#network)
+	- [Topics](#topics)
+		- [1. Network Models](#1-network-models)
+		- [2. Cabling and Topology](#2-cabling-and-topology)
+		- [3. Ethernet Basics](#3-ethernet-basics)
+	- [Cybrary Notes](#cybrary-notes)
+		- [Networking Concepts](#networking-concepts)
+		- [Network Troubleshooting](#network-troubleshooting)
+		- [Troubleshooting tools](#troubleshooting-tools)
+## Topics
 
-TODO
+Topic organization and certification objectives are listed as in "Network+ Exam Guide Seventh Edition" by Mike Meyers.
 
-### Cybrary Notes
+### 1. Network Models
 
-## Networking Concepts
+Network+ exam expects you to know how to:
+
+* 1.2 Explain devices, applications, protocols and services at their appropriate OSI layers.
+* 1.3 Explain the concepts and characteristics of routing and switching.
+
+To achieve these goals you must be able to:
+
+* Describe how models such as the OSI seven-layer model and the TCP/IP help technicians understand and troubleshoot networks.
+* Explain the major functions of networks with OSI.
+* Describe the major functions of networks with TCP/IP.
+
+### 2. Cabling and Topology
+
+Network+ exam expects you to know how to:
+
+* 1.5 Compare and contrast the characteristics of network topologies, types and technologies.
+* 2.1 Given a scenario, deploy the appropriate cabling solution.
+
+To achieve these goals you must be able to:
+
+* Explain the different types of network topologies.
+* Describe the different types of network cabling and connectos.
+* Describe the IEEE networking standards.
+
+### 3. Ethernet Basics
+
+Network+ exam expects you to know how to:
+
+* 2.1 Given a scenario, deploy the appropriate cabling solution.
+* 2.2 Given a scenario, determine the appropriate placement of networking devices on a network and install/configure them.
+* 4.6 Explain common mitigation techniques and their purposes.
+
+To achieve these goals you must be able to:
+
+* Define and describe Ethernet.
+* Explain early Ethernet implementations.
+* Describe ways to enhance and extend Ethernet networks.
+
+## Cybrary Notes
+
+### Networking Concepts
 
 * OSI vs TCP/IP Model
 * IP Class Ranges
@@ -15,7 +64,7 @@ TODO
 * Common Ports
 	* DNS, DHCP, Telnet, SSH, HTTPS
 
-## [Network Troubleshooting](./troubleshooting)
+### [Network Troubleshooting](./troubleshooting)
 
 1. Identify problem
 2. Gather infomration
@@ -26,7 +75,7 @@ TODO
 7. Verify system functionality
 8. Document!
 
-## Troubleshooting tools
+### Troubleshooting tools
 
 * Ping
 	* Determine connectivity.
