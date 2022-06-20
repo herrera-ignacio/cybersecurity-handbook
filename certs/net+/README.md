@@ -5,10 +5,9 @@
 		- [1. Network Models](#1-network-models)
 		- [2. Cabling and Topology](#2-cabling-and-topology)
 		- [3. Ethernet Basics](#3-ethernet-basics)
-	- [Cybrary Notes](#cybrary-notes)
-		- [Networking Concepts](#networking-concepts)
-		- [Network Troubleshooting](#network-troubleshooting)
-		- [Troubleshooting tools](#troubleshooting-tools)
+	- [Troubleshooting](#troubleshooting)
+		- [Steps](#steps)
+		- [Tools](#tools)
 ## Topics
 
 Topic organization and certification objectives are listed as in "Network+ Exam Guide Seventh Edition" by Mike Meyers.
@@ -53,18 +52,9 @@ To achieve these goals you must be able to:
 * Explain early Ethernet implementations.
 * Describe ways to enhance and extend Ethernet networks.
 
-## Cybrary Notes
+## [Troubleshooting](./troubleshooting)
 
-### Networking Concepts
-
-* OSI vs TCP/IP Model
-* IP Class Ranges
-* Subnets and CIDR notation
-* Network Communication
-* Common Ports
-	* DNS, DHCP, Telnet, SSH, HTTPS
-
-### [Network Troubleshooting](./troubleshooting)
+### Steps
 
 1. Identify problem
 2. Gather infomration
@@ -75,17 +65,11 @@ To achieve these goals you must be able to:
 7. Verify system functionality
 8. Document!
 
-### Troubleshooting tools
+### Tools
 
-* Ping
-	* Determine connectivity.
-* traceroute/tracert
-	* Determine route (hops) to destination.
-* NSLookup/Dig
-	* DNS troubleshooting, see if you can resolve to an IP address.
-* ipconfig/ifconfig
-	* Information about current host.
-* netstat
-	* View all active connections of host.
-* route
-	* Current routing table.
+* `ping`: Determine connectivity.
+* `traceroute/tracert`: Determine route (hops) to destination.
+* `NSLookup/Dig`: DNS troubleshooting, see if you can resolve to an IP address.
+* `ipconfig/ifconfig`: Information about current host.
+* `netstat`: View all active connections of host.
+* `route`: Current routing table.

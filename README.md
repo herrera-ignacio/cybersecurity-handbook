@@ -12,8 +12,9 @@ Each topic is only described in an introductory level. Learning how to apply tho
   - [Crypto Attacks](#crypto-attacks)
   - [Cybersecurity](#cybersecurity)
   - [Networking & Telecommunications](#networking--telecommunications)
-  - [General Concepts](#general-concepts)
-    - [Protocols and Technology](#protocols-and-technology)
+    - [General Concepts](#general-concepts)
+    - [Standards](#standards)
+    - [Protocols](#protocols)
   - [Social Engineering](#social-engineering)
   - [Tools](#tools)
   - [Vulnerabilities Glossary](#vulnerabilities-glossary)
@@ -68,7 +69,7 @@ Each topic is only described in an introductory level. Learning how to apply tho
 
 ## Networking & Telecommunications
 
-## General Concepts
+### General Concepts
 
 * [Devices](networking/general/devices)
 * [Duplex](networking/general/duplex)
@@ -77,7 +78,6 @@ Each topic is only described in an introductory level. Learning how to apply tho
   * Unicast
   * Broadcast
   * Multicast
-* [OSI: Open Systems Interconnection](networking/general/osi)
 * [Packets](networking/general/packets)
 * [Proxy Server](networking/general/proxy-server)
 * [SPOF: Single Point of Failure](networking/general/spof)
@@ -92,7 +92,13 @@ Each topic is only described in an introductory level. Learning how to apply tho
 * [User Agent](networking/general/user-agent)
 * [WHATWG](networking/general/whatwg)
 
-### Protocols and Technology 
+### Standards
+
+* [OSI: Open Systems Interconnection](networking/general/osi)
+* [IEEE 802: Networking Industry Standards](networking/standards/ieee802)
+  * [IEE 802.3: Ethernet](networking/standards/ieee802/3)
+
+### Protocols 
 
 * [Commonly Used Port Numbers](https://www.utilizewindows.com/list-of-common-network-port-numbers/)
 * [Cookies](glossary/cookies)
