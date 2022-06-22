@@ -5,6 +5,9 @@
 		- [1. Network Models](#1-network-models)
 		- [2. Cabling and Topology](#2-cabling-and-topology)
 		- [3. Ethernet Basics](#3-ethernet-basics)
+		- [4. Modern Ethernet](#4-modern-ethernet)
+		- [5. Installing a Physical Network](#5-installing-a-physical-network)
+		- [6. TCP/IP Basics](#6-tcpip-basics)
 	- [Troubleshooting](#troubleshooting)
 		- [Steps](#steps)
 		- [Tools](#tools)
@@ -51,6 +54,53 @@ To achieve these goals you must be able to:
 * Define and describe Ethernet.
 * Explain early Ethernet implementations.
 * Describe ways to enhance and extend Ethernet networks.
+
+### 4. Modern Ethernet
+
+Network+ exam expects you to know how to:
+
+* 1.5 Compare and contrast the characteristics of network topologies, types and technologies.
+* 2.1 Given a scenario, deploy the appropriate cabling solution.
+* 2.2 Given a scenario, determine the appropriate placement of network devices on a network and install/configure them.
+
+To achieve these goals you must be able to:
+
+* Describe the varieties of 100-megabit Ethernet.
+* Discuss copper- and fiber-based Gigabit Ethernet.
+* Discover and describe Ethernet varieties beyond Gigabit.
+
+### 5. Installing a Physical Network
+
+Network+ certification expects you to know how to:
+
+* 2.1 Given a scenario, deploy the appropriate cabling solution.
+* 3.1 Given a scenario, use appropriate documentation and diagrams to manage the network.
+* 3.2 Compare and contrast business continuity and disaster recovery concepts.
+* 5.3 Given a scenario, troubleshoot common wired connectivity and performance issues.
+
+To achieve these goals, you must be able to:
+
+* Recognize and describe the functions of basic components in a structured cabling system.
+* Explain the process of installing structured cabling.
+* Install a network interface card.
+* Perform basic troubleshooting on a structured cable network.
+
+### 6. TCP/IP Basics
+
+Network+ certification expects you to know how to:
+
+* 1.1 Explain the purposes and uses of ports and protocols.
+* 1.3 Explain the concepts and characteristics of routing and switching.
+* 1.4 Given a scenario, configure the appropriate IP addressing components.
+* 1.8 Explain the functions of network services.
+* 5.5 Given a scenario, troubleshoot common network service issues.
+
+To achieve these goals, you must be able to:
+
+* Describe how the TCP/IP protocol suite works.
+* Explain CIDR and subnetting.
+* Describe the functions of static and dynamic IP addresses.
+
 
 ## [Troubleshooting](./troubleshooting)
 
