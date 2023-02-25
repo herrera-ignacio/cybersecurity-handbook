@@ -35,6 +35,7 @@ Each topic is only described in an introductory level. Learning how to apply tho
 - [Ciphers: Asymmetric](crypto/ciphers/asymmetric)
 - [Ciphers: Symmetric](crypto/ciphers/symmetric)
 - [Encryption: Introduction](crypto/encryption)
+  - [End-to-end encrpytion](crypto/encryption/e2e/README.md)
   - [Public-Key](crypto/encryption/public-key)
   - [SSL](crypto/encryption/ssl)
   - [TLS](crypto/encryption/tls)

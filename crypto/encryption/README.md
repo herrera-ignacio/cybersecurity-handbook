@@ -2,18 +2,22 @@
 
 <!-- toc -->
 
-- [Symmetric cryptography](#symmetric-cryptography)
-    * [Caesar's Cipher](#caesars-cipher)
-- [Asymmetric Cryptography - Public Key Cryptography](#asymmetric-cryptography---public-key-cryptography)
-    * [Pair of keys](#pair-of-keys)
-    * [Browser example](#browser-example)
-    * [Real life analogy](#real-life-analogy)
-    * [RSA (Rivest, Shamir, Adleman) algorithm](#rsa-rivest-shamir-adleman-algorithm)
-        + [The Concept](#the-concept)
-        + [Generating Public Key (`n`, `e`)](#generating-public-key-n-e)
-        + [Generating Private Key (`d`)](#generating-private-key-d)
-        + [Encrypt "HI" (`c`)](#encrypt-hi-c)
-        + [Decrypt "HI"](#decrypt-hi)
+- [Introducing Cryptography](#introducing-cryptography)
+  - [Symmetric cryptography](#symmetric-cryptography)
+    - [Caesar's Cipher](#caesars-cipher)
+  - [Asymmetric Cryptography - Public Key Cryptography](#asymmetric-cryptography---public-key-cryptography)
+    - [Pair of keys](#pair-of-keys)
+    - [Browser example](#browser-example)
+    - [Real life analogy](#real-life-analogy)
+    - [RSA (Rivest, Shamir, Adleman) algorithm](#rsa-rivest-shamir-adleman-algorithm)
+      - [The Concept](#the-concept)
+      - [Generating Public Key (`n`, `e`)](#generating-public-key-n-e)
+      - [Generating Private Key (`d`)](#generating-private-key-d)
+      - [Encrypt "HI" (`c`)](#encrypt-hi-c)
+      - [Decrypt "HI"](#decrypt-hi)
+  - [Digital Signatures](#digital-signatures)
+    - [Digitally signing a document](#digitally-signing-a-document)
+    - [Verifying the authenticity of a document](#verifying-the-authenticity-of-a-document)
 
 <!-- tocstop -->
 
@@ -22,9 +26,10 @@
 It involves _sharing_ a key (cipher) with the person you want to communicate with.
 
 The primary problems with symmetric:
-* Trust in the counter-party
-* Overhead and maintenance of the list of authorized people.
-* You may not know when a key has been compromised.
+
+- Trust in the counter-party.
+- Overhead and maintenance of the list of authorized people.
+- You may not know when a key has been compromised.
 
 > Public key cryptography was invented to solve the problem of shared trust.
 
@@ -48,8 +53,8 @@ Public key cryptography is an example of _asymmetric_ cryptography, and it secur
 
 The output of these algorithms is the same: a _correlated_ pair of keys, `A` and `B`, that you can use for the purposes of encrypting a message to be snet onver an insecure channel.
 
-* `A` must be kept secret, known only to you. You can use your private key `A` to _sign_ a message, and `B` (known to the public) can _verify_ the signature.
-* `B` is your _public_ key. You can publicize it on the Internet, and someone can use it to encrypt a message that _only_ you can decrypt (using `A`).
+- `A` must be kept secret, known only to you. You can use your private key `A` to _sign_ a message, and `B` (known to the public) can _verify_ the signature.
+- `B` is your _public_ key. You can publicize it on the Internet, and someone can use it to encrypt a message that _only_ you can decrypt (using `A`).
 
 ### Browser example
 
@@ -86,8 +91,8 @@ This _bidirectional guarantee_ around identity is known as _mutual authenticatio
 
 RSA is based on the fact that it is difficult to __factorize a large integer__.
 
-* The public key consists of two numbers where one number is multiplication of two large prime numbers.
-* The private key is also derived from the same two prime numbers.
+- The public key consists of two numbers where one number is multiplication of two large prime numbers.
+- The private key is also derived from the same two prime numbers.
 
 Therefore, if somebody can factorize the large number, the private key is compromised. Thus, encryption strength totally lies on the key size.
 
@@ -97,33 +102,33 @@ Therefore, if somebody can factorize the large number, the private key is compro
 
 Our public key consists of two numbers `n` & `e`.
 
-* Select two prime numbers `P` and `Q`
-    * Suppose `P = 53` and `Q = 59`.
-    * First part of the _Public key_ is `n = P*Q = 3127`
-* Select a small exponent `e` such that:
-    * An integer.
-    * Not be a factor of `n`.
-    * `1 < e < Theta(n)`
-* Let's suppose `e` = 3.
+- Select two prime numbers `P` and `Q`
+  - Suppose `P = 53` and `Q = 59`.
+  - First part of the _Public key_ is `n = P*Q = 3127`
+- Select a small exponent `e` such that:
+  - An integer.
+  - Not be a factor of `n`.
+  - `1 < e < Theta(n)`
+- Let's suppose `e` = 3.
 
 #### Generating Private Key (`d`)
 
-* Calculate `Thera(n)` such that `Theta(n) = (P-1)*(Q-1)`.
-* In our example, `Theta(n) = 3016`.
-* Now we calculate _Private key_, `d`:
-    * `d = (k * Theta(n) + 1) / e` for some integer `k`.
-* Suppose `k=2`, then in our example `d = 2011`.
+- Calculate `Thera(n)` such that `Theta(n) = (P-1)*(Q-1)`.
+- In our example, `Theta(n) = 3016`.
+- Now we calculate _Private key_, `d`:
+  - `d = (k * Theta(n) + 1) / e` for some integer `k`.
+- Suppose `k=2`, then in our example `d = 2011`.
 
 #### Encrypt "HI" (`c`)
 
-* Convert letters to number: `H = 8` and `I = 9`.
-* Thus encrypted data `c = 89^e mod n`.
-    * Then our encrypted data comes out to be 1394.
+- Convert letters to number: `H = 8` and `I = 9`.
+- Thus encrypted data `c = 89^e mod n`.
+  - Then our encrypted data comes out to be 1394.
 
 #### Decrypt "HI"
 
-* Decrypted data: `c^d mod n`.
-* Then our decrypted data comes out to be 89, which is correct.
+- Decrypted data: `c^d mod n`.
+- Then our decrypted data comes out to be 89, which is correct.
 
 ## Digital Signatures
 
@@ -133,9 +138,9 @@ Digital signatures make use of public key cryptography to provide a way for the 
 
 They satisfy three useful claims:
 
-1. **Authenticity**: This could've only been signed by the sender.
-2. **Integrity**: This data wasn't forged or tampered with.
-3. **Non-repudiation**: The sender can't deny having sent the data.
+1. __Authenticity__: This could've only been signed by the sender.
+2. __Integrity__: This data wasn't forged or tampered with.
+3. __Non-repudiation__: The sender can't deny having sent the data.
 
 ### Digitally signing a document
 
