@@ -31,11 +31,10 @@ Each topic is only described in an introductory level. Learning how to apply tho
 
 ## Cryptograpgy
 
-- [Cryptography](crypto)
-- [Ciphers: Asymmetric](crypto/ciphers/asymmetric)
-- [Ciphers: Symmetric](crypto/ciphers/symmetric)
-- [Encryption: Introduction](crypto/encryption)
 - [End-to-end encrpytion (E2EE)](crypto/encryption/e2e/README.md)
+- [Symmetric encryption](crypto/encryption/symmetric/README.md)
+- [Asymmetric encryption](crypto/encryption/asymmetric/README.md)
+  - [Digital signature](crypto/encryption/digital_signature/README.md)
 - [Key exchange](https://en.wikipedia.org/wiki/Key_exchange)
   - [Public-Key](crypto/encryption/public-key)
   - [SSL](crypto/encryption/ssl)
