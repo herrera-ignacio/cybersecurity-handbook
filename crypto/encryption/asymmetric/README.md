@@ -6,25 +6,21 @@
   - [Examples](#examples)
     - [Browser example](#browser-example)
     - [Real life analogy](#real-life-analogy)
-  - [Algorithms](#algorithms)
-    - [RSA (Rivest, Shamir, Adleman) algorithm](#rsa-rivest-shamir-adleman-algorithm)
-      - [Generating Public Key (`n`, `e`)](#generating-public-key-n-e)
-      - [Generating Private Key (`d`)](#generating-private-key-d)
-      - [Encrypt "HI" (`c`)](#encrypt-hi-c)
-      - [Decrypt "HI"](#decrypt-hi)
 
 ## Overview
 
-Public key cryptography is an example of _asymmetric_ cryptography, and it secures almost all modern systems on the Internet.
+Public key cryptography, also known as _asymmetric_ cryptography, is an encryption scheme that __uses two mathemtically related, but not identical, keys__: a public and a private key.
 
 > There are many public key cryptography algorithms, such as RSA, or ECDSA in the case of Bitcoin. Some are thought to be quantum computing-resistant; others are chosen for their speed or ease.
 
 ## Pair of keys
 
-The output of these algorithms is the same: a _correlated_ pair of keys, `A` and `B`, that you can use for the purposes of encrypting a message to be snet onver an insecure channel.
+Unlike symmetric key algorithms that rely on one single key to both enctypt and decrypt, each key performs an unique action.
 
-- `A` must be kept secret, known only to you. You can use your private key `A` to _sign_ a message, and `B` (known to the public) can _verify_ the signature.
-- `B` is your _public_ key. You can publicize it on the Internet, and someone can use it to encrypt a message that _only_ you can decrypt (using `A`).
+If the public key is used for encryption, then the related private key is used for decryption. If the private key is used for encryption, then the related public key is used for decryption.
+
+- Your _private_ key. It must be kept secret, known only to you. You can use your private key to _sign_ a message, and your _public key_ (known to others) can _verify_ the signature.
+- Your _public_ key can be publicized on the Internet, and someone can use it to encrypt a message that _only_ you can decrypt (using your _private_ key).
 
 ## Examples
 
@@ -56,48 +52,3 @@ The output of these algorithms is the same: a _correlated_ pair of keys, `A` and
 7. If Bob's key doesn't open the second padlock, then Alice knows that this is not the box she was expecting from Bob, it's a forgery.
 
 This _bidirectional guarantee_ around identity is known as _mutual authentication_.
-
-## Algorithms
-
-### RSA (Rivest, Shamir, Adleman) algorithm
-
-RSA is based on the fact that it is difficult to __factorize a large integer__.
-
-- The public key consists of two numbers where one number is multiplication of two large prime numbers.
-- The private key is also derived from the same two prime numbers.
-
-Therefore, if somebody can factorize the large number, the private key is compromised. Thus, encryption strength totally lies on the key size.
-
-> RSA keys can be typically 1024 or 2048 bits long.
-
-#### Generating Public Key (`n`, `e`)
-
-Our public key consists of two numbers `n` & `e`.
-
-- Select two prime numbers `P` and `Q`
-  - Suppose `P = 53` and `Q = 59`.
-  - First part of the _Public key_ is `n = P*Q = 3127`
-- Select a small exponent `e` such that:
-  - An integer.
-  - Not be a factor of `n`.
-  - `1 < e < Theta(n)`
-- Let's suppose `e` = 3.
-
-#### Generating Private Key (`d`)
-
-- Calculate `Thera(n)` such that `Theta(n) = (P-1)*(Q-1)`.
-- In our example, `Theta(n) = 3016`.
-- Now we calculate _Private key_, `d`:
-  - `d = (k * Theta(n) + 1) / e` for some integer `k`.
-- Suppose `k=2`, then in our example `d = 2011`.
-
-#### Encrypt "HI" (`c`)
-
-- Convert letters to number: `H = 8` and `I = 9`.
-- Thus encrypted data `c = 89^e mod n`.
-  - Then our encrypted data comes out to be 1394.
-
-#### Decrypt "HI"
-
-- Decrypted data: `c^d mod n`.
-- Then our decrypted data comes out to be 89, which is correct.

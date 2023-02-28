@@ -33,8 +33,9 @@ Each topic is only described in an introductory level. Learning how to apply tho
 
 - [End-to-end encrpytion (E2EE)](crypto/encryption/e2e/README.md)
 - [Symmetric encryption](crypto/encryption/symmetric/README.md)
-- [Asymmetric encryption](crypto/encryption/asymmetric/README.md)
+- [Asymmetric encryption (public-key)](crypto/encryption/asymmetric/README.md)
   - [Digital signature](crypto/encryption/digital_signature/README.md)
+  - [RSA](crypto/encryption/rsa/README.md)
 - [Key exchange](https://en.wikipedia.org/wiki/Key_exchange)
   - [Public-Key](crypto/encryption/public-key)
   - [SSL](crypto/encryption/ssl)
