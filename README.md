@@ -233,7 +233,7 @@ Each topic is only described in an introductory level. Learning how to apply tho
 - Learning Communities & Sites
   - [Hacker101](https://www.hacker101.com/)
 - CTFs, Challenges and Vulnerable Systems
-  - Hackerbox
+  - [Hack the box](https://www.hackthebox.com/)
   - TryHackMe
   - OWASP WebGoat Project
   - [Acunetix WVS](http://testphp.vulnweb.com/)
