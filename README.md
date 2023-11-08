@@ -168,6 +168,7 @@ Each topic is only described in an introductory level. Learning how to apply tho
     - [HunterIO](https://hunter.io/): Find email addresses.
   - External Active
     - [aircrack-ng](tools/scanning/external-active/aircrack-ng): Suite of tools to assess WiFi network security.
+    - [nmap](https://amber-laugh-fbc.notion.site/Nmap-657f7cb7625944bf8c15153405227089?pvs=4)
     - [Zenmap](tools/scanning/external-active/zenmap)
   - Internal
     - [IP Scanner](https://www.advanced-ip-scanner.com/es/)
