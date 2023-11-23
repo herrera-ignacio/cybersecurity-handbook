@@ -31,16 +31,17 @@ Each topic is only described in an introductory level. Learning how to apply tho
 
 ## Cryptograpgy
 
-- [End-to-end encrpytion (E2EE)](crypto/encryption/e2e/README.md)
-- [Symmetric encryption](crypto/encryption/symmetric/README.md)
 - [Asymmetric encryption (public-key)](crypto/encryption/asymmetric/README.md)
   - [Digital signature](crypto/encryption/digital_signature/README.md)
   - [RSA](crypto/encryption/rsa/README.md)
+- [End-to-end encrpytion (E2EE)](crypto/encryption/e2e/README.md)
+- [Hashes](crypto/hashes)
+- [Symmetric encryption](crypto/encryption/symmetric/README.md)
 - [Key exchange](https://en.wikipedia.org/wiki/Key_exchange)
   - [Public-Key](crypto/encryption/public-key)
   - [SSL](crypto/encryption/ssl)
   - [TLS](crypto/encryption/tls)
-- [Hashes](crypto/hashes)
+
 - [Message Authentication Code (MAC)](crypto/mac)
 - [Mortal Sins of Crypto](crypto/mortal-sins)
 - [Padding](crypto/padding)
@@ -75,6 +76,8 @@ Each topic is only described in an introductory level. Learning how to apply tho
 
 - [Devices](networking/general/devices)
 - [Duplex](networking/general/duplex)
+- [Firewalls](networking/general/firewalls/README.md)
+- [IDS/IPS](networking/general/firewalls/IDS-IPS/README.md)
 - [Mime Sniffing](networking/general/mime-sniffing)
 - [Network Communication](networking/general/network-communication)
   - Unicast
