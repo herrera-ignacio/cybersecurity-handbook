@@ -16,13 +16,13 @@ First you'd want to have a rough list of all application's functionalities.
 
 Then, think if you were an attacker, what would your goal be?
 
-#### Prioritization
+## Prioritization
 
 You can start to rank areas of the application in terms of payoff. If I compromise area X, does that give me low-value information or high-value?
 
 Often asking developers the question "what keeps you up at night?" will point to areas to check.
 
-#### Severity
+### Severity
 
 This is based on difficulty of exploitation and potential usiness impact.
 
@@ -32,7 +32,7 @@ This is based on difficulty of exploitation and potential usiness impact.
 * High: Potential to reveal user data or aids in explotation of other vulnerabilities.
 * Critical: High risk of personal/confidential data exposure, general system compromise and other severe impacts to the business.
 
-#### Finding Report
+## Finding Report
 
 A minimal report should include:
 

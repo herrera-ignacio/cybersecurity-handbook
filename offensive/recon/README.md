@@ -1,4 +1,6 @@
-# Recon
+# Crowsourced testing
+
+“Crowdsourced testing” or “crowdtesting” is a QA approach which relies on sending tests to a distributed community of testers around the world.
 
 With Crowsourced testing, we are looking for vulnerabilities that aren't as easy to find, where payment is based on impact not number of findings. __Find the road less traveled__, which menas the parts of an application less tested.
 

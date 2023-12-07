@@ -1,14 +1,25 @@
 # Network Topologies
 
-> https://en.wikipedia.org/wiki/Network_topology
+## Overview
 
-![](2021-07-18-14-41-51.png)
+> <https://en.wikipedia.org/wiki/Network_topology>
+
+![topologies](2021-07-18-14-41-51.png)
 
 *Network Topology* is the arrangement of the elements (links, nodes, etc.) of a communication network. It is the *topological* structure of a network and may be depicted **physically**, refering to the placement of the various components of a network (e.g., device location and cable installation) and concerned of the *physical layer* of the *OSI model*, or **logically**, which illustrates how data flows within a network.
 
 > Distance between nodes, physical interconnections, transmission rates, or signal types may differ between two different networks, yet their logical topologies may be identical.
 
 it is an application of *graph theory* wherein communicating devices are modeled as links or lines between the nodes.
+
+## Types
+
+- [Bus](bus/README.md)
+- [Ring](ring/README.md)
+- [Star](star/README.md)
+- [Extended Star](extended-star/README.md)
+- [Mesh](mesh/README.md)
+- [Tree](tree/README.md)
 
 ## Physical Topology
 

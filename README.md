@@ -11,21 +11,25 @@ Each topic is only described in an introductory level. Learning how to apply tho
   - [Cryptograpgy](#cryptograpgy)
   - [Crypto Attacks](#crypto-attacks)
   - [Cybersecurity](#cybersecurity)
+    - [General concepts](#general-concepts)
+    - [Offensive security](#offensive-security)
+    - [White-box testing](#white-box-testing)
   - [Networking \& Telecommunications](#networking--telecommunications)
-    - [General Concepts](#general-concepts)
+    - [General Concepts](#general-concepts-1)
     - [Standards](#standards)
-    - [Protocols](#protocols)
+    - [Protocols and specifications](#protocols-and-specifications)
   - [Social Engineering](#social-engineering)
   - [Tools](#tools)
   - [Vulnerabilities Glossary](#vulnerabilities-glossary)
     - [Web](#web)
     - [Server](#server)
-  - [Useful Links](#useful-links)
-  - [:bomb: Other Resources \& Lectures](#bomb-other-resources--lectures)
+  - [:bomb: Other Resources](#bomb-other-resources)
+    - [Books summaries](#books-summaries)
+    - [Certifications study notes](#certifications-study-notes)
+    - [Links](#links)
     - [Lectures](#lectures)
       - [Pentesting \& Bug hunting](#pentesting--bug-hunting)
       - [SOC Analyst](#soc-analyst)
-    - [Certifications study notes](#certifications-study-notes)
 
 ---
 
@@ -41,7 +45,6 @@ Each topic is only described in an introductory level. Learning how to apply tho
   - [Public-Key](crypto/encryption/public-key)
   - [SSL](crypto/encryption/ssl)
   - [TLS](crypto/encryption/tls)
-
 - [Message Authentication Code (MAC)](crypto/mac)
 - [Mortal Sins of Crypto](crypto/mortal-sins)
 - [Padding](crypto/padding)
@@ -56,19 +59,29 @@ Each topic is only described in an introductory level. Learning how to apply tho
 
 ## Cybersecurity
 
+> [What is cybersecurity](sec-glossary/cybersecurity)?
+
+### General concepts
+
+- [Ethical Hacking](offensive/ethical-hacking)
+- [Bug Bounty](offensive/bug-bounty)
 - [CID Triad](sec-glossary/cid)
 - [Cybersecurity](sec-glossary/cybersecurity)
 - [Defense in Depth](sec-glossary/did)
 - [IOC: Indicator of Compromise](sec-glossary/ioc)
 - [OWASP](sec-glossary/owasp)
-- Offensive Security
-  - [Architecture Review](offensive/architectuer-review)
-  - [Bug Bounty](offensive/bug-bounty)
-  - [Code Review (Source Code)](offensive/code-review)
-  - [Ethical Hacking](offensive/ethical-hacking)
-  - [Recon](offensive/recon)
-  - [Threat Modeling](offensive/threat-modeling)
-  - [Web Security](offensive/web-sec)
+- [Threat Modeling](offensive/threat-modeling)
+- [Crowsourced testing](./offensive/recon/README.md)
+
+### Offensive security
+
+- [Login brute forcing (hydra)](https://amber-laugh-fbc.notion.site/Login-Brute-Forcing-43815fe25e6340b684b35b8e5aa9f045?pvs=4)
+- [Network enumeration (nmap)](https://amber-laugh-fbc.notion.site/Nmap-657f7cb7625944bf8c15153405227089?pvs=4)
+
+### White-box testing
+
+- [Architecture Review](offensive/architectuer-review)
+- [Code Review (Source Code)](offensive/code-review)
 
 ## Networking & Telecommunications
 
@@ -79,21 +92,12 @@ Each topic is only described in an introductory level. Learning how to apply tho
 - [Firewalls](networking/general/firewalls/README.md)
 - [IDS/IPS](networking/general/firewalls/IDS-IPS/README.md)
 - [Mime Sniffing](networking/general/mime-sniffing)
-- [Network Communication](networking/general/network-communication)
-  - Unicast
-  - Broadcast
-  - Multicast
+- [Network communication types](networking/general/network-communication)
+- [Network Topologies](networking/general/network-topologies)
 - [Packets](networking/general/packets)
 - [Proxy Server](networking/general/proxy-server)
 - [SPOF: Single Point of Failure](networking/general/spof)
 - [Subnetting](networking/general/subnetting)
-- [Network Topologies](networking/general/network-topologies)
-  - [Bus](networking/general/network-topologies/bus)
-  - [Ring](networking/general/network-topologies/ring)
-  - [Star](networking/general/networking-topologies/star)
-  - [Extended Star](networking/general/networking-topologies/extended-star)
-  - [Mesh](networking/general/networking-topologies/mesh)
-  - [Tree](networking/general/networking-topologies/tree)
 - [User Agent](networking/general/user-agent)
 - [WHATWG](networking/general/whatwg)
 
@@ -103,7 +107,7 @@ Each topic is only described in an introductory level. Learning how to apply tho
 - [IEEE 802: Networking Industry Standards](networking/standards/ieee802)
   - [IEE 802.3: Ethernet](networking/standards/ieee802/3)
 
-### Protocols
+### Protocols and specifications
 
 - [Commonly Used Port Numbers](https://www.utilizewindows.com/list-of-common-network-port-numbers/)
 - [Cookies](glossary/cookies)
@@ -138,64 +142,50 @@ Each topic is only described in an introductory level. Learning how to apply tho
 
 ## Tools
 
-> Some custom wrappers examples can be found [here](tools/scripts).
-
-- Delivery
-  - [Apache](tools/delivery/apache): Webserver.
-  - [Evilgrade](tools/delivery/evilgrade): DNS Spoofing for injecting payloads on software updates.
-  - [bdfproxy](tools/delivery/bdfproxy): Inject payloads on downloads on the fly.
-- Frameworks
-  - [BeEf (Browser Exploitation Framework)](tools/frameworks/beef)
-  - [Burp](tools/frameworks/burp)
-  - [Metasploit](tools/frameworks/metasploit)
-  - [Nexpose](tools/frameworks/nexpose)
-  - [Veil](tools/frameworks/veil)
-- Inteligence
-  - OSINT
-  - SOCMINT
-  - HUMIT
-  - OWISAM
-  - OWASP
-  - PTES
-  - OSSTM
-- Malware Analysis
-  - [Hybrid-Analysis](https://www.hybrid-analysis.com)
-  - [binwalk](tools/binwalk)
-  - [md5deep](tools/md5deep)
-  - [exiftool](tools/exiftool)
-- Scanning
-  - External Passive
-    - [Shodan](tools/scanning/external-passive/shodan)
-    - [OSINT](tools/scanning/external-passive/osint)
-    - [Discover](tools/scanning/external-passive/discover)
-    - [HunterIO](https://hunter.io/): Find email addresses.
-  - External Active
-    - [aircrack-ng](tools/scanning/external-active/aircrack-ng): Suite of tools to assess WiFi network security.
-    - [nmap](https://amber-laugh-fbc.notion.site/Nmap-657f7cb7625944bf8c15153405227089?pvs=4)
-    - [Zenmap](tools/scanning/external-active/zenmap)
-  - Internal
-    - [IP Scanner](https://www.advanced-ip-scanner.com/es/)
-    - [ARPSpoof](tools/scanning/internal/arpspoof): ARP Spoofing.
-    - [Bettercap](tools/scanning/internal/bettercap): Network reconnaissance and MITM attacks.
-    - [Wireshark](tools/scanning/internal/wireshark): Packet analyzer.
-    - [MANA Toolkit](tools/scanning/internal/mana-toolkit): Honeypot - MITM
-- Social Engineering
-  - [Maltego](tools/social-engineering/maltego): Information gathering tool.
-  - [SendingBlue](tools/social-engineering/sendingblue): SMTP email service.
-- Exploiting
-  - [Exploit DB](tools/exploiting/exploitdb)
-- Payloads
-  - [msfvenom](tools/payloads/msfvenom)
-- Post Exploitation
-  - [Meterpreter](tools/post-exploitation/meterpreter)
-- Utilities
-  - [crunch](tools/utilities/crunch): Wordlist generator.
-  - [ifconfig/iwconfig](tools/utilities/ifconfig)
-- Windows
-  - [Windows Security Infrastructure](tools/windows-sec/infrastructure)
-- Web Applications
-  - [SQLmap](tools/web/sqlmap)
-  - [sqlninja](tools/web/sqlninja)
+| Category              | Resource                                                              | Description                                                            |
+|-----------------------|-----------------------------------------------------------------------|------------------------------------------------------------------------|
+| **Delivery**          | Apache                                                                | A popular open-source web server.                                      |
+|                       | bdfproxy                                                              | Payload injection in downloads.                                        |
+|                       | Evilgrade                                                             | Facilitates update exploitation via DNS spoofing.                      |
+| **Exploiting**        | Exploit DB                                                            | Database of exploits and vulnerabilities.                              |
+| **Frameworks**        | BeEf                                                                  | Framework for exploiting web browsers.                                 |
+|                       | Burp                                                                  | Integrated platform for web application security.                      |
+|                       | Metasploit                                                            | Popular framework for developing and executing exploit code against remote targets. |
+|                       | Nexpose                                                               | Vulnerability scanner with integrated risk management.                 |
+|                       | Veil                                                                  | Tool for generating antivirus-evading payloads.                        |
+| **Guidelines**        | OSSTM                                                                 | Manual for open source security testing.                               |
+|                       | OWASP                                                                 | Non-profit organization with guidelines for web application security.  |
+|                       | OWISAM                                                                | Methodology for web application security assessments.                  |
+|                       | PTES                                                                  | Standard methodology for penetration testing.                          |
+| **Intelligence**      | HUMIT                                                                 | Intelligence gathering from human sources.                             |
+|                       | OSINT                                                                 | Techniques for gathering information from publicly available sources.  |
+|                       | SOCMINT                                                               | Collection and analysis of data from social media platforms.           |
+| **Malware Analysis**  | binwalk                                                               | Firmware analysis tool.                                                |
+|                       | exiftool                                                              | Software for reading, writing, and manipulating metadata in files.     |
+|                       | Hybrid-Analysis                                                       | Online malware analysis service.                                       |
+|                       | md5deep                                                               | Tool for recursive hash computations.                                  |
+| **Payloads**          | msfvenom                                                              | Payload generation tool.                                               |
+| **Post Exploitation** | Meterpreter                                                           | Advanced multi-function payload.                                       |
+| **Scanning**          | aircrack-ng                                                           | Suite of tools for WiFi network security testing.                      |
+|                       | ARPSpoof                                                              | Tool for network auditing and ARP spoofing.                            |
+|                       | Bettercap                                                             | Comprehensive tool for network analysis and attacks.                   |
+|                       | Discover                                                              | Tool for automating the process of detecting a target's network.       |
+|                       | HunterIO                                                              | Online service for finding and verifying email addresses.              |
+|                       | IP Scanner                                                            | Free, fast and powerful network scanner.                               |
+|                       | nmap ([Link](https://amber-laugh-fbc.notion.site/Nmap-657f7cb7625944bf8c15153405227089?pvs=4)) | Network discovery and security auditing tool.                         |
+|                       | OSINT                                                                 | Techniques to collect information from open sources.                   |
+|                       | Shodan                                                                | Search engine for Internet-connected devices.                          |
+|                       | Wireshark                                                             | Widely-used network protocol analyzer.                                 |
+|                       | Zenmap                                                                | Graphical interface for nmap.                                          |
+|                       | MANA Toolkit                                                          | Toolkit for setting up rogue access points.                            |
+| **Social Engineering** | Maltego                                                               | Interactive data mining tool.                                          |
+|                       | SendingBlue                                                           | Email marketing service.                                               |
+| **Utilities**         | crunch                                                                | Custom wordlist generator.                                             |
+|                       | cupp                                                                  | Custom wordlist generator.                                             |
+|                       | ifconfig/iwconfig                                                     | Tools for configuring network interfaces.                              |
+| **Web Applications**  | SQLmap                                                                | Automated tool for SQL injection testing.                              |
+|                       | sqlninja                                                              | Tool focused on exploiting SQL injection vulnerabilities.              |
+| **Windows Security**  | Windows Security Infrastructure                                       | Overview of Windows security infrastructure.                           |
 
 ## Vulnerabilities Glossary
 
@@ -230,7 +220,19 @@ Each topic is only described in an introductory level. Learning how to apply tho
 
 ---
 
-## Useful Links
+## :bomb: Other Resources
+
+### Books summaries
+
+- [The Hacker Playbook 1](./lectures/hackerplaybook/README.md)
+
+### Certifications study notes
+
+- [Network+](certs/net+)
+- [Security+](certs/security+)
+- [LPIC-1](https://github.com/herrera-ignacio/lpic-1)
+
+### Links
 
 - Bug Bounty Programs
   - [Hackerone](https://www.hackerone.com/)
@@ -243,10 +245,6 @@ Each topic is only described in an introductory level. Learning how to apply tho
   - [Acunetix WVS](http://testphp.vulnweb.com/)
 - Exploits, Payloads, Resources
   - [Exploit DB](http://www.exploit-db.com/remote)
-
-## :bomb: Other Resources & Lectures
-
-- [The Hacker Playbook 1](lectures/hackerplaybook)
 
 ### Lectures
 
@@ -261,11 +259,3 @@ Each topic is only described in an introductory level. Learning how to apply tho
 - [Cyber threat intelligence](lectures/cyber-threat-intelligence)
 - [Vulnerabity Management Fundamentals](lectures/vuln-management-fundamentals)
 - [Malware Threats](lectures/malware-threats)
-
-### Certifications study notes
-
-- [Network+](certs/net+)
-- [Security+](certs/security+)
-- [LPIC-1](https://github.com/herrera-ignacio/lpic-1)
-
----

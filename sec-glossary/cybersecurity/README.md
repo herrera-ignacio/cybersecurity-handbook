@@ -9,10 +9,10 @@ Technologies, processes and practices designed for the protection of internet-co
 ## TOC
 
 * [Career Paths](./paths)
-    * [System Administrator](./paths/sysadmin.md)
-    * [Network Engineering](./paths/neteng.md)
-    * [SOC Analyst (Incident Response & Forensic)](./paths/soc-analyst.md)
-    * [Offensive Security & Pentesting](./paths/pentester.md)
+  * [System Administrator](./paths/sysadmin.md)
+  * [Network Engineering](./paths/neteng.md)
+  * [SOC Analyst (Incident Response & Forensic)](./paths/soc-analyst.md)
+  * [Offensive Security & Pentesting](./paths/pentester.md)
 * Responsabilities of Roles
 * Tools
 * Certifications
