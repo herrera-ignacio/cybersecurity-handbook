@@ -152,7 +152,7 @@ Each topic is only described in an introductory level. Learning how to apply tho
 |                       | Burp                                                                  | Integrated platform for web application security.                      |
 |                       | Metasploit                                                            | Popular framework for developing and executing exploit code against remote targets. |
 |                       | Nexpose                                                               | Vulnerability scanner with integrated risk management.                 |
-|                       | Veil                                                                  | Tool for generating antivirus-evading payloads.                        |
+|                       | Veil                                                                  | Generate antivirus-evading payloads.                                   |
 | **Guidelines**        | OSSTM                                                                 | Manual for open source security testing.                               |
 |                       | OWASP                                                                 | Non-profit organization with guidelines for web application security.  |
 |                       | OWISAM                                                                | Methodology for web application security assessments.                  |
@@ -163,13 +163,13 @@ Each topic is only described in an introductory level. Learning how to apply tho
 | **Malware Analysis**  | binwalk                                                               | Firmware analysis tool.                                                |
 |                       | exiftool                                                              | Software for reading, writing, and manipulating metadata in files.     |
 |                       | Hybrid-Analysis                                                       | Online malware analysis service.                                       |
-|                       | md5deep                                                               | Tool for recursive hash computations.                                  |
+|                       | md5deep                                                               | Recursive hash computations.                                           |
 | **Payloads**          | msfvenom                                                              | Payload generation tool.                                               |
 | **Post Exploitation** | Meterpreter                                                           | Advanced multi-function payload.                                       |
 | **Scanning**          | aircrack-ng                                                           | Suite of tools for WiFi network security testing.                      |
-|                       | ARPSpoof                                                              | Tool for network auditing and ARP spoofing.                            |
+|                       | ARPSpoof                                                              | Network auditing and ARP spoofing.                                     |
 |                       | Bettercap                                                             | Comprehensive tool for network analysis and attacks.                   |
-|                       | Discover                                                              | Tool for automating the process of detecting a target's network.       |
+|                       | Discover                                                              | Automating the process of detecting a target's network.                |
 |                       | HunterIO                                                              | Online service for finding and verifying email addresses.              |
 |                       | IP Scanner                                                            | Free, fast and powerful network scanner.                               |
 |                       | nmap ([Link](https://amber-laugh-fbc.notion.site/Nmap-657f7cb7625944bf8c15153405227089?pvs=4)) | Network discovery and security auditing tool.                         |
@@ -182,9 +182,10 @@ Each topic is only described in an introductory level. Learning how to apply tho
 |                       | SendingBlue                                                           | Email marketing service.                                               |
 | **Utilities**         | crunch                                                                | Custom wordlist generator.                                             |
 |                       | cupp                                                                  | Custom wordlist generator.                                             |
-|                       | ifconfig/iwconfig                                                     | Tools for configuring network interfaces.                              |
+|                       | ifconfig/iwconfig                                                     | Configuring network interfaces.                                        |
 | **Web Applications**  | SQLmap                                                                | Automated tool for SQL injection testing.                              |
-|                       | sqlninja                                                              | Tool focused on exploiting SQL injection vulnerabilities.              |
+|                       | sqlninja                                                              | Exploiting SQL injection vulnerabilities.                              |
+|                       | ffuf                                                                  | Web fuzzer (directory/vhost discovery).                                |
 | **Windows Security**  | Windows Security Infrastructure                                       | Overview of Windows security infrastructure.                           |
 
 ## Vulnerabilities Glossary
