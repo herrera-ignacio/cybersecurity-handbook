@@ -1,4 +1,4 @@
-# Bus Network Topology
+# Bus
 
 ![](2021-07-17-22-18-25.png)
 

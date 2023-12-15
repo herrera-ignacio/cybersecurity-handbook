@@ -1,40 +1,40 @@
-# Cybersecurity Handbook
+# 1. Cybersecurity Handbook
 
-## :pushpin: Description
+## 1.1. :pushpin: Description
 
 This attemps to be a collection of Cybersecurity knowledge. I seek to encourage you to persue your curiosity. It's up to you how deep you want to dive in any subject.
 
 Each topic is only described in an introductory level. Learning how to apply those concepts in real-life scenarios is up to you to research and experiment.
 
-- [Cybersecurity Handbook](#cybersecurity-handbook)
-  - [:pushpin: Description](#pushpin-description)
-  - [Fundamentals](#fundamentals)
-  - [Cryptograpgy](#cryptograpgy)
-    - [Concepts and practices](#concepts-and-practices)
-    - [Schemes](#schemes)
-    - [Cryptosystems](#cryptosystems)
-    - [Crypto attacks](#crypto-attacks)
-  - [Offensive security](#offensive-security)
-  - [Networking \& Telecommunications](#networking--telecommunications)
-    - [General Concepts](#general-concepts)
-    - [Standards](#standards)
-    - [Protocols and specifications](#protocols-and-specifications)
-  - [Social Engineering](#social-engineering)
-  - [Tools](#tools)
-  - [Vulnerabilities Glossary](#vulnerabilities-glossary)
-    - [Web](#web)
-    - [Server](#server)
-  - [:bomb: Other Resources](#bomb-other-resources)
-    - [Books summaries](#books-summaries)
-    - [Certifications study notes](#certifications-study-notes)
-    - [Links](#links)
-    - [Lectures](#lectures)
-      - [Pentesting \& Bug hunting](#pentesting--bug-hunting)
-      - [SOC Analyst](#soc-analyst)
+- [1. Cybersecurity Handbook](#1-cybersecurity-handbook)
+  - [1.1. :pushpin: Description](#11-pushpin-description)
+  - [1.2. Fundamentals](#12-fundamentals)
+  - [1.3. Cryptograpgy](#13-cryptograpgy)
+    - [1.3.1. Concepts and practices](#131-concepts-and-practices)
+    - [1.3.2. Schemes](#132-schemes)
+    - [1.3.3. Cryptosystems](#133-cryptosystems)
+    - [1.3.4. Crypto attacks](#134-crypto-attacks)
+  - [1.4. Offensive security](#14-offensive-security)
+  - [1.5. Networking \& Telecommunications](#15-networking--telecommunications)
+    - [1.5.1. Concepts and practices](#151-concepts-and-practices)
+    - [1.5.2. Standards](#152-standards)
+    - [1.5.3. Protocols and specifications](#153-protocols-and-specifications)
+  - [1.6. Social Engineering](#16-social-engineering)
+  - [1.7. Tools](#17-tools)
+  - [1.8. Vulnerabilities Glossary](#18-vulnerabilities-glossary)
+    - [1.8.1. Web](#181-web)
+    - [1.8.2. Server](#182-server)
+  - [1.9. :bomb: Other Resources](#19-bomb-other-resources)
+    - [1.9.1. Books summaries](#191-books-summaries)
+    - [1.9.2. Certifications study notes](#192-certifications-study-notes)
+    - [1.9.3. Links](#193-links)
+    - [1.9.4. Lectures](#194-lectures)
+      - [1.9.4.1. Pentesting \& Bug hunting](#1941-pentesting--bug-hunting)
+      - [1.9.4.2. SOC Analyst](#1942-soc-analyst)
 
 ---
 
-## Fundamentals
+## 1.2. Fundamentals
 
 - [Ethical hacking](docusaurus/docs/fundamentals/ethical-hacking/README.md)
 - [Bug bounty](docusaurus/docs/fundamentals/bug-bounty/README.md)
@@ -48,86 +48,86 @@ Each topic is only described in an introductory level. Learning how to apply tho
   - [Architecture Review](docusaurus/docs/fundamentals/architectuer-review)
   - [Code Review (Source Code)](docusaurus/docs/fundamentals/code-review)
 
-## Cryptograpgy
+## 1.3. Cryptograpgy
 
-### Concepts and practices
+### 1.3.1. Concepts and practices
 
-- [Hashing](docs/cryptography/hashing)
-- [Message Authentication Code (MAC)](docs/cryptography/mac)
-- [Mortal Sins of Crypto](docs/cryptography/mortal-sins)
-- [Padding](docs/cryptography/padding)
-- [Password Storage](docs/cryptography/pwd-storage)
+- [Hashing](docusaurus/docs/cryptography/concepts/hashing/README.md)
+- [Message Authentication Code (MAC)](docusaurus/docs/cryptography/concepts/mac/README.mdc)
+- [Mortal Sins of Crypto](docusaurus/docs/cryptography/concepts/mortal-sins/README.md)
+- [Padding](docusaurus/docs/cryptography/concepts/padding/README.md)
+- [Password Storage](docusaurus/docs/cryptography/concepts/pwd-storage/README.md)
 - [Key exchange](https://en.wikipedia.org/wiki/Key_exchange)
 
-### Schemes
+### 1.3.2. Schemes
 
-- [Asymmetric encryption (public-key)](docs/cryptography/schemes/asymmetric/README.md)
-- [Symmetric encryption](docs/cryptography/schemes/symmetric/README.md)
-- [End-to-end encrpytion (E2EE)](docs/cryptography/schemes/e2e/README.md)
+- [Asymmetric encryption (public-key)](docusaurus/docs/cryptography/schemes/asymmetric/README.md)
+- [Symmetric encryption](docusaurus/docs/cryptography/schemes/symmetric/README.md)
+- [End-to-end encrpytion (E2EE)](docusaurus/docs/cryptography/schemes/e2e/README.md)
 
-### Cryptosystems
+### 1.3.3. Cryptosystems
 
-- [Digital signature](docs/cryptography/cryptosystems/digital_signature/README.md)
-- [RSA](docs/cryptography/cryptosystems/rsa/README.md)
-- [SSL](docs/cryptography/cryptosystems/ssl/README.md)
-- [TLS](docs/cryptography/cryptosystems/tls/README.md)
+- [Digital signature](docusaurus/docs/cryptography/cryptosystems/digital_signature/README.md)
+- [RSA](docusaurus/docs/cryptography/cryptosystems/rsa/README.md)
+- [SSL](docusaurus/docs/cryptography/cryptosystems/ssl/README.md)
+- [TLS](docusaurus/docs/cryptography/cryptosystems/tls/README.md)
 
-### Crypto attacks
+### 1.3.4. Crypto attacks
 
-- [ECB Block Reordering](docs/cryptography/attacks/ecb-block-reordering/README.md)
-- [Hash/Length Extension](docs/cryptography/attacks/hash-extension/README.md)
-- [Padding Oracle](docs/cryptography/attacks/padding-oracle/README.md)
-- [Stream Cipher Reuse](docs/cryptography/attacks/stream-cipher-reuse/README.md)
+- [ECB Block Reordering](docusaurus/docs/cryptography/attacks/ecb-block-reordering/README.md)
+- [Hash/Length Extension](docusaurus/docs/cryptography/attacks/hash-extension/README.md)
+- [Padding Oracle](docusaurus/docs/cryptography/attacks/padding-oracle/README.md)
+- [Stream Cipher Reuse](docusaurus/docs/cryptography/attacks/stream-cipher-reuse/README.md)
 
-## Offensive security
+## 1.4. Offensive security
 
 - [Login brute forcing (hydra)](https://amber-laugh-fbc.notion.site/Login-Brute-Forcing-43815fe25e6340b684b35b8e5aa9f045?pvs=4)
 - [Network enumeration (nmap)](https://amber-laugh-fbc.notion.site/Nmap-657f7cb7625944bf8c15153405227089?pvs=4)
 
-## Networking & Telecommunications
+## 1.5. Networking & Telecommunications
 
-### General Concepts
+### 1.5.1. Concepts and practices
 
-- [Devices](networking/general/devices)
-- [Duplex](networking/general/duplex)
-- [Firewalls](networking/general/firewalls/README.md)
-- [IDS/IPS](networking/general/firewalls/IDS-IPS/README.md)
-- [Mime Sniffing](networking/general/mime-sniffing)
-- [Network communication types](networking/general/network-communication)
-- [Network Topologies](networking/general/network-topologies)
-- [Packets](networking/general/packets)
-- [Proxy Server](networking/general/proxy-server)
-- [SPOF: Single Point of Failure](networking/general/spof)
-- [Subnetting](networking/general/subnetting)
-- [User Agent](networking/general/user-agent)
-- [WHATWG](networking/general/whatwg)
+- [Devices](docusaurus/docs/networking/concepts/devices/README.md)
+- [Duplex](docusaurus/docs/networking/concepts/duplex/README.md)
+- [Firewalls](docusaurus/docs/networking/concepts/firewalls/README.md)
+- [IDS/IPS](docusaurus/docs/networking/concepts/firewalls/IDS-IPS/README.md)
+- [Mime Sniffing](docusaurus/docs/networking/concepts/mime-sniffing/README.md)
+- [Network communication types](docusaurus/docs/networking/concepts/network-communication/README.md)
+- [Network Topologies](docusaurus/docs/networking/concepts/network-topologies/README.md)
+- [Packets](docusaurus/docs/networking/concepts/packets/README.md)
+- [Proxy Server](docusaurus/docs/networking/concepts/proxy-server/README.md)
+- [SPOF: Single Point of Failure](docusaurus/docs/networking/concepts/spof/README.md)
+- [Subnetting](docusaurus/docs/networking/concepts/subnetting/README.md)
+- [User Agent](docusaurus/docs/networking/concepts/user-agent/README.md)
+- [WHATWG](docusaurus/docs/networking/concepts/whatwg/README.md)
 
-### Standards
+### 1.5.2. Standards
 
-- [OSI: Open Systems Interconnection](networking/general/osi)
-- [IEEE 802: Networking Industry Standards](networking/standards/ieee802)
+- [OSI: Open Systems Interconnection](docusaurus/docs/networking/standards/osi)
+- [IEEE 802: Networking Industry Standards](docusaurus/docs/networking/standards/ieee802)
   - [IEE 802.3: Ethernet](networking/standards/ieee802/3)
 
-### Protocols and specifications
+### 1.5.3. Protocols and specifications
 
 - [Commonly Used Port Numbers](https://www.utilizewindows.com/list-of-common-network-port-numbers/)
-- [Cookies](glossary/cookies)
-- [CORB: Cross-Origin Read Blocking](glossary/corb)
-- [CORS: Cross-Origin Resource Sharing](glossary/cors)
-- [CSP: Content Security Policy](glossary/csp)
-- [DOM: Document Object Model](glossary/dom)
-- [HTML](glossary/html)
-- [HTTP](glossary/http)
-- [HTTP Headers](glossary/http-headers)
-- [HTTP Requests](glossary/http-requests)
-- [IP Addressing](glossary/ipaddressing)
-- [MIME Types](glossary/mime-types)
-- [Routing Protocols](glossary/routing-protocols)
-- [SOP: Same-Origin-Policy](glossary/sop)
-- [SPF: Sender Policy Framework](glossay/spf)
-- [TCP/IP Model](/glossary/tcp-ip)
+- [Cookies](docusaurus/docs/networking/specs/cookies/README.md)
+- [CORB: Cross-Origin Read Blocking](docusaurus/docs/networking/specs/corb/README.md)
+- [CORS: Cross-Origin Resource Sharing](docusaurus/docs/networking/specs/cors/README.md)
+- [CSP: Content Security Policy](docusaurus/docs/networking/specs/csp/README.md)
+- [DOM: Document Object Model](docusaurus/docs/networking/specs/dom/README.md)
+- [HTML](docusaurus/docs/networking/specs/html/README.md)
+- [HTTP](docusaurus/docs/networking/specs/http/README.md)
+- [HTTP Headers](docusaurus/docs/networking/specs/http-headers/README.md)
+- [HTTP Requests](docusaurus/docs/networking/specs/http-requests/README.md)
+- [IP Addressing](docusaurus/docs/networking/specs/ipaddressing/README.md)
+- [MIME Types](docusaurus/docs/networking/specs/mime-types/README.md)
+- [Routing Protocols](docusaurus/docs/networking/specs/routing-protocols/README.md)
+- [SOP: Same-Origin-Policy](docusaurus/docs/networking/specs/sop/README.md)
+- [SPF: Sender Policy Framework](glossay/spf/README.md)
+- [TCP/IP Model](/docusaurus/docs/networking/specs/tcp-ip/README.md)
 
-## Social Engineering
+## 1.6. Social Engineering
 
 - Impersonating
 - Eavesdropping
@@ -141,7 +141,7 @@ Each topic is only described in an introductory level. Learning how to apply tho
 - Fake security apps
 - Baiting
 
-## Tools
+## 1.7. Tools
 
 | Category              | Resource                                                              | Description                                                            |
 |-----------------------|-----------------------------------------------------------------------|------------------------------------------------------------------------|
@@ -189,9 +189,9 @@ Each topic is only described in an introductory level. Learning how to apply tho
 |                       | ffuf                                                                  | Web fuzzer (directory/vhost discovery).                                |
 | **Windows Security**  | Windows Security Infrastructure                                       | Overview of Windows security infrastructure.                           |
 
-## Vulnerabilities Glossary
+## 1.8. Vulnerabilities Glossary
 
-### Web
+### 1.8.1. Web
 
 - [Auth-Z: Forced Browsing/Improper Authorization](vulnerabilities/web/auth-z)
 - [Clickjacking](vulnerabilities/web/clickjacking)
@@ -216,25 +216,25 @@ Each topic is only described in an introductory level. Learning how to apply tho
 - [XSS: Cross-Site Scripting](vulnerabilities/web/xss)
 - [XXE: XML External Entities](vulnerabilities/web/xml-entities)
 
-### Server
+### 1.8.2. Server
 
 - [Shellshock](vulnerabilities/server/shellshock)
 
 ---
 
-## :bomb: Other Resources
+## 1.9. :bomb: Other Resources
 
-### Books summaries
+### 1.9.1. Books summaries
 
 - [The Hacker Playbook 1](./lectures/hackerplaybook/README.md)
 
-### Certifications study notes
+### 1.9.2. Certifications study notes
 
 - [Network+](certs/net+)
 - [Security+](certs/security+)
 - [LPIC-1](https://github.com/herrera-ignacio/lpic-1)
 
-### Links
+### 1.9.3. Links
 
 - Bug Bounty Programs
   - [Hackerone](https://www.hackerone.com/)
@@ -248,15 +248,15 @@ Each topic is only described in an introductory level. Learning how to apply tho
 - Exploits, Payloads, Resources
   - [Exploit DB](http://www.exploit-db.com/remote)
 
-### Lectures
+### 1.9.4. Lectures
 
 - [HIPAA Training](lectures/hipaa-training)
 
-#### Pentesting & Bug hunting
+#### 1.9.4.1. Pentesting & Bug hunting
 
 - [Defcon 23, Jason Haddix, How to Shot Web (2015)](lectures/d23-how-to-shoot-web)
 
-#### SOC Analyst
+#### 1.9.4.2. SOC Analyst
 
 - [Cyber threat intelligence](lectures/cyber-threat-intelligence)
 - [Vulnerabity Management Fundamentals](lectures/vuln-management-fundamentals)

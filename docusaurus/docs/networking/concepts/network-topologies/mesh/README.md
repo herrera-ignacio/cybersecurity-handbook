@@ -1,4 +1,4 @@
-# Mesh Network / Meshnet
+# Meshnet: Mesh network
 
 ![](2021-07-18-15-08-00.png)
 

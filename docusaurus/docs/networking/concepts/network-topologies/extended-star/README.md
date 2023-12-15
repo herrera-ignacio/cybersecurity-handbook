@@ -1,4 +1,4 @@
-# Extended Star
+# Extended star
 
 ![](2021-07-18-15-03-53.png)
 

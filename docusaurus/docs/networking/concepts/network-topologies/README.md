@@ -1,8 +1,8 @@
-# Network Topologies
+# Network topologies
 
 ## Overview
 
-> <https://en.wikipedia.org/wiki/Network_topology>
+> [Wikipedia - Network topology](https://en.wikipedia.org/wiki/Network_topology)
 
 ![topologies](2021-07-18-14-41-51.png)
 
@@ -21,7 +21,7 @@ it is an application of *graph theory* wherein communicating devices are modeled
 - [Mesh](mesh/README.md)
 - [Tree](tree/README.md)
 
-## Physical Topology
+## Physical topology
 
 The **transmission medium layout** used to link devices is the physical topology of the network.
 
@@ -29,7 +29,7 @@ The **transmission medium layout** used to link devices is the physical topology
 
 The physical topology of a network is determined by the capabilities of the network access devices and media, the level of control or fault tolerance desired, and the cost associated with cabling or telecommunication circuits.
 
-## Logical Topology
+## Logical topology
 
 *Logical Topology* is the way that the signals act on the network media, or the way that the data passes through the network from one device to the next without regard to the physical interconnection of the devices.
 

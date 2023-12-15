@@ -1,4 +1,4 @@
-# Proxy Server
+# Proxy server
 
 A __Proxy Server__ is an intermediate program or computer used when navigating through different networks of the Internet.
 

@@ -1,4 +1,4 @@
-# Single Point of Failure
+# Single point of failure
 
 ![](2021-07-18-14-56-21.png)
 

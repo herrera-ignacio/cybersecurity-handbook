@@ -1,4 +1,4 @@
-# Ring Network Topology
+# Ring
 
 ![](2021-07-18-01-21-49.png)
 

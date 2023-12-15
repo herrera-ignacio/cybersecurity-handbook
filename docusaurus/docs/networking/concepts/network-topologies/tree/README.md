@@ -1,4 +1,4 @@
-# Tree / Star-Bus Network
+# Tree / Star-bus
 
 ![](2021-07-18-15-14-05.png)
 
