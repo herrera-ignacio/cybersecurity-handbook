@@ -8,12 +8,13 @@ Each topic is only described in an introductory level. Learning how to apply tho
 
 - [Cybersecurity Handbook](#cybersecurity-handbook)
   - [:pushpin: Description](#pushpin-description)
+  - [Fundamentals](#fundamentals)
   - [Cryptograpgy](#cryptograpgy)
-  - [Crypto Attacks](#crypto-attacks)
-  - [Concepts and Practices](#concepts-and-practices)
-    - [General](#general)
-    - [Offensive security](#offensive-security)
-    - [White-box testing](#white-box-testing)
+    - [Concepts and practices](#concepts-and-practices)
+    - [Schemes](#schemes)
+    - [Cryptosystems](#cryptosystems)
+    - [Crypto attacks](#crypto-attacks)
+  - [Offensive security](#offensive-security)
   - [Networking \& Telecommunications](#networking--telecommunications)
     - [General Concepts](#general-concepts)
     - [Standards](#standards)
@@ -33,52 +34,55 @@ Each topic is only described in an introductory level. Learning how to apply tho
 
 ---
 
+## Fundamentals
+
+- [Ethical hacking](docusaurus/docs/fundamentals/ethical-hacking/README.md)
+- [Bug bounty](docusaurus/docs/fundamentals/bug-bounty/README.md)
+- [CID triad](docusaurus/docs/fundamentals/cid/README.md)
+- [DiD: Defense in depth](docusaurus/docs/fundamentals/did/README.md)
+- [IOC: Indicator of compromise](docusaurus/fundamentals/concepts/ioc/README.md)
+- [OWASP](docusaurus/docs/fundamentals/owasp/README.md)
+- [Threat mdeling](docusaurus/docs/fundamentals/threat-modeling/README.md)
+- [Crowsourced testing](docusaurus/docs/fundamentals/recon/README.md)
+- White-box testing
+  - [Architecture Review](docusaurus/docs/fundamentals/architectuer-review)
+  - [Code Review (Source Code)](docusaurus/docs/fundamentals/code-review)
+
 ## Cryptograpgy
 
-- [Asymmetric encryption (public-key)](crypto/encryption/asymmetric/README.md)
-  - [Digital signature](crypto/encryption/digital_signature/README.md)
-  - [RSA](crypto/encryption/rsa/README.md)
-- [End-to-end encrpytion (E2EE)](crypto/encryption/e2e/README.md)
-- [Hashes](crypto/hashes)
-- [Symmetric encryption](crypto/encryption/symmetric/README.md)
+### Concepts and practices
+
+- [Hashing](docs/cryptography/hashing)
+- [Message Authentication Code (MAC)](docs/cryptography/mac)
+- [Mortal Sins of Crypto](docs/cryptography/mortal-sins)
+- [Padding](docs/cryptography/padding)
+- [Password Storage](docs/cryptography/pwd-storage)
 - [Key exchange](https://en.wikipedia.org/wiki/Key_exchange)
-  - [Public-Key](crypto/encryption/public-key)
-  - [SSL](crypto/encryption/ssl)
-  - [TLS](crypto/encryption/tls)
-- [Message Authentication Code (MAC)](crypto/mac)
-- [Mortal Sins of Crypto](crypto/mortal-sins)
-- [Padding](crypto/padding)
-- [Password Storage](crypto/pwd-storage)
 
-## Crypto Attacks
+### Schemes
 
-- [ECB Block Reordering](crypto/attacks/ecb-block-reordering)
-- [Hash/Length Extension](crypto/attacks/hash-extension)
-- [Padding Oracle](crypto/attacks/padding-oracle)
-- [Stream Cipher Reuse](crypto/attacks/stream-cipher-reuse)
+- [Asymmetric encryption (public-key)](docs/cryptography/schemes/asymmetric/README.md)
+- [Symmetric encryption](docs/cryptography/schemes/symmetric/README.md)
+- [End-to-end encrpytion (E2EE)](docs/cryptography/schemes/e2e/README.md)
 
-## Concepts and Practices
+### Cryptosystems
 
-### General
+- [Digital signature](docs/cryptography/cryptosystems/digital_signature/README.md)
+- [RSA](docs/cryptography/cryptosystems/rsa/README.md)
+- [SSL](docs/cryptography/cryptosystems/ssl/README.md)
+- [TLS](docs/cryptography/cryptosystems/tls/README.md)
 
-- [Ethical hacking](docusaurus/docs/concepts/ethical-hacking/README.md)
-- [Bug bounty](docusaurus/docs/concepts/bug-bounty/README.md)
-- [CID triad](docusaurus/docs/concepts/cid/README.md)
-- [DiD: Defense in depth](docusaurus/docs/concepts/did/README.md)
-- [IOC: Indicator of compromise](docusaurus/docs/concepts/ioc/README.md)
-- [OWASP](docusaurus/docs/concepts/owasp/README.md)
-- [Threat mdeling](docusaurus/docs/concepts/threat-modeling/README.md)
-- [Crowsourced testing](docusaurus/docs/concepts/recon/README.md)
+### Crypto attacks
 
-### Offensive security
+- [ECB Block Reordering](docs/cryptography/attacks/ecb-block-reordering/README.md)
+- [Hash/Length Extension](docs/cryptography/attacks/hash-extension/README.md)
+- [Padding Oracle](docs/cryptography/attacks/padding-oracle/README.md)
+- [Stream Cipher Reuse](docs/cryptography/attacks/stream-cipher-reuse/README.md)
+
+## Offensive security
 
 - [Login brute forcing (hydra)](https://amber-laugh-fbc.notion.site/Login-Brute-Forcing-43815fe25e6340b684b35b8e5aa9f045?pvs=4)
 - [Network enumeration (nmap)](https://amber-laugh-fbc.notion.site/Nmap-657f7cb7625944bf8c15153405227089?pvs=4)
-
-### White-box testing
-
-- [Architecture Review](offensive/architectuer-review)
-- [Code Review (Source Code)](offensive/code-review)
 
 ## Networking & Telecommunications
 
