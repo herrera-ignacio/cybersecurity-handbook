@@ -30,7 +30,7 @@ It is important to note that __E2EE alone does not guarantee privacy or security
 
 ### Man-in-the-middle attacks
 
-Rather than try to break the encryption, an eavesdropper may impersonate a message recipient (during [key exchange](../key_exchange/README.md) or by substituting their public key for the recipient's), so that messages are encrypted with a key known to the attacker.
+Rather than try to break the encryption, an eavesdropper may impersonate a message recipient key exchange or by substituting their public key for the recipient's), so that messages are encrypted with a key known to the attacker.
 
 After decrypting the message, the snoop can then encrypt it with a key that they share with the actual recipient, or their public key in case of asymmetric systems, and send the message on again to avoid detection.
 

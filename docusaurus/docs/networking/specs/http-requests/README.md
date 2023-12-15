@@ -12,6 +12,4 @@ HTTP defines a set of __request metods__ to indicate the desired action to be pe
 * `TRACE`: performs a message loop-back test along the path to the target resource.
 * `PATCH`: apply partial modifications to a resource.
 
-#### Read More
-
-* [MDN](./https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
+> Read more in [MDN docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers).
