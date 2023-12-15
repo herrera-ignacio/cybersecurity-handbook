@@ -12,4 +12,4 @@ Each topic is only described in an introductory level. Learning how to apply tho
 
 ## Live docs
 
-Consider looking at https://herrera-ignacio.github.io/cybersecurity-handbook/ for a better experience powered by [Docusaurus](https://docusaurus.io/).
+Docs are published on a static website powered by [Docusaurus](https://docusaurus.io/) is available at https://herrera-ignacio.github.io/cybersecurity-handbook/.

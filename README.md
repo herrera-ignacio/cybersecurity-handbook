@@ -10,12 +10,12 @@ Each topic is only described in an introductory level. Learning how to apply tho
   - [:pushpin: Description](#pushpin-description)
   - [Cryptograpgy](#cryptograpgy)
   - [Crypto Attacks](#crypto-attacks)
-  - [Cybersecurity](#cybersecurity)
-    - [General concepts](#general-concepts)
+  - [Concepts and Practices](#concepts-and-practices)
+    - [General](#general)
     - [Offensive security](#offensive-security)
     - [White-box testing](#white-box-testing)
   - [Networking \& Telecommunications](#networking--telecommunications)
-    - [General Concepts](#general-concepts-1)
+    - [General Concepts](#general-concepts)
     - [Standards](#standards)
     - [Protocols and specifications](#protocols-and-specifications)
   - [Social Engineering](#social-engineering)
@@ -57,21 +57,18 @@ Each topic is only described in an introductory level. Learning how to apply tho
 - [Padding Oracle](crypto/attacks/padding-oracle)
 - [Stream Cipher Reuse](crypto/attacks/stream-cipher-reuse)
 
-## Cybersecurity
+## Concepts and Practices
 
-> [What is cybersecurity](sec-glossary/cybersecurity)?
+### General
 
-### General concepts
-
-- [Ethical Hacking](offensive/ethical-hacking)
-- [Bug Bounty](offensive/bug-bounty)
-- [CID Triad](sec-glossary/cid)
-- [Cybersecurity](sec-glossary/cybersecurity)
-- [Defense in Depth](sec-glossary/did)
-- [IOC: Indicator of Compromise](sec-glossary/ioc)
-- [OWASP](sec-glossary/owasp)
-- [Threat Modeling](offensive/threat-modeling)
-- [Crowsourced testing](./offensive/recon/README.md)
+- [Ethical hacking](docusaurus/docs/concepts/ethical-hacking/README.md)
+- [Bug bounty](docusaurus/docs/concepts/bug-bounty/README.md)
+- [CID triad](docusaurus/docs/concepts/cid/README.md)
+- [DiD: Defense in depth](docusaurus/docs/concepts/did/README.md)
+- [IOC: Indicator of compromise](docusaurus/docs/concepts/ioc/README.md)
+- [OWASP](docusaurus/docs/concepts/owasp/README.md)
+- [Threat mdeling](docusaurus/docs/concepts/threat-modeling/README.md)
+- [Crowsourced testing](docusaurus/docs/concepts/recon/README.md)
 
 ### Offensive security
 

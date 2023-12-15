@@ -1,4 +1,14 @@
-# Ethical Hacking
+# Ethical hacking
+
+- [Ethical hacking](#ethical-hacking)
+  - [Overview](#overview)
+  - [Defense/Offense Imbalance](#defenseoffense-imbalance)
+  - [Attacker Goals](#attacker-goals)
+  - [Prioritization](#prioritization)
+    - [Severity](#severity)
+  - [Finding Report](#finding-report)
+
+## Overview
 
 An ethical hacker attempts to bypass system's security and search for any weak points that could be exploited by malicious hackers.
 

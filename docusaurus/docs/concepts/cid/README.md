@@ -1,4 +1,4 @@
-# CIA Triad
+# CIA triad
 
 The CIA Triad is a venerable, well-known model for security policy development, used to identify problem areas and necessary solutions for information security.
 

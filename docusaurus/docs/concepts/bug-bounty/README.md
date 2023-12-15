@@ -1,4 +1,8 @@
-# [Bug Bounty](https://en.wikipedia.org/wiki/Bug_bounty_program)
+---
+sidebar_label: Bug bounty
+---
+
+# [Bug bounty](https://en.wikipedia.org/wiki/Bug_bounty_program)
 
 A Bug Bounty Program is a deal offered by different etities by which individuals can receive recognition and compensation for reporting bugs, especially those pertaining to security __exploits__ and __vulnerabilities__.
 

@@ -1,4 +1,4 @@
-# IOC: Indicator of Compromise
+# IOC: Indicator of compromise
 
 Pieces of __forensic data__, such as data found in system log entries or files, that __identify potentially malicious activity__ on a system or network.
 
