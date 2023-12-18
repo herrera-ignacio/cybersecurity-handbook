@@ -1,4 +1,4 @@
-# Layer 2: Data Link
+# 2. Data Link
 
 Controls communication between one device and the next immediately connected device, on the immediate physical link.
 

@@ -1,4 +1,4 @@
-# Transport Layer
+# 4. Transport Layer
 
 Controls communication between end hosts/devices, which can be either reliable or not.
 

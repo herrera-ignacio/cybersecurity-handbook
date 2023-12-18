@@ -24,7 +24,7 @@
 
 ## 1. IOC and Malware
 
-> Recommended lecture for different types of malware: [Malware Threats](../../lectures/../../lectures/malware-threats)
+> Recommended lecture for different types of malware: [Malware Threats](../../../lectures/defensive/malware-threats/README.md)
 
 IOC are artifacts observed on a network or OS that with high confidence indicates a computer intrusion.
 

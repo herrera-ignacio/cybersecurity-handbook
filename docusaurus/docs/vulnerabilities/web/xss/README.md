@@ -1,4 +1,4 @@
-# XSS: Cross-Site Scripting
+# 1. XSS: Cross-Site Scripting
 
 XSS attacks enable attackers to _inject client-side scripts_ into web pages viewed by other users.
 
@@ -8,23 +8,23 @@ XSS effects vay from petty nuisance to significant security risk, dependending o
 
 * [XSS, Wikipedia article](https://en.wikipedia.org/wiki/Cross-site_scripting)
 
-## Types
+## 1.1. Types
 
-#### Reflected (rXSS)
+#### 1.1.0.1. Reflected (rXSS)
 
 Input from a user is directly returned to the browser, permitting injection of arbitrary content.
 
 rXSS vulnerabilities are _inherently dependent on CSRF_ vulnerabilities to be exploitable, in the case of POSTs. If your rXSS exists just in a GET, it's probably secure.
 
-#### Stored/Persisted (sXSS)
+#### 1.1.0.2. Stored/Persisted (sXSS)
 
 Input from a user is stored on the serer (often in a database) and returned later without proper escaping.
 
-#### DOM
+#### 1.1.0.3. DOM
 
 Input from a user is inserted into the page's DOM without proper handling, enabling insertion of arbitrary nodes. Biggest different with rXSS and sXSS is that it doesn't depend on a server-side flaw, it only needs vulnerable JavaScript on the client-side.
 
-## Mitigation
+## 1.2. Mitigation
 
 * Unless there is _absolutely_ no other option, user-controlled input should not end up in a script tag or inside of an attribute for a DOM event.
 * Escape every dangerous character: angle brackets, quotes and backslashes.
@@ -34,7 +34,7 @@ Input from a user is inserted into the page's DOM without proper handling, enabl
   * Embedding attacker data into tags and attributes requires HTLM encoding
   * Same goes for innerHTML
 
-## Recognition checklist
+## 1.3. Recognition checklist
 
 * Figure out __where it goes__: Does it get embedded in a tag attribute or in a script tag?
 * Figure out __any special handling__: Do URLs get turned into links (`<a>`)?
@@ -42,13 +42,13 @@ Input from a user is inserted into the page's DOM without proper handling, enabl
 
 We usually want a simple payload to work, such as `<script>alert(1);</script>`, then we can work further.
 
-## Exploitation
+## 1.4. Exploitation
 
 1. URL Redirection (`document.location.href`)
 2. Phishing (insert `iframe`)
 3. Cookie stealing (`document.cookie`)
 
-## XSS Cheat Sheet
+## 1.5. XSS Cheat Sheet
 
 Couple quick things to try when testing for XSS:
 
@@ -57,15 +57,15 @@ Couple quick things to try when testing for XSS:
 * `"onmouseover="alert(1)`
 * `http://"onmouseover="alert(1)`
 
-## Examples
+## 1.6. Examples
 
-### Attribute Tag example
+### 1.6.1. Attribute Tag example
 
-Suppose a text link "Check out http://google.com" gets automatically parsed into `Check out <a href="http://google.com">http://google.com</a>`, notice that wrapping `"` did not get into the resulting output. 
+Suppose a text link "Check out `http://google.com`" gets automatically parsed into `Check out <a href="http://google.com">http://google.com</a>`, notice that wrapping `"` did not get into the resulting output.
 
-We can trigger DOM events, for example: `http://"onmouseover="alert(1);`, giving you: `<a href="http://"onmouseover="alert(1);">
+We can trigger DOM events, for example: `http://"onmouseover="alert(1);`, giving you: `<a href="http://"onmouseover="alert(1);">`
 
-### Script Tag example
+### 1.6.2. Script Tag example
 
 If for example, we are in the following scenario:
 
@@ -85,8 +85,8 @@ This HTML encoded payload:
 ```html
 '; alert(1);'
 ```
- 
-Results in a final script of: 
+
+Results in a final script of:
 
 ```html
 <script> var token = ''; alert(1);'' </script>
@@ -104,7 +104,7 @@ Give us a final script of:
 <script> var token = '</script><script>alert(1);</script>'; </script>
 ```
 
-## Interesting exploits
+## 1.7. Interesting exploits
 
 ```js
 let script = document.createElement('script');

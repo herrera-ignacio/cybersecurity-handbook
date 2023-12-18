@@ -10,10 +10,10 @@
 
 You can also run all these look-ups prior to an engagement to save you an immense about of time.
 
-> Sometimes with a little *Google* hacking and *Shodan* you'll evven actually find vulnerabilities before you even start testing.
-
-* *Open Source Intelligence (OSINT)* tools.
-* [Discover Scripts](../../../tools/scanning/external-passive/discover) (previously *Backtrack Scripts*)
+:::tip
+Consider looking at *Open Source Intelligence (OSINT)* tools.
+Sometimes with a little *Google* hacking and *Shodan* you'll even actually find vulnerabilities before you even start testing.
+:::
 
 ## External/Internal Active Discovery
 
@@ -48,7 +48,7 @@ This means you'll be able to pull up an HTML page and quickly view which sites h
 
 > Gnmap.pl is a Perl script that will take the results from the prior Nmap and clean it to a list of IPs.
 
-```
+```bash
 cd /opt.peepingtom/
 cat report.gnmap | ./gnmap.pl | grep http | cut -f 1,2 -d "," | tr "," ":" > http_ips.txt
 python ./peepingtom.py -p -i http_ips.txt

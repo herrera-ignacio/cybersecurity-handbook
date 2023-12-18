@@ -1,4 +1,4 @@
-# 3: Network Layer
+# 3. Network Layer
 
 Controls communication between broadcast domains.
 
