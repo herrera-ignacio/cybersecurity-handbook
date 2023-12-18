@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-lectures/defensive/cyber-threat-intelligence/README" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.0.1">
+<title data-rh="true">Cyber Threat Intelligence | Cybersecurity Handbook</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://herrera-ignacio.github.io/cybersecurity-handbook/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://herrera-ignacio.github.io/cybersecurity-handbook/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://herrera-ignacio.github.io/cybersecurity-handbook/lectures/defensive/cyber-threat-intelligence/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Cyber Threat Intelligence | Cybersecurity Handbook"><meta data-rh="true" name="description" content="Original lecture by Melinton Navas"><meta data-rh="true" property="og:description" content="Original lecture by Melinton Navas"><link data-rh="true" rel="icon" href="/cybersecurity-handbook/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://herrera-ignacio.github.io/cybersecurity-handbook/lectures/defensive/cyber-threat-intelligence/"><link data-rh="true" rel="alternate" href="https://herrera-ignacio.github.io/cybersecurity-handbook/lectures/defensive/cyber-threat-intelligence/" hreflang="en"><link data-rh="true" rel="alternate" href="https://herrera-ignacio.github.io/cybersecurity-handbook/lectures/defensive/cyber-threat-intelligence/" hreflang="x-default"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/cybersecurity-handbook/assets/css/styles.ebb2964c.css">
+<script src="/cybersecurity-handbook/assets/js/runtime~main.a3b4367c.js" defer="defer"></script>
+<script src="/cybersecurity-handbook/assets/js/main.8f95dc28.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/cybersecurity-handbook/"><b class="navbar__title text--truncate">Cybersecurity Handbook</b></a></div><div class="navbar__items navbar__items--right"><a href="https://www.linkedin.com/in/ignacioromanherrera/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">LinkedIn<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><a href="https://github.com/herrera-ignacio/cybersecurity-handbook" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/cybersecurity-handbook/">Introduction</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/fundamentals/bug-bounty/">Fundamentals</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/networking/concepts/devices/">Networking</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/cryptography/concepts/hashing/">Cryptography</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/books/hackerplaybook/">Books</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/cert_notes/ccna/">Certifications</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" aria-expanded="true" href="/cybersecurity-handbook/lectures/compliance/hipaa-training/">Lectures</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" tabindex="0" href="/cybersecurity-handbook/lectures/compliance/hipaa-training/">Compliance</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" aria-expanded="true" tabindex="0" href="/cybersecurity-handbook/lectures/defensive/cyber-threat-intelligence/">Defensive</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/cybersecurity-handbook/lectures/defensive/cyber-threat-intelligence/">Cyber Threat Intelligence</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/cybersecurity-handbook/lectures/defensive/malware-threats/">Malware Threats</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/cybersecurity-handbook/lectures/defensive/vuln-management-fundamentals/">Introduction of Vulnerability Management</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" tabindex="0" href="/cybersecurity-handbook/lectures/offensive/d23-how-to-shoot-web/">Offensive</a></div></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/vulnerabilities/server/shellshock/">Vulnerabilities</a></div></li></ul></nav><button type="button" title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width="20" height="20" aria-hidden="true" class="collapseSidebarButtonIcon_kv0_"><g fill="#7a7a7a"><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"></path><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"></path></g></svg></button></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/cybersecurity-handbook/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Lectures</span><meta itemprop="position" content="1"></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Defensive</span><meta itemprop="position" content="2"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Cyber Threat Intelligence</span><meta itemprop="position" content="3"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><h1>Cyber Threat Intelligence</h1>
+<blockquote>
+<p>Original lecture by Melinton Navas</p>
+</blockquote>
+<ul>
+<li>Introduction to CTI</li>
+<li>Security organization<!-- -->
+<ul>
+<li>SOC</li>
+<li>IR</li>
+</ul>
+</li>
+<li>CTI Lifecycle (Intelligence-Driven Security)<!-- -->
+<ul>
+<li>Tools</li>
+</ul>
+</li>
+<li>CTI role in SOC, IR and Risk Analysis</li>
+<li>CTI for Fraud Prevention</li>
+<li>CTI Frameworks<!-- -->
+<ul>
+<li>Lockheed Martin Cyber Kill Chain</li>
+<li>Diamond Model</li>
+<li>MITRE ATT&amp;CK</li>
+</ul>
+</li>
+<li>Developing core of CTI implementation</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="introduction">Introduction<a href="#introduction" class="hash-link" aria-label="Direct link to Introduction" title="Direct link to Introduction">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="what-is-a-cyber-threat">What is a Cyber Threat?<a href="#what-is-a-cyber-threat" class="hash-link" aria-label="Direct link to What is a Cyber Threat?" title="Direct link to What is a Cyber Threat?">​</a></h3>
+<blockquote>
+<p>&quot;An event or condition that has the potential for causing asset loss and the undesirable consequences or impact from such loss.&quot; (NIST, 2019)</p>
+</blockquote>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="vulnerability">Vulnerability<a href="#vulnerability" class="hash-link" aria-label="Direct link to Vulnerability" title="Direct link to Vulnerability">​</a></h3>
+<blockquote>
+<p>&quot;A weakness of an asset or group of assets that can be exploited by one or more threats.&quot; (ISO 27002)</p>
+</blockquote>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="what-is-cti">What is CTI?<a href="#what-is-cti" class="hash-link" aria-label="Direct link to What is CTI?" title="Direct link to What is CTI?">​</a></h3>
+<ul>
+<li>
+<p>Includes information and analysis from a rich array of resources presented in a way that is easy to understand and use.</p>
+</li>
+<li>
+<p>It is valuable for all the major teams in the cyber security organization.</p>
+</li>
+<li>
+<p>Can be handled and executed mostly by the existing security staff.</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="how-cti-approaches-an-organization">How CTI approaches an organization?<a href="#how-cti-approaches-an-organization" class="hash-link" aria-label="Direct link to How CTI approaches an organization?" title="Direct link to How CTI approaches an organization?">​</a></h3>
+<ul>
+<li>
+<p>No &quot;one size fits all&quot; or recipe.</p>
+</li>
+<li>
+<p>Takes into account nature of organization and information.</p>
+</li>
+<li>
+<p>Data is everywhere, information can help every organization unit, intelligente can drive the right questions to the right answers.</p>
+</li>
+<li>
+<p>The more you know, the more you&#x27;re capable to learn how to defend yourself and aim your defenses the most efficient way possible.</p>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="security-organization">Security Organization<a href="#security-organization" class="hash-link" aria-label="Direct link to Security Organization" title="Direct link to Security Organization">​</a></h2>
+<p><img loading="lazy" alt="roles" src="/cybersecurity-handbook/assets/images/soc_roles-bcd29ba4660063c6ddde392cad42e87d.jpg" width="707" height="407" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="security-operations-center-soc">Security Operations Center (SOC)<a href="#security-operations-center-soc" class="hash-link" aria-label="Direct link to Security Operations Center (SOC)" title="Direct link to Security Operations Center (SOC)">​</a></h3>
+<blockquote>
+<p>&quot;Centralized function within an organization employing people, processes, and technology to continuously monitor and improve an organization&#x27;s security posture while preventing, detecting, analazying, and responding to cybersecurity incidents.&quot; (McAfee, 2019)</p>
+</blockquote>
+<ul>
+<li>Monitor for potential threats.</li>
+<li>Detect suspicious network activity.</li>
+<li>Contain active threats.</li>
+<li>Remediate using available technology.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="incident-response-team-ir">Incident Response Team (IR)<a href="#incident-response-team-ir" class="hash-link" aria-label="Direct link to Incident Response Team (IR)" title="Direct link to Incident Response Team (IR)">​</a></h3>
+<ul>
+<li>
+<p>Part of SOC...</p>
+</li>
+<li>
+<p>When SOC detects something not supposed to be happening, IR comes in.</p>
+</li>
+<li>
+<p>Vulnerability Management</p>
+</li>
+<li>
+<p>IR team requires high skill analysts since the topics covered are not entry-level security.</p>
+</li>
+<li>
+<p>Timing is critical.</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="vulnerability-management-cycle">Vulnerability Management Cycle<a href="#vulnerability-management-cycle" class="hash-link" aria-label="Direct link to Vulnerability Management Cycle" title="Direct link to Vulnerability Management Cycle">​</a></h3>
+<p>Scan &gt; Prioritize &gt; Assess &gt; Report &gt; Fix &gt; Verify &gt; Start again</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="zero-day-vulnerabilities">Zero-day vulnerabilities<a href="#zero-day-vulnerabilities" class="hash-link" aria-label="Direct link to Zero-day vulnerabilities" title="Direct link to Zero-day vulnerabilities">​</a></h3>
+<blockquote>
+<p>&quot;A vulnerability in a system or device that has been disclosed but is not yet patched.&quot; (TrendMicro, 2019)</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="cti-lifecycle-by-recorded-future">CTI Lifecycle (By Recorded Future)<a href="#cti-lifecycle-by-recorded-future" class="hash-link" aria-label="Direct link to CTI Lifecycle (By Recorded Future)" title="Direct link to CTI Lifecycle (By Recorded Future)">​</a></h2>
+<p>Direction &gt; Collection &gt; Processing &gt; Analysis &gt; Dissemination &gt; Feedback</p>
+<p><img loading="lazy" alt="lifecycle" src="/cybersecurity-handbook/assets/images/cti_lifecycle-9410ba987222a559155a45555e8e5214.jpg" width="782" height="480" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="direction">Direction<a href="#direction" class="hash-link" aria-label="Direct link to Direction" title="Direct link to Direction">​</a></h3>
+<ul>
+<li>
+<p>Information assets and business processes that needs to be protected.</p>
+</li>
+<li>
+<p>Potential impacts of losing those assets or interrupting those processes.</p>
+</li>
+<li>
+<p>Types of threat intelligence that the security organization requires.</p>
+</li>
+<li>
+<p>Priorities about what to protect.</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="collection">Collection<a href="#collection" class="hash-link" aria-label="Direct link to Collection" title="Direct link to Collection">​</a></h3>
+<p>Collection is the process of gathering information to address the most important intelligence requirements.</p>
+<ul>
+<li>
+<p>Pulling metadata and logs.</p>
+</li>
+<li>
+<p>Subscribing to threat data feeds.</p>
+</li>
+<li>
+<p>Holding conversations and targeted interviews with knowledgeable sources.</p>
+</li>
+<li>
+<p>Scarping and harvesting websites and forums.</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="media">Media<a href="#media" class="hash-link" aria-label="Direct link to Media" title="Direct link to Media">​</a></h4>
+<ul>
+<li>Security websites or vender researchs</li>
+<li>For human consumption</li>
+<li>Requires manual procedure</li>
+<li>May be misunderstood</li>
+<li>Should not be first option</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="social-media">Social Media<a href="#social-media" class="hash-link" aria-label="Direct link to Social Media" title="Direct link to Social Media">​</a></h4>
+<ul>
+<li>High probability of misinformation</li>
+<li>Personal point of views may affect information</li>
+<li>Large need for cross-referencing with multiple sources</li>
+<li>Requires manual analysis</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="threat-actor-forums">Threat actor forums<a href="#threat-actor-forums" class="hash-link" aria-label="Direct link to Threat actor forums" title="Direct link to Threat actor forums">​</a></h4>
+<ul>
+<li>Host relevant discussions</li>
+<li>Emerging vulnerabilities or latest research</li>
+<li>Heavy analysis and cross-referencing is essential</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="dark-web">Dark web<a href="#dark-web" class="hash-link" aria-label="Direct link to Dark web" title="Direct link to Dark web">​</a></h4>
+<ul>
+<li>Markets &amp; forums</li>
+<li>Often birthplace of super valuable intelligence</li>
+<li>Hard to access</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="processing">Processing<a href="#processing" class="hash-link" aria-label="Direct link to Processing" title="Direct link to Processing">​</a></h3>
+<p>Processing is the transformation of collected information into a format usable by the organization. Almost all raw data collected needs to be processed in some manner, whether by humans or machines.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="analysis">Analysis<a href="#analysis" class="hash-link" aria-label="Direct link to Analysis" title="Direct link to Analysis">​</a></h3>
+<p>A human process that turns processed information into intelligence that can inform decisions.</p>
+<p>The decisions might involve whether to investigate a potential threat, what actions to take, how to strengthen security controls, or how much investment is justified.</p>
+<p>Not all intelligence needs to be digested via a formal report. Continual technical reporting can be done to other teams with external context.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="dissemination">Dissemination<a href="#dissemination" class="hash-link" aria-label="Direct link to Dissemination" title="Direct link to Dissemination">​</a></h3>
+<p>Get the intelligence output to the places it needs to go.</p>
+<ul>
+<li>
+<p>What threat intelligence do they need?</p>
+</li>
+<li>
+<p>How should intelligence be presented?</p>
+</li>
+<li>
+<p>How often should we provide updates and other information?</p>
+</li>
+<li>
+<p>Through what media should the intelligence be disseminated?</p>
+</li>
+<li>
+<p>How should we follow up if they have any question?</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="feedback">Feedback<a href="#feedback" class="hash-link" aria-label="Direct link to Feedback" title="Direct link to Feedback">​</a></h3>
+<p>Make further requirements/adjustments based on priorities.</p>
+<ul>
+<li>
+<p>What types of data to collect.</p>
+</li>
+<li>
+<p>How to process and enrich data.</p>
+</li>
+<li>
+<p>How to analyze information and present it as actionable intelligence.</p>
+</li>
+<li>
+<p>To whom each type of intelligence must be disseminated, how quickly, and how fast respond to questions.</p>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="cti-lifecycle-tools">CTI Lifecycle Tools<a href="#cti-lifecycle-tools" class="hash-link" aria-label="Direct link to CTI Lifecycle Tools" title="Direct link to CTI Lifecycle Tools">​</a></h2>
+<p>Threat intelligence solutions are designed to collect, process, and analyze all types of threat data from internal, technical, and human sources.</p>
+<p>There are existing security tools, such as SIEMs (Security Information and Event Management) and analytics tools, which collect and correlate security events and log data.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="cti-role">CTI Role<a href="#cti-role" class="hash-link" aria-label="Direct link to CTI Role" title="Direct link to CTI Role">​</a></h2>
+<p>Provides <strong>context</strong>, which is a must.</p>
+<p>Security analyst are unable to review, prioritize and investigate all the alerts on their own. They are forced to make mistakes:</p>
+<ul>
+<li>
+<p>Ignore alerts.</p>
+</li>
+<li>
+<p>Chase false positives.</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="essential-values">Essential Values<a href="#essential-values" class="hash-link" aria-label="Direct link to Essential Values" title="Direct link to Essential Values">​</a></h3>
+<ul>
+<li>
+<p>Comprehension</p>
+</li>
+<li>
+<p>Relevance</p>
+</li>
+<li>
+<p>Contextualization</p>
+</li>
+<li>
+<p>Integration</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="comprehension">Comprehension<a href="#comprehension" class="hash-link" aria-label="Direct link to Comprehension" title="Direct link to Comprehension">​</a></h4>
+<ul>
+<li>
+<p>Automatic capture of valuable information.</p>
+</li>
+<li>
+<p>Easy to understand and accurate information.</p>
+</li>
+<li>
+<p>Information can be then correlated with internal information regarding an alert.</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="relevance">Relevance<a href="#relevance" class="hash-link" aria-label="Direct link to Relevance" title="Direct link to Relevance">​</a></h4>
+<p>There are two types of false positives to consider:</p>
+<ol>
+<li>Alerts that are relevant to organization but are inaccurate or unhelpful.</li>
+<li>Alerts that are accurate but aren&#x27;t relevant to organization.</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="contextualization">Contextualization<a href="#contextualization" class="hash-link" aria-label="Direct link to Contextualization" title="Direct link to Contextualization">​</a></h4>
+<p>Provides clues/relevant information to identify if an alert is relevant to organization and/or accurate.</p>
+<ul>
+<li>
+<p>Corroboration from multiple sources associated with recent attacks.</p>
+</li>
+<li>
+<p>Confirmation that it has been associated with threat actors active in the industry.</p>
+</li>
+<li>
+<p>Timeline showing alert occurred before or after other events linked with attacks.</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="integrated">Integrated<a href="#integrated" class="hash-link" aria-label="Direct link to Integrated" title="Direct link to Integrated">​</a></h4>
+<p>CTI will help to:</p>
+<ul>
+<li>
+<p>Determine whether each alert should be dismissd as a false positive.</p>
+</li>
+<li>
+<p>Score the alert according to its importance.</p>
+</li>
+<li>
+<p>Automatically enrich alert with valuable extra context.</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="impact-in-soc">Impact in SOC<a href="#impact-in-soc" class="hash-link" aria-label="Direct link to Impact in SOC" title="Direct link to Impact in SOC">​</a></h3>
+<p>By enriching internal alerts with external information and context, it helps making risk-based decisions properly.</p>
+<ul>
+<li>
+<p>Better scoping &amp; filter out false alarms.</p>
+</li>
+<li>
+<p>Speed up triage.</p>
+</li>
+<li>
+<p>Simplify containing incident &amp; analysis.</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="triage">Triage<a href="#triage" class="hash-link" aria-label="Direct link to Triage" title="Direct link to Triage">​</a></h4>
+<p>Triage requires a lot of context. Each of the following provide crucial information to determine the flow of a possible attack.</p>
+<ul>
+<li>
+<p>Internal system logs.</p>
+</li>
+<li>
+<p>Network devices.</p>
+</li>
+<li>
+<p>Security tools.</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="monitoring">Monitoring<a href="#monitoring" class="hash-link" aria-label="Direct link to Monitoring" title="Direct link to Monitoring">​</a></h4>
+<ul>
+<li>
+<p>Outbound connections.</p>
+</li>
+<li>
+<p>Firewall alerts.</p>
+</li>
+<li>
+<p>Internal network activity.</p>
+</li>
+<li>
+<p>Session activity by user and workstation.</p>
+</li>
+<li>
+<p>Accurate time in logs.</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="impact-in-ir">Impact in IR<a href="#impact-in-ir" class="hash-link" aria-label="Direct link to Impact in IR" title="Direct link to Impact in IR">​</a></h3>
+<ul>
+<li>
+<p>Reduce reactiveness by defining proper scope and incident containment.</p>
+</li>
+<li>
+<p>Prepare process in advance.</p>
+</li>
+<li>
+<p>Remediate data exposure and stolen assets.</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="reaction-timing-is-key">Reaction timing is key<a href="#reaction-timing-is-key" class="hash-link" aria-label="Direct link to Reaction timing is key" title="Direct link to Reaction timing is key">​</a></h4>
+<p>A typical IR process goes this way:</p>
+<ol>
+<li>Incident detection</li>
+<li>Discovery</li>
+<li>Triage and containment</li>
+<li>Remediation</li>
+<li>Going back to normal operations</li>
+</ol>
+<p>Each one of these steps requires high reactive response and most of the time it is not done until an alert is flagged.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="reduce-reactiveness-issue">Reduce reactiveness issue<a href="#reduce-reactiveness-issue" class="hash-link" aria-label="Direct link to Reduce reactiveness issue" title="Direct link to Reduce reactiveness issue">​</a></h4>
+<p>The right preparation can be especially helpful in reducing response times by becoming less reactive.</p>
+<ul>
+<li>Identification of possible threats.</li>
+<li>Prioritizations.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="cti-impact-on-reactiveness-scope-and-incident-containment">CTI Impact on reactiveness, scope and incident containment<a href="#cti-impact-on-reactiveness-scope-and-incident-containment" class="hash-link" aria-label="Direct link to CTI Impact on reactiveness, scope and incident containment" title="Direct link to CTI Impact on reactiveness, scope and incident containment">​</a></h4>
+<ul>
+<li>
+<p>Automatically identifying and dismissing false positive alerts.</p>
+</li>
+<li>
+<p>Erinching alerts with real-time context from across open and dark web.</p>
+</li>
+<li>
+<p>Assembling and comparing information from internal and external data sources.</p>
+</li>
+<li>
+<p>Providing details about threat and insights about attacker TTPs.</p>
+</li>
+<li>
+<p>Scoring threats according to the organization&#x27;s specific needs and infrastructure.</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="prepare-process-in-advance">Prepare process in advance<a href="#prepare-process-in-advance" class="hash-link" aria-label="Direct link to Prepare process in advance" title="Direct link to Prepare process in advance">​</a></h4>
+<ul>
+<li>
+<p>Comprehensive up-to-date picture of threat landscape.</p>
+</li>
+<li>
+<p>Information about popular threat actor tactics, techniques, and procedures (TTPs).</p>
+</li>
+<li>
+<p>Highlights of industry- and area-specific attack trends.</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="remediate-data-exposure-and-stolen-assets">Remediate data exposure and stolen assets<a href="#remediate-data-exposure-and-stolen-assets" class="hash-link" aria-label="Direct link to Remediate data exposure and stolen assets" title="Direct link to Remediate data exposure and stolen assets">​</a></h4>
+<p>CTI could be capable of alerting when:</p>
+<ul>
+<li>
+<p>Organization&#x27;s assets are exposed online.</p>
+</li>
+<li>
+<p>Someone is offering the assets for sale.</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="impact-in-risk-analysis">Impact in Risk Analysis<a href="#impact-in-risk-analysis" class="hash-link" aria-label="Direct link to Impact in Risk Analysis" title="Direct link to Impact in Risk Analysis">​</a></h3>
+<p>Many risk models have a hard time with:</p>
+<ul>
+<li>Vague non-quantified outputs that show threat levels with different colors.</li>
+<li>Threat probabilities and costs based on partial information and riddled with unfounded assumptions.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="fair-risk-model-factor-analysis-of-information-risk">FAIR Risk model (Factor Analysis of Information Risk)<a href="#fair-risk-model-factor-analysis-of-information-risk" class="hash-link" aria-label="Direct link to FAIR Risk model (Factor Analysis of Information Risk)" title="Direct link to FAIR Risk model (Factor Analysis of Information Risk)">​</a></h4>
+<p><img loading="lazy" alt="model" src="/cybersecurity-handbook/assets/images/fair_risk_model-0ba0b9cc93b2b7395557d14488019e35.jpg" width="1074" height="498" class="img_ev3q"></p>
+<p>This framework enables organizations to create more efficient risk model by:</p>
+<ul>
+<li>
+<p>Make defined measurements of risk.</p>
+</li>
+<li>
+<p>Transparent about assumptions, variables, and outcomes.</p>
+</li>
+<li>
+<p>Show specific loss probabilities in financial terms.</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="threat-probabilities">Threat Probabilities<a href="#threat-probabilities" class="hash-link" aria-label="Direct link to Threat Probabilities" title="Direct link to Threat Probabilities">​</a></h4>
+<p>A big part of creating a threat model involves <strong>estimating probability of successful attacks</strong>. To do so, CTI can:</p>
+<ol>
+<li>
+<p>Create list of threat categories that might affect the business.</p>
+</li>
+<li>
+<p>Estimate probabilities that attacks will happen, and that they will succeed.</p>
+</li>
+</ol>
+<p>And this can be answered by asking the following questions:</p>
+<ul>
+<li>How many enterprises have been suffering this attacks lately and with which frequency?</li>
+<li>How many of those attacks were successful?</li>
+<li>Have we observed us being targeted?</li>
+<li>What type of financial loss those attacks produced?</li>
+<li>Etc...</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="cti-for-fraud-prevention">CTI for Fraud Prevention<a href="#cti-for-fraud-prevention" class="hash-link" aria-label="Direct link to CTI for Fraud Prevention" title="Direct link to CTI for Fraud Prevention">​</a></h2>
+<ul>
+<li>Detect when a breach has happened and security devices &amp; framework didn&#x27;t detect.</li>
+<li>Detect when regional industries similar to the organization&#x27;s one are involved in a data breach.</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="frameworks">Frameworks<a href="#frameworks" class="hash-link" aria-label="Direct link to Frameworks" title="Direct link to Frameworks">​</a></h2>
+<p>Processes, procedures, and structures to which teams can attach to in order to make everything more effective.</p>
+<ul>
+<li>Cyber Kill Chain</li>
+<li>Diamond Model</li>
+<li>MITRE ATT&amp;CK</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lockheed-martin-cyber-kill-chain">Lockheed Martin: Cyber Kill Chain<a href="#lockheed-martin-cyber-kill-chain" class="hash-link" aria-label="Direct link to Lockheed Martin: Cyber Kill Chain" title="Direct link to Lockheed Martin: Cyber Kill Chain">​</a></h3>
+<p><img loading="lazy" alt="chain" src="/cybersecurity-handbook/assets/images/cyber_kill_chain-2908031e2a38c9d18487b6b62734e235.jpg" width="873" height="289" class="img_ev3q"></p>
+<ul>
+<li>
+<p>By breaking an attack up, defenders can pinpoint which stage it is in and deploy appropriate countermeasures.</p>
+</li>
+<li>
+<p>Security teams can develop standard responses for each stage.</p>
+</li>
+<li>
+<p>Cyber Kill Chain also allows organizations to build a defense-in-depth model that targets specific parts of the kill chain.</p>
+</li>
+<li>
+<p>One of the critics of this model is that it doesn&#x27;t take into account how many modern attacks work. Even with this limitation, it creates a good baseline to discuss attacks and where they can be stopped.</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="1-reconnaissance">1. Reconnaissance<a href="#1-reconnaissance" class="hash-link" aria-label="Direct link to 1. Reconnaissance" title="Direct link to 1. Reconnaissance">​</a></h4>
+<p>Research, identification and selection of attack vector / threats.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2-weaponization">2. Weaponization<a href="#2-weaponization" class="hash-link" aria-label="Direct link to 2. Weaponization" title="Direct link to 2. Weaponization">​</a></h4>
+<p>Build process of malicious payload, malware, etc.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="3-delivery">3. Delivery<a href="#3-delivery" class="hash-link" aria-label="Direct link to 3. Delivery" title="Direct link to 3. Delivery">​</a></h4>
+<p>Transmission of weapon to the target environment.</p>
+<p>Transmission medium can be email attachments, websites, and usb-removable media.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="4-explotaition">4. Explotaition<a href="#4-explotaition" class="hash-link" aria-label="Direct link to 4. Explotaition" title="Direct link to 4. Explotaition">​</a></h4>
+<p>Triggers weapon/exploit. It can be automatic or manual.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="5-installation">5. Installation<a href="#5-installation" class="hash-link" aria-label="Direct link to 5. Installation" title="Direct link to 5. Installation">​</a></h4>
+<p>Installation of backdoor on victim system, allowing attacker to maintain persistence inside the environment.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="6-command-and-control">6. Command and Control<a href="#6-command-and-control" class="hash-link" aria-label="Direct link to 6. Command and Control" title="Direct link to 6. Command and Control">​</a></h4>
+<p>Establish a command and control (persistence) channel, such as a ssh-connection through internet.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="7-exfiltration">7. Exfiltration<a href="#7-exfiltration" class="hash-link" aria-label="Direct link to 7. Exfiltration" title="Direct link to 7. Exfiltration">​</a></h4>
+<p>Intruders can take actions to achieve original objectives, such as collecting, compromising and extracting assets from target environment.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="indicators">Indicators<a href="#indicators" class="hash-link" aria-label="Direct link to Indicators" title="Direct link to Indicators">​</a></h4>
+<ul>
+<li><strong>Atomic</strong>: indicators that cannot be broken down into smaller parts.</li>
+<li><strong>Computed</strong>: indicators derived from data involved in an incident.</li>
+<li><strong>Behavioral</strong>: collection of computed and atomic indicators, often subject to qualification by quantity and possibly combinatorial logic.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="diamond-model">Diamond Model<a href="#diamond-model" class="hash-link" aria-label="Direct link to Diamond Model" title="Direct link to Diamond Model">​</a></h3>
+<ul>
+<li>
+<p>Created in 2013 by now-defunct CCIATR (Center for Cyber Intelligence Analysis and Threat Research).</p>
+</li>
+<li>
+<p>Used to track attack groups over time rather than the progress of indivual attacks.</p>
+</li>
+<li>
+<p>In its most basic form, this model describes that an <strong>adversary</strong> deploys a <strong>capability</strong> over some <strong>infrastructure</strong> against a <strong>victim</strong>.</p>
+</li>
+<li>
+<p>Advantages:</p>
+<ul>
+<li>Pivoting.</li>
+<li>Flexibility.</li>
+<li>Extensibility.</li>
+</ul>
+</li>
+<li>
+<p>Disadvantages:</p>
+<ul>
+<li>Require a lot of care and feeding.</li>
+<li>Some aspects of the model, especially infrastructure, change rapidly.</li>
+<li>Need to update diamond of an attacker constantly or risk of working with outdated information.</li>
+</ul>
+</li>
+</ul>
+<p><img loading="lazy" alt="model" src="/cybersecurity-handbook/assets/images/diamond_model-535fd3160e69b1106cf9cad38d4c1d9a.jpg" width="731" height="560" class="img_ev3q"></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="pivoting">Pivoting<a href="#pivoting" class="hash-link" aria-label="Direct link to Pivoting" title="Direct link to Pivoting">​</a></h4>
+<p>Diamond model would help you <em>pivot</em> from initial indicators to find information about the attacker associated with an IP address, then research the known capabilities of that attacker.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="diamond-event">Diamond Event<a href="#diamond-event" class="hash-link" aria-label="Direct link to Diamond Event" title="Direct link to Diamond Event">​</a></h4>
+<blockquote>
+<p>&quot;For every intrusion event there exists an adversary taking a step towards an intended goal by using a capability over infrastructure against a victim to produce a result&quot;.</p>
+</blockquote>
+<p>Each event feature, has an associated confidence value. This value is left purposefully undefined as each model implementation may understand confidence differently.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="flexibility--extensibility">Flexibility &amp; Extensibility<a href="#flexibility--extensibility" class="hash-link" aria-label="Direct link to Flexibility &amp; Extensibility" title="Direct link to Flexibility &amp; Extensibility">​</a></h4>
+<p>One of the big advantages of Diamond Model is its flexibility and extensibility. Other features of an attack can be tracked besides the four core ones:</p>
+<ul>
+<li>Phase</li>
+<li>Result</li>
+<li>Direction</li>
+<li>Methodology</li>
+<li>Resources</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="adversary">Adversary<a href="#adversary" class="hash-link" aria-label="Direct link to Adversary" title="Direct link to Adversary">​</a></h4>
+<blockquote>
+<p>&quot;There exists a set of adversaries (insiders, outsiders, individuals, groups, and organizations) which seek to compromise computer systems or networks to further their intent and satisfy their needs.&quot;</p>
+</blockquote>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="capability">Capability<a href="#capability" class="hash-link" aria-label="Direct link to Capability" title="Direct link to Capability">​</a></h4>
+<ul>
+<li>Capability describes tools/techniques of the adversary used in the event.</li>
+<li>All vulnerabilities and exposures that can be utilized by adversary capability regardless of victim are considered its <strong>capacity</strong>.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="infrastructure">Infrastructure<a href="#infrastructure" class="hash-link" aria-label="Direct link to Infrastructure" title="Direct link to Infrastructure">​</a></h4>
+<p>Describes physical/logical communication structures that adversary uses to deliver a capability, maintain control of capabilities, and effect results from the victim.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="victim">Victim<a href="#victim" class="hash-link" aria-label="Direct link to Victim" title="Direct link to Victim">​</a></h4>
+<blockquote>
+<p>&quot;A victim is the target of the adversary and against whom vulnerabilities and exposures are exploited and capabilities used. As with other features, a victim can be described in whichever way necessary and appropriate: organization, person, target email address, IP address, domain, etc.&quot;</p>
+</blockquote>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="vulnerabilities--exposures">Vulnerabilities &amp; Exposures<a href="#vulnerabilities--exposures" class="hash-link" aria-label="Direct link to Vulnerabilities &amp; Exposures" title="Direct link to Vulnerabilities &amp; Exposures">​</a></h4>
+<blockquote>
+<p>&quot;Every system, and by extension every victim asset, has vulnerabilities and exposures.&quot;</p>
+</blockquote>
+<p>These can be described as broadly as <em>&quot;lack of user education causing email-borne hyperlinks to be clicked&quot;</em>, or as specific as a CVE to fit the documentation requirements of the event.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="mitre-attck">MITRE ATT&amp;CK<a href="#mitre-attck" class="hash-link" aria-label="Direct link to MITRE ATT&amp;CK" title="Direct link to MITRE ATT&amp;CK">​</a></h3>
+<p>MITRE is a unique organization in the US, responsible for managing federal funding for research projects across multiple federal agencies. It is responsible for the development of <strong>Common Vulnerabilities and Exposures (CVE)</strong>, and also developed specific frameworks for CTI.</p>
+<p>ATT&amp;CK stands for <strong>Adversarial Tactics, Techniques, and Common Knowledge</strong>, and it was created to address four main issues:</p>
+<ol>
+<li>Adversary&#x27;s behaviors.</li>
+<li>Lifecycle models that didn&#x27;t fit.</li>
+<li>Applicability to real enviornments.</li>
+<li>Common taxonomy.</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="attck-matrix">ATT&amp;CK MATRIX<a href="#attck-matrix" class="hash-link" aria-label="Direct link to ATT&amp;CK MATRIX" title="Direct link to ATT&amp;CK MATRIX">​</a></h4>
+<p>ATT&amp;CK uses 11 different tactic categories to describe adversary&#x27;s behavior:</p>
+<ol>
+<li>Initial access</li>
+<li>Execution</li>
+<li>Persistence</li>
+<li>Privilege escalation</li>
+<li>Defense evasion</li>
+<li>Credential access</li>
+<li>Discovery</li>
+<li>Lateral movement</li>
+<li>Collectio</li>
+<li>Exfiltration</li>
+<li>Command and control</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="attck-coverage">ATT&amp;CK coverage<a href="#attck-coverage" class="hash-link" aria-label="Direct link to ATT&amp;CK coverage" title="Direct link to ATT&amp;CK coverage">​</a></h4>
+<p>This clasification of behaviors, allows teams to easily track adversary&#x27;s behavior and:</p>
+<ul>
+<li>Prioritize incident responses.</li>
+<li>Tie indicators to attackers.</li>
+<li>Identify holes in an organization&#x27;s security posture.</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="developing-core-of-cti-implementation">Developing core of CTI implementation<a href="#developing-core-of-cti-implementation" class="hash-link" aria-label="Direct link to Developing core of CTI implementation" title="Direct link to Developing core of CTI implementation">​</a></h2>
+<ul>
+<li>Preparing your ground</li>
+<li>Key success factors</li>
+<li>Team and approach</li>
+<li>Technical resources</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="preparing-your-ground">Preparing your ground<a href="#preparing-your-ground" class="hash-link" aria-label="Direct link to Preparing your ground" title="Direct link to Preparing your ground">​</a></h3>
+<p>Clarify each group goals and define a solid start point to provide btter intelligence.</p>
+<ul>
+<li>What are their greatest risk?</li>
+<li>How can CTI help in addressing those risks?</li>
+<li>What is the impact of addressing them?</li>
+<li>What information gaps do they have currently?</li>
+</ul>
+<p><img loading="lazy" alt="intelligence" src="/cybersecurity-handbook/assets/images/threat-intelligence-5b863d06ef8bddb4987b74a339b71301.jpg" width="756" height="560" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-success-factors">Key Success Factors<a href="#key-success-factors" class="hash-link" aria-label="Direct link to Key Success Factors" title="Direct link to Key Success Factors">​</a></h3>
+<ul>
+<li>
+<p>Generating quick wins with monitoring</p>
+<ul>
+<li>Look for a few types of data that are particularly meaningful for the organization and security strategy.</li>
+<li>Check for new vulnerabilities that affect your most important assets.</li>
+<li>Track threat trends that pose potential risks to your business operations.</li>
+<li>Watch for any leaked information on public sources.</li>
+</ul>
+</li>
+<li>
+<p>Automate as much as possible so people can work on making effective, informed decisions.</p>
+<ul>
+<li>Start by fundamental task like:<!-- -->
+<ul>
+<li>Data aggregation</li>
+<li>Comparisong</li>
+<li>Labeling</li>
+<li>Contextualization</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Integrate CTI with processes and infrastructure.</p>
+<ul>
+<li>Make intelligence accessible and usable.</li>
+<li>Give CTI tools visibility into security events and activities.</li>
+<li>Combine and correlate internal and external data points.</li>
+<li>Deliver the most important, specific, relevant and contextualized intelligence to the right group at the right time.</li>
+</ul>
+</li>
+<li>
+<p>Get experts help to nurture internal experts</p>
+<ul>
+<li>Look for partners and consultants that provide both technical capabilities and expertise.</li>
+</ul>
+</li>
+<li>
+<p>You don&#x27;t have to have it all at once to get advantage of CTI capabilities.</p>
+<ul>
+<li>Start with current staff, data sources, and integration with existing security tools.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="cti-maturity-matrix">CTI maturity matrix<a href="#cti-maturity-matrix" class="hash-link" aria-label="Direct link to CTI maturity matrix" title="Direct link to CTI maturity matrix">​</a></h4>
+<p><img loading="lazy" alt="matrix" src="/cybersecurity-handbook/assets/images/cti-maturity-matrix-0479e34f36895949d75002f0b8d1f9aa.jpg" width="955" height="444" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="team-and-approach">Team and approach<a href="#team-and-approach" class="hash-link" aria-label="Direct link to Team and approach" title="Direct link to Team and approach">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="independent-cti-team">Independent CTI team<a href="#independent-cti-team" class="hash-link" aria-label="Direct link to Independent CTI team" title="Direct link to Independent CTI team">​</a></h4>
+<ul>
+<li>Organization independence has greater autonomy and prestige.</li>
+<li>It can come with political issues.</li>
+<li>Start with individuals who are already in cybersecurity and are applying CTI to their particular areas of security.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="skill-set-for-furture-members">Skill set for furture members<a href="#skill-set-for-furture-members" class="hash-link" aria-label="Direct link to Skill set for furture members" title="Direct link to Skill set for furture members">​</a></h4>
+<ul>
+<li>Correlating external data with internal telemetry.</li>
+<li>Providing threat situational awareness and recommendations.</li>
+<li>Practively hunting internal threats.</li>
+<li>Educating employees and customers on cyber threats.</li>
+<li>Engaging with threat intelligence communities.</li>
+<li>Identifying and managing information sources.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="four-types-of-cti">Four types of CTI<a href="#four-types-of-cti" class="hash-link" aria-label="Direct link to Four types of CTI" title="Direct link to Four types of CTI">​</a></h4>
+<p><img loading="lazy" alt="types" src="/cybersecurity-handbook/assets/images/cti-types-af5b8328dd3431d65fafb462af4740e4.jpg" width="959" height="509" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="technical-resources">Technical Resources<a href="#technical-resources" class="hash-link" aria-label="Direct link to Technical Resources" title="Direct link to Technical Resources">​</a></h3>
+<p>Collecting and enriching threat data:</p>
+<ul>
+<li>Human.</li>
+<li>Technologies.</li>
+<li>Combination of sources.</li>
+<li>CTI with AI.</li>
+<li>CTI communities.</li>
+</ul></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/cybersecurity-handbook/lectures/compliance/hipaa-training/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">HIPAA Training</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/cybersecurity-handbook/lectures/defensive/malware-threats/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Malware Threats</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#introduction" class="table-of-contents__link toc-highlight">Introduction</a><ul><li><a href="#what-is-a-cyber-threat" class="table-of-contents__link toc-highlight">What is a Cyber Threat?</a></li><li><a href="#vulnerability" class="table-of-contents__link toc-highlight">Vulnerability</a></li><li><a href="#what-is-cti" class="table-of-contents__link toc-highlight">What is CTI?</a></li><li><a href="#how-cti-approaches-an-organization" class="table-of-contents__link toc-highlight">How CTI approaches an organization?</a></li></ul></li><li><a href="#security-organization" class="table-of-contents__link toc-highlight">Security Organization</a><ul><li><a href="#security-operations-center-soc" class="table-of-contents__link toc-highlight">Security Operations Center (SOC)</a></li><li><a href="#incident-response-team-ir" class="table-of-contents__link toc-highlight">Incident Response Team (IR)</a></li><li><a href="#vulnerability-management-cycle" class="table-of-contents__link toc-highlight">Vulnerability Management Cycle</a></li><li><a href="#zero-day-vulnerabilities" class="table-of-contents__link toc-highlight">Zero-day vulnerabilities</a></li></ul></li><li><a href="#cti-lifecycle-by-recorded-future" class="table-of-contents__link toc-highlight">CTI Lifecycle (By Recorded Future)</a><ul><li><a href="#direction" class="table-of-contents__link toc-highlight">Direction</a></li><li><a href="#collection" class="table-of-contents__link toc-highlight">Collection</a></li><li><a href="#processing" class="table-of-contents__link toc-highlight">Processing</a></li><li><a href="#analysis" class="table-of-contents__link toc-highlight">Analysis</a></li><li><a href="#dissemination" class="table-of-contents__link toc-highlight">Dissemination</a></li><li><a href="#feedback" class="table-of-contents__link toc-highlight">Feedback</a></li></ul></li><li><a href="#cti-lifecycle-tools" class="table-of-contents__link toc-highlight">CTI Lifecycle Tools</a></li><li><a href="#cti-role" class="table-of-contents__link toc-highlight">CTI Role</a><ul><li><a href="#essential-values" class="table-of-contents__link toc-highlight">Essential Values</a></li><li><a href="#impact-in-soc" class="table-of-contents__link toc-highlight">Impact in SOC</a></li><li><a href="#impact-in-ir" class="table-of-contents__link toc-highlight">Impact in IR</a></li><li><a href="#impact-in-risk-analysis" class="table-of-contents__link toc-highlight">Impact in Risk Analysis</a></li></ul></li><li><a href="#cti-for-fraud-prevention" class="table-of-contents__link toc-highlight">CTI for Fraud Prevention</a></li><li><a href="#frameworks" class="table-of-contents__link toc-highlight">Frameworks</a><ul><li><a href="#lockheed-martin-cyber-kill-chain" class="table-of-contents__link toc-highlight">Lockheed Martin: Cyber Kill Chain</a></li><li><a href="#diamond-model" class="table-of-contents__link toc-highlight">Diamond Model</a></li><li><a href="#mitre-attck" class="table-of-contents__link toc-highlight">MITRE ATT&amp;CK</a></li></ul></li><li><a href="#developing-core-of-cti-implementation" class="table-of-contents__link toc-highlight">Developing core of CTI implementation</a><ul><li><a href="#preparing-your-ground" class="table-of-contents__link toc-highlight">Preparing your ground</a></li><li><a href="#key-success-factors" class="table-of-contents__link toc-highlight">Key Success Factors</a></li><li><a href="#team-and-approach" class="table-of-contents__link toc-highlight">Team and approach</a></li><li><a href="#technical-resources" class="table-of-contents__link toc-highlight">Technical Resources</a></li></ul></li></ul></div></div></div></div></main></div></div></div></div>
+</body>
+</html>

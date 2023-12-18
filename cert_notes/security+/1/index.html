@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-cert_notes/security+/1/README" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.0.1">
+<title data-rh="true">Domain 1 - Threats, Attacks and Vulnerabilities | Cybersecurity Handbook</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://herrera-ignacio.github.io/cybersecurity-handbook/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://herrera-ignacio.github.io/cybersecurity-handbook/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://herrera-ignacio.github.io/cybersecurity-handbook/cert_notes/security+/1/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Domain 1 - Threats, Attacks and Vulnerabilities | Cybersecurity Handbook"><meta data-rh="true" name="description" content="1. Given a scenario, analyze IOC and determine type of malware."><meta data-rh="true" property="og:description" content="1. Given a scenario, analyze IOC and determine type of malware."><link data-rh="true" rel="icon" href="/cybersecurity-handbook/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://herrera-ignacio.github.io/cybersecurity-handbook/cert_notes/security+/1/"><link data-rh="true" rel="alternate" href="https://herrera-ignacio.github.io/cybersecurity-handbook/cert_notes/security+/1/" hreflang="en"><link data-rh="true" rel="alternate" href="https://herrera-ignacio.github.io/cybersecurity-handbook/cert_notes/security+/1/" hreflang="x-default"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/cybersecurity-handbook/assets/css/styles.ebb2964c.css">
+<script src="/cybersecurity-handbook/assets/js/runtime~main.a3b4367c.js" defer="defer"></script>
+<script src="/cybersecurity-handbook/assets/js/main.8f95dc28.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/cybersecurity-handbook/"><b class="navbar__title text--truncate">Cybersecurity Handbook</b></a></div><div class="navbar__items navbar__items--right"><a href="https://www.linkedin.com/in/ignacioromanherrera/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">LinkedIn<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><a href="https://github.com/herrera-ignacio/cybersecurity-handbook" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/cybersecurity-handbook/">Introduction</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/fundamentals/bug-bounty/">Fundamentals</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/networking/concepts/devices/">Networking</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/cryptography/concepts/hashing/">Cryptography</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/books/hackerplaybook/">Books</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" aria-expanded="true" href="/cybersecurity-handbook/cert_notes/ccna/">Certifications</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" tabindex="0" href="/cybersecurity-handbook/cert_notes/ccna/">CCNA: Cisco Certified Network ASsociated</a><button aria-label="Expand sidebar category &#x27;CCNA: Cisco Certified Network ASsociated&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/cybersecurity-handbook/cert_notes/lpic-1/">LPIC-1</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" tabindex="0" href="/cybersecurity-handbook/cert_notes/net+/">Network+</a><button aria-label="Expand sidebar category &#x27;Network+&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" aria-expanded="true" tabindex="0" href="/cybersecurity-handbook/cert_notes/security+/">CompTIA - Security+</a><button aria-label="Collapse sidebar category &#x27;CompTIA - Security+&#x27;" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/cybersecurity-handbook/cert_notes/security+/1/">Domain 1 - Threats, Attacks and Vulnerabilities</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/cybersecurity-handbook/cert_notes/security+/2/">Domain 2: Technologies &amp; Tools</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/cybersecurity-handbook/cert_notes/security+/3/">Domain 3: Architecture &amp; Design</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/cybersecurity-handbook/cert_notes/security+/4/">Domain 4: Identity &amp; Access Management</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/cybersecurity-handbook/cert_notes/security+/5/">Domain 5: Risk Management</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/cybersecurity-handbook/cert_notes/security+/6/">Domain 6: Cryptography &amp; PKI</a></li></ul></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/lectures/compliance/hipaa-training/">Lectures</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/vulnerabilities/server/shellshock/">Vulnerabilities</a></div></li></ul></nav><button type="button" title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width="20" height="20" aria-hidden="true" class="collapseSidebarButtonIcon_kv0_"><g fill="#7a7a7a"><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"></path><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"></path></g></svg></button></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/cybersecurity-handbook/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Certifications</span><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/cybersecurity-handbook/cert_notes/security+/"><span itemprop="name">CompTIA - Security+</span></a><meta itemprop="position" content="2"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Domain 1 - Threats, Attacks and Vulnerabilities</span><meta itemprop="position" content="3"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><h1>Domain 1 - Threats, Attacks and Vulnerabilities</h1>
+<ol>
+<li>Given a scenario, analyze IOC and determine type of malware.</li>
+<li>Compare and contrast types of attacks.</li>
+<li>Explain threat actor types and attributes.</li>
+<li>Explain penetration testing concepts.</li>
+<li>Explain vulnerability scanning concepts.</li>
+<li>Explain the impact associated with types of vulnerabilities.</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="objective">Objective<a href="#objective" class="hash-link" aria-label="Direct link to Objective" title="Direct link to Objective">​</a></h2>
+<ul>
+<li>Must be able to analyze IOC (Indicators of Compromise) and determine types of malware.</li>
+<li>Compare and contrast types of attacks from the many different tactics of social egineering and application service attacks.</li>
+<li>Explain concepts such as Threat Actor Types and Attributes.</li>
+<li>Understand motivations behind insiders and external attacks, and different types of attackers.</li>
+<li>Key concepts of penetration testing and its different approaches.<!-- -->
+<ul>
+<li>Black/Gray/White Box tactics.</li>
+<li>Active/Passive Reconnaissance.</li>
+<li>Escalation of Privileges.</li>
+</ul>
+</li>
+<li>Vulnerability Scanning.</li>
+<li>Types of vulnerabilities.</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-ioc-and-malware">1. IOC and Malware<a href="#1-ioc-and-malware" class="hash-link" aria-label="Direct link to 1. IOC and Malware" title="Direct link to 1. IOC and Malware">​</a></h2>
+<blockquote>
+<p>Recommended lecture for different types of malware: <a href="/cybersecurity-handbook/lectures/defensive/malware-threats/">Malware Threats</a></p>
+</blockquote>
+<p>IOC are artifacts observed on a network or OS that with high confidence indicates a computer intrusion.</p>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="osint-open-source-intelligence">OSINT: Open-Source Intelligence<a href="#osint-open-source-intelligence" class="hash-link" aria-label="Direct link to OSINT: Open-Source Intelligence" title="Direct link to OSINT: Open-Source Intelligence">​</a></h3>
+<p>Websites and tools that allow you to gather information on current threats or specific security issues.</p>
+<ul>
+<li>ThreatCrowd</li>
+<li>OpenPhish</li>
+<li>OSINT Framework</li>
+<li>Shodan</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-attack-types">2. Attack Types<a href="#2-attack-types" class="hash-link" aria-label="Direct link to 2. Attack Types" title="Direct link to 2. Attack Types">​</a></h2>
+<ol>
+<li>Social Engineering</li>
+<li>Application/service attacks</li>
+<li>Crypto attacks</li>
+<li>Network &amp; Wireless Attacks</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-social-engineering">1. Social Engineering<a href="#1-social-engineering" class="hash-link" aria-label="Direct link to 1. Social Engineering" title="Direct link to 1. Social Engineering">​</a></h3>
+<blockquote>
+<p>Recommended lecture: Cris Hadnagy, The Art of Human Hacking.</p>
+</blockquote>
+<p>The process by which intruders gain access to facilities, network, systems, data, and even employees by exploiting the generally trusting nature of people.</p>
+<p>The use of deception to manipulate individuals into divulging confidential or personal information that may be used for fraudulent purposes.</p>
+<p>Types:</p>
+<ul>
+<li>Online<!-- -->
+<ul>
+<li>Spoofing</li>
+<li>Phishing; Vishing; Whaling; Spear Phishing</li>
+</ul>
+</li>
+<li>Offline / Physical<!-- -->
+<ul>
+<li>Tailgating; Impersonation; Dumpster diving; Shoulder surfing.</li>
+</ul>
+</li>
+<li>Either</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="online-spoofing--fraud">Online Spoofing / Fraud<a href="#online-spoofing--fraud" class="hash-link" aria-label="Direct link to Online Spoofing / Fraud" title="Direct link to Online Spoofing / Fraud">​</a></h4>
+<ul>
+<li><strong>Phishing</strong>: sending emails purporting to be from reputable companies in order to induce individuals to reveal personal information.<!-- -->
+<ul>
+<li><strong>Whaling</strong>: phishing attack that is specifically aimed at wealthy, powerful, or prominent individuals.</li>
+</ul>
+</li>
+<li><strong>Spear Phishing</strong>: sending emails ostensibly from a known or trusted sender in order to induce targeted individuals to reveal confidential information.</li>
+<li><strong>Vishing</strong>: making phone calls or sending voice messages purporting to be from reputable companies.</li>
+<li><strong>Pharming</strong>: traffic redirect to a spoofed web site.</li>
+<li><strong>Hoax</strong>: malicious actors issuing false warnings to alarm users.</li>
+<li><strong>Swatting</strong>: fraudulent calls to the police.</li>
+<li><strong>Watering Hole Attack</strong>: security exploit in which attacker seeks to compromise a specific group of end users by infecting websites that members of the group are known to visit.</li>
+</ul>
+<p>Variants, such as <em>SMiShing</em>.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="physical">Physical<a href="#physical" class="hash-link" aria-label="Direct link to Physical" title="Direct link to Physical">​</a></h4>
+<ul>
+<li><strong>Tailgating</strong>: gaining entry to electronically locked system by following someone through the door they just unlocked.</li>
+<li><strong>Dumpster diving</strong>: foraging in garbage for discarded items that may still be valuable, useful, or used to commit fraud.</li>
+<li><strong>Shoulder surfing</strong>: watching someone &quot;over their shoulder&quot; when they enter sensitive data such as password or credit card information.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="principles-reasons-for-effectiveness">Principles (Reasons for effectiveness)<a href="#principles-reasons-for-effectiveness" class="hash-link" aria-label="Direct link to Principles (Reasons for effectiveness)" title="Direct link to Principles (Reasons for effectiveness)">​</a></h4>
+<ul>
+<li>Authority</li>
+<li>Intimidation</li>
+<li>Consensus / Social Proof</li>
+<li>Scarcity</li>
+<li>Familiarity / Liking</li>
+<li>Trust</li>
+<li>Urgency</li>
+<li>Reciprocity</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="prevention">Prevention<a href="#prevention" class="hash-link" aria-label="Direct link to Prevention" title="Direct link to Prevention">​</a></h4>
+<ul>
+<li>User education</li>
+<li>&quot;Trust, but verify&quot;</li>
+<li>&quot;If you see something, say something&quot;</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-applicationservice-attacks">2. Application/service attacks<a href="#2-applicationservice-attacks" class="hash-link" aria-label="Direct link to 2. Application/service attacks" title="Direct link to 2. Application/service attacks">​</a></h3>
+<ul>
+<li><strong>Buffer overflow</strong>: A program, while writting data to a buffer, can overrun the buffer&#x27;s boundary and overwrite adjacent memory locations.</li>
+<li><strong>Injection</strong>: Occurs when untrusted data is sent to an interpreted as part of a command or query (examples are SQL Injection, OS, LDAP, XML).</li>
+<li><strong>Cross-site scripting (XSS)</strong>: XSS occurs whenever an application process untrusted data withour proper validation or escaping.</li>
+<li><strong>Cross-site request forgery (CSRF)</strong>: Attack that forces an end user to execute unwanted actions on an application. Also known as <em>session riding</em> or <em>one-click-attack</em>.</li>
+<li><strong>Privilege escalation</strong>: Act of exploiting a bug, design flaw or configuration oversight in an application to gain elevated access to resources that are normally protected from an application or user.</li>
+<li><strong>Zero Day Exploits</strong>: Attack that exploits a previously unknown security vulnerability. It may take advantage of a security vulnerability on the same day that the vulnerability becomes generally known (Stuxnet is an example of this).</li>
+<li><strong>Impersonation/Masquerading</strong>: Act pretending to be someone or something to gain unauthorized access to a system.</li>
+<li><strong>Replay</strong>: Capturing network traffic via eavesdropping, then reestablishing a session by replaying captured traffic using spoofed authentication credentials.</li>
+<li><strong>Driver manipulation</strong>:<!-- -->
+<ul>
+<li><em>Driver</em>: program that controls a device (printers, media, keyboards, etc).</li>
+<li><em>Shimming</em>: creating a library to bypass a driver and perform a function other than the one for which the API was created.</li>
+<li><em>Refactoring</em>: set of techniques used to identify the flow and then modify the internal structure of code without changing the code&#x27;s visible behavior.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="prevention-1">Prevention<a href="#prevention-1" class="hash-link" aria-label="Direct link to Prevention" title="Direct link to Prevention">​</a></h4>
+<ul>
+<li>Good coding practices - OWASP.</li>
+<li>Filter and validate any user input.</li>
+<li>Use a <em>Web Application Firewall</em> (WAF).</li>
+<li>Build security into the <em>Software Development Lifecycle</em> (SDLC)</li>
+<li>Have an Incident Response plan in place.</li>
+<li>0-day exploits:<!-- -->
+<ul>
+<li>Defense in depth</li>
+<li>Patch</li>
+<li>Keep anti-virus up-to-date.</li>
+</ul>
+</li>
+<li>Replay attacks<!-- -->
+<ul>
+<li>Token authentication (Kerberos)</li>
+<li>MFA/TFA</li>
+<li>Encryption</li>
+<li>Sequenced session identification</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-crypto-attacks">3. Crypto attacks<a href="#3-crypto-attacks" class="hash-link" aria-label="Direct link to 3. Crypto attacks" title="Direct link to 3. Crypto attacks">​</a></h3>
+<ul>
+<li><strong>Birthday</strong>: Attack on cryptographic hash that looks for hash collisions (exploiting the <em>1-to-1</em> nature of hashing functions).</li>
+<li><strong>Known plain text/cipher text</strong>: Attacker attempts to derive a cryptographic key by using pairs of known plain text along with the corresponding cipher text.</li>
+<li><strong>Frequency analysis</strong>: Looking at the blocks of an encrypted message to determine if any common pattern exists.</li>
+<li>Password Attacks<!-- -->
+<ul>
+<li><strong>Dictionary</strong>: Systematically entering each word in a dictionary as a password.</li>
+<li><strong>Brute Force</strong>: Systematically attempting all possible combinations of letters, numbers, and symbols.</li>
+<li><strong>Rainbow tables</strong>: All possible password hashes are computed in advance and those hash values are compared with the password database.</li>
+<li><strong>Pass the hash</strong>: Attacker attempts to authenticate to a remote service by intercepting password hashes on a network.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-network--wireless-attacks">4. Network &amp; Wireless attacks<a href="#4-network--wireless-attacks" class="hash-link" aria-label="Direct link to 4. Network &amp; Wireless attacks" title="Direct link to 4. Network &amp; Wireless attacks">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="hijacking-and-related">Hijacking and related<a href="#hijacking-and-related" class="hash-link" aria-label="Direct link to Hijacking and related" title="Direct link to Hijacking and related">​</a></h4>
+<ul>
+<li><strong>Clickjacking</strong>: tricking a web user into clicking a spoofed button or graphic.</li>
+<li><strong>Session hijacking (Cookie)</strong>: exploiting a valid computer session, or session key, to gain unauthorized access to services.</li>
+<li><strong>URL hijacking / Typo squatting</strong>: act of registering domains that are similar to those for a known entity but based on a misspelling or typographical error.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="network-hijacking">Network Hijacking<a href="#network-hijacking" class="hash-link" aria-label="Direct link to Network Hijacking" title="Direct link to Network Hijacking">​</a></h4>
+<ul>
+<li><strong>MAC Spoofing</strong>: <em>Media Access Control</em> address is a hard-coded number on a <em>Network Interface Controller</em> (NIC). Many drivers allow the MAC address to be changed.</li>
+<li><strong>IP Spoofing</strong>: Technique used to gain unauthorized access to machines, whereby an attacker illicitly impersonates another machine by manipulating IP packets. IP Spoofing involves modifying the packet header with a forged (spoofed) source IP address, a checksum, and the order value.</li>
+<li><strong>ARP Spoofing</strong>: Attacker sends fake ARP (<em>Address Resolution Protocol</em>) messages over a LAN (_Local Area Network). This results in the linking of an attacker&#x27;s MAC address with the IP address of a legitimate computer or server on the network.</li>
+<li><strong>Man-in-the-Middle (MITM)</strong>: Attacker secretly relays and possibly alters the communication between two parties who believe they are directly communicating with each other.* <strong>Denial of Service (DoS)</strong>: Preventing access to resources by users authorized to use those recourses. Attacking systems <em>availability</em>.</li>
+<li><strong>Distributed Denial of Service (DDoS)</strong>: DoS attack utilizing multiple compromised systems as sources of attack traffic.</li>
+<li><strong>Amplification Attacks</strong>: Attacker attempts to get a response to their request in a greater that 1:1 ratio so that the additional bandwith traffic works to congest and slow the responding server down. The ratio achieved is known as the <em>amplification factor</em>, and high numbers are possible with UDP based protocols such as NTP, CharGen, and DNS. Usually employed as part of a DDoS attack.</li>
+<li><strong>Resolution Attacks (Domain Hijacking / DNS Poisoning / DNS Spoofing)</strong>:<!-- -->
+<ul>
+<li><em>Poisoning</em>: Attacker alters the <em>domain-name-to-IP-address</em> mappings in a DNS system to redirect traffic to a rogue system or perform DoS attack.</li>
+<li><em>Spoofing</em>: Attacker sends false replies to a requesting system in place of a valid DNS response.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="wireless-attacks">Wireless Attacks<a href="#wireless-attacks" class="hash-link" aria-label="Direct link to Wireless Attacks" title="Direct link to Wireless Attacks">​</a></h4>
+<ul>
+<li><strong>Evil twin</strong>: Rogue wireless access point poses as a legitimate wireless service provider to intercept information that users transmit.</li>
+<li><strong>Rogue AP</strong>: Any wireless access point added to your network that has not been authorized.</li>
+<li><strong>Initialization Vector (IV) / nounce</strong>: Arbitrary number that can be used along with a secret key for data encryption. If the IV is weak, as in WEP, it may be reused.</li>
+<li><strong>Jamming</strong>: Causing interference with a wireless signal.</li>
+<li><strong>Bluejacking</strong>: Sending of unsolicited messages over a Bluetooth connection.</li>
+<li><strong>Bluesnarfing</strong>: Gaining of unauthorized access/intercepting data through a Bluetooth connection.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="dos--ddos-prevention">DoS &amp; DDoS Prevention<a href="#dos--ddos-prevention" class="hash-link" aria-label="Direct link to DoS &amp; DDoS Prevention" title="Direct link to DoS &amp; DDoS Prevention">​</a></h4>
+<ul>
+<li>Work with your ISP / network provider.</li>
+<li>Border protection / Intrusion Detection &amp; Protection System.</li>
+<li>Update Network Appliances, OS and Applications.</li>
+<li>End users&#x27; systems are up-to-date and deploy anti-virus/bot prevention.</li>
+<li>Resolution Attacks prevention<!-- -->
+<ul>
+<li>Protect any internal DNS servers</li>
+<li>USe authoritative DNS sources only</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-threat-actors">3. Threat Actors<a href="#3-threat-actors" class="hash-link" aria-label="Direct link to 3. Threat Actors" title="Direct link to 3. Threat Actors">​</a></h2>
+<p>A <strong>threat</strong> is a potential occurrence that can result in an undesirable outcome.</p>
+<p>A <strong>threat actor</strong> is a subject (person or entity) that is responsible for an event that impacts, or has the potential to impact, the security of another subject.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="types-of-actors">Types of actors<a href="#types-of-actors" class="hash-link" aria-label="Direct link to Types of actors" title="Direct link to Types of actors">​</a></h3>
+<ol>
+<li><strong>Script Kiddies</strong>: Derogatory term for people who use hacking techniques but have limited skills. Often such attackers rely almost entirely on automated tools from other authors.</li>
+<li><strong>Hacktivist</strong>: Person who uses hacking techniques to accomplish some activist or political goal.</li>
+<li><strong>Organized crime</strong>: Organized groups seeking to steal money, identities, or corporate secrets.</li>
+<li><strong>Nation states</strong>: Countries sponsoring illegal or fraudulent actions.</li>
+<li><strong>ATP: Advanced Persistent Threat</strong>: Attacker gains access to system and stays there undetected for a long period of time. The intention of ATP is to steal data rather than to cause damage.</li>
+<li>Insiders</li>
+<li><strong>Competitors</strong>: Outside organizations seeking to commit corporate espionage for financial or market gain.</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="attributes-of-actors">Attributes of actors<a href="#attributes-of-actors" class="hash-link" aria-label="Direct link to Attributes of actors" title="Direct link to Attributes of actors">​</a></h3>
+<ul>
+<li><strong>Internal / external</strong>: Entity&#x27;s level of access.</li>
+<li><strong>Level of sophistication</strong>: Knowledge entity needs to have to exploit the vulnerability.</li>
+<li><strong>Resources / funding</strong>: Resources the entity needs to have to exploit the vulenrability.</li>
+<li><strong>Intent / motivation</strong>: Why is the entity performing the attack?</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-penetration-testing">4. Penetration Testing<a href="#4-penetration-testing" class="hash-link" aria-label="Direct link to 4. Penetration Testing" title="Direct link to 4. Penetration Testing">​</a></h2>
+<p>Authorized, simulated attack on a system, performed to evaluate the security of the system by actively exploiting found vulnerabilities.</p>
+<ol>
+<li>Information gathering</li>
+<li>Threat modeling</li>
+<li>Vulnerability Analysis</li>
+<li>Exploitation</li>
+<li>Post Exploitation</li>
+<li>Reporting</li>
+</ol>
+<p>This is not the same that:</p>
+<ul>
+<li><strong>Vulnerability scanning</strong>: allows tester to identify specific vulnerabilities in a system. Most penetration testers will start with this procedure so that they can identify likely targets to attack.</li>
+<li><strong>Risk Assessment</strong>: allows an organization to understand cybersecurity risk to organizational operations (mission, functions, image, or reputation), organizational assets, systems or individuals.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="requirements">Requirements<a href="#requirements" class="hash-link" aria-label="Direct link to Requirements" title="Direct link to Requirements">​</a></h3>
+<ul>
+<li>Scope document of what will be tested.</li>
+<li>Permission to test.</li>
+<li>Skills to attack resources limiting harm or collateral damage.</li>
+<li>Plan of attack / steps.</li>
+<li>Resources &amp; access to conduct the test.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="information-gathering--discovery--reconnaissance">Information Gathering / Discovery / Reconnaissance<a href="#information-gathering--discovery--reconnaissance" class="hash-link" aria-label="Direct link to Information Gathering / Discovery / Reconnaissance" title="Direct link to Information Gathering / Discovery / Reconnaissance">​</a></h3>
+<ul>
+<li><strong>Passive reconnaissance</strong>: attempt to gain information about targeted computers/networks without actively engaging with the systems.<!-- -->
+<ul>
+<li>Collecting information from public databases.</li>
+<li>Talking to employees/partners.</li>
+<li>Dumpster diving</li>
+<li>etc...</li>
+</ul>
+</li>
+<li><strong>Active reconnaissance</strong>: attempt to gain information about targeted systems by actively engaging with them. Directly focuses on the system to identify weaknesses that could be used to launch an attack.<!-- -->
+<ul>
+<li>Port scans</li>
+<li>Traceroute information</li>
+<li>Network mapping</li>
+<li>Vulnerability scanning</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="types-of-testing">Types of testing<a href="#types-of-testing" class="hash-link" aria-label="Direct link to Types of testing" title="Direct link to Types of testing">​</a></h3>
+<ul>
+<li><strong>Black box</strong>: tester has absolutelty no knowledge of the system and is functioning in the same manner as an outsider attacker.</li>
+<li><strong>White box</strong>: tester has significant knowledge of the system and simulates an attack from an insider (such as a rogue employee).</li>
+<li><strong>Gray box</strong>: tester has limited knowledge of the target system.</li>
+<li><strong>Nonintrisuve tests</strong>: involve passively testing of security controls, performing vulnerability scans, and probing for weaknesses but not exploitintg them.</li>
+<li><strong>Intrusive tests</strong>: involve actually trying to exploit vulnerabilities to break into the network.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="testing-activities">Testing activities<a href="#testing-activities" class="hash-link" aria-label="Direct link to Testing activities" title="Direct link to Testing activities">​</a></h3>
+<ul>
+<li><strong>Initial exploitation</strong>: gain a foothold on a system. This is often with lesser privileges or access.</li>
+<li><strong>Pivot (island hopping)</strong>: attacking a system using another, compromised system, that&#x27;s trusted to the one you are attacking.</li>
+<li><strong>Persistence</strong>: maintaing access for a period of time / hiding.</li>
+<li><strong>Escalation of privilege</strong>: gaining elevated privileged access to resources that are normally protected from an application/user.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-vulnerability-testing">5. Vulnerability Testing<a href="#5-vulnerability-testing" class="hash-link" aria-label="Direct link to 5. Vulnerability Testing" title="Direct link to 5. Vulnerability Testing">​</a></h2>
+<p>A <strong>vulnerability</strong> is a flaw in a system that can leave it open to an attack or information exposed to a threat.</p>
+<p><strong>Vulnerability scanning</strong> is an inspection of the potential points of exploit on a system to identify security holes. It detects and classifies system weaknesses in computers, networks, and communications equipment, and predicts the effectiveness of countermeasures.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="scanning--assessment">Scanning / Assessment<a href="#scanning--assessment" class="hash-link" aria-label="Direct link to Scanning / Assessment" title="Direct link to Scanning / Assessment">​</a></h3>
+<p>We seek to identify:</p>
+<ul>
+<li>System, network, or application weaknesses.</li>
+<li>Unpatched or not-updated systems/applications.</li>
+<li>Common misconfigurations (system settings, policies, or rule sets).</li>
+<li>A flaw or lack of security controls.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="scanning--assessment-types">Scanning / Assessment Types<a href="#scanning--assessment-types" class="hash-link" aria-label="Direct link to Scanning / Assessment Types" title="Direct link to Scanning / Assessment Types">​</a></h3>
+<ul>
+<li><strong>Intrusive</strong>: directly engaging on the target system.</li>
+<li><strong>Non intrussive</strong>: gain vulnerability information without actively engaging with systems (i.e. Qualys SSL Labs)</li>
+<li><strong>Credentialed vs non-credentialed</strong>: whether or not authentication credentials are used in scanning. Credentialed has lesser risks and may provide more information, but isn&#x27;t as realistic.</li>
+<li><strong>False positive</strong>: occurs when scan mistakenly identifies a vulnerabiltiy when it is not.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="tools">Tools<a href="#tools" class="hash-link" aria-label="Direct link to Tools" title="Direct link to Tools">​</a></h3>
+<ul>
+<li>OpenVAS (included in Kali Linux)</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="6-vulnerability-types--impact">6. Vulnerability Types &amp; Impact<a href="#6-vulnerability-types--impact" class="hash-link" aria-label="Direct link to 6. Vulnerability Types &amp; Impact" title="Direct link to 6. Vulnerability Types &amp; Impact">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="overall-vulnerabilities">Overall vulnerabilities<a href="#overall-vulnerabilities" class="hash-link" aria-label="Direct link to Overall vulnerabilities" title="Direct link to Overall vulnerabilities">​</a></h3>
+<ul>
+<li>
+<p><strong>Race condition/hazard</strong>: behavior of electronics, software, or other systems where the output is dependent on the sequence or timing of other uncontrollable events, when events do not happen in the order the programmer intended.</p>
+</li>
+<li>
+<p><strong>Improper input handling</strong>: system does not validate input propery, thus, attacker is able to craft input in a form that is not expected by the rest of the application. This will lead to parts of the system receiving unintended input, which may result in altered control flow, arbitrary control of a resource, or arbitrary code execution.l</p>
+</li>
+<li>
+<p><strong>Improper error handling</strong>: system generates an error message that includes sensitive information about its environment, users, or associated data.</p>
+</li>
+<li>
+<p><strong>Misconfiguration/weak configuration</strong>: using insecure configuration or control settings (i.e, browsers, system policies, wi-fi).</p>
+</li>
+<li>
+<p><strong>Weak cipher suites</strong>: use of older or less robust cryptographic algorithms for encrypting data (i.e. DES, WEP).</p>
+</li>
+<li>
+<p><strong>Improper certificate and key management</strong>: allowing unauthorized access to encryption keys or certificates. Allows sensitive data to be decrypted. Also, allowing digital certificates to expire.</p>
+</li>
+<li>
+<p><strong>Improperly configured accounts</strong>: accounts have greater privileges that is needed to perform a function. Solved by Least Privilege Principle.</p>
+</li>
+<li>
+<p><strong>Resource exhaustion</strong>: simple DoS condition that happens when the resources required to execute an action are entirely expended, preventing that action from occurring.</p>
+</li>
+<li>
+<p><strong>Vulnerable business processess</strong>: silently altering parts of specific business processes, or machines facilitating these processes, in order to access systems or altering their behavior.</p>
+</li>
+<li>
+<p><strong>System sprawl / undocumented assets</strong>: allowing unchecked systems or devices on an internal network. Lack of an internal inventory system.</p>
+</li>
+<li>
+<p><strong>Architecture/design weaknesses</strong>: insecurely designed network or system architecture (i.e, not segmenting systems on an internal network).</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="vulnerabilities-by-system-internals">Vulnerabilities by system internals<a href="#vulnerabilities-by-system-internals" class="hash-link" aria-label="Direct link to Vulnerabilities by system internals" title="Direct link to Vulnerabilities by system internals">​</a></h3>
+<ul>
+<li>End-of-life (EOL) systems.</li>
+<li>Embedded systems.</li>
+<li>Lack of vendor support.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="memorybuffer-vulnerabilities">Memory/buffer vulnerabilities<a href="#memorybuffer-vulnerabilities" class="hash-link" aria-label="Direct link to Memory/buffer vulnerabilities" title="Direct link to Memory/buffer vulnerabilities">​</a></h3>
+<p>Impact on system availability, or code execution. Preventing these attacks begin with <em>Secure Coding Practices</em> and with regularly patching systems.</p>
+<ul>
+<li>Memory leak</li>
+<li>Integer/Buffer overflow</li>
+<li>Pointer dereference</li>
+<li>DLL Injection</li>
+</ul></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/cybersecurity-handbook/cert_notes/security+/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">CompTIA - Security+</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/cybersecurity-handbook/cert_notes/security+/2/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Domain 2: Technologies &amp; Tools</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#objective" class="table-of-contents__link toc-highlight">Objective</a></li><li><a href="#1-ioc-and-malware" class="table-of-contents__link toc-highlight">1. IOC and Malware</a><ul><li><a href="#osint-open-source-intelligence" class="table-of-contents__link toc-highlight">OSINT: Open-Source Intelligence</a></li></ul></li><li><a href="#2-attack-types" class="table-of-contents__link toc-highlight">2. Attack Types</a><ul><li><a href="#1-social-engineering" class="table-of-contents__link toc-highlight">1. Social Engineering</a></li><li><a href="#2-applicationservice-attacks" class="table-of-contents__link toc-highlight">2. Application/service attacks</a></li><li><a href="#3-crypto-attacks" class="table-of-contents__link toc-highlight">3. Crypto attacks</a></li><li><a href="#4-network--wireless-attacks" class="table-of-contents__link toc-highlight">4. Network &amp; Wireless attacks</a></li></ul></li><li><a href="#3-threat-actors" class="table-of-contents__link toc-highlight">3. Threat Actors</a><ul><li><a href="#types-of-actors" class="table-of-contents__link toc-highlight">Types of actors</a></li><li><a href="#attributes-of-actors" class="table-of-contents__link toc-highlight">Attributes of actors</a></li></ul></li><li><a href="#4-penetration-testing" class="table-of-contents__link toc-highlight">4. Penetration Testing</a><ul><li><a href="#requirements" class="table-of-contents__link toc-highlight">Requirements</a></li><li><a href="#information-gathering--discovery--reconnaissance" class="table-of-contents__link toc-highlight">Information Gathering / Discovery / Reconnaissance</a></li><li><a href="#types-of-testing" class="table-of-contents__link toc-highlight">Types of testing</a></li><li><a href="#testing-activities" class="table-of-contents__link toc-highlight">Testing activities</a></li></ul></li><li><a href="#5-vulnerability-testing" class="table-of-contents__link toc-highlight">5. Vulnerability Testing</a><ul><li><a href="#scanning--assessment" class="table-of-contents__link toc-highlight">Scanning / Assessment</a></li><li><a href="#scanning--assessment-types" class="table-of-contents__link toc-highlight">Scanning / Assessment Types</a></li><li><a href="#tools" class="table-of-contents__link toc-highlight">Tools</a></li></ul></li><li><a href="#6-vulnerability-types--impact" class="table-of-contents__link toc-highlight">6. Vulnerability Types &amp; Impact</a><ul><li><a href="#overall-vulnerabilities" class="table-of-contents__link toc-highlight">Overall vulnerabilities</a></li><li><a href="#vulnerabilities-by-system-internals" class="table-of-contents__link toc-highlight">Vulnerabilities by system internals</a></li><li><a href="#memorybuffer-vulnerabilities" class="table-of-contents__link toc-highlight">Memory/buffer vulnerabilities</a></li></ul></li></ul></div></div></div></div></main></div></div></div></div>
+</body>
+</html>

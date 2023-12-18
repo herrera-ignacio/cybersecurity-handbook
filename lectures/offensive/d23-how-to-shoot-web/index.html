@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-lectures/offensive/d23-how-to-shoot-web/README" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.0.1">
+<title data-rh="true">Jason Haddix: How to Shot Web | Cybersecurity Handbook</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://herrera-ignacio.github.io/cybersecurity-handbook/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://herrera-ignacio.github.io/cybersecurity-handbook/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://herrera-ignacio.github.io/cybersecurity-handbook/lectures/offensive/d23-how-to-shoot-web/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Jason Haddix: How to Shot Web | Cybersecurity Handbook"><meta data-rh="true" name="description" content="Tactical Fuzzing, XSS"><meta data-rh="true" property="og:description" content="Tactical Fuzzing, XSS"><link data-rh="true" rel="icon" href="/cybersecurity-handbook/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://herrera-ignacio.github.io/cybersecurity-handbook/lectures/offensive/d23-how-to-shoot-web/"><link data-rh="true" rel="alternate" href="https://herrera-ignacio.github.io/cybersecurity-handbook/lectures/offensive/d23-how-to-shoot-web/" hreflang="en"><link data-rh="true" rel="alternate" href="https://herrera-ignacio.github.io/cybersecurity-handbook/lectures/offensive/d23-how-to-shoot-web/" hreflang="x-default"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/cybersecurity-handbook/assets/css/styles.ebb2964c.css">
+<script src="/cybersecurity-handbook/assets/js/runtime~main.a3b4367c.js" defer="defer"></script>
+<script src="/cybersecurity-handbook/assets/js/main.8f95dc28.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/cybersecurity-handbook/"><b class="navbar__title text--truncate">Cybersecurity Handbook</b></a></div><div class="navbar__items navbar__items--right"><a href="https://www.linkedin.com/in/ignacioromanherrera/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">LinkedIn<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><a href="https://github.com/herrera-ignacio/cybersecurity-handbook" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/cybersecurity-handbook/">Introduction</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/fundamentals/bug-bounty/">Fundamentals</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/networking/concepts/devices/">Networking</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/cryptography/concepts/hashing/">Cryptography</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/books/hackerplaybook/">Books</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/cert_notes/ccna/">Certifications</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" aria-expanded="true" href="/cybersecurity-handbook/lectures/compliance/hipaa-training/">Lectures</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" tabindex="0" href="/cybersecurity-handbook/lectures/compliance/hipaa-training/">Compliance</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" tabindex="0" href="/cybersecurity-handbook/lectures/defensive/cyber-threat-intelligence/">Defensive</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" aria-expanded="true" tabindex="0" href="/cybersecurity-handbook/lectures/offensive/d23-how-to-shoot-web/">Offensive</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/cybersecurity-handbook/lectures/offensive/d23-how-to-shoot-web/">Jason Haddix: How to Shot Web</a></li></ul></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/vulnerabilities/server/shellshock/">Vulnerabilities</a></div></li></ul></nav><button type="button" title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width="20" height="20" aria-hidden="true" class="collapseSidebarButtonIcon_kv0_"><g fill="#7a7a7a"><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"></path><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"></path></g></svg></button></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/cybersecurity-handbook/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Lectures</span><meta itemprop="position" content="1"></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Offensive</span><meta itemprop="position" content="2"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Jason Haddix: How to Shot Web</span><meta itemprop="position" content="3"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><h1>Jason Haddix: How to Shot Web</h1>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="tactical-fuzzing-xss">Tactical Fuzzing, XSS<a href="#tactical-fuzzing-xss" class="hash-link" aria-label="Direct link to Tactical Fuzzing, XSS" title="Direct link to Tactical Fuzzing, XSS">​</a></h2>
+<p>Many user use <strong>Polyglot</strong> payloads.</p>
+<ul>
+<li><a href="https://owasp.org/www-community/xss-filter-evasion-cheatsheet" target="_blank" rel="noopener noreferrer">OWASP, XSS Filter Evasion Cheat Sheet</a></li>
+<li><a href="https://www.blackhat.com/docs/eu-14/materials/eu-14-Javed-Revisiting-XSS-Sanitization.pdf" target="_blank" rel="noopener noreferrer">Ashar Javed XSS Research</a></li>
+<li><a href="https://www.youtube.com/watch?v=EeZDw64YwV0" target="_blank" rel="noopener noreferrer">Mathias Karlsson Polyglot Payloads</a></li>
+<li><a href="https://dev.to/didymus/xss-and-sqli-polyglot-payloads-4hb4" target="_blank" rel="noopener noreferrer">XSS and SQLi Polyglot payloads</a></li>
+<li><a href="https://github.com/danielmiessler/SecLists" target="_blank" rel="noopener noreferrer">SecLists payloads</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="polyglot-payloads">Polyglot payloads<a href="#polyglot-payloads" class="hash-link" aria-label="Direct link to Polyglot payloads" title="Direct link to Polyglot payloads">​</a></h3>
+<p>XSS polyglot payload by Rsnake</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">‘;alert(String.fromCharCode(88,83,83))//‘;alert(String.fromCharCode(88,83,83))//“;alert(String.fromCharCode(88,83,83))//“;alert(String.fromCharCode(88,83,83))//—&gt;&lt;/SCRIPT&gt;”&gt;’&gt;&lt;SCRIPT&gt;alert(String.fromCharCode(88,83,83))&lt;/SCRIPT&gt;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>Ashar Javed from his XSS PhD research</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">‘“&gt;&gt;&lt;marquee&gt;&lt;img src=x onerror=confirm(1)&gt;&lt;/marquee&gt;”&gt;&lt;/plaintext\&gt;&lt;/|\&gt;&lt;plaintext/onmouseover=prompt(1)&gt;&lt;script&gt;prompt(1)&lt;/script&gt;@gmail.com&lt;isindex formaction=javascript:alert(/XSS/) type=submit&gt;’—&gt;”&gt;&lt;/script&gt;&lt;script&gt;alert(1)&lt;/script&gt;”&gt;&lt;img/id=“confirm&amp;lpar;1)”/alt=“/“src=“/“onerror=eval(id&amp;%23x29;&gt;’”&gt;&lt;img src=“http://i.imgur.com/P8mL8.jpg”&gt;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>XSS polyglot payload by Mathias Karlsson:</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">“onclick=alert(1)//&lt;button‘onclick=alert(1)//&gt;*/alert(1)//</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>An SQLi polyglot payload by Mathias Karlsson:</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">SLEEP(1) /*’ or SLEEP(1) or’” or SLEEP(1) or “*/</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="sql-specifics">SQL specifics<a href="#sql-specifics" class="hash-link" aria-label="Direct link to SQL specifics" title="Direct link to SQL specifics">​</a></h3>
+<ul>
+<li>Blind is predominant, error based is highly unlikely.</li>
+<li>SQLMap is king<!-- -->
+<ul>
+<li>Use <code>-l</code> to parse a Burp log file.</li>
+<li>Use <strong>Tamper Scripts</strong> for backlists.</li>
+<li><strong>SQLiPy</strong> burp plugin works well to instrument SQLmap quickly.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="dbms-specific-resources">DBMS Specific Resources<a href="#dbms-specific-resources" class="hash-link" aria-label="Direct link to DBMS Specific Resources" title="Direct link to DBMS Specific Resources">​</a></h4>
+<ul>
+<li>MySQL<!-- -->
+<ul>
+<li>PentestMonkey&#x27;s MySQL Injection Cheatsheet</li>
+<li>Reiners MySQL Injection Filter Evasion Cheatsheet</li>
+</ul>
+</li>
+<li>MSSQL<!-- -->
+<ul>
+<li>EvilSQL&#x27;s Error/Union/Based MSSQL Cheatsheet</li>
+<li>PentestMonkey&#x27;s MSSQL SQLi Injection Cheatsheet</li>
+</ul>
+</li>
+<li>Oracle<!-- -->
+<ul>
+<li>PentestMonkey&#x27;s Oracle SQLi Cheatsheet</li>
+</ul>
+</li>
+<li>PostgreSQL<!-- -->
+<ul>
+<li>PentestMonkey&#x27;s Postgres SQLi Cheatsheet</li>
+</ul>
+</li>
+<li>Others<!-- -->
+<ul>
+<li>Access SQLi Cheatsheet</li>
+<li>PentestMonkey&#x27;s<!-- -->
+<ul>
+<li>Ingres SQLi Cheatsheet</li>
+<li>DB2 SQLi Cheatsheet</li>
+<li>Informix SQLi Cheatsheet</li>
+</ul>
+</li>
+<li>SQLite3 Injection Cheatsheet</li>
+<li>Ruby on Rails (Active Record) SQL Injection Guide</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="malicious-file-upload">Malicious File Upload<a href="#malicious-file-upload" class="hash-link" aria-label="Direct link to Malicious File Upload" title="Direct link to Malicious File Upload">​</a></h2>
+<p>Common attack vector in this type of testing. File upload functions need a lot of protections to be adequately secure.</p>
+<ul>
+<li>Upload unexpected file format to achieve code exec (swf, html, php, php3, aspx, ++), web shells or...</li>
+<li>Execute XSS via same type of files. Images as well!</li>
+<li>Attack the parser to DoS the site or XSS via storing payloads in metadata or file header.</li>
+<li>Bypass security zones and store malware on target site via file polyglots.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="csrf">CSRF<a href="#csrf" class="hash-link" aria-label="Direct link to CSRF" title="Direct link to CSRF">​</a></h2>
+<p>Many sites will have CSRF protection, focus on CSRF <strong>bypass</strong>!</p>
+<ul>
+<li>Remove CSRF token from request</li>
+<li>Remove CSRF token parameter value</li>
+<li>Add bad control chars to CSRF parameter value</li>
+<li>Use a second identical CSRF param</li>
+<li>Change POST to GET</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="privilege">Privilege<a href="#privilege" class="hash-link" aria-label="Direct link to Privilege" title="Direct link to Privilege">​</a></h2>
+<p>Often logic, priv, auth bugs are blurred. <strong>Autorize</strong> Burp plugin is pretty neat.</p>
+<ol>
+<li>Find site functionality that is restricted to certain user types.</li>
+<li>Try accessing those functions with lesser/other user roles.</li>
+<li>Try to directly browse to views with sensitive information as a lesser privileged used.</li>
+</ol>
+<p>Ex: Testing user priv:</p>
+<ol>
+<li>admin has power</li>
+<li>peon has none</li>
+<li>peon can use function only meant for admin</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="insecure-direct-object-references-idor">Insecure Direct Object References (IDOR)<a href="#insecure-direct-object-references-idor" class="hash-link" aria-label="Direct link to Insecure Direct Object References (IDOR)" title="Direct link to Insecure Direct Object References (IDOR)">​</a></h2>
+<p>IDORs are common place in bounties, and hard to catch with scanners.</p>
+<p>Find <strong>any and all</strong> UIDs:</p>
+<ul>
+<li>increment</li>
+<li>decrement</li>
+<li>negative values</li>
+<li>Attempt to perform sensitive functions substituting another UID<!-- -->
+<ul>
+<li>Change password</li>
+<li>Forgot password</li>
+<li>Admin only functions</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="logic">Logic<a href="#logic" class="hash-link" aria-label="Direct link to Logic" title="Direct link to Logic">​</a></h2>
+<p>Logic flaws that are tricky, mostly manual:</p>
+<ul>
+<li>substituting hashed parameters</li>
+<li>step manipulation</li>
+<li>use negative in quantities</li>
+<li>authentication bypass</li>
+<li>application level DoS</li>
+<li>timing attacks</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="data-driven-assessment">Data Driven Assessment<a href="#data-driven-assessment" class="hash-link" aria-label="Direct link to Data Driven Assessment" title="Direct link to Data Driven Assessment">​</a></h2>
+<ol>
+<li>Visit search, registration, contact, password reset, and comment forms, and hit them with your polyglot strings.</li>
+<li>Scan those specific functions with Burp&#x27;s built-in scanner.</li>
+<li>Check your cookie, log out, check cookie, log in, check cookie. Submit old cookie, see if access.</li>
+<li>Perform user enumeration checks on login, registration, and password reset.</li>
+<li>Do a reset and see if, password comes plaintext, uses a URL based token, is predictable, can be used multiple times, or logs you in automatically.</li>
+<li>Find numeric account identifiers anywhere in URLs and rotate them for context change.</li>
+<li>Find security-sensitive function(s) of files and see if vulnerable to non-auth browsing (IDORs), lower-auth browsing, CSRF, CSRF protection bypass, and see if they can be done over HTTP.</li>
+<li>Directory brute for top short lists on SecLists.</li>
+<li>Check upload functions for alternate file types that can execute code (xss, php, etc...)</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="things-to-take-with-you">Things to take with you<a href="#things-to-take-with-you" class="hash-link" aria-label="Direct link to Things to take with you" title="Direct link to Things to take with you">​</a></h2>
+<ul>
+<li>Crowdsourced testing is different enough to pay attention to.</li>
+<li>Crowdsourcing focuses on the 20% because 80% goes quick.</li>
+<li>Data analysis can yield the most successfully attacked areas.</li>
+<li>15 minute web test, done right, could yield a majority of your criticial vulns.</li>
+<li>Add polyglots to your toolbet.</li>
+<li>Use SecLists to power your scanners.</li>
+<li>Remember to periodically referesh your game with the wisdom of other techniques and other approaches.</li>
+</ul></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/cybersecurity-handbook/lectures/defensive/vuln-management-fundamentals/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Introduction of Vulnerability Management</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/cybersecurity-handbook/vulnerabilities/server/shellshock/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Shellshock</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#tactical-fuzzing-xss" class="table-of-contents__link toc-highlight">Tactical Fuzzing, XSS</a><ul><li><a href="#polyglot-payloads" class="table-of-contents__link toc-highlight">Polyglot payloads</a></li><li><a href="#sql-specifics" class="table-of-contents__link toc-highlight">SQL specifics</a></li></ul></li><li><a href="#malicious-file-upload" class="table-of-contents__link toc-highlight">Malicious File Upload</a></li><li><a href="#csrf" class="table-of-contents__link toc-highlight">CSRF</a></li><li><a href="#privilege" class="table-of-contents__link toc-highlight">Privilege</a></li><li><a href="#insecure-direct-object-references-idor" class="table-of-contents__link toc-highlight">Insecure Direct Object References (IDOR)</a></li><li><a href="#logic" class="table-of-contents__link toc-highlight">Logic</a></li><li><a href="#data-driven-assessment" class="table-of-contents__link toc-highlight">Data Driven Assessment</a></li><li><a href="#things-to-take-with-you" class="table-of-contents__link toc-highlight">Things to take with you</a></li></ul></div></div></div></div></main></div></div></div></div>
+</body>
+</html>

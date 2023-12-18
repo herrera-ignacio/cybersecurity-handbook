@@ -1,0 +1,885 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-cert_notes/security+/2/README" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.0.1">
+<title data-rh="true">Domain 2: Technologies &amp; Tools | Cybersecurity Handbook</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://herrera-ignacio.github.io/cybersecurity-handbook/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://herrera-ignacio.github.io/cybersecurity-handbook/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://herrera-ignacio.github.io/cybersecurity-handbook/cert_notes/security+/2/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Domain 2: Technologies &amp; Tools | Cybersecurity Handbook"><meta data-rh="true" name="description" content="1. Install and configure network components, both hardware and software-based, to support organizational security."><meta data-rh="true" property="og:description" content="1. Install and configure network components, both hardware and software-based, to support organizational security."><link data-rh="true" rel="icon" href="/cybersecurity-handbook/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://herrera-ignacio.github.io/cybersecurity-handbook/cert_notes/security+/2/"><link data-rh="true" rel="alternate" href="https://herrera-ignacio.github.io/cybersecurity-handbook/cert_notes/security+/2/" hreflang="en"><link data-rh="true" rel="alternate" href="https://herrera-ignacio.github.io/cybersecurity-handbook/cert_notes/security+/2/" hreflang="x-default"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/cybersecurity-handbook/assets/css/styles.ebb2964c.css">
+<script src="/cybersecurity-handbook/assets/js/runtime~main.a3b4367c.js" defer="defer"></script>
+<script src="/cybersecurity-handbook/assets/js/main.8f95dc28.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/cybersecurity-handbook/"><b class="navbar__title text--truncate">Cybersecurity Handbook</b></a></div><div class="navbar__items navbar__items--right"><a href="https://www.linkedin.com/in/ignacioromanherrera/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">LinkedIn<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><a href="https://github.com/herrera-ignacio/cybersecurity-handbook" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/cybersecurity-handbook/">Introduction</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/fundamentals/bug-bounty/">Fundamentals</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/networking/concepts/devices/">Networking</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/cryptography/concepts/hashing/">Cryptography</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/books/hackerplaybook/">Books</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" aria-expanded="true" href="/cybersecurity-handbook/cert_notes/ccna/">Certifications</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" tabindex="0" href="/cybersecurity-handbook/cert_notes/ccna/">CCNA: Cisco Certified Network ASsociated</a><button aria-label="Expand sidebar category &#x27;CCNA: Cisco Certified Network ASsociated&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/cybersecurity-handbook/cert_notes/lpic-1/">LPIC-1</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" tabindex="0" href="/cybersecurity-handbook/cert_notes/net+/">Network+</a><button aria-label="Expand sidebar category &#x27;Network+&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" aria-expanded="true" tabindex="0" href="/cybersecurity-handbook/cert_notes/security+/">CompTIA - Security+</a><button aria-label="Collapse sidebar category &#x27;CompTIA - Security+&#x27;" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/cybersecurity-handbook/cert_notes/security+/1/">Domain 1 - Threats, Attacks and Vulnerabilities</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/cybersecurity-handbook/cert_notes/security+/2/">Domain 2: Technologies &amp; Tools</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/cybersecurity-handbook/cert_notes/security+/3/">Domain 3: Architecture &amp; Design</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/cybersecurity-handbook/cert_notes/security+/4/">Domain 4: Identity &amp; Access Management</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/cybersecurity-handbook/cert_notes/security+/5/">Domain 5: Risk Management</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/cybersecurity-handbook/cert_notes/security+/6/">Domain 6: Cryptography &amp; PKI</a></li></ul></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/lectures/compliance/hipaa-training/">Lectures</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/vulnerabilities/server/shellshock/">Vulnerabilities</a></div></li></ul></nav><button type="button" title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width="20" height="20" aria-hidden="true" class="collapseSidebarButtonIcon_kv0_"><g fill="#7a7a7a"><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"></path><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"></path></g></svg></button></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/cybersecurity-handbook/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Certifications</span><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/cybersecurity-handbook/cert_notes/security+/"><span itemprop="name">CompTIA - Security+</span></a><meta itemprop="position" content="2"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Domain 2: Technologies &amp; Tools</span><meta itemprop="position" content="3"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><h1>Domain 2: Technologies &amp; Tools</h1>
+<ol>
+<li>Install and configure network components, both hardware and software-based, to support organizational security.</li>
+<li>Given a scenario, use appropriate software tools to assess the security posture of an organization.</li>
+<li>Given a scenario, troubleshoot common security issues.</li>
+<li>Given a scenario, analyze and interpret output from security technologies.</li>
+<li>Given a scenario, deploy mobile devices securely.</li>
+<li>Given a scenario, implement secure protocols.</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="networking-basics">Networking Basics<a href="#networking-basics" class="hash-link" aria-label="Direct link to Networking Basics" title="Direct link to Networking Basics">​</a></h2>
+<p>Must know basics of:</p>
+<ul>
+<li>OSI Model and its layers</li>
+<li>DOM-3 mdoel</li>
+<li>IP Addressing</li>
+<li>DNS</li>
+<li>HTTP/S, TCP/IP, UDP.</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-network-security-components">1. Network Security Components<a href="#1-network-security-components" class="hash-link" aria-label="Direct link to 1. Network Security Components" title="Direct link to 1. Network Security Components">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="devices">Devices<a href="#devices" class="hash-link" aria-label="Direct link to Devices" title="Direct link to Devices">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="router">Router<a href="#router" class="hash-link" aria-label="Direct link to Router" title="Direct link to Router">​</a></h4>
+<p>Connects computer networks.</p>
+<ul>
+<li>Operates at layer 3 (Network layer).</li>
+<li>Stores information about network destinations (routing tables).</li>
+<li><em>Border Router</em>: outside connection of a LAN to a WAN.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="switch">Switch<a href="#switch" class="hash-link" aria-label="Direct link to Switch" title="Direct link to Switch">​</a></h4>
+<p>Connects devices with a computer network by using packet switching to receive, process and forward data to the destination device.</p>
+<ul>
+<li>Operates either on layer 2 (data link) or layer 3 (network layer).</li>
+<li>Packet-forwarding decisions are based on <em>Media Access Control (MAC)</em> addresses.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="bridge">Bridge<a href="#bridge" class="hash-link" aria-label="Direct link to Bridge" title="Direct link to Bridge">​</a></h4>
+<p>Connect two different physical network.</p>
+<ul>
+<li>Layer 2 (data link).</li>
+<li>Replaced by switches.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="proxy">Proxy<a href="#proxy" class="hash-link" aria-label="Direct link to Proxy" title="Direct link to Proxy">​</a></h4>
+<p>Boundary device between internal &amp; external networks. It can be any device that acts on behalf of other(s), providing <strong>security, logging and caching</strong>.</p>
+<ul>
+<li><strong>Proxy Server</strong>: blocks nown malicious websites.</li>
+<li><strong>Forward Proxy</strong>: retrieves data on behalf of a client.</li>
+<li><strong>Reverse Proxy</strong>: protects access to a server on the internal network.</li>
+<li><strong>Transparent proxy</strong> (inline, forced): caching server that redirects client requests without modifying them to reduce bandwith usage.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="load-balancer">Load Balancer<a href="#load-balancer" class="hash-link" aria-label="Direct link to Load Balancer" title="Direct link to Load Balancer">​</a></h4>
+<p>Shifting burden from one device to another.</p>
+<ul>
+<li>Reduces response time.</li>
+<li>Maximizes throughput.</li>
+<li>Allows better allocation of resources.</li>
+</ul>
+<p>There are different types:</p>
+<ul>
+<li><strong>Scheduling</strong>: distributing load.<!-- -->
+<ul>
+<li><em>Round-robin</em>: taking turns using a circular pattern.</li>
+<li><em>Affinity / Sticky sessions</em>: requests sent to a specific application.</li>
+<li><em>Least connections</em></li>
+<li><em>Random</em></li>
+</ul>
+</li>
+<li><strong>Active/active</strong>: servers work together.</li>
+<li><strong>Active/inactive</strong>: all traffic is sent to the active server.</li>
+<li><strong>Virtual IPs (VIPs)</strong>: at least one physical server is assigned, but more than one virtual IP address assigned.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="access-points">Access Points<a href="#access-points" class="hash-link" aria-label="Direct link to Access Points" title="Direct link to Access Points">​</a></h4>
+<p>Consist of a transmitter and receiver (transceiver) device used to create a wireless LAN (WLAN).</p>
+<ul>
+<li>Typically wireless (WAP).</li>
+<li>Layer 2 (data link).</li>
+<li>Can operate as a Bridge connecting standard wired network to wireless devices or as a Router passing data transmissions from one AP to another.</li>
+<li>A <em>Centralized Access Controller (AC)</em> is capable of providing management, configuration, encryption and policy settings for WLAN AP.</li>
+</ul>
+<p>Three types:</p>
+<ul>
+<li><strong>Fat</strong>: intelligent AP.</li>
+<li><strong>Fit</strong>: scaled Fat AP.</li>
+<li><strong>Thin</strong>: intelligent antennas (only transmit/receive).</li>
+</ul>
+<p>Which can be <em>Controller-based</em> or <em>Standalone</em>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="network-security-devices--best-practices">Network Security Devices &amp; Best Practices<a href="#network-security-devices--best-practices" class="hash-link" aria-label="Direct link to Network Security Devices &amp; Best Practices" title="Direct link to Network Security Devices &amp; Best Practices">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="router-security">Router security<a href="#router-security" class="hash-link" aria-label="Direct link to Router security" title="Direct link to Router security">​</a></h4>
+<ul>
+<li><strong>Access Control Lists (ACLs)</strong>: filtering packets by source address, destination address, protocol or port.</li>
+<li><strong>Zones</strong>: segmenting networks based on functionality or security.</li>
+<li><strong>Antispoofing</strong>: creating a set of access lists that deny access to private IP addresses and local host ranges from the internet.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="switch-security">Switch security<a href="#switch-security" class="hash-link" aria-label="Direct link to Switch security" title="Direct link to Switch security">​</a></h4>
+<ul>
+<li><strong>Virtual LANs (VLANs)</strong>: segment networks &amp; limit broadcast traffic.</li>
+<li><strong>Port security</strong> (<em>layer 2</em>): enable/disable individual switch ports based on MAC address.<!-- -->
+<ul>
+<li>Vulnerable to MAC address spoofing.</li>
+</ul>
+</li>
+<li><strong>Loop prevention</strong>: a loop is when data units can travel from a first LAN segment to a second LAN segment trough more than one path, which can happen on switches or bridges.<!-- -->
+<ul>
+<li><strong>Spanning Tree Protocol (STP)</strong>, a link-management protocol that provides path redundancy while preventing undesirable loops in the network.</li>
+</ul>
+</li>
+<li><strong>Flood Guard</strong>: detect and prevent malicious traffic, normally associated with DoS attacks.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="wireless-management--security">Wireless Management &amp; Security<a href="#wireless-management--security" class="hash-link" aria-label="Direct link to Wireless Management &amp; Security" title="Direct link to Wireless Management &amp; Security">​</a></h4>
+<ul>
+<li>SSID (Service Set Identifier)<!-- -->
+<ul>
+<li>Broadcast</li>
+<li>Cloaked</li>
+</ul>
+</li>
+<li>MAC Filtering</li>
+<li>Signal Strength</li>
+<li>Band Selection / Width</li>
+<li>Antenna types and placement<!-- -->
+<ul>
+<li>Omnidirectional</li>
+<li>Directional</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="firewalls">Firewalls<a href="#firewalls" class="hash-link" aria-label="Direct link to Firewalls" title="Direct link to Firewalls">​</a></h4>
+<ul>
+<li>Isolate one network from another.</li>
+<li>Network security device that monitors incoming and outgoing network traffic and decides whether to allow or block specific traffic based on a defined set of security rules (Cisco).</li>
+<li>Hardware (appliances), software or both.</li>
+<li>Network or host-based.</li>
+</ul>
+<p>There are different types:</p>
+<ul>
+<li><strong>Packet filter</strong>:<!-- -->
+<ul>
+<li>Passes or blocks traffic to specific ports or IP addresses based on rules.</li>
+<li><em>Access Control List (ACL)</em> filter.</li>
+<li>Little intelligence / stateless.</li>
+<li>Faster than stateful inspection.</li>
+</ul>
+</li>
+<li><strong>Proxy firewall</strong>:<!-- -->
+<ul>
+<li>Acts as an intermediary.</li>
+<li>Application Proxy.</li>
+<li>Web Proxy.</li>
+</ul>
+</li>
+<li><strong>Stateful packet inspection</strong>:<!-- -->
+<ul>
+<li>Intelligent.</li>
+<li>Analyzes data flows and traffic patterns.</li>
+<li>Dynamic access control decisions.</li>
+<li>Records are kept using a state table that tracks every communication channel.</li>
+<li>Remembers where the packet came from and where next one should come from.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="firewall-rules">Firewall Rules<a href="#firewall-rules" class="hash-link" aria-label="Direct link to Firewall Rules" title="Direct link to Firewall Rules">​</a></h4>
+<p>Configured to specify computers, programs, services, ports, or protocols.</p>
+<ul>
+<li>Order of firewall rules matters.</li>
+<li><strong>Implicit deny</strong>: access or resource availability is restricted to only those that are explicitly granted access, all others are denied.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="application-firewalls">Application Firewalls<a href="#application-firewalls" class="hash-link" aria-label="Direct link to Application Firewalls" title="Direct link to Application Firewalls">​</a></h4>
+<ul>
+<li>Controls input, output, and/or access from, to, or by an application or service based on categories, rules, or heuristics.</li>
+<li>Deep packet inspection.</li>
+<li>Functions at layer 7 of the OSI model.</li>
+<li><em>Web Application Firewall (WAF)</em>.<!-- -->
+<ul>
+<li>Protects web applications from known attacks (Injection, Buffer, Overflows, etc).</li>
+</ul>
+</li>
+<li>Often included in other firewall types (Proxy, IDS/IPS).</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="idsips-intrusion-detectionprotection-systems">IDS/IPS (Intrusion Detection/Protection Systems)<a href="#idsips-intrusion-detectionprotection-systems" class="hash-link" aria-label="Direct link to IDS/IPS (Intrusion Detection/Protection Systems)" title="Direct link to IDS/IPS (Intrusion Detection/Protection Systems)">​</a></h4>
+<p>Like a burglar alamr, identify unauthorized activity, access or anomalies. They can be network-based or host-based.</p>
+<ul>
+<li>Snort (Windows &amp; Linux)</li>
+</ul>
+<p>IDS and IPS differs in whether to focus on <em>detection</em> or <em>protection</em>:</p>
+<ul>
+<li><strong>Passive response (detection)</strong>:<!-- -->
+<ul>
+<li>Logging.</li>
+<li>Notification.</li>
+<li>Shunning / Quarantine.</li>
+</ul>
+</li>
+<li><strong>Active response (protection)</strong>:<!-- -->
+<ul>
+<li>Terminating process or sessions.</li>
+<li>Configuration changes.</li>
+<li><em>Deception Active Response</em>: attacker believes the attack is succeeding while the system monitors the activity and potentially redirects the attacker to a honeypot or logging system.</li>
+</ul>
+</li>
+</ul>
+<p>Also IDS/IPS can be further clasiffied by:</p>
+<ul>
+<li><strong>Signature/Knowledge based</strong>:<!-- -->
+<ul>
+<li>Detects known vulenrabilities.</li>
+<li>Rules / updates provided by vendor.</li>
+<li>Reactive.</li>
+</ul>
+</li>
+<li><strong>Behavior based</strong>:<!-- -->
+<ul>
+<li>Outside of normal bounds / established profile.</li>
+<li>Anomaly-based.</li>
+<li>Potential for false positives.</li>
+</ul>
+</li>
+<li><strong>Heuristic-based</strong>:<!-- -->
+<ul>
+<li>Uses algorithms to analyze the activity / network traffic.</li>
+<li>High initial overhead.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="nids--nips-network-instrusion-detectionprotection-systems">NIDS / NIPS (Network Instrusion Detection/Protection Systems)<a href="#nids--nips-network-instrusion-detectionprotection-systems" class="hash-link" aria-label="Direct link to NIDS / NIPS (Network Instrusion Detection/Protection Systems)" title="Direct link to NIDS / NIPS (Network Instrusion Detection/Protection Systems)">​</a></h4>
+<ul>
+<li>Analysis used to be separate, now is combined with Firewalls.</li>
+<li><em>Passive</em>: traffic is mirrored to sensor.</li>
+<li><em>Inline</em>: monitors traffic flow and prevent attacks in real time. Could cause latency.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="vpn-concentrators">VPN Concentrators<a href="#vpn-concentrators" class="hash-link" aria-label="Direct link to VPN Concentrators" title="Direct link to VPN Concentrators">​</a></h4>
+<ul>
+<li>A <em>Virtual Private Network (VPN)</em> allows remote access into a network.<!-- -->
+<ul>
+<li>Site-to-Site.</li>
+<li>User (host-to-site).</li>
+</ul>
+</li>
+<li>VPN Concentrator.<!-- -->
+<ul>
+<li>Single device to funnel all VPN access / Connects VPN nodes.</li>
+<li>Encrypted tunnels.</li>
+<li>Centralized authentication (RADIUS, Kerberos, Federated ID).</li>
+</ul>
+</li>
+<li>Always-on VPN.</li>
+<li>Network security through encryption.<!-- -->
+<ul>
+<li><em>Internet Protocol Security (IPsec)</em>.</li>
+<li><em>Secure Sockets Layer (SSL)</em>.</li>
+</ul>
+</li>
+<li>VPN Tunneling<!-- -->
+<ul>
+<li><strong>Full tunnel</strong>: all requests are routed and encrypted through the VPN.</li>
+<li><strong>Split tunnel</strong>: only some (usually all incoming requests) are routed and encrypted over the VPN.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="ipsec">IPsec<a href="#ipsec" class="hash-link" aria-label="Direct link to IPsec" title="Direct link to IPsec">​</a></h4>
+<p>Provides authentication services and encapsulation of data through support of the <em>Internet Key Exchange (IKE)</em> protocol.</p>
+<ul>
+<li>Functions at layer 3 (Network layer) with the IP protocol.</li>
+<li>Three services:<!-- -->
+<ul>
+<li>Data verification.</li>
+<li>Data tampering protection.</li>
+<li>Private transactions.</li>
+</ul>
+</li>
+<li>Two separate (mutually exclusive) protocols:<!-- -->
+<ul>
+<li><strong>Authentication Header (AH)</strong>: authentication and integrity checking for data packets.</li>
+<li><strong>Encapsulating Security Payload (ESP)</strong>: encryption services.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="utm-unified-threat-management--ngfw-next-generation-firewall">UTM (Unified Threat Management) &amp; NGFW (Next Generation Firewall)<a href="#utm-unified-threat-management--ngfw-next-generation-firewall" class="hash-link" aria-label="Direct link to UTM (Unified Threat Management) &amp; NGFW (Next Generation Firewall)" title="Direct link to UTM (Unified Threat Management) &amp; NGFW (Next Generation Firewall)">​</a></h4>
+<p>An all-in-one appliance / single interface / single vendor:</p>
+<ul>
+<li>Network IDS / IPS.</li>
+<li>URL filtering (block websites based on category or URL).</li>
+<li>Content inspection (application aware).</li>
+<li>Malware inspection.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="nac-network-access-control">NAC: Network Access Control<a href="#nac-network-access-control" class="hash-link" aria-label="Direct link to NAC: Network Access Control" title="Direct link to NAC: Network Access Control">​</a></h4>
+<p>Uses a set of protocols to define and implement a policy that describes how to secure access to network nodes by devices upon initial access (uses <em>IEEE 802.1X Standard</em>).</p>
+<p>It consists of different components:</p>
+<ul>
+<li><strong>Access requestor (AR)</strong>: Device that requests access. Assessment of the device can be self-performed or delegated to another system.</li>
+<li><strong>Policy decision point (PDP)</strong>: System that assigns a policy based on the assessment. The PDP determines access.</li>
+<li><strong>Policy enforcement point (PEP)</strong>: The device that enforces the policy. This device can be a switch, firewall, or router.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="siem-security-information--event-management">SIEM: Security Information &amp; Event Management<a href="#siem-security-information--event-management" class="hash-link" aria-label="Direct link to SIEM: Security Information &amp; Event Management" title="Direct link to SIEM: Security Information &amp; Event Management">​</a></h4>
+<p>SIEM tools collect, correlate, and display data feeds that support response activities.</p>
+<ul>
+<li>Log aggregation on a centralize server.</li>
+<li>Centrally managing security events.</li>
+<li>Correlating and normalizing events for context and alerting (automated alerting and triggers).</li>
+<li>Reporting on data gathered from various applications.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="data-loss-prevention--data-leakage-protection-dlp">Data Loss Prevention . Data Leakage Protection (DLP)<a href="#data-loss-prevention--data-leakage-protection-dlp" class="hash-link" aria-label="Direct link to Data Loss Prevention . Data Leakage Protection (DLP)" title="Direct link to Data Loss Prevention . Data Leakage Protection (DLP)">​</a></h4>
+<ul>
+<li>Prevent sensitive information from physically or logically leaving corporate systems by monitoring, detecting and blocking sensitive data while in use (endpoint actions), in motion (network traffic), and at rest (data storage).</li>
+<li>Designed to detect and prevent unauthorized use and transmission of confidential information.</li>
+<li>Network: <em>Content-filtering</em> (proxy).</li>
+<li>System: <em>Application white-lising</em>.</li>
+<li>Hardware: <em>USB blocking</em>.</li>
+<li>Cloud data.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="ssl--tls-accelerators">SSL / TLS Accelerators<a href="#ssl--tls-accelerators" class="hash-link" aria-label="Direct link to SSL / TLS Accelerators" title="Direct link to SSL / TLS Accelerators">​</a></h4>
+<ul>
+<li><strong>SSL offloading</strong>: shifting the burden of encrypting and decrypting traffic sent via SSL from the web server to another device.</li>
+<li>Accepts SSL/TLS connections from the endpoint and sends the connection to the server unencrypted.</li>
+<li>Associated with Load Balancers.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="gateways-mail--media">Gateways (Mail &amp; Media)<a href="#gateways-mail--media" class="hash-link" aria-label="Direct link to Gateways (Mail &amp; Media)" title="Direct link to Gateways (Mail &amp; Media)">​</a></h4>
+<ul>
+<li>Centralization and routing.</li>
+<li>Encryption.</li>
+<li>Spam filters (Inbound / Outbound)</li>
+<li>Proxy servers (media).</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="hsm-hardware-security-module">HSM: Hardware Security Module<a href="#hsm-hardware-security-module" class="hash-link" aria-label="Direct link to HSM: Hardware Security Module" title="Direct link to HSM: Hardware Security Module">​</a></h4>
+<p>Hardware-based encryption that manages digital keys, accelerates cryptographic processes, and provides strong access authentication. <em>Trusted Platform Module (TPM)</em> is used to assist with cryptographic key generation.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-security-assessment-tools">2. Security Assessment Tools<a href="#2-security-assessment-tools" class="hash-link" aria-label="Direct link to 2. Security Assessment Tools" title="Direct link to 2. Security Assessment Tools">​</a></h2>
+<ul>
+<li>Protocol Analyzers / Packet Sniffers.</li>
+<li>Network Scanners / Mappers.</li>
+<li>Vulnerability Scanner.</li>
+<li>Exploitation Frameworks.</li>
+<li>Wireless Scanners.</li>
+<li>Configuration Compliance Applications.</li>
+<li>Banner Grabbing.</li>
+<li>Password Crackers.</li>
+<li>Honeypots / Honeynets.</li>
+<li>Steganography.</li>
+<li>Data Sanitization Tools.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="protocol-analyzers--packet-sniffers">Protocol Analyzers / Packet Sniffers<a href="#protocol-analyzers--packet-sniffers" class="hash-link" aria-label="Direct link to Protocol Analyzers / Packet Sniffers" title="Direct link to Protocol Analyzers / Packet Sniffers">​</a></h3>
+<p>Gathering packet-level information on a network.</p>
+<ul>
+<li>Wireshark.</li>
+<li>TCPDump.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="network-scanners--mappers">Network Scanners / Mappers<a href="#network-scanners--mappers" class="hash-link" aria-label="Direct link to Network Scanners / Mappers" title="Direct link to Network Scanners / Mappers">​</a></h3>
+<p>Network enumeration.</p>
+<ul>
+<li>Nmap</li>
+<li>ZenMap</li>
+<li>Fing (iOS &amp; Android)</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="vulnerability-scanner">Vulnerability Scanner<a href="#vulnerability-scanner" class="hash-link" aria-label="Direct link to Vulnerability Scanner" title="Direct link to Vulnerability Scanner">​</a></h3>
+<p>Software utility that scans a range of IP Addresses and tests for the presence of known vulnerabilities in software configuration and accessible services. It relies upon a database of known vulnerabilities.</p>
+<ul>
+<li>Nessus (Tenable)</li>
+<li>OpenVAS (Linux)</li>
+<li>Nexpose Community Edition</li>
+<li>Burp Suite</li>
+<li>OWASP ZAP (Web Apps)</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="exploitation-frameworks">Exploitation Frameworks<a href="#exploitation-frameworks" class="hash-link" aria-label="Direct link to Exploitation Frameworks" title="Direct link to Exploitation Frameworks">​</a></h3>
+<p>Platforms used for penetration testing and risk assessments. Frameworks contains a set of exploits for known vulnerabilities.</p>
+<ul>
+<li>Kali Linux</li>
+<li>Social Engineering Toolkit (SET)</li>
+<li>Metasploit</li>
+<li>Canvas</li>
+<li>Core Impact</li>
+<li>BeEF: Browser Exploitation Framework (web vulnerabilities)</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="kali-linux">Kali Linux<a href="#kali-linux" class="hash-link" aria-label="Direct link to Kali Linux" title="Direct link to Kali Linux">​</a></h4>
+<p>Debian-derived Linux distribution, designed for digital forensics and penetration testing, which is preinstalled with numerous toolkits.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="social-engineering-toolkit-set">Social Engineering Toolkit (SET)<a href="#social-engineering-toolkit-set" class="hash-link" aria-label="Direct link to Social Engineering Toolkit (SET)" title="Direct link to Social Engineering Toolkit (SET)">​</a></h4>
+<p>Searchable information resource for people wishing to learn more about the psychological, physical and historical aspects of social engineering.</p>
+<p>You will find typical social engineering attacks, specifically designed to target the human element during a penetration test.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="metasploit">Metasploit<a href="#metasploit" class="hash-link" aria-label="Direct link to Metasploit" title="Direct link to Metasploit">​</a></h4>
+<p>Utilizing an ever growing database of exploits, you can safely simulate attacks on your network and train yourself/your team.</p>
+<p>You can run its own exploitable machine as a VM, <em>Metasploitable</em>, and run exploits against it.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="wireless-scanners">Wireless Scanners<a href="#wireless-scanners" class="hash-link" aria-label="Direct link to Wireless Scanners" title="Direct link to Wireless Scanners">​</a></h3>
+<ul>
+<li>Gather information about Wi-Fi networks.</li>
+<li>Detect AP (Rogue or valids).</li>
+<li>Break encryption keys.</li>
+</ul>
+<p>Examples of this are:</p>
+<ul>
+<li>Aerodump</li>
+<li>Kismet/KisMAC</li>
+<li>Netstumbler</li>
+<li>Vistumber</li>
+<li>inSSIDer</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="configuration-compliance-applications">Configuration Compliance Applications<a href="#configuration-compliance-applications" class="hash-link" aria-label="Direct link to Configuration Compliance Applications" title="Direct link to Configuration Compliance Applications">​</a></h3>
+<ul>
+<li><strong>Microsoft Baseline Security Analyzer (MBSA)</strong>: Software vulnerability scanner to analyze targeted Microsoft systems, to detect whether software security patches or baseline configuration settings are missing.</li>
+<li><strong>Center for Internet Security (CIS)</strong></li>
+<li><strong>Nessus</strong>.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="banner-grabbing">Banner Grabbing<a href="#banner-grabbing" class="hash-link" aria-label="Direct link to Banner Grabbing" title="Direct link to Banner Grabbing">​</a></h3>
+<p>Technique used to identify OS, applications and services on a system. It helps to <strong>narrow vulnerability searches</strong>.</p>
+<ul>
+<li>Netcat</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="password-crackers">Password Crackers<a href="#password-crackers" class="hash-link" aria-label="Direct link to Password Crackers" title="Direct link to Password Crackers">​</a></h3>
+<p>Used to disclose passwords and assess password strength. Online password-cracking tools enable you to type in the hash and get the password returned in plain text.</p>
+<ul>
+<li>Brutus</li>
+<li>Cain and Able</li>
+<li>John the Ripper</li>
+<li>THC Hydra</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="honeypots--honeynets">Honeypots / Honeynets<a href="#honeypots--honeynets" class="hash-link" aria-label="Direct link to Honeypots / Honeynets" title="Direct link to Honeypots / Honeynets">​</a></h3>
+<p>Systems or networks exposed to capture malicious activity. They help gathering investigation evidence &amp; study attack strategies.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="steganography">Steganography<a href="#steganography" class="hash-link" aria-label="Direct link to Steganography" title="Direct link to Steganography">​</a></h3>
+<p>Means &quot;<em>hidden writing</em>&quot;, hidding messages, often in other media, so that unintended recipients are not even aware of any messaage.</p>
+<p>There are different approaches:</p>
+<ul>
+<li>Least significant bit insertion.</li>
+<li>Masking and filtering.</li>
+<li>Algorithms and transformations.</li>
+</ul>
+<p>Common steganography tools include:</p>
+<ul>
+<li>OpenPuff</li>
+<li>Camouflage</li>
+<li>Steghide</li>
+<li>rSteg</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="data-sanitization-tools">Data Sanitization Tools<a href="#data-sanitization-tools" class="hash-link" aria-label="Direct link to Data Sanitization Tools" title="Direct link to Data Sanitization Tools">​</a></h3>
+<p>Sanitization is the process of removing contents from a device or media.</p>
+<ul>
+<li>DBAN</li>
+<li>BCWipe</li>
+<li>Cryptographic erase (CE)</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-troubleshooting">3. Troubleshooting<a href="#3-troubleshooting" class="hash-link" aria-label="Direct link to 3. Troubleshooting" title="Direct link to 3. Troubleshooting">​</a></h2>
+<p>You should be proficient with the following CLI Tools:</p>
+<ul>
+<li>man</li>
+<li>ping</li>
+<li>netstat</li>
+<li>tracert</li>
+<li>nslookup / dig</li>
+<li>arp</li>
+<li>ipconfig / ip / ifconfig</li>
+<li>tcpdump</li>
+<li>nmap</li>
+<li>netcat</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-security-technology-output">4. Security Technology Output<a href="#4-security-technology-output" class="hash-link" aria-label="Direct link to 4. Security Technology Output" title="Direct link to 4. Security Technology Output">​</a></h2>
+<p>You should be able to analyze &amp; interpret output from the following technologies.</p>
+<ul>
+<li>Host-based FW</li>
+<li>Host-based HIDS/HIPS</li>
+<li>Antivirus / Anti-malware</li>
+<li>File Integrity Checker</li>
+<li>Application Whitelisting</li>
+<li>Data Loss Prevention</li>
+<li>Removable Media Control</li>
+<li>Patch Management</li>
+<li>Data Execution Prevention (DEP)</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="host-based-firewalls">Host-based Firewalls<a href="#host-based-firewalls" class="hash-link" aria-label="Direct link to Host-based Firewalls" title="Direct link to Host-based Firewalls">​</a></h3>
+<ul>
+<li>Firewalls<!-- -->
+<ul>
+<li>Windows: type <code>wf.msc</code></li>
+<li>Linux: <code>ufw</code> or <code>iptables</code></li>
+</ul>
+</li>
+<li>Firewall configuration<!-- -->
+<ul>
+<li>End users shouldn&#x27;t be allowed to disable the firewall</li>
+<li>Monitor both cincoming and outgoing network traffic</li>
+</ul>
+</li>
+<li>Output depends on the FW application and OS<!-- -->
+<ul>
+<li>Windows Event Viewer</li>
+<li>Linux logging <code>/var/log</code></li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="host-based-hidships">Host-based HIDS/HIPS<a href="#host-based-hidships" class="hash-link" aria-label="Direct link to Host-based HIDS/HIPS" title="Direct link to Host-based HIDS/HIPS">​</a></h3>
+<ul>
+<li>Sensors on each host relay to a centralized management console<!-- -->
+<ul>
+<li>Compiles data to identify distributed trends</li>
+</ul>
+</li>
+<li>May be included with Host FW or AntiVirus solution</li>
+<li>Issues<!-- -->
+<ul>
+<li>False positives</li>
+<li>False negatives</li>
+<li>Matching traffic identified as an attack with the actual network traffic</li>
+</ul>
+</li>
+<li>NIST SP 800-94<!-- -->
+<ul>
+<li>Guide to IDPS</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="antivirus--anti-malware">Antivirus / Anti-malware<a href="#antivirus--anti-malware" class="hash-link" aria-label="Direct link to Antivirus / Anti-malware" title="Direct link to Antivirus / Anti-malware">​</a></h3>
+<ul>
+<li>End-user pop-up warning</li>
+<li>Centralized management console warning</li>
+<li>Quarantine vs Removal</li>
+<li>Issues<!-- -->
+<ul>
+<li>AV not updated / outdated signatures</li>
+<li>False positives</li>
+<li>May be ignored or not seen</li>
+<li>Incorrect decision</li>
+<li>Malware may still be present</li>
+</ul>
+</li>
+<li>Solutions<!-- -->
+<ul>
+<li>Auto update</li>
+<li>Detach system from the network</li>
+<li>Use multiple AV products</li>
+<li>Manual removal (<em>hunting malware with SysInternals</em>)</li>
+<li>Reimage the system</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="file-integrity-checker">File Integrity Checker<a href="#file-integrity-checker" class="hash-link" aria-label="Direct link to File Integrity Checker" title="Direct link to File Integrity Checker">​</a></h3>
+<ul>
+<li>Computes a cryptographic hash such as SHA-1 or MD5 for all selected files and creates a database of the hashes.</li>
+<li>Hashes are periodically recalculated and compared to the hashes in the database, to check for modification.</li>
+<li>Output to a centralized server.</li>
+<li>For alerts, determine what changed and why.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="application-whitelisting">Application Whitelisting<a href="#application-whitelisting" class="hash-link" aria-label="Direct link to Application Whitelisting" title="Direct link to Application Whitelisting">​</a></h3>
+<ul>
+<li>Organization approves / permits software applications. All others are not allowed by default.</li>
+<li><em>Windows AppLocker</em>
+<ul>
+<li>Publisher, for digitally signed files.</li>
+<li>Path, which identifies an application by its location.</li>
+<li>File hash, which uses a system-computed cryptographic hash.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="data-loss-prevention-dlp">Data Loss Prevention (DLP)<a href="#data-loss-prevention-dlp" class="hash-link" aria-label="Direct link to Data Loss Prevention (DLP)" title="Direct link to Data Loss Prevention (DLP)">​</a></h3>
+<p>Prevent sensitive information from physically or logically leaving corporate systems by monitoring, detecting and blocking sensitive data while in use (endpoint actions), in motion (network traffic), and at rest (data storage).</p>
+<ul>
+<li>Logging to a centralized system.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="removable-media-control">Removable Media Control<a href="#removable-media-control" class="hash-link" aria-label="Direct link to Removable Media Control" title="Direct link to Removable Media Control">​</a></h3>
+<ul>
+<li>Detects or prevents the use of removable media.</li>
+<li>Local or network.</li>
+<li>Set by corporate policy.</li>
+<li>Exception handling.</li>
+<li>Use only corporate owned / secured devices.</li>
+<li>Scan removable media on each use.</li>
+<li>Encryption.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="patch-management">Patch Management<a href="#patch-management" class="hash-link" aria-label="Direct link to Patch Management" title="Direct link to Patch Management">​</a></h3>
+<ul>
+<li>Automatic updates when possible</li>
+<li>Patching process<!-- -->
+<ul>
+<li>Vendor notification</li>
+<li>Testing</li>
+<li>Staged deployment</li>
+<li>Reporting</li>
+</ul>
+</li>
+<li>Alerting on failed patches</li>
+<li>Patching all applications / systems<!-- -->
+<ul>
+<li><em>WSUS: Windows Server Update Services</em>: deploy updates to domain-joined Windows servers and workstation in a corporate network.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="patch-management-services">Patch Management Services<a href="#patch-management-services" class="hash-link" aria-label="Direct link to Patch Management Services" title="Direct link to Patch Management Services">​</a></h4>
+<ul>
+<li>Microsoft System Center Configuration Manager (SCCM) / Systems Management Server (SMS)</li>
+<li>Linux RPM (Red Hat Package Manager)</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="data-execution-prevention-dep">Data Execution Prevention (DEP)<a href="#data-execution-prevention-dep" class="hash-link" aria-label="Direct link to Data Execution Prevention (DEP)" title="Direct link to Data Execution Prevention (DEP)">​</a></h3>
+<ul>
+<li>Hardware or Software.</li>
+<li>Prevents malware from executing in memory space that is reserved for OS processes.</li>
+<li>Both AMD and Intel platforms have DEP hardware capabilities.</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-mobile-device-security">5. Mobile Device Security<a href="#5-mobile-device-security" class="hash-link" aria-label="Direct link to 5. Mobile Device Security" title="Direct link to 5. Mobile Device Security">​</a></h2>
+<ul>
+<li>Connection methods</li>
+<li>Mobile Device Management concepts</li>
+<li>Enforcement and monitoring</li>
+<li>Deployment models</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="connection-methods">Connection methods<a href="#connection-methods" class="hash-link" aria-label="Direct link to Connection methods" title="Direct link to Connection methods">​</a></h3>
+<ul>
+<li>Cellular</li>
+<li>Wi-Fi</li>
+<li>Bluetooth</li>
+<li>NFC (Near-Field Communications)</li>
+<li>SATCOM (Satellite Communications)</li>
+<li>ANT (Proprietary Multicast Wireless)</li>
+<li>Infrared (Using light in the infrared spectrum)</li>
+<li>USB / Firewire</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="celullar-communications">Celullar communications<a href="#celullar-communications" class="hash-link" aria-label="Direct link to Celullar communications" title="Direct link to Celullar communications">​</a></h4>
+<ul>
+<li>Components<!-- -->
+<ul>
+<li>Cellular layout (towers)</li>
+<li>Base station (connects to the tower)</li>
+<li>Mobile switching office (centerpiece of the operation)</li>
+<li>Public switched telephone network (PSTN)</li>
+</ul>
+</li>
+<li>Voice technologies<!-- -->
+<ul>
+<li>Long-Term Evolution (LTE)</li>
+<li>Code Division Multiple Access (CDMA)</li>
+<li>Global Systems Mobile (GSM)</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="bluetooth">Bluetooth<a href="#bluetooth" class="hash-link" aria-label="Direct link to Bluetooth" title="Direct link to Bluetooth">​</a></h4>
+<ul>
+<li><em>Personal-Area Network (PAN)</em>, sohrt-range wireless conectivity.</li>
+<li>If needed, set to <strong>nondiscoverable</strong>.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="nfc-near-filed-communications">NFC (Near-Filed Communications)<a href="#nfc-near-filed-communications" class="hash-link" aria-label="Direct link to NFC (Near-Filed Communications)" title="Direct link to NFC (Near-Filed Communications)">​</a></h4>
+<ul>
+<li>Standards for contactless communication between devices.</li>
+<li>Chips generate electromagnetic fields.</li>
+<li>Modes of operation<!-- -->
+<ul>
+<li><em>Perr-to-peer mode</em>: two mobilde devices exchange data.</li>
+<li><em>Read/write mode</em>: active device receives data from a passive device.</li>
+<li><em>Card emulation</em>: device is used as a contactless credit car.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="mobile-device-management">Mobile Device Management<a href="#mobile-device-management" class="hash-link" aria-label="Direct link to Mobile Device Management" title="Direct link to Mobile Device Management">​</a></h3>
+<p>The administration of mobile devices in an organization.</p>
+<ul>
+<li>Software used to inventory, monitor, manage, and secure employees&#x27; mobile devices, deployed across multiple mobile service providers and across multiple mobile OS.</li>
+<li>Device enrollment, provisioning and inventory.</li>
+<li>Configuration management / updating.</li>
+<li>Managing applications.</li>
+<li>Enforcing policies.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="objetives">Objetives<a href="#objetives" class="hash-link" aria-label="Direct link to Objetives" title="Direct link to Objetives">​</a></h4>
+<ul>
+<li>Separate personal and business content.</li>
+<li><em>Storage segmentation</em>: segregate business and personal storage.</li>
+<li><em>Containerization</em>: separate sensitive corporate information from the user&#x27;s personal use of the device &amp; isolate apps functions.</li>
+<li><em>Remote wipe / sanitization</em>: sending a command from a centralized management server to remotely clear data, useful when device is lost, stolen, or employee terminates.</li>
+<li>Full device / application encryption.</li>
+<li>Screen locks / lockout after specific time.</li>
+<li>Passwords and pins based on corporate policy.</li>
+<li>Biometrics.</li>
+<li><em>Context-aware authentication</em>: additional criteria used for authentication or device usage, such as location, time or activity.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="capabilities">Capabilities<a href="#capabilities" class="hash-link" aria-label="Direct link to Capabilities" title="Direct link to Capabilities">​</a></h4>
+<ul>
+<li><strong>Mobile Application Management (MAM)</strong>
+<ul>
+<li>Restricting applications</li>
+<li>Digitally signing applications</li>
+<li>Distribution from a centralized, controlled source</li>
+<li>Managed through <em>whitelisting</em> or <em>blacklisting</em></li>
+</ul>
+</li>
+<li><strong>Mobile Content Management (MCM)</strong>
+<ul>
+<li>Controlling access to data and file storage</li>
+</ul>
+</li>
+<li><strong>Push notitication services</strong>
+<ul>
+<li>Brief message or alert</li>
+<li>OS Push Notification Service (OSPNS)</li>
+<li>Allows auto-updating base OS and client apps</li>
+</ul>
+</li>
+<li><strong>Geolocation</strong>
+<ul>
+<li>Uses the devices GPS</li>
+<li>Some apps already include this (Maps, Foursquare)</li>
+</ul>
+</li>
+<li><strong>Geofencing</strong>
+<ul>
+<li>Defining a greographic permiter</li>
+</ul>
+</li>
+<li><strong>Containerization</strong>
+<ul>
+<li>Control access to file storage and sharing capabilities of services</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="enforcement-and-monitoring">Enforcement and Monitoring<a href="#enforcement-and-monitoring" class="hash-link" aria-label="Direct link to Enforcement and Monitoring" title="Direct link to Enforcement and Monitoring">​</a></h3>
+<ul>
+<li><strong>Third-party Apps</strong>
+<ul>
+<li>Restrict based on policy</li>
+<li>Whitelist applications</li>
+</ul>
+</li>
+<li><strong>Rooting</strong> (Android) / <strong>Jailbreaking</strong> (Apple)<!-- -->
+<ul>
+<li>Should be forbidden for corporate devices</li>
+</ul>
+</li>
+<li><strong>Sideloading</strong>
+<ul>
+<li>Transfer data between two devices (side-channel)</li>
+</ul>
+</li>
+<li><strong>USB On-the-Go (OTG)</strong>
+<ul>
+<li>Standard that enables mobile devices communication using a USB cable</li>
+</ul>
+</li>
+<li><strong>Custom firmware</strong>
+<ul>
+<li>Valid use: Forensics acquisition</li>
+<li>Invalid use: Bypass policy</li>
+</ul>
+</li>
+<li><strong>Carrier unlocking</strong>
+<ul>
+<li>Modifying device to use difference cell carrier without having to purchase a new device.</li>
+</ul>
+</li>
+<li><strong>Firmware OTA updates</strong>
+<ul>
+<li>Automatically update device when attached to corporate Wi-Fi or computers.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="deployment-models">Deployment Models<a href="#deployment-models" class="hash-link" aria-label="Direct link to Deployment Models" title="Direct link to Deployment Models">​</a></h3>
+<ul>
+<li><strong>BYOD: Bring your own device</strong>
+<ul>
+<li>Highest risk</li>
+<li>Adherence with company policies</li>
+</ul>
+</li>
+<li><strong>CYOD: Choose your own device</strong>
+<ul>
+<li>Employees chose from a list of approved devices</li>
+</ul>
+</li>
+<li><strong>COPE: Copmany Owned Provided Equipment</strong>
+<ul>
+<li>Company has complete control over the device</li>
+</ul>
+</li>
+<li><strong>VDI: Virtual Desktop Infrastructure</strong></li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="6-security-protocols">6. Security Protocols<a href="#6-security-protocols" class="hash-link" aria-label="Direct link to 6. Security Protocols" title="Direct link to 6. Security Protocols">​</a></h2>
+<ul>
+<li>Web (SSL/TLS, HTTPS)</li>
+<li>DNSSEC</li>
+<li>SSH</li>
+<li>Secure Email (S/MIME, POP3S and IMAPS)</li>
+<li>FTPS &amp; SFTP</li>
+<li>SRTP: Secure Realtime Transport Protocol</li>
+<li>LDAPS</li>
+<li>SNMPv3: Simple Network Management Protocol</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="web">Web<a href="#web" class="hash-link" aria-label="Direct link to Web" title="Direct link to Web">​</a></h3>
+<ul>
+<li>
+<p><strong>SSL: Secure Sockets Layer</strong></p>
+<ul>
+<li>Deprecated by the IETF.</li>
+<li>Uses certificates for authentication and encryption form essage integrity and confidentiality.</li>
+<li>Establishes a stateful connection.</li>
+</ul>
+</li>
+<li>
+<p><strong>TLS</strong></p>
+<ul>
+<li>Based on SSL latest version 3.0.</li>
+<li>Provices privacy (asymmetric encryption), message integrity (Message Authentication Code), and authentication (PKI digital certificates).</li>
+<li>Forward secrecy ensuring that any future disclosure of encryption keys cannot be used to decrypt any TLS communications recorded in the past.</li>
+</ul>
+</li>
+<li>
+<p><strong>HTTPS</strong></p>
+<ul>
+<li>Uses SSL/TLS to secure web-based communications.</li>
+<li>X.509 digital certificates.</li>
+<li>256-bit encryption keys.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="dnssec-domain-name-service-security">DNSSEC: Domain Name Service Security<a href="#dnssec-domain-name-service-security" class="hash-link" aria-label="Direct link to DNSSEC: Domain Name Service Security" title="Direct link to DNSSEC: Domain Name Service Security">​</a></h3>
+<ul>
+<li>Suite of IETF specifications</li>
+<li>Protects aginast DNS Cache Poisoning</li>
+<li>DNS extensions provide DNS clients (resolvers) origin authentication of DNS data, authenticated denial of existence, and data integrity.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="ssh-secure-shell">SSH: Secure Shell<a href="#ssh-secure-shell" class="hash-link" aria-label="Direct link to SSH: Secure Shell" title="Direct link to SSH: Secure Shell">​</a></h3>
+<ul>
+<li>Replaces telnet for remote communications</li>
+<li>Establishes a session between client and host computers using an authenticated and encrypted connection</li>
+<li>Uses the asymmetric (public key) RSA cryptography for both connection and authentication</li>
+<li>Other protocols can tunnel through SSH</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="secure-email">Secure Email<a href="#secure-email" class="hash-link" aria-label="Direct link to Secure Email" title="Direct link to Secure Email">​</a></h3>
+<ul>
+<li>
+<p><strong>Secure/Multipurpose Internet Mail Extensions (S/MIME)</strong></p>
+<ul>
+<li>Standard for encryption (confidentiality) and signing (authentication) of MIME (email) data</li>
+<li>Requires PKI and uses Certificate Authorities (CA)</li>
+<li>Internal email</li>
+</ul>
+</li>
+<li>
+<p><strong>POP3S</strong> and <strong>IMAPS</strong></p>
+<ul>
+<li>Use SSL/TLS to secure emails in transit between a POP or an IMAP server and the client.</li>
+<li>External email</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="ftps--sftp-securing-ftp">FTPS &amp; SFTP, securing FTP<a href="#ftps--sftp-securing-ftp" class="hash-link" aria-label="Direct link to FTPS &amp; SFTP, securing FTP" title="Direct link to FTPS &amp; SFTP, securing FTP">​</a></h3>
+<ul>
+<li>FTP (File Transfer Protocol) passes credentials in clear text</li>
+<li>FTPS extension that adds SSL/TLS<!-- -->
+<ul>
+<li>Mutual authentication of parties (certificates)</li>
+<li>Data confidentiality (encryption) and integrity (hashing)</li>
+<li>FTPS implicit over port 990</li>
+<li>FTPS explicit over port 21</li>
+</ul>
+</li>
+<li>SFTP (secure FTP) uses SSH to transfer files.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="srtp-secure-realtime-transport-protocol">SRTP: Secure Realtime Transport Protocol<a href="#srtp-secure-realtime-transport-protocol" class="hash-link" aria-label="Direct link to SRTP: Secure Realtime Transport Protocol" title="Direct link to SRTP: Secure Realtime Transport Protocol">​</a></h3>
+<ul>
+<li>Secure voide and video transmissions</li>
+<li>Voice and video calls are established with <em>Session Initiation Protocol (SIP)</em> and data is transmitted with <em>Realtime Transfer Protocol (RTP)</em>.</li>
+<li>Extension to <strong>RTP</strong>, in both unicast and multicast applications, intended to provide:<!-- -->
+<ul>
+<li>Encryption</li>
+<li>Message Authentication</li>
+<li>Integrity</li>
+<li>Replay Attack Protection</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="ldaps">LDAPS<a href="#ldaps" class="hash-link" aria-label="Direct link to LDAPS" title="Direct link to LDAPS">​</a></h3>
+<ul>
+<li>LDAP is a <em>Directory Protocol</em> that contains sensitive unencrypted information about organizational systems and users</li>
+<li>LDAPS over SSL/TLS</li>
+<li>Uses TCP port 636</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="snmpv3">SNMPv3<a href="#snmpv3" class="hash-link" aria-label="Direct link to SNMPv3" title="Direct link to SNMPv3">​</a></h3>
+<ul>
+<li>SNMP (<em>Simple Network Management Protocol</em>) used to manage networks.</li>
+<li>Each managed device has a software agent reporting configuration settings and alerts to a central SNMP Management Server.</li>
+<li>SNMPv1 &amp; SNMPv2 sent all data as clear text, whereas SNMPv3 <strong>encrypts</strong> data.</li>
+</ul></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/cybersecurity-handbook/cert_notes/security+/1/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Domain 1 - Threats, Attacks and Vulnerabilities</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/cybersecurity-handbook/cert_notes/security+/3/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Domain 3: Architecture &amp; Design</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#networking-basics" class="table-of-contents__link toc-highlight">Networking Basics</a></li><li><a href="#1-network-security-components" class="table-of-contents__link toc-highlight">1. Network Security Components</a><ul><li><a href="#devices" class="table-of-contents__link toc-highlight">Devices</a></li><li><a href="#network-security-devices--best-practices" class="table-of-contents__link toc-highlight">Network Security Devices &amp; Best Practices</a></li></ul></li><li><a href="#2-security-assessment-tools" class="table-of-contents__link toc-highlight">2. Security Assessment Tools</a><ul><li><a href="#protocol-analyzers--packet-sniffers" class="table-of-contents__link toc-highlight">Protocol Analyzers / Packet Sniffers</a></li><li><a href="#network-scanners--mappers" class="table-of-contents__link toc-highlight">Network Scanners / Mappers</a></li><li><a href="#vulnerability-scanner" class="table-of-contents__link toc-highlight">Vulnerability Scanner</a></li><li><a href="#exploitation-frameworks" class="table-of-contents__link toc-highlight">Exploitation Frameworks</a></li><li><a href="#wireless-scanners" class="table-of-contents__link toc-highlight">Wireless Scanners</a></li><li><a href="#configuration-compliance-applications" class="table-of-contents__link toc-highlight">Configuration Compliance Applications</a></li><li><a href="#banner-grabbing" class="table-of-contents__link toc-highlight">Banner Grabbing</a></li><li><a href="#password-crackers" class="table-of-contents__link toc-highlight">Password Crackers</a></li><li><a href="#honeypots--honeynets" class="table-of-contents__link toc-highlight">Honeypots / Honeynets</a></li><li><a href="#steganography" class="table-of-contents__link toc-highlight">Steganography</a></li><li><a href="#data-sanitization-tools" class="table-of-contents__link toc-highlight">Data Sanitization Tools</a></li></ul></li><li><a href="#3-troubleshooting" class="table-of-contents__link toc-highlight">3. Troubleshooting</a></li><li><a href="#4-security-technology-output" class="table-of-contents__link toc-highlight">4. Security Technology Output</a><ul><li><a href="#host-based-firewalls" class="table-of-contents__link toc-highlight">Host-based Firewalls</a></li><li><a href="#host-based-hidships" class="table-of-contents__link toc-highlight">Host-based HIDS/HIPS</a></li><li><a href="#antivirus--anti-malware" class="table-of-contents__link toc-highlight">Antivirus / Anti-malware</a></li><li><a href="#file-integrity-checker" class="table-of-contents__link toc-highlight">File Integrity Checker</a></li><li><a href="#application-whitelisting" class="table-of-contents__link toc-highlight">Application Whitelisting</a></li><li><a href="#data-loss-prevention-dlp" class="table-of-contents__link toc-highlight">Data Loss Prevention (DLP)</a></li><li><a href="#removable-media-control" class="table-of-contents__link toc-highlight">Removable Media Control</a></li><li><a href="#patch-management" class="table-of-contents__link toc-highlight">Patch Management</a></li><li><a href="#data-execution-prevention-dep" class="table-of-contents__link toc-highlight">Data Execution Prevention (DEP)</a></li></ul></li><li><a href="#5-mobile-device-security" class="table-of-contents__link toc-highlight">5. Mobile Device Security</a><ul><li><a href="#connection-methods" class="table-of-contents__link toc-highlight">Connection methods</a></li><li><a href="#mobile-device-management" class="table-of-contents__link toc-highlight">Mobile Device Management</a></li><li><a href="#enforcement-and-monitoring" class="table-of-contents__link toc-highlight">Enforcement and Monitoring</a></li><li><a href="#deployment-models" class="table-of-contents__link toc-highlight">Deployment Models</a></li></ul></li><li><a href="#6-security-protocols" class="table-of-contents__link toc-highlight">6. Security Protocols</a><ul><li><a href="#web" class="table-of-contents__link toc-highlight">Web</a></li><li><a href="#dnssec-domain-name-service-security" class="table-of-contents__link toc-highlight">DNSSEC: Domain Name Service Security</a></li><li><a href="#ssh-secure-shell" class="table-of-contents__link toc-highlight">SSH: Secure Shell</a></li><li><a href="#secure-email" class="table-of-contents__link toc-highlight">Secure Email</a></li><li><a href="#ftps--sftp-securing-ftp" class="table-of-contents__link toc-highlight">FTPS &amp; SFTP, securing FTP</a></li><li><a href="#srtp-secure-realtime-transport-protocol" class="table-of-contents__link toc-highlight">SRTP: Secure Realtime Transport Protocol</a></li><li><a href="#ldaps" class="table-of-contents__link toc-highlight">LDAPS</a></li><li><a href="#snmpv3" class="table-of-contents__link toc-highlight">SNMPv3</a></li></ul></li></ul></div></div></div></div></main></div></div></div></div>
+</body>
+</html>

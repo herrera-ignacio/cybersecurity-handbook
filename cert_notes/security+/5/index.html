@@ -1,0 +1,768 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-cert_notes/security+/5/README" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.0.1">
+<title data-rh="true">Domain 5: Risk Management | Cybersecurity Handbook</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://herrera-ignacio.github.io/cybersecurity-handbook/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://herrera-ignacio.github.io/cybersecurity-handbook/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://herrera-ignacio.github.io/cybersecurity-handbook/cert_notes/security+/5/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Domain 5: Risk Management | Cybersecurity Handbook"><meta data-rh="true" name="description" content="1. Explain the importance of policies, plans and procedures related to organizational security."><meta data-rh="true" property="og:description" content="1. Explain the importance of policies, plans and procedures related to organizational security."><link data-rh="true" rel="icon" href="/cybersecurity-handbook/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://herrera-ignacio.github.io/cybersecurity-handbook/cert_notes/security+/5/"><link data-rh="true" rel="alternate" href="https://herrera-ignacio.github.io/cybersecurity-handbook/cert_notes/security+/5/" hreflang="en"><link data-rh="true" rel="alternate" href="https://herrera-ignacio.github.io/cybersecurity-handbook/cert_notes/security+/5/" hreflang="x-default"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/cybersecurity-handbook/assets/css/styles.ebb2964c.css">
+<script src="/cybersecurity-handbook/assets/js/runtime~main.a3b4367c.js" defer="defer"></script>
+<script src="/cybersecurity-handbook/assets/js/main.8f95dc28.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/cybersecurity-handbook/"><b class="navbar__title text--truncate">Cybersecurity Handbook</b></a></div><div class="navbar__items navbar__items--right"><a href="https://www.linkedin.com/in/ignacioromanherrera/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">LinkedIn<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><a href="https://github.com/herrera-ignacio/cybersecurity-handbook" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/cybersecurity-handbook/">Introduction</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/fundamentals/bug-bounty/">Fundamentals</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/networking/concepts/devices/">Networking</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/cryptography/concepts/hashing/">Cryptography</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/books/hackerplaybook/">Books</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" aria-expanded="true" href="/cybersecurity-handbook/cert_notes/ccna/">Certifications</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" tabindex="0" href="/cybersecurity-handbook/cert_notes/ccna/">CCNA: Cisco Certified Network ASsociated</a><button aria-label="Expand sidebar category &#x27;CCNA: Cisco Certified Network ASsociated&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/cybersecurity-handbook/cert_notes/lpic-1/">LPIC-1</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" tabindex="0" href="/cybersecurity-handbook/cert_notes/net+/">Network+</a><button aria-label="Expand sidebar category &#x27;Network+&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" aria-expanded="true" tabindex="0" href="/cybersecurity-handbook/cert_notes/security+/">CompTIA - Security+</a><button aria-label="Collapse sidebar category &#x27;CompTIA - Security+&#x27;" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/cybersecurity-handbook/cert_notes/security+/1/">Domain 1 - Threats, Attacks and Vulnerabilities</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/cybersecurity-handbook/cert_notes/security+/2/">Domain 2: Technologies &amp; Tools</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/cybersecurity-handbook/cert_notes/security+/3/">Domain 3: Architecture &amp; Design</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/cybersecurity-handbook/cert_notes/security+/4/">Domain 4: Identity &amp; Access Management</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/cybersecurity-handbook/cert_notes/security+/5/">Domain 5: Risk Management</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/cybersecurity-handbook/cert_notes/security+/6/">Domain 6: Cryptography &amp; PKI</a></li></ul></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/lectures/compliance/hipaa-training/">Lectures</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/vulnerabilities/server/shellshock/">Vulnerabilities</a></div></li></ul></nav><button type="button" title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width="20" height="20" aria-hidden="true" class="collapseSidebarButtonIcon_kv0_"><g fill="#7a7a7a"><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"></path><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"></path></g></svg></button></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/cybersecurity-handbook/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Certifications</span><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/cybersecurity-handbook/cert_notes/security+/"><span itemprop="name">CompTIA - Security+</span></a><meta itemprop="position" content="2"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Domain 5: Risk Management</span><meta itemprop="position" content="3"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><h1>Domain 5: Risk Management</h1>
+<ol>
+<li>Explain the importance of policies, plans and procedures related to organizational security.</li>
+<li>Summarize business impact analysis concepts.</li>
+<li>Explain risk management processes and concepts.</li>
+<li>Given a scenario, follow incident response procedures.</li>
+<li>Summarize basic concepts of forensics.</li>
+<li>Explain disaster recovery and continuity of operations concepts.</li>
+<li>Compare and contrast various types of controls.</li>
+<li>Given a scenario, carry out data security and privacy practices.</li>
+</ol>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-policies-plans--procedures">1. Policies, Plans &amp; Procedures<a href="#1-policies-plans--procedures" class="hash-link" aria-label="Direct link to 1. Policies, Plans &amp; Procedures" title="Direct link to 1. Policies, Plans &amp; Procedures">​</a></h2>
+<ul>
+<li>Policies<!-- -->
+<ul>
+<li>Document Types</li>
+<li>Elements</li>
+<li>Common policies</li>
+</ul>
+</li>
+<li>Procedures (SOP: Standard Operating Procedure)<!-- -->
+<ul>
+<li>Agreements</li>
+<li>Personal Management</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="policies">Policies<a href="#policies" class="hash-link" aria-label="Direct link to Policies" title="Direct link to Policies">​</a></h3>
+<p>Policies form the foundation of any security program.</p>
+<ul>
+<li>How IT will approach security</li>
+<li>How users approach security</li>
+<li>How certain situations will be handled</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="policy-document-types">Policy Document Types<a href="#policy-document-types" class="hash-link" aria-label="Direct link to Policy Document Types" title="Direct link to Policy Document Types">​</a></h4>
+<ul>
+<li><strong>Policies</strong>: general management rules.</li>
+<li><strong>Standards</strong>: specific mandatory controls, based on a given policy.</li>
+<li><strong>Guidelines</strong>: recommendation or good practices.</li>
+<li><strong>Procedures</strong>: instructions on how to implement a policy or standard.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="policy-elements">Policy Elements<a href="#policy-elements" class="hash-link" aria-label="Direct link to Policy Elements" title="Direct link to Policy Elements">​</a></h4>
+<ul>
+<li>Overview</li>
+<li>Purpose</li>
+<li>Scope</li>
+<li>Target Audience</li>
+<li>Definitions</li>
+<li>Version</li>
+<li>Implementation Date</li>
+<li>Compliance / Exceptions</li>
+<li>Policy Statements</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="common-policies">Common Policies<a href="#common-policies" class="hash-link" aria-label="Direct link to Common Policies" title="Direct link to Common Policies">​</a></h4>
+<ul>
+<li>Acceptable Use Policy (AUP)</li>
+<li>Access</li>
+<li>Authentication</li>
+<li>Backup &amp; Recovery</li>
+<li>Data Classification</li>
+<li>Email / Messaging</li>
+<li>Social Media</li>
+<li>Physical Security</li>
+<li>Incident Response</li>
+<li>Mobile Device</li>
+<li>Network Security (Wireless, Remote)</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="procedures-sop-standard-operating-procedure">Procedures (SOP: Standard Operating Procedure)<a href="#procedures-sop-standard-operating-procedure" class="hash-link" aria-label="Direct link to Procedures (SOP: Standard Operating Procedure)" title="Direct link to Procedures (SOP: Standard Operating Procedure)">​</a></h3>
+<p>Standard set of instructions for workers to carry out routine operations. Aim to achieve efficiency and consistent output.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="agreements">Agreements<a href="#agreements" class="hash-link" aria-label="Direct link to Agreements" title="Direct link to Agreements">​</a></h4>
+<ul>
+<li><strong>Non-Disclosure Agreement (NDA)</strong>: protects against sensitive information disclosure.</li>
+<li><strong>Business Partner Agreement (BPA)</strong>: specifies partner financial and dfiduciary responsibilities (profit sharing).</li>
+<li><strong>Service-level Agreement (SLA)</strong>: specifies nature and level of service by a provider (uptime).</li>
+<li><strong>Memorandum of Understanding (MOU)</strong> and <strong>Memorandum of Agreement (MOA)</strong>: outlines the terms and details of an agreement.</li>
+<li><strong>Interconnection Security Agreement (ISA)</strong>.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="personnel-management">Personnel Management<a href="#personnel-management" class="hash-link" aria-label="Direct link to Personnel Management" title="Direct link to Personnel Management">​</a></h4>
+<ul>
+<li>Mandatory vacations</li>
+<li>Job rotation</li>
+<li>Separation of duties</li>
+<li>Clean desk</li>
+<li>Role-based awareness training (based on job responsibilities)</li>
+<li>Continuing education</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-business-impact-analysis">2. Business Impact Analysis<a href="#2-business-impact-analysis" class="hash-link" aria-label="Direct link to 2. Business Impact Analysis" title="Direct link to 2. Business Impact Analysis">​</a></h2>
+<ul>
+<li>The process of evaluating all of the critical systems (important to core business functions) in an organization to define impact and recovery plans.</li>
+<li>Determining the potential impacts (costs, resources, time) resulting from the interruption of time-sensitive or critcal business processes.</li>
+<li>Identify crtical business functions, systems, services, and technologies along with the cost associated with their loss and the maximum acceptable outage period.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="critical-functions">Critical Functions<a href="#critical-functions" class="hash-link" aria-label="Direct link to Critical Functions" title="Direct link to Critical Functions">​</a></h3>
+<p>Mission-essential functions, roles, services, systems, applications or data required to sustain business.</p>
+<ol>
+<li>Identification &amp; Analysis</li>
+<li>Prioritization</li>
+<li>Calcuating a timeframe for critical system loss</li>
+<li>Estimating the tangible and intangible impact on the organization</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="single-point-of-failure">Single Point of Failure<a href="#single-point-of-failure" class="hash-link" aria-label="Direct link to Single Point of Failure" title="Direct link to Single Point of Failure">​</a></h3>
+<ul>
+<li>One fault or malfunction can compromise an entire system or enterprise</li>
+<li>Can be people or technology</li>
+<li>Are avoided with redundancy and fault-tolerant protocols/procedures (HA - High Availability)</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="recovery-objectives">Recovery Objectives<a href="#recovery-objectives" class="hash-link" aria-label="Direct link to Recovery Objectives" title="Direct link to Recovery Objectives">​</a></h3>
+<ul>
+<li><strong>RTO</strong>: maximum amount of time that a process or service is allowed to be down and the consequences still to be considered acceptable.</li>
+<li><strong>RPO</strong>: point last known good data prior to an uotage that is used to recover systems.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="average-time-measurement">Average time measurement<a href="#average-time-measurement" class="hash-link" aria-label="Direct link to Average time measurement" title="Direct link to Average time measurement">​</a></h3>
+<ul>
+<li><strong>Mean Time To Failure (MTTF)</strong>: Average time to failure for a nonrepairable system. Represents how long a product can reasonably be expected to perform, based on specific testing.</li>
+<li><strong>Mean Time Between Failures (MTBF)</strong>: Measure of the anticipated incidence of failure for a system or component.</li>
+<li><strong>Mean Time to Recovery/Restore/Repair (MTTR)</strong>: Average time required to repair a failed system, device, or component, and return it to operational status.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="privacy-assessments">Privacy Assessments<a href="#privacy-assessments" class="hash-link" aria-label="Direct link to Privacy Assessments" title="Direct link to Privacy Assessments">​</a></h3>
+<ul>
+<li>
+<p><strong>Personally Identifiable Information (PII)</strong>: Information that can be used to distinguish or trace an individual&#x27;s identity, such as name, social security number, biometric records, etc. Alone, or when combined with other personal or identifying information that is linked or linkable to a specific individual, such as date and place of birth, mother&#x27;s maiden name, etc. (NIST)</p>
+</li>
+<li>
+<p><strong>Personal Health Information (PHI)</strong>.</p>
+</li>
+<li>
+<p><strong>Privacy Impact Assessment (PIA)</strong>: identifies the adverse impacts that can be associated with the destruction, loss, corruption, or accidental disclosure of sensitive, personal or private data for the organization. Required for any organization that collects, uses, stores, or porcesses PII or PHI.</p>
+</li>
+<li>
+<p><strong>Privacy Treshold Assessment (PTA)</strong>: Determines whether a system contains PII or PHI.</p>
+</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-risk-management">3. Risk Management<a href="#3-risk-management" class="hash-link" aria-label="Direct link to 3. Risk Management" title="Direct link to 3. Risk Management">​</a></h2>
+<ul>
+<li>Risk &amp; Threat Defintions</li>
+<li>Threat Assessment</li>
+<li>Risk Assessment Process<!-- -->
+<ul>
+<li>Quantitative vs Qualitative</li>
+</ul>
+</li>
+<li>Risk Response / Strategies</li>
+<li>Risk Register</li>
+<li>Supply Chain Assessments</li>
+<li>Change Management</li>
+<li>Testing</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="definitions">Definitions<a href="#definitions" class="hash-link" aria-label="Direct link to Definitions" title="Direct link to Definitions">​</a></h3>
+<p>Check <a href="https://csrc.nist.gov/glossary" target="_blank" rel="noopener noreferrer">NIST Glossary</a>.</p>
+<ul>
+<li>
+<p><strong>Risk</strong>: Level of impact on organizational operations (mission, functions, image or reputation), organizational assets, or individuals resulting from the operation of an information system given the potential impact of a threat and the likelihood of that threat ocurring.</p>
+</li>
+<li>
+<p><strong>Threat</strong>: Any circumstance or event with the potential to adversely impact organizational operations, assets, or individuals through an information system via unauthorized access, destruction, dissclosure, modification of information, and/or denial of service. Also, the potential for a threat-source to successfully exploit a particular information system vulnerability.</p>
+</li>
+<li>
+<p><strong>Impact</strong>: Magnitude of harm that can be expected to result from the consequences of a threat ocurring.</p>
+</li>
+<li>
+<p><strong>Vulnerability</strong>: Weakness in an information system, security procedures, internal controls, or implementation, that could be exploited or triggered by a threat source.</p>
+</li>
+<li>
+<p><strong>Exploit</strong>: Piece of software, chunk of data, or sequence of commands, that takes advantage of a bug or vulnerability, to cause unintended or unanticipated behavior to occur on a system.</p>
+</li>
+<li>
+<p><strong>Risk Assessment/Analysis</strong>: Process of identifying risks to organizational operations, assets, individuals, other organizations, and nations, resulting from the operation of an information system. Part of risk management, incorporates threat and vulnerability analysis, and considers mitigations provided by security controls planned or in place.</p>
+<ul>
+<li>Also known as <em>Risk Analysis</em> or <em>Risk Calculation</em>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Risk Management</strong>: Process of managing risks resulting from the operation of an information system, includes:</p>
+<ul>
+<li>Conduct of a Risk Assessment</li>
+<li>Implementation of a Risk Mitigation Strategy</li>
+<li>Employment of techniques and procedures for the continuous monitoring of the security state of the information system.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="threat-assessment">Threat Assessment<a href="#threat-assessment" class="hash-link" aria-label="Direct link to Threat Assessment" title="Direct link to Threat Assessment">​</a></h3>
+<p>Structured process used to identify and evaluate various risks or threats that an organization might be exposed to.</p>
+<ul>
+<li><strong>Threat Agent / Source</strong>: intent and method targeted at the intentional exploitation of a vulnerability or a situation hat may accidentally exploit a vulnerability.</li>
+<li><strong>Threat Vector</strong>: method or path a threat uses to access a target.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="threat-assessment-types">Threat Assessment Types<a href="#threat-assessment-types" class="hash-link" aria-label="Direct link to Threat Assessment Types" title="Direct link to Threat Assessment Types">​</a></h4>
+<ul>
+<li><strong>Environmental</strong>: natural events, such as wheather, storms, flooding, earthquakes, fire, etc.</li>
+<li><strong>Manmade</strong>: human cause, such as flooding, fire, accidents, etc.</li>
+<li><strong>Internal vs External</strong>: origin of the threat source, is the threat agent inside your organization?</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="risk-assessment-process">Risk Assessment Process<a href="#risk-assessment-process" class="hash-link" aria-label="Direct link to Risk Assessment Process" title="Direct link to Risk Assessment Process">​</a></h3>
+<ol>
+<li>Identify assets</li>
+<li>Identify associated threats &amp; vulnerabilities</li>
+<li>Determine likelihood of exploit or compromise</li>
+<li>Determine impact of exploit or compromise</li>
+<li>Prioritize risk activities / security controls</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="quantitative-vs-qualitative-risk-analysis">Quantitative vs Qualitative Risk Analysis<a href="#quantitative-vs-qualitative-risk-analysis" class="hash-link" aria-label="Direct link to Quantitative vs Qualitative Risk Analysis" title="Direct link to Quantitative vs Qualitative Risk Analysis">​</a></h4>
+<p><img loading="lazy" alt="risk" src="/cybersecurity-handbook/assets/images/risk-d3f6a2ce8c0798c738e1d13ab158a5e9.jpg" width="516" height="280" class="img_ev3q"></p>
+<ul>
+<li><strong>Qualitative</strong>
+<ul>
+<li>Estimating risk values (likelihood &amp; impact).</li>
+<li>Normally using a scale (1-5).<!-- -->
+<ul>
+<li>Impact: trivial, minor, moderate, major, extreme.</li>
+<li>Probability: rare, unlikely, moderate, likely, very likely.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Quantitative</strong>
+<ul>
+<li>Using real numeric values to calculate risk equation.</li>
+<li>Return on Investment (ROI) / Return on Security Investment (ROSI).</li>
+<li>Formula: <code>SLE x ARO = ALE</code>.<!-- -->
+<ul>
+<li><em>SLE (Single Loss Expectancy)</em>: how much you could expect to lose at any one time.<!-- -->
+<ul>
+<li><em>AV (asset value)</em>: value of item.</li>
+<li><em>EF (exposure factor)</em>: percentage of loss.</li>
+</ul>
+</li>
+<li><em>ARO (Annualized rate of ocurrence)</em>: likelihood, often drawn from historical data, of an event ocurring within a year.</li>
+<li><em>ALE (Annual loss expectancy)</em>: monetary measure of how much loss you could expect in a year.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="risk-response--strategies">Risk Response / Strategies<a href="#risk-response--strategies" class="hash-link" aria-label="Direct link to Risk Response / Strategies" title="Direct link to Risk Response / Strategies">​</a></h3>
+<ul>
+<li><strong>Avoidance</strong>: deciding not to engage in the actions associated with that risk.</li>
+<li><strong>Transfer</strong>: sharing the burden of the risk with another party (<em>insurance</em>).</li>
+<li><strong>Mitigation</strong>: taking steps to reduce the likelihood or impact of a risk.</li>
+<li><strong>Acceptance</strong>: choosing consciously to live with a risk.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="risk-register">Risk Register<a href="#risk-register" class="hash-link" aria-label="Direct link to Risk Register" title="Direct link to Risk Register">​</a></h3>
+<ul>
+<li>Recording information about an identified risk.</li>
+<li>Can be specialized software program, cloud service, or master document.</li>
+<li>Contains details about the risks, risk decisions, mitigating controls, risk owner, time frames, residual risk, etc.</li>
+<li>Ensures organization risk tolerance / appetite is aligned.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="supply-chain-assessments">Supply Chain Assessments<a href="#supply-chain-assessments" class="hash-link" aria-label="Direct link to Supply Chain Assessments" title="Direct link to Supply Chain Assessments">​</a></h3>
+<ul>
+<li>Aka Third-Party assessments.</li>
+<li>Review vendor&#x27;s security posture.</li>
+<li>Any organization connected to yours virtual or physical.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="change-management">Change Management<a href="#change-management" class="hash-link" aria-label="Direct link to Change Management" title="Direct link to Change Management">​</a></h3>
+<ul>
+<li>Change (IT) such as addition, removal, or altering of environment, should be managed.</li>
+<li>Change management seeks to allow for change without disruption, or with only minimal disruption, to systems and services.</li>
+<li>Need to reassess security risks with any change.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="testing">Testing<a href="#testing" class="hash-link" aria-label="Direct link to Testing" title="Direct link to Testing">​</a></h3>
+<ul>
+<li>Part of the Risk Analysis process.</li>
+<li>Provides visibility into the risk components.</li>
+<li>Vulnerability assessments.</li>
+<li>Pentration tests.</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-incident-response">4. Incident Response<a href="#4-incident-response" class="hash-link" aria-label="Direct link to 4. Incident Response" title="Direct link to 4. Incident Response">​</a></h2>
+<p><strong>Incident</strong> (NIST) is an ocurrence that actually or potentially jeopardizes the confidentiality, integrity, or availability of an information system or the information the system processes, stores, or transmits, or that constitutes a violation or inminent threat of violation of security policies, procedures, or use policies.</p>
+<p>It can be conceived as an unplanned disruption or degration of a service.</p>
+<ul>
+<li>Incident Response Process</li>
+<li>Incident Response Plan</li>
+<li>Cyber Incident Response Teams</li>
+<li>Reporting requirements/escalation</li>
+<li>Training</li>
+<li>Incident Preparation</li>
+<li>Incident Detection/Identification/Analysis</li>
+<li>Incident Containment</li>
+<li>Eradication</li>
+<li>Incident Recovery</li>
+<li>Post Incident</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="nist-incident-response-process">NIST Incident Response Process<a href="#nist-incident-response-process" class="hash-link" aria-label="Direct link to NIST Incident Response Process" title="Direct link to NIST Incident Response Process">​</a></h3>
+<ol>
+<li>Preparation</li>
+<li>Detection &amp; Analysis</li>
+<li>Containment, Erradication &amp; Recovery (go back to 2 if needed)</li>
+<li>Post Incident Activity (go back to 1)</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="incident-response-plan-irp">Incident Response Plan (IRP)<a href="#incident-response-plan-irp" class="hash-link" aria-label="Direct link to Incident Response Plan (IRP)" title="Direct link to Incident Response Plan (IRP)">​</a></h3>
+<p>Documentation of a predetermined set of instructions or procedures to detect, respond to, and limit consequences of a malicious attack against an organization&#x27;s information system(s).</p>
+<p>NIST <em>Computer Security Incident Handling Guide (SP 800-61)</em> provides guidance on exact elements to include:</p>
+<ul>
+<li>Mission, strategies, and goals of incident response.</li>
+<li>Senior management aproval.</li>
+<li>Approach to incident response.</li>
+<li>Resposne team communications.</li>
+<li>Metrics for measuring response capabilities and effectiveness.</li>
+<li>Roadmap for maturing response capability.</li>
+<li>How the incident response program fits into the organization.</li>
+<li>Document incident types/category definitions<!-- -->
+<ul>
+<li>Natural</li>
+<li>Mechanical</li>
+<li>Accidental / Human error</li>
+<li>Malicious / Compromise</li>
+<li>Policy violation</li>
+</ul>
+</li>
+<li>Roles &amp; responsibilities<!-- -->
+<ul>
+<li>Granting clear authority for actions to be taken during an incident.</li>
+<li>Who can / does perform IRP activities:<!-- -->
+<ul>
+<li>Incident alerting</li>
+<li>Identification / Triage</li>
+<li>Decisions making (organizational executive)</li>
+<li>Equipment collection / confiscation</li>
+<li>Forensics (independence / segregation of duties)</li>
+<li>Repair / Recovery</li>
+<li>Reporting</li>
+<li>Communicating</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cyber-incident-response-teams">Cyber-incident Response Teams<a href="#cyber-incident-response-teams" class="hash-link" aria-label="Direct link to Cyber-incident Response Teams" title="Direct link to Cyber-incident Response Teams">​</a></h3>
+<ul>
+<li>Computer Emergency Response Team (CERT)</li>
+<li>Cyber Incident Response Team (CIRT)</li>
+<li>Computer Security Incident Response Team (CSIRT)</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="types">Types<a href="#types" class="hash-link" aria-label="Direct link to Types" title="Direct link to Types">​</a></h4>
+<ul>
+<li>Formalized, standing or ad-hoc</li>
+<li>Internal or external</li>
+<li>Central, distributed or coordinating</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="personnel">Personnel<a href="#personnel" class="hash-link" aria-label="Direct link to Personnel" title="Direct link to Personnel">​</a></h4>
+<ul>
+<li>Systems, network, database administrators</li>
+<li>Legal</li>
+<li>HR</li>
+<li>Management</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="reporting-requirementsescalation">Reporting requirements/escalation<a href="#reporting-requirementsescalation" class="hash-link" aria-label="Direct link to Reporting requirements/escalation" title="Direct link to Reporting requirements/escalation">​</a></h3>
+<ul>
+<li>Documents</li>
+<li>Included in many help desk systems</li>
+<li>Collecting evidence (physical, virtual, etc)</li>
+<li>Reporting / disclosing to:<!-- -->
+<ul>
+<li>Internal Management (Legal, HR, CEO, CFO)</li>
+<li>Legal authorities, law enforcment (local, international)</li>
+<li>Affected organizations, clients or costumers</li>
+<li>CERT (<a href="http://www.cert.org" target="_blank" rel="noopener noreferrer">www.cert.org</a>)</li>
+<li>Internet Crime Complaint Center (IC3, <a href="http://www.ic3.org" target="_blank" rel="noopener noreferrer">www.ic3.org</a>)</li>
+<li>Insurance</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="testing-exercises--training">Testing, exercises &amp; training<a href="#testing-exercises--training" class="hash-link" aria-label="Direct link to Testing, exercises &amp; training" title="Direct link to Testing, exercises &amp; training">​</a></h3>
+<ul>
+<li>Be prepared</li>
+<li>Prepare each role with training</li>
+<li>Practice using real world scenarios</li>
+<li>Test systems and processes to find issues</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="incident-preparation">Incident Preparation<a href="#incident-preparation" class="hash-link" aria-label="Direct link to Incident Preparation" title="Direct link to Incident Preparation">​</a></h3>
+<ul>
+<li>Creating the Incident Response Plan</li>
+<li>Hardware / Software / Communications</li>
+<li>Testing &amp; exercises</li>
+<li>Creating checklists (technical, procedures, contacts)</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="incident-detectionidentificationanalysis">Incident Detection/Identification/Analysis<a href="#incident-detectionidentificationanalysis" class="hash-link" aria-label="Direct link to Incident Detection/Identification/Analysis" title="Direct link to Incident Detection/Identification/Analysis">​</a></h3>
+<ul>
+<li>Alerting<!-- -->
+<ul>
+<li>Logs (IDS, SIEM, AV)</li>
+<li>Humans</li>
+</ul>
+</li>
+<li>Incident triage / validation</li>
+<li>Determine incident scope<!-- -->
+<ul>
+<li>What and who is affected</li>
+<li>Identification of incident type (system, data, personnel, etc)</li>
+</ul>
+</li>
+<li>Analysis, impact and recoverability effort</li>
+<li>Escalation</li>
+<li>Documentation &amp; Notification</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="incident-containment">Incident Containment<a href="#incident-containment" class="hash-link" aria-label="Direct link to Incident Containment" title="Direct link to Incident Containment">​</a></h3>
+<ul>
+<li>Ensuring incident doesn&#x27;t continue or spread</li>
+<li>Securing scene, limitating access, isolating systems (quarantine)<!-- -->
+<ul>
+<li>Physical</li>
+<li>Network</li>
+<li>Logical</li>
+</ul>
+</li>
+<li>Gathering evidence</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="eradication">Eradication<a href="#eradication" class="hash-link" aria-label="Direct link to Eradication" title="Direct link to Eradication">​</a></h3>
+<ul>
+<li>Find and eliminate root cause</li>
+<li>AV clean-up</li>
+<li>Patching/updating software</li>
+<li>Re-imaging systems</li>
+<li>Restoring from backup</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="incident-recovery">Incident Recovery<a href="#incident-recovery" class="hash-link" aria-label="Direct link to Incident Recovery" title="Direct link to Incident Recovery">​</a></h3>
+<p>Process of restoring and returning affected systems and devices back into your business environment.</p>
+<ul>
+<li>Repair<!-- -->
+<ul>
+<li>Restoring from backup</li>
+<li>Patching</li>
+<li>Hardening systems</li>
+<li>Access control</li>
+<li>Authentication</li>
+</ul>
+</li>
+<li>Procedural changes</li>
+<li>Documentation</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="post-incident">Post Incident<a href="#post-incident" class="hash-link" aria-label="Direct link to Post Incident" title="Direct link to Post Incident">​</a></h3>
+<ul>
+<li>Lessons learned</li>
+<li>After-action meeting with all Incident Response Team members</li>
+<li>Capture actions such as the cause, cost, and recommendations for preventing future incidents</li>
+<li>Regulatory or legal requirements</li>
+<li>Update Incident Response Plan</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-forensics">5. Forensics<a href="#5-forensics" class="hash-link" aria-label="Direct link to 5. Forensics" title="Direct link to 5. Forensics">​</a></h2>
+<ul>
+<li>Strategic intelligence / Counterintelligence</li>
+<li>Order of volatility</li>
+<li>Chain of custody</li>
+<li>Data acquisition</li>
+<li>Network traffic &amp; logs</li>
+<li>Record time offset</li>
+<li>Take Hashes</li>
+<li>Documentation</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="strategic-intelligence--counterintelligence">Strategic intelligence / Counterintelligence<a href="#strategic-intelligence--counterintelligence" class="hash-link" aria-label="Direct link to Strategic intelligence / Counterintelligence" title="Direct link to Strategic intelligence / Counterintelligence">​</a></h3>
+<ul>
+<li>Gathering information regarding an incident</li>
+<li>Nature of the threat actor / source / vector</li>
+<li>Pull from multiple data sources (internal/external)</li>
+<li>Use of active logging</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="order-of-volatility">Order of volatility<a href="#order-of-volatility" class="hash-link" aria-label="Direct link to Order of volatility" title="Direct link to Order of volatility">​</a></h3>
+<ul>
+<li>Order for collecting evidence (incident identification)</li>
+<li>Volatile data is easily or quickly lost<!-- -->
+<ul>
+<li>Resident computer memory</li>
+<li>Caches / temporary storage</li>
+<li>Physical media (USB)</li>
+</ul>
+</li>
+<li>Capture data that will be lost first</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="chain-of-custody">Chain of custody<a href="#chain-of-custody" class="hash-link" aria-label="Direct link to Chain of custody" title="Direct link to Chain of custody">​</a></h3>
+<p>Provides a clear record of the path that evidence takes from acquisition to disposal. Any items taken must be secured to preserve its integrity.</p>
+<p>Documentation / tracking / evidence must be:</p>
+<ul>
+<li>Admissible</li>
+<li>Authentic</li>
+<li>Complete</li>
+<li>Reliable</li>
+<li>Believable</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="legal-hold">Legal hold<a href="#legal-hold" class="hash-link" aria-label="Direct link to Legal hold" title="Direct link to Legal hold">​</a></h4>
+<p>Preservation on all forms of relevant information when litigation is reasonable anticipated. Do not destroy what might be relevant to a legal matter.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="data-acquisition">Data Acquisition<a href="#data-acquisition" class="hash-link" aria-label="Direct link to Data Acquisition" title="Direct link to Data Acquisition">​</a></h3>
+<ul>
+<li>Capture system image in its exploited state<!-- -->
+<ul>
+<li>Disk to disk</li>
+<li>Disk to an image file</li>
+<li>Image file to disk</li>
+<li>Tools: Encase, Forensics Toolkit, Native Linux (<code>dd</code>)</li>
+</ul>
+</li>
+<li>Network traffic &amp; logs</li>
+<li>Record time offset</li>
+<li>System hashes</li>
+<li>Screenshots</li>
+<li>Interview witnesses</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="network-traffic--logs">Network traffic &amp; logs<a href="#network-traffic--logs" class="hash-link" aria-label="Direct link to Network traffic &amp; logs" title="Direct link to Network traffic &amp; logs">​</a></h3>
+<ul>
+<li>Capture logs from static network systems<!-- -->
+<ul>
+<li>VMs</li>
+<li>Firewalls, IDS, VPN, routers, switches</li>
+<li>Servers</li>
+<li>Security Incident &amp; Event Management (SIEM) / Centralized logging systems</li>
+</ul>
+</li>
+<li>Active network scanning (Wireshark)</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="record-time-offset">Record time offset<a href="#record-time-offset" class="hash-link" aria-label="Direct link to Record time offset" title="Direct link to Record time offset">​</a></h3>
+<ul>
+<li>Coordinating time to accurately track events (time zone differences)</li>
+<li>NTP: Network Time Protocol</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="take-hashes">Take Hashes<a href="#take-hashes" class="hash-link" aria-label="Direct link to Take Hashes" title="Direct link to Take Hashes">​</a></h3>
+<ul>
+<li>Hash as unique &quot;fingerprint&quot; of system files or data.</li>
+<li>Tracks integirty or any changes.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="documentation">Documentation<a href="#documentation" class="hash-link" aria-label="Direct link to Documentation" title="Direct link to Documentation">​</a></h3>
+<ul>
+<li>Document everything</li>
+<li>Written narrative</li>
+<li>When and what was done</li>
+<li>Evidence</li>
+<li>Images / Videos</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="6-disaster-recovery--business-continuity">6. Disaster Recovery / Business Continuity<a href="#6-disaster-recovery--business-continuity" class="hash-link" aria-label="Direct link to 6. Disaster Recovery / Business Continuity" title="Direct link to 6. Disaster Recovery / Business Continuity">​</a></h2>
+<ul>
+<li>Planning documents</li>
+<li>Recovery sites</li>
+<li>Order of restoration</li>
+<li>Types of backups</li>
+<li>Geographic considerations</li>
+<li>Continuity of operations planning (COOP)</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="planning-documents">Planning documents<a href="#planning-documents" class="hash-link" aria-label="Direct link to Planning documents" title="Direct link to Planning documents">​</a></h3>
+<p>Should be determined and written prior to an incident, and include a contingency plan.</p>
+<ul>
+<li>
+<p><em>Business Continuity Plan (BCP)</em>: ensure the restoration of organizational functions in the shortest possible time, even if services resume at a reduced level of effectiveness or availability.</p>
+</li>
+<li>
+<p><em>Disaster Recovery Plan (DRP)</em>: ensure a full recovery of operational capacity following a disaster (natural or man-made).</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="recovery-sites">Recovery sites<a href="#recovery-sites" class="hash-link" aria-label="Direct link to Recovery sites" title="Direct link to Recovery sites">​</a></h3>
+<p>Locations for recovering systems and/or business operations.</p>
+<ul>
+<li>
+<p><em>Hot site</em>: servers, networks, and telecommunications equipment in place &amp; on-line to reestablish service.</p>
+</li>
+<li>
+<p><em>Warm site</em>: some equipment in place/online that requires administrators to install and configure systems to resume operations.</p>
+</li>
+<li>
+<p><em>Cold site</em>: facility isn&#x27;t immediately ready to use and may need to bring your own equipment.</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="order-of-restoration">Order of restoration<a href="#order-of-restoration" class="hash-link" aria-label="Direct link to Order of restoration" title="Direct link to Order of restoration">​</a></h3>
+<ul>
+<li>Prioritized restore sequence</li>
+<li>Based on <em>Business Impact Assessment (BIA)</em></li>
+<li>Most critical systems restored first</li>
+<li><strong>RTO</strong>: maximum amount of time that a process or service is allowed to be down and the consequences still to be considered acceptable.</li>
+<li><strong>RPO</strong>: point last known good data prior to an outage that is used to recover systems.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="types-of-backups">Types of backups<a href="#types-of-backups" class="hash-link" aria-label="Direct link to Types of backups" title="Direct link to Types of backups">​</a></h3>
+<ul>
+<li><em>Full</em>: complete backup of all data (most time and resource intesive)</li>
+<li><em>Incremental</em>: capture what has changed since the last incremental backup. Requires each incremental backup along with the full backup for complete restoration.</li>
+<li><em>Differential</em>: saves data that has changed since last full backup. Requires full backup and most recent differential backup.</li>
+<li><em>Copies and snapshots</em>: Like a full backup.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="geographic-considerations">Geographic considerations<a href="#geographic-considerations" class="hash-link" aria-label="Direct link to Geographic considerations" title="Direct link to Geographic considerations">​</a></h3>
+<ul>
+<li>Alternate site planning</li>
+<li>Location for recovery</li>
+<li>Utilities</li>
+<li>Proximity to main site</li>
+<li>Personnel</li>
+<li>Legal implications</li>
+<li>Use of cloud services</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="continuity-of-operations-planning-coop">Continuity of operations planning (COOP)<a href="#continuity-of-operations-planning-coop" class="hash-link" aria-label="Direct link to Continuity of operations planning (COOP)" title="Direct link to Continuity of operations planning (COOP)">​</a></h3>
+<ul>
+<li>Policies and procedures designed to ensure that an organization can recover from a potentially destructive incident and resume operations as quickly as possible following that event.</li>
+<li>Ensures systems, data, and personnel availability.</li>
+<li>Failover, system redundancy.</li>
+<li>Availability of alternate processing, work sites and facilities.</li>
+<li>Alternate business practices.</li>
+<li>Testing, training and exercises.</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="7-security-controls">7. Security Controls<a href="#7-security-controls" class="hash-link" aria-label="Direct link to 7. Security Controls" title="Direct link to 7. Security Controls">​</a></h2>
+<p>Controls are defenses or countermeasures put in places to manage risk.</p>
+<blockquote>
+<p>ISACA: Means of managing risk, including policies, procedures, guidelines, practices, or organizational structures, which can be of an administrative, technical, management, or legal nature.</p>
+</blockquote>
+<ul>
+<li>Technical/Logical</li>
+<li>Administrative/Management</li>
+<li>Physical/Operational</li>
+<li>Categorization by functionality</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="technicallogical-controls">Technical/Logical controls<a href="#technicallogical-controls" class="hash-link" aria-label="Direct link to Technical/Logical controls" title="Direct link to Technical/Logical controls">​</a></h3>
+<ul>
+<li>Implemented through technology.</li>
+<li>Patching, Firewalls, IDS/IPS, Access Controls.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="administrativemanagement">Administrative/Management<a href="#administrativemanagement" class="hash-link" aria-label="Direct link to Administrative/Management" title="Direct link to Administrative/Management">​</a></h3>
+<ul>
+<li>Documents policies, procedures and guidelines.<!-- -->
+<ul>
+<li>Acceptable Use Policy</li>
+<li>Incident Response Plan</li>
+</ul>
+</li>
+<li>People / personnel<!-- -->
+<ul>
+<li>SOC</li>
+<li>Guards/Surveillance</li>
+<li>Security awareness training</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="physicaloperational">Physical/Operational<a href="#physicaloperational" class="hash-link" aria-label="Direct link to Physical/Operational" title="Direct link to Physical/Operational">​</a></h3>
+<p>Reduce the risk of harm coming to physical property, systems or other assets.</p>
+<ul>
+<li>Hardened facilities</li>
+<li>Locks</li>
+<li>Badges</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="categorization-by-functionality">Categorization by functionality<a href="#categorization-by-functionality" class="hash-link" aria-label="Direct link to Categorization by functionality" title="Direct link to Categorization by functionality">​</a></h3>
+<p>They can be clasiffied based on functionality:</p>
+<ul>
+<li><strong>Deterrent</strong>: Discourage individuals from intentionally violating security (highly visible).</li>
+<li><strong>Preventive</strong>: Stop an unwanted event with proactive measures.<!-- -->
+<ul>
+<li>Access, authentication, authorization, verification</li>
+<li>Separation of duties</li>
+<li>Technical standards</li>
+<li>Network security (Firewalls, IPS, Internet Filtering)</li>
+</ul>
+</li>
+<li><strong>Detective</strong>: Reactive (automated or manual), warning of anomalies or violations.<!-- -->
+<ul>
+<li>Cameras</li>
+<li>Motion sensor</li>
+<li>IDS / SIEM</li>
+<li>Audits</li>
+</ul>
+</li>
+<li><strong>Corrective</strong>: Measures to lessen harmful effects or restore system. Mostly reactive measures.<!-- -->
+<ul>
+<li>Patching / upgrades</li>
+<li>Hardening (physical &amp; logical)</li>
+<li>Process improvements</li>
+</ul>
+</li>
+<li><strong>Compensating</strong>: Alternative controls that are intended to reduce the risk of an existing or potential control weakness.</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="8-data-security-and-privacy">8. Data Security and Privacy<a href="#8-data-security-and-privacy" class="hash-link" aria-label="Direct link to 8. Data Security and Privacy" title="Direct link to 8. Data Security and Privacy">​</a></h2>
+<ul>
+<li>Data sensitivity labeling and handling</li>
+<li>Data sensitivity classifications</li>
+<li>Sensitive Data Types (Legal)</li>
+<li>Data Roles</li>
+<li>Data Retention &amp; Disposal</li>
+<li>Data destruction and media sanitization</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="data-sensitivity-labeling-and-handling">Data sensitivity labeling and handling<a href="#data-sensitivity-labeling-and-handling" class="hash-link" aria-label="Direct link to Data sensitivity labeling and handling" title="Direct link to Data sensitivity labeling and handling">​</a></h3>
+<p>Data is classified according to its value and level of sensitivity, so the appropriate level of security can be applied.</p>
+<p>Process should be:</p>
+<ul>
+<li>Easy to apply</li>
+<li>Consistent</li>
+<li>Visible</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="data-sensitivity-classifications">Data sensitivity classifications<a href="#data-sensitivity-classifications" class="hash-link" aria-label="Direct link to Data sensitivity classifications" title="Direct link to Data sensitivity classifications">​</a></h3>
+<p>There are common labels but classification terms and labeling is determined by the organization.</p>
+<ul>
+<li>
+<p><strong>Public / Unclassified</strong>: No harm if disclosed.</p>
+</li>
+<li>
+<p><strong>Confidential</strong>: Limited harm if disclosed.</p>
+</li>
+<li>
+<p><strong>Secret</strong>: Grave harm if disclosed.</p>
+</li>
+<li>
+<p><strong>Proprietary</strong>: Limited to internal use only. Restricted externally.</p>
+</li>
+<li>
+<p><strong>Private</strong>: Information regarding people.</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="sensitive-data-types-legal">Sensitive Data Types (Legal)<a href="#sensitive-data-types-legal" class="hash-link" aria-label="Direct link to Sensitive Data Types (Legal)" title="Direct link to Sensitive Data Types (Legal)">​</a></h3>
+<ul>
+<li><strong>PII: Personally Identifiable Information</strong>
+<ul>
+<li>Data that identifies or is traceable to a specific individual.</li>
+<li>Name, Social Security Number, BIometrics, Address</li>
+<li>See NIST SP800-122</li>
+</ul>
+</li>
+<li><strong>PHI: Protected/Personal Health Information</strong>
+<ul>
+<li>HIPAA</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="data-roles">Data Roles<a href="#data-roles" class="hash-link" aria-label="Direct link to Data Roles" title="Direct link to Data Roles">​</a></h3>
+<ul>
+<li>Data Owner</li>
+<li>Data Custodian</li>
+<li>Privacy Officer</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="data-retention--disposal">Data Retention &amp; Disposal<a href="#data-retention--disposal" class="hash-link" aria-label="Direct link to Data Retention &amp; Disposal" title="Direct link to Data Retention &amp; Disposal">​</a></h3>
+<ul>
+<li>Retention<!-- -->
+<ul>
+<li>US Federal Rules of Civil Procedure (FRCP)</li>
+<li>Keep information for only as long as you need it and no longer</li>
+<li>Set in a <em>Data Protection Policy</em></li>
+</ul>
+</li>
+<li>Disposal<!-- -->
+<ul>
+<li>Properly disposing of data and associated hardware</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="data-destruction-and-media-sanitization">Data destruction and media sanitization<a href="#data-destruction-and-media-sanitization" class="hash-link" aria-label="Direct link to Data destruction and media sanitization" title="Direct link to Data destruction and media sanitization">​</a></h2>
+<ul>
+<li>Trusting third parties for destruction.</li>
+<li>Observe transportation and destruction process.</li>
+<li>Best practice is to combine multiple methods.<!-- -->
+<ul>
+<li><em>Burning</em>: not environmentally friendly.</li>
+<li><em>Shredding</em>: reduces size of object but may still be re-assembled, it&#x27;s costly.</li>
+<li><em>Pulping</em>: reduces paper to liquid slurry and can be safely recycled.</li>
+<li><em>Pulverizing</em>: hydraulic or neumatic action, it&#x27;s costly.</li>
+<li><em>Degaussing</em>: larget magnet to remove data from magnetic storage.</li>
+<li><em>Purging / Sanitization</em>: removing files and all traces of data.</li>
+<li><em>Wiping</em>: overwriting data with random 0&#x27;s and 1&#x27;s, and then removed.</li>
+</ul>
+</li>
+</ul></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/cybersecurity-handbook/cert_notes/security+/4/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Domain 4: Identity &amp; Access Management</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/cybersecurity-handbook/cert_notes/security+/6/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Domain 6: Cryptography &amp; PKI</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-policies-plans--procedures" class="table-of-contents__link toc-highlight">1. Policies, Plans &amp; Procedures</a><ul><li><a href="#policies" class="table-of-contents__link toc-highlight">Policies</a></li><li><a href="#procedures-sop-standard-operating-procedure" class="table-of-contents__link toc-highlight">Procedures (SOP: Standard Operating Procedure)</a></li></ul></li><li><a href="#2-business-impact-analysis" class="table-of-contents__link toc-highlight">2. Business Impact Analysis</a><ul><li><a href="#critical-functions" class="table-of-contents__link toc-highlight">Critical Functions</a></li><li><a href="#single-point-of-failure" class="table-of-contents__link toc-highlight">Single Point of Failure</a></li><li><a href="#recovery-objectives" class="table-of-contents__link toc-highlight">Recovery Objectives</a></li><li><a href="#average-time-measurement" class="table-of-contents__link toc-highlight">Average time measurement</a></li><li><a href="#privacy-assessments" class="table-of-contents__link toc-highlight">Privacy Assessments</a></li></ul></li><li><a href="#3-risk-management" class="table-of-contents__link toc-highlight">3. Risk Management</a><ul><li><a href="#definitions" class="table-of-contents__link toc-highlight">Definitions</a></li><li><a href="#threat-assessment" class="table-of-contents__link toc-highlight">Threat Assessment</a></li><li><a href="#risk-assessment-process" class="table-of-contents__link toc-highlight">Risk Assessment Process</a></li><li><a href="#risk-response--strategies" class="table-of-contents__link toc-highlight">Risk Response / Strategies</a></li><li><a href="#risk-register" class="table-of-contents__link toc-highlight">Risk Register</a></li><li><a href="#supply-chain-assessments" class="table-of-contents__link toc-highlight">Supply Chain Assessments</a></li><li><a href="#change-management" class="table-of-contents__link toc-highlight">Change Management</a></li><li><a href="#testing" class="table-of-contents__link toc-highlight">Testing</a></li></ul></li><li><a href="#4-incident-response" class="table-of-contents__link toc-highlight">4. Incident Response</a><ul><li><a href="#nist-incident-response-process" class="table-of-contents__link toc-highlight">NIST Incident Response Process</a></li><li><a href="#incident-response-plan-irp" class="table-of-contents__link toc-highlight">Incident Response Plan (IRP)</a></li><li><a href="#cyber-incident-response-teams" class="table-of-contents__link toc-highlight">Cyber-incident Response Teams</a></li><li><a href="#reporting-requirementsescalation" class="table-of-contents__link toc-highlight">Reporting requirements/escalation</a></li><li><a href="#testing-exercises--training" class="table-of-contents__link toc-highlight">Testing, exercises &amp; training</a></li><li><a href="#incident-preparation" class="table-of-contents__link toc-highlight">Incident Preparation</a></li><li><a href="#incident-detectionidentificationanalysis" class="table-of-contents__link toc-highlight">Incident Detection/Identification/Analysis</a></li><li><a href="#incident-containment" class="table-of-contents__link toc-highlight">Incident Containment</a></li><li><a href="#eradication" class="table-of-contents__link toc-highlight">Eradication</a></li><li><a href="#incident-recovery" class="table-of-contents__link toc-highlight">Incident Recovery</a></li><li><a href="#post-incident" class="table-of-contents__link toc-highlight">Post Incident</a></li></ul></li><li><a href="#5-forensics" class="table-of-contents__link toc-highlight">5. Forensics</a><ul><li><a href="#strategic-intelligence--counterintelligence" class="table-of-contents__link toc-highlight">Strategic intelligence / Counterintelligence</a></li><li><a href="#order-of-volatility" class="table-of-contents__link toc-highlight">Order of volatility</a></li><li><a href="#chain-of-custody" class="table-of-contents__link toc-highlight">Chain of custody</a></li><li><a href="#data-acquisition" class="table-of-contents__link toc-highlight">Data Acquisition</a></li><li><a href="#network-traffic--logs" class="table-of-contents__link toc-highlight">Network traffic &amp; logs</a></li><li><a href="#record-time-offset" class="table-of-contents__link toc-highlight">Record time offset</a></li><li><a href="#take-hashes" class="table-of-contents__link toc-highlight">Take Hashes</a></li><li><a href="#documentation" class="table-of-contents__link toc-highlight">Documentation</a></li></ul></li><li><a href="#6-disaster-recovery--business-continuity" class="table-of-contents__link toc-highlight">6. Disaster Recovery / Business Continuity</a><ul><li><a href="#planning-documents" class="table-of-contents__link toc-highlight">Planning documents</a></li><li><a href="#recovery-sites" class="table-of-contents__link toc-highlight">Recovery sites</a></li><li><a href="#order-of-restoration" class="table-of-contents__link toc-highlight">Order of restoration</a></li><li><a href="#types-of-backups" class="table-of-contents__link toc-highlight">Types of backups</a></li><li><a href="#geographic-considerations" class="table-of-contents__link toc-highlight">Geographic considerations</a></li><li><a href="#continuity-of-operations-planning-coop" class="table-of-contents__link toc-highlight">Continuity of operations planning (COOP)</a></li></ul></li><li><a href="#7-security-controls" class="table-of-contents__link toc-highlight">7. Security Controls</a><ul><li><a href="#technicallogical-controls" class="table-of-contents__link toc-highlight">Technical/Logical controls</a></li><li><a href="#administrativemanagement" class="table-of-contents__link toc-highlight">Administrative/Management</a></li><li><a href="#physicaloperational" class="table-of-contents__link toc-highlight">Physical/Operational</a></li><li><a href="#categorization-by-functionality" class="table-of-contents__link toc-highlight">Categorization by functionality</a></li></ul></li><li><a href="#8-data-security-and-privacy" class="table-of-contents__link toc-highlight">8. Data Security and Privacy</a><ul><li><a href="#data-sensitivity-labeling-and-handling" class="table-of-contents__link toc-highlight">Data sensitivity labeling and handling</a></li><li><a href="#data-sensitivity-classifications" class="table-of-contents__link toc-highlight">Data sensitivity classifications</a></li><li><a href="#sensitive-data-types-legal" class="table-of-contents__link toc-highlight">Sensitive Data Types (Legal)</a></li><li><a href="#data-roles" class="table-of-contents__link toc-highlight">Data Roles</a></li><li><a href="#data-retention--disposal" class="table-of-contents__link toc-highlight">Data Retention &amp; Disposal</a></li></ul></li><li><a href="#data-destruction-and-media-sanitization" class="table-of-contents__link toc-highlight">Data destruction and media sanitization</a></li></ul></div></div></div></div></main></div></div></div></div>
+</body>
+</html>

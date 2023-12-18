@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-cert_notes/security+/3/README" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.0.1">
+<title data-rh="true">Domain 3: Architecture &amp; Design | Cybersecurity Handbook</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://herrera-ignacio.github.io/cybersecurity-handbook/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://herrera-ignacio.github.io/cybersecurity-handbook/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://herrera-ignacio.github.io/cybersecurity-handbook/cert_notes/security+/3/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Domain 3: Architecture &amp; Design | Cybersecurity Handbook"><meta data-rh="true" name="description" content="1. Explain use cases &amp; purposes for frameworks, best practices, and secure configurations guides."><meta data-rh="true" property="og:description" content="1. Explain use cases &amp; purposes for frameworks, best practices, and secure configurations guides."><link data-rh="true" rel="icon" href="/cybersecurity-handbook/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://herrera-ignacio.github.io/cybersecurity-handbook/cert_notes/security+/3/"><link data-rh="true" rel="alternate" href="https://herrera-ignacio.github.io/cybersecurity-handbook/cert_notes/security+/3/" hreflang="en"><link data-rh="true" rel="alternate" href="https://herrera-ignacio.github.io/cybersecurity-handbook/cert_notes/security+/3/" hreflang="x-default"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/cybersecurity-handbook/assets/css/styles.ebb2964c.css">
+<script src="/cybersecurity-handbook/assets/js/runtime~main.a3b4367c.js" defer="defer"></script>
+<script src="/cybersecurity-handbook/assets/js/main.8f95dc28.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/cybersecurity-handbook/"><b class="navbar__title text--truncate">Cybersecurity Handbook</b></a></div><div class="navbar__items navbar__items--right"><a href="https://www.linkedin.com/in/ignacioromanherrera/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">LinkedIn<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><a href="https://github.com/herrera-ignacio/cybersecurity-handbook" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/cybersecurity-handbook/">Introduction</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/fundamentals/bug-bounty/">Fundamentals</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/networking/concepts/devices/">Networking</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/cryptography/concepts/hashing/">Cryptography</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/books/hackerplaybook/">Books</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" aria-expanded="true" href="/cybersecurity-handbook/cert_notes/ccna/">Certifications</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" tabindex="0" href="/cybersecurity-handbook/cert_notes/ccna/">CCNA: Cisco Certified Network ASsociated</a><button aria-label="Expand sidebar category &#x27;CCNA: Cisco Certified Network ASsociated&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/cybersecurity-handbook/cert_notes/lpic-1/">LPIC-1</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" tabindex="0" href="/cybersecurity-handbook/cert_notes/net+/">Network+</a><button aria-label="Expand sidebar category &#x27;Network+&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" aria-expanded="true" tabindex="0" href="/cybersecurity-handbook/cert_notes/security+/">CompTIA - Security+</a><button aria-label="Collapse sidebar category &#x27;CompTIA - Security+&#x27;" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/cybersecurity-handbook/cert_notes/security+/1/">Domain 1 - Threats, Attacks and Vulnerabilities</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/cybersecurity-handbook/cert_notes/security+/2/">Domain 2: Technologies &amp; Tools</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/cybersecurity-handbook/cert_notes/security+/3/">Domain 3: Architecture &amp; Design</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/cybersecurity-handbook/cert_notes/security+/4/">Domain 4: Identity &amp; Access Management</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/cybersecurity-handbook/cert_notes/security+/5/">Domain 5: Risk Management</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/cybersecurity-handbook/cert_notes/security+/6/">Domain 6: Cryptography &amp; PKI</a></li></ul></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/lectures/compliance/hipaa-training/">Lectures</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/cybersecurity-handbook/vulnerabilities/server/shellshock/">Vulnerabilities</a></div></li></ul></nav><button type="button" title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width="20" height="20" aria-hidden="true" class="collapseSidebarButtonIcon_kv0_"><g fill="#7a7a7a"><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"></path><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"></path></g></svg></button></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/cybersecurity-handbook/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Certifications</span><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/cybersecurity-handbook/cert_notes/security+/"><span itemprop="name">CompTIA - Security+</span></a><meta itemprop="position" content="2"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Domain 3: Architecture &amp; Design</span><meta itemprop="position" content="3"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><h1>Domain 3: Architecture &amp; Design</h1>
+<ol>
+<li>Explain use cases &amp; purposes for frameworks, best practices, and secure configurations guides.<!-- -->
+<ul>
+<li>Understand regulations such as GDPR, HIPAA, GLBA</li>
+</ul>
+</li>
+<li>Given a scenario, implement secure network architecture concepts.</li>
+<li>Given a scenario, implement secure systems design.</li>
+<li>Explain the importance of secure staging deployment concepts.</li>
+<li>Explain the security implications of embedded systems.</li>
+<li>Summarize secure application development and deployment concepts.</li>
+<li>Summarize cloud and virtualization concepts.</li>
+<li>Explain how resiliency and automation strategies reduce risk.</li>
+<li>Explain the importance of physical security controls.</li>
+</ol>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-frameworks-best-practices--secure-configurations">1. Frameworks, best practices, &amp; secure configurations.<a href="#1-frameworks-best-practices--secure-configurations" class="hash-link" aria-label="Direct link to 1. Frameworks, best practices, &amp; secure configurations." title="Direct link to 1. Frameworks, best practices, &amp; secure configurations.">​</a></h2>
+<p>When designing organizational security architecture, in addition to regulations, components take into consideration industry-standards, frameworks &amp; guidelines.</p>
+<ul>
+<li><strong>Industry standards</strong>: specific, mandatory controls based on policies.</li>
+<li><strong>Guidelines</strong>: provide recommendations or best practices.</li>
+<li><strong>Frameworks</strong>: generally consists of more components than a guideline, and sets the basis for implementation and management of security controls.</li>
+<li>Benchmarks &amp; Secure Configuration Guides</li>
+<li>Defense in Depth / Layered Security</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="frameworks">Frameworks<a href="#frameworks" class="hash-link" aria-label="Direct link to Frameworks" title="Direct link to Frameworks">​</a></h3>
+<p>Frameworks can be created by national or international entities.</p>
+<ul>
+<li><strong>Regulatory</strong>: created by government agencies and are mandatory by law.</li>
+<li><strong>Non-regulatory</strong>: developed by agencies that provide technology, metrics, or standards development for the better of science and industry.</li>
+<li><strong>Industry-specific frameworks</strong>: developed for specific industry frames (such as HIPAA for medicine).</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="industry-standard-frameworks">Industry Standard Frameworks<a href="#industry-standard-frameworks" class="hash-link" aria-label="Direct link to Industry Standard Frameworks" title="Direct link to Industry Standard Frameworks">​</a></h4>
+<ul>
+<li>ISO: International Organization for Standardization</li>
+<li>NIST: National Institute of Standards and Technology</li>
+<li>PCI-DSS: Payment Card Industry Data Security Standard</li>
+<li>NERC: North American Electirc Reliability Corporation</li>
+<li>CIS: Center for Internet Security</li>
+<li>OWASP: Open Web Application Security Project</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="iso-standards">ISO Standards<a href="#iso-standards" class="hash-link" aria-label="Direct link to ISO Standards" title="Direct link to ISO Standards">​</a></h4>
+<ul>
+<li><strong>IEC 27001:2013</strong> - Information security management systems, Requirements.<!-- -->
+<ul>
+<li>Requirements for establishing, implementing, maintaining and continually improving an information security management system within the context of the organization.</li>
+<li>Requirements for assessment and treatment of information security risks tailored to the needs of the organization.</li>
+</ul>
+</li>
+<li><strong>IEC 27002:2013</strong> - Code of practice for information security controls.<!-- -->
+<ul>
+<li>Guidelines and security management practices including the selection, implementation and management of controls taking into consideration the organization&#x27;s information security risk environment(s).</li>
+<li>Information Security Policies</li>
+<li>Organization of Information Security</li>
+<li>Human Resource Security</li>
+<li>Asset Management</li>
+<li>Access Control</li>
+<li>Cryptography</li>
+<li>Physical and Environmental Security</li>
+<li>Operation Security: Procedures and Responsibilities</li>
+<li>Communication Security</li>
+<li>System Acquisition, Development and Maintenance</li>
+<li>Supplier Relationships</li>
+<li>Incident Management</li>
+<li>Business Continuity Management</li>
+</ul>
+</li>
+<li><strong>IEC 27003:2017</strong> - Information security management systems, Guidance.</li>
+<li><strong>IEC 27004:2016</strong> - Information security management, Monitoring, Measurement, Analysis &amp; Evaluation.</li>
+<li><strong>IEC 27005:2018</strong> - Information security risk management.</li>
+<li><strong>IEC 27017:2015</strong>: Code of practice for information security controls for cloud services.<!-- -->
+<ul>
+<li>Guidelines for information security controls applicable to the provision and use of cloud services.</li>
+<li>Additional implementation guidance for relevant controls specified in <em>IEC 27002:2013</em>.</li>
+<li>Additional controls with implementation guidance that specifically relate to cloud services.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="nist-national-institute-of-standards-and-technology">NIST: National Institute of Standards and Technology<a href="#nist-national-institute-of-standards-and-technology" class="hash-link" aria-label="Direct link to NIST: National Institute of Standards and Technology" title="Direct link to NIST: National Institute of Standards and Technology">​</a></h4>
+<ul>
+<li>US National Standards</li>
+<li><em>Computer Security Resource Center (CSRC)</em> provides NIST&#x27;s cybersecurity and information security related projects, publications, news and events.</li>
+<li><em>NIST Cybersecurity Framework (NIST CSF)</em> is a group of related standards that are designed to provide guidance on cybersecurity.<!-- -->
+<ul>
+<li><strong>SP 800-30</strong>: Guide for conducting Risk Assessments.</li>
+<li><strong>SP 800-35</strong>: Guide to Information Technology Security Services.</li>
+<li><strong>SP 800-53</strong>: Security and Privacy Controls for Federal Information Systems and Organizations.</li>
+<li><strong>SP 80053A</strong>: Assessing Security and Privacy Controls in Federal Information Systems and Organizations: Building Effective Assessment Plans.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="pci-dss-payment-card-industry-data-security-standard">PCI-DSS: Payment Card Industry Data Security Standard<a href="#pci-dss-payment-card-industry-data-security-standard" class="hash-link" aria-label="Direct link to PCI-DSS: Payment Card Industry Data Security Standard" title="Direct link to PCI-DSS: Payment Card Industry Data Security Standard">​</a></h4>
+<ul>
+<li>Used by Visa, Mastercard, American Express, and Discover, to create common security controls for protection of <em>Card Holder Data (CHD)</em>.</li>
+<li>Any organization processing credit cards must be compliant.</li>
+<li>Levels of compliance differ.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="benchmarks--secure-configuration-guides">Benchmarks / Secure Configuration Guides<a href="#benchmarks--secure-configuration-guides" class="hash-link" aria-label="Direct link to Benchmarks / Secure Configuration Guides" title="Direct link to Benchmarks / Secure Configuration Guides">​</a></h3>
+<p>General purpose guides for securing OS, networks and applications.</p>
+<ul>
+<li><strong>DoD Security Technical Implementation Guides (STIGs)</strong>: technical guidance to &quot;lock down&quot; information systems/software that might otherwise be vulnerable to a malicious computer attack.</li>
+<li><strong>Center for Internet Security Benchmarks</strong>: best practices for the secure configuration of a target system.</li>
+<li>Platform/vendor-specific guides<!-- -->
+<ul>
+<li>Network<!-- -->
+<ul>
+<li>Cisco</li>
+</ul>
+</li>
+<li>OS<!-- -->
+<ul>
+<li>Microsoft TechNet</li>
+<li>Macintosh</li>
+<li>Linux</li>
+</ul>
+</li>
+<li>Web Server<!-- -->
+<ul>
+<li>Microsoft IIS</li>
+<li>Apache</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="defense-in-depth--layered-security">Defense in Depth / Layered Security<a href="#defense-in-depth--layered-security" class="hash-link" aria-label="Direct link to Defense in Depth / Layered Security" title="Direct link to Defense in Depth / Layered Security">​</a></h3>
+<ul>
+<li><strong>Defense in depth</strong>: Coordinate use of multiple security countermeasures to information assets.</li>
+<li><strong>Segmentation</strong>: Splitting a computer network into zones or subnetworks based on business function or security needs, using:<!-- -->
+<ul>
+<li>Physical devices (Routers/Switches)</li>
+<li>Virtual Local Area Networks (VLANs)</li>
+<li>Air Gaps</li>
+</ul>
+</li>
+<li><strong>Control Diversity</strong>: Addressing a security concern using multiple controls, that don&#x27;t depend on another.<!-- -->
+<ul>
+<li>Administrative / Process</li>
+<li>Technical</li>
+</ul>
+</li>
+<li><strong>Vendor Diversity</strong>: Addressing a security concern using multiple vendor products, that don&#x27;t depend on each other.</li>
+<li><strong>User Training</strong>: Reduces the imapct of threats &amp; vulnerabilities.</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-network-architecture">2. Network Architecture<a href="#2-network-architecture" class="hash-link" aria-label="Direct link to 2. Network Architecture" title="Direct link to 2. Network Architecture">​</a></h2>
+<ul>
+<li>Security Zones / Topologies</li>
+<li>Security device placement</li>
+<li>VPN / Tunneling</li>
+<li>SDN: Software Defined Network</li>
+<li>Honeypots / Honeynets</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="security-zones--topologies">Security Zones / Topologies<a href="#security-zones--topologies" class="hash-link" aria-label="Direct link to Security Zones / Topologies" title="Direct link to Security Zones / Topologies">​</a></h3>
+<p>Each zone on a network is separated based on organizational role or level of security (<em>Segregation, Segmentation &amp; Isolation</em>).</p>
+<ul>
+<li><strong>DMZ</strong>
+<ul>
+<li>Network segment located between protected (internal) and unprotected (public) networks.</li>
+<li>Provides a buffer zone / defense-in-depth.</li>
+<li>Usually set-up using firewalls.</li>
+<li>Contains hardened systems that need to reach each network segment (i.e, email, web, or DNS servers)</li>
+</ul>
+</li>
+<li><strong>Extranet / Intranet</strong>
+<ul>
+<li>Extranet is a private network that uses Internet technology and public telecommunication system to securely share part of a business&#x27;s information or operations with suppliers, vendors, partners, customers, or other businesses.</li>
+<li>Intranet, is websites/applications that are only accessible within the organization&#x27;s network.</li>
+</ul>
+</li>
+<li><strong>Wireless segmentation</strong>
+<ul>
+<li>Separating wireless access on an internal network / creating a buffer between wireless and wired networks.</li>
+<li>Separating guest wireless access from internal networks. Often allows only internet access.</li>
+<li>Controlled by 801.1X Port-based access control.</li>
+<li>MAC filtering, restricting access based on the devices.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="security-device-placement">Security device placement<a href="#security-device-placement" class="hash-link" aria-label="Direct link to Security device placement" title="Direct link to Security device placement">​</a></h3>
+<p>Where should security devices be on a corporate network.</p>
+<ul>
+<li>Firewalls / UTM</li>
+<li>IDS/IPS</li>
+<li>VPN</li>
+<li>Proxies</li>
+<li>Load balancers</li>
+<li>SIEM, log collection / correlation</li>
+<li>DDoS mitigation (border router)</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="vpn--tunneling">VPN / Tunneling<a href="#vpn--tunneling" class="hash-link" aria-label="Direct link to VPN / Tunneling" title="Direct link to VPN / Tunneling">​</a></h3>
+<ul>
+<li>Private network connection through an unsecured public network.</li>
+<li>Use to connect LANS</li>
+<li>Remote devices appear as if they are local.</li>
+<li>Methods:<!-- -->
+<ul>
+<li>Site-to-site (connect LANs across the internet)</li>
+<li>Remote access (connect users or devices to a corporate network)</li>
+<li>Remote Access Server (RAS)</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="sdn-software-defined-network">SDN: Software Defined Network<a href="#sdn-software-defined-network" class="hash-link" aria-label="Direct link to SDN: Software Defined Network" title="Direct link to SDN: Software Defined Network">​</a></h3>
+<ul>
+<li>Entire network is virtualized</li>
+<li>Allows for easier network segmentation</li>
+<li>Allows administrators to place virtualized security devices anywhere</li>
+</ul>
+<p>The SDN architecture is:</p>
+<ul>
+<li>Directly programmable</li>
+<li>Agile</li>
+<li>Centrally managed</li>
+<li>Programmatically configured</li>
+<li>Open standards-based and vendor-neutral</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="honeypots--honeynets">Honeypots / Honeynets<a href="#honeypots--honeynets" class="hash-link" aria-label="Direct link to Honeypots / Honeynets" title="Direct link to Honeypots / Honeynets">​</a></h3>
+<p>Systems or networks exposed to capture malicious activity, gather investigation evidence, and study attack strategies. Separated from any business network.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-secure-system-design">3. Secure System Design<a href="#3-secure-system-design" class="hash-link" aria-label="Direct link to 3. Secure System Design" title="Direct link to 3. Secure System Design">​</a></h2>
+<ul>
+<li>Hardware / Firmware security</li>
+<li>OS Types</li>
+<li>OS Security hardening</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="hardware--firmware-security">Hardware / Firmware security<a href="#hardware--firmware-security" class="hash-link" aria-label="Direct link to Hardware / Firmware security" title="Direct link to Hardware / Firmware security">​</a></h3>
+<ul>
+<li><strong>FDE: Full Disk Encryption</strong>
+<ul>
+<li>Bitlocker</li>
+<li>Veracrypt</li>
+</ul>
+</li>
+<li><strong>SED: Self-Encrypting Drive</strong>
+<ul>
+<li>Automatically encrypts / decrypts a drive</li>
+<li>Media Encryption Key (MEK)</li>
+<li>Key Encryption Key (KEK), supplied by user</li>
+</ul>
+</li>
+<li><strong>TPM: Trusted Platform Modules</strong>: specialized chip on an endpoint device that stores encryption keys specific to the host system for hardware authentication. Usually on the system motherboard.</li>
+<li><strong>HSM: Hardware Security Modules</strong>: physical computing device that safeguards and manages digital keys for strong authentication and provides crypto processing. These modules traiditionally come in the form of a plug-in card or an external device that attaches directly to a computer or network server.</li>
+<li><strong>BIOS: Basic Input/Output System</strong>: boot up configuration.</li>
+<li><strong>UEFI: Unified Extensible Firmware Interface</strong>: modern boot-up configuration.</li>
+<li><strong>Secure boot and attestation</strong>: creates a cryptographic hash of the BIOS/UEFI OS boot loader and drivers and compares that against a stored hash. This is done to prevent rootkits and boot sector viruses.</li>
+<li><strong>RoT: Root of Trust</strong>: highly reliable hardware, firmware, and software components that perform specific, critical functions.</li>
+<li><strong>Suply Chain</strong>: confirming the origin of hardware is secure.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="os-types">OS Types<a href="#os-types" class="hash-link" aria-label="Direct link to OS Types" title="Direct link to OS Types">​</a></h3>
+<ul>
+<li>Network (CISCO)</li>
+<li>Server (Windows Server / Linux)</li>
+<li>Workstation</li>
+<li>Appliance (IoT)</li>
+<li>Kiosk (public computer)</li>
+<li>Mobile OS</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="os-security-hardening">OS Security hardening<a href="#os-security-hardening" class="hash-link" aria-label="Direct link to OS Security hardening" title="Direct link to OS Security hardening">​</a></h3>
+<ul>
+<li>Trusted OS baseline</li>
+<li>Secure configurations</li>
+<li>Least functionality / single purpose</li>
+<li>Disabling unnecesary ports and services</li>
+<li>Disable default accounts/passwords</li>
+<li>Application whitelisting</li>
+<li>Patch management process</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-secure-staging--deployment">4. Secure Staging &amp; Deployment<a href="#4-secure-staging--deployment" class="hash-link" aria-label="Direct link to 4. Secure Staging &amp; Deployment" title="Direct link to 4. Secure Staging &amp; Deployment">​</a></h2>
+<ul>
+<li>Secure baseline in compliance with security standards and benchmarks</li>
+<li>Environments</li>
+<li>Integrity Measurement, monitory systems, against the baseline for any deviatons.<!-- -->
+<ul>
+<li>Tripwire</li>
+<li>Hash checking</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-embedded-systems">5. Embedded Systems<a href="#5-embedded-systems" class="hash-link" aria-label="Direct link to 5. Embedded Systems" title="Direct link to 5. Embedded Systems">​</a></h2>
+<p>One that has software embedded within the computer hardware, usually within <em>Read Only Memory (ROM)</em>. A computer system with a dedicated function within a larger mechanical or electrical system.</p>
+<ul>
+<li><strong>SoC: System on a Chip</strong>: integrated circuit that integrates all components of a computer or other electroc systems on a single computer chip.</li>
+<li><strong>Real-Time OS (RTOSs)</strong>: OS intended to serve real-time applications that process data as it comes in, typically without buffer delays. Designed to have zero latency.</li>
+<li><strong>Internet of Things (IoT)</strong>: system of interrelated computing devices, mechanical and digital machines, objects, animals, or people that are provided with unique identifiers (UIDs) and the ability to transfer data over a network without requiring human-to-human or human-to-computer interaction.</li>
+<li><strong>Smart devices</strong>:<!-- -->
+<ul>
+<li>Wearable technology (watches, medical devices), often communicate through Bluetooth.</li>
+<li>Home automation (security, cameras, locks, lights, thermostats, sound systems, personal assistants), often communicate through wi-fi.</li>
+</ul>
+</li>
+<li><strong>ICS: Industrial Control Systems</strong>: several types of control systems and associated instrumentation used for industrial process control.</li>
+<li><strong>SCADA: Supervisor Control and Data Acquisition</strong>: collects data from factories, plants, or other remote locations and forwards it to a central computer that manages / controls the system.</li>
+<li><strong>PLC: Programmable Logic Controllers</strong>: single use computers used in manufacturing.</li>
+<li><strong>HVAC: Heating, Ventilation and Air Conditioning Systems</strong>: regulate air flow and temperature.</li>
+<li><strong>Security</strong>:<!-- -->
+<ul>
+<li>Network partitioning / segmentation</li>
+<li>Access Control</li>
+<li>Monitoring</li>
+</ul>
+</li>
+<li><strong>Printers / Multi-function devices (MFDs)</strong>
+<ul>
+<li>Used for networked printing, scanning and copying</li>
+<li>Web accessible</li>
+<li>Generally little access controls</li>
+</ul>
+</li>
+<li><strong>Special Purpose Devices</strong>
+<ul>
+<li>Medical devices (Pacemakers, Insulin pumps)</li>
+<li>Vehicles (Trucks &amp; Autos)</li>
+<li>Aircraft / Unmanned Areal Vehicles (UAV)</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="securing-embedded-devices">Securing Embedded Devices<a href="#securing-embedded-devices" class="hash-link" aria-label="Direct link to Securing Embedded Devices" title="Direct link to Securing Embedded Devices">​</a></h3>
+<ul>
+<li>Secure by design and default</li>
+<li>Security integrated into the technology</li>
+<li>System hardening</li>
+<li>Shielded from electromagnetic interference</li>
+<li>Network security, encryption using TLS</li>
+<li>Security verification</li>
+<li>Automated patching</li>
+<li>Anomaly alerts</li>
+<li></li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="6-secure-app-development">6. Secure App Development<a href="#6-secure-app-development" class="hash-link" aria-label="Direct link to 6. Secure App Development" title="Direct link to 6. Secure App Development">​</a></h2>
+<ul>
+<li>Secure DevOps (DevSecOps)</li>
+<li>Change Management / Version Control</li>
+<li>Secure coding techniques</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="devsecops">DevSecOps<a href="#devsecops" class="hash-link" aria-label="Direct link to DevSecOps" title="Direct link to DevSecOps">​</a></h3>
+<ul>
+<li>Security integrated into all of your development operations, which includes database design, programming, and infrastructure.</li>
+<li>Having security practices integrated into the entire software delivery cycle.</li>
+<li>Address security concerns at the beginning of projects.</li>
+<li>Add automated security testing techniques.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="characteristics">Characteristics<a href="#characteristics" class="hash-link" aria-label="Direct link to Characteristics" title="Direct link to Characteristics">​</a></h4>
+<ul>
+<li><strong>Continuous integration</strong>: security in every step with updates from a centralized, controlled repository.</li>
+<li><strong>Security automation</strong>: repeatable, scripted tasks.</li>
+<li><strong>Baselining</strong>: reference points that require completion and approval of a set of predifined project requirements to prevent uncontrolled change and lesson vulnerabilities.</li>
+<li><strong>Immutable systems</strong>: no changing to systems in place. They maintain a known, documented, and repeatable configuration.</li>
+<li><strong>Infrastructure As Code (IaC)</strong>: programmable infrastructure. Infrastructure configuration is included with application code.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="change-management--version-control">Change Management / Version Control<a href="#change-management--version-control" class="hash-link" aria-label="Direct link to Change Management / Version Control" title="Direct link to Change Management / Version Control">​</a></h3>
+<p>Control and manage software changes is needed for quality and security.</p>
+<ul>
+<li>Prevents tampering or changing the source code or executables.</li>
+<li>Tracks software file changes or application code changes.<!-- -->
+<ul>
+<li>Historical data on changes to files.</li>
+<li>Traceability.</li>
+</ul>
+</li>
+<li>Uses distributed storage for code.</li>
+<li>Branchng and merging capabiltiies.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="secure-coding-techniques">Secure coding techniques<a href="#secure-coding-techniques" class="hash-link" aria-label="Direct link to Secure coding techniques" title="Direct link to Secure coding techniques">​</a></h3>
+<ul>
+<li><strong>Authentication</strong>
+<ul>
+<li>No hard-coding credentials into code.</li>
+<li>Use of cookies.</li>
+</ul>
+</li>
+<li><strong>Proper error handling</strong>
+<ul>
+<li>Errors should be generic / not divulge specific system or application information.</li>
+<li>Comments should not be visible in the end-product.</li>
+</ul>
+</li>
+<li><strong>Product input validation</strong>
+<ul>
+<li>Scrub &amp; validate input from outside / untrusted sources.</li>
+<li>Use of default values and character limitations.</li>
+</ul>
+</li>
+<li><strong>Normalization</strong>
+<ul>
+<li>Conversion of data to its anticipated, simplest known form.</li>
+</ul>
+</li>
+<li><strong>Stored procedures</strong>
+<ul>
+<li>Associated with database queries / precompiled SQL statements.</li>
+</ul>
+</li>
+<li><strong>Code reuse/dead code</strong>
+<ul>
+<li>Reusing existing software modules should be validated for vulnerabilities.</li>
+<li>Dead code (no longer provides useful function) should be purged.</li>
+</ul>
+</li>
+<li><strong>Use of third-party libraries and SDKs</strong>
+<ul>
+<li>Use trusted sources.</li>
+<li>Check for CVE.</li>
+</ul>
+</li>
+<li><strong>Code signing</strong>
+<ul>
+<li>Signing executable code using a certificate-based signature to prove the author&#x27;s identity and provide code integrity.</li>
+</ul>
+</li>
+<li><strong>Data exposure</strong>
+<ul>
+<li>Encryption of sensitive data at all times (in transit and at rest)</li>
+</ul>
+</li>
+<li><strong>Encryption</strong>
+<ul>
+<li>Standard encryption algorithms, hashing, and digital signatures.</li>
+<li>TLS for data in transit.</li>
+</ul>
+</li>
+<li><strong>Obfuscation/camouflage</strong>
+<ul>
+<li>Hiding back-end code</li>
+<li>Prevents code from being reverse-engineered</li>
+</ul>
+</li>
+<li><strong>Memory management</strong>
+<ul>
+<li>Vulnerabilities may explot improper memory utilization (buffer overflow)</li>
+</ul>
+</li>
+<li><strong>Server-side vs client-side execution and validation</strong>
+<ul>
+<li>Server-side protects against malicious attemps by user to bypass validation before sending data to server.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="7-summarize-cloud-and-virtualization-concepts">7. Summarize cloud and virtualization concepts<a href="#7-summarize-cloud-and-virtualization-concepts" class="hash-link" aria-label="Direct link to 7. Summarize cloud and virtualization concepts" title="Direct link to 7. Summarize cloud and virtualization concepts">​</a></h2>
+<p><em>NIST SP800-145</em>: &quot;Cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources that can be rapidly provisioned and released with minimal management effort or service provider interaction.</p>
+<ul>
+<li>Cloud Computing Types</li>
+<li>Essential Characteristics</li>
+<li>Cloud Computing Service Models</li>
+<li>Cloud Storage - Network Storage</li>
+<li>Virtualization<!-- -->
+<ul>
+<li>Security for Virtualization</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cloud-computing-types">Cloud Computing Types<a href="#cloud-computing-types" class="hash-link" aria-label="Direct link to Cloud Computing Types" title="Direct link to Cloud Computing Types">​</a></h3>
+<ul>
+<li><strong>On-Premise</strong>: Servers at organization&#x27;s location.</li>
+<li><strong>Hosted</strong>: Servers outsourced to an external provider.</li>
+<li><strong>Cloud</strong>: Using shared servers.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="essential-characteristics">Essential Characteristics<a href="#essential-characteristics" class="hash-link" aria-label="Direct link to Essential Characteristics" title="Direct link to Essential Characteristics">​</a></h3>
+<ul>
+<li>On-demand self-service</li>
+<li>Broad network access</li>
+<li>Resource pooling</li>
+<li>Rapid elasticity or expansion</li>
+<li>Measured service</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cloud-computing-service-models">Cloud Computing Service Models<a href="#cloud-computing-service-models" class="hash-link" aria-label="Direct link to Cloud Computing Service Models" title="Direct link to Cloud Computing Service Models">​</a></h3>
+<ul>
+<li>
+<p><strong>Software as a Service (SaaS)</strong>: Capability provided to the consumer is to use the provider&#x27;s applications running on a cloud infrastructure. Applications are accessible from various client devices through either a thin client interface, or a program interface. Consumer does not maage or control the underlying cloud infrastructure, or even individual application capabilities, with the possible exception of limited user-specific application configuration settings.</p>
+</li>
+<li>
+<p><strong>Platform as a Service (PaaS)</strong>: Capability provided to the consumer is to deploy onto the cloud infrastructure consumer-created or acquired applications created using programming languages, libraries, services, and tools supported by the provider. Consumer does not manage or control the underlying cloud infrastructure, but has control over the deployed applications and possibly configuration settings for the application-hosting environment.</p>
+</li>
+<li>
+<p><strong>Infrastructure as a Service (IaaS)</strong>: Capability provided to the consumer is to provision processing, storage, networks, and other fundamental computing resources where the consumer is able to deploy and run arbitrary software, which can include OS and applications. Consumer does not manage or control the underlying clod unfrastructure but has control over OS, sotrage, and deployed applications, and possibly limited control of selecting networking components (i.e., host firewalls).</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="cloud-storage---network-storage">Cloud Storage - Network Storage<a href="#cloud-storage---network-storage" class="hash-link" aria-label="Direct link to Cloud Storage - Network Storage" title="Direct link to Cloud Storage - Network Storage">​</a></h4>
+<ul>
+<li>DAS: Direct attached storage</li>
+<li>NAS: Network area storage</li>
+<li>SANs: Storage area networks</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="virtualization">Virtualization<a href="#virtualization" class="hash-link" aria-label="Direct link to Virtualization" title="Direct link to Virtualization">​</a></h3>
+<ul>
+<li><strong>Hypervisors</strong>: Underlying technology that creates and runs virtual machines. Presents the guest operating systems with a virtual operating platform and manages the execution of the guest operating systems.<!-- -->
+<ul>
+<li><strong>Native/bare-metal</strong>: works directly on top of hardware.</li>
+<li><strong>Hosted</strong>: works directly on top of OS.</li>
+</ul>
+</li>
+<li><strong>Containers</strong>: Lightweight, stand-alone, executable package of software that includes everything needed to run it: code, runtime, system tools, system libraries, settings.<!-- -->
+<ul>
+<li>Replacing or used with hypervisors.</li>
+</ul>
+</li>
+<li><strong>VDE: Virtual Desktop Environment</strong>: Desktop virtualization.</li>
+<li><strong>VDI: Virtual Desktop Infrastructure</strong>: User&#x27;s desktop is running inside a virtual machine that resides on a server. A form of VDE that enables fully personalized desktops for each user.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="security-for-virtualization">Security for Virtualization<a href="#security-for-virtualization" class="hash-link" aria-label="Direct link to Security for Virtualization" title="Direct link to Security for Virtualization">​</a></h4>
+<ul>
+<li><strong>VM Escape Protection</strong>: leaving an assigned VM.</li>
+<li><strong>VM Sprawl Avoidance</strong>: overusing shared resources.</li>
+<li><strong>CASB: Cloud Access Security Broker</strong>: security policy enforcement points.</li>
+<li><strong>Security as a service</strong>: subscription-based business model for acquiring and managing security functions (virtual SOC).</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="38-resiliency-and-automation-strategies">3.8 Resiliency and Automation strategies<a href="#38-resiliency-and-automation-strategies" class="hash-link" aria-label="Direct link to 3.8 Resiliency and Automation strategies" title="Direct link to 3.8 Resiliency and Automation strategies">​</a></h2>
+<ul>
+<li>Automation/scripting</li>
+<li>Frameworks and Templates</li>
+<li>Master Image</li>
+<li>Manging Cloud Risk</li>
+<li>Fault Tolerance</li>
+<li>RAID Storage</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="automationscripting">Automation/scripting<a href="#automationscripting" class="hash-link" aria-label="Direct link to Automation/scripting" title="Direct link to Automation/scripting">​</a></h3>
+<ul>
+<li>Reduces risk through repeatable processes and automated courses of action.</li>
+<li><strong>Continuous monitoring</strong>: Leveraging sophisticated monitors and sensors.</li>
+<li>Configuration validation.</li>
+<li>OS scripting languages (Bash, PowerShell).</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="frameworks-and-templates">Frameworks and Templates<a href="#frameworks-and-templates" class="hash-link" aria-label="Direct link to Frameworks and Templates" title="Direct link to Frameworks and Templates">​</a></h3>
+<ul>
+<li>See 3.1 for common Frameworks (NIST, ISO, PCI DSS).</li>
+<li>System baselines using standard templates.</li>
+<li>Compare current state against a desired state.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="master-image">Master Image<a href="#master-image" class="hash-link" aria-label="Direct link to Master Image" title="Direct link to Master Image">​</a></h3>
+<ul>
+<li>aka &quot;Gold&quot; image.</li>
+<li>Creating a model OS verified as &quot;clean&quot;.</li>
+<li>Used for system restores.</li>
+<li>Needs to be secured.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="managing-cloud-risk">Managing Cloud Risk<a href="#managing-cloud-risk" class="hash-link" aria-label="Direct link to Managing Cloud Risk" title="Direct link to Managing Cloud Risk">​</a></h3>
+<ul>
+<li><strong>Nonpersistence</strong>: Temporary system images. Snapshot of known, good state.</li>
+<li><strong>Elasticity / Scalability</strong>: Adjusting resources as needed.</li>
+<li><strong>High Availability</strong>: Measures, such as redundancy, failover, and mirroring, used to keep services and systems operational.</li>
+<li><strong>Redundancy</strong>: Replicating systems usually at multiple sites. Associated with failover.</li>
+<li><strong>Distributive allocation / Load balancing</strong>:dDistributing<!-- --> burden across multiple systems.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="fault-tolerance">Fault Tolerance<a href="#fault-tolerance" class="hash-link" aria-label="Direct link to Fault Tolerance" title="Direct link to Fault Tolerance">​</a></h3>
+<p>Ability of a system to sustain operations in the event of a component failure.</p>
+<ul>
+<li>Two key components<!-- -->
+<ul>
+<li>Spare parts</li>
+<li>Electrical power<!-- -->
+<ul>
+<li>Surge protection</li>
+<li><em>Uniterruptible Power Supply (UPS)</em></li>
+<li>Backup power / generators</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="raid-storage">RAID Storage<a href="#raid-storage" class="hash-link" aria-label="Direct link to RAID Storage" title="Direct link to RAID Storage">​</a></h3>
+<p>Windows has a built-in capability to set up a software RAID that combines multiple disk drive components into a single logical unit for purpose of providing fault tolerance or enhance the performance of your storage subsystem.</p>
+<ul>
+<li><strong>Redundant Array of Inexpensive Disks</strong>.</li>
+<li>Focuses on <em>availability</em> of data.</li>
+<li>RAID Types<!-- -->
+<ol>
+<li>Disk striping</li>
+<li>Disk mirroring</li>
+<li>Disk striping with a parity disk</li>
+<li>Disk striping with parity</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="9-physical-security--environmental-controls">9. Physical Security &amp; Environmental Controls<a href="#9-physical-security--environmental-controls" class="hash-link" aria-label="Direct link to 9. Physical Security &amp; Environmental Controls" title="Direct link to 9. Physical Security &amp; Environmental Controls">​</a></h2>
+<ul>
+<li>Concepts</li>
+<li>Lighting</li>
+<li>Perimter Security</li>
+<li>Safes / Locking Cabinets</li>
+<li>Locks</li>
+<li>Physical Access Control</li>
+<li>Faraday Cage / Shielding</li>
+<li>Personnel Access Controls<!-- -->
+<ul>
+<li>Site Access Controls (Key Card)</li>
+<li>Biometric Access Controls</li>
+</ul>
+</li>
+<li>Detection</li>
+<li>Environmental Controls</li>
+<li>Fire Prevention, Detection &amp; Suppresion</li>
+<li>Video Surveillance / Cameras</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="concepts">Concepts<a href="#concepts" class="hash-link" aria-label="Direct link to Concepts" title="Direct link to Concepts">​</a></h3>
+<p>We try to accomplish a layering / defense-in-depth security.</p>
+<ul>
+<li><strong>Protection</strong>
+<ul>
+<li>Locks</li>
+<li>Barriers: Walls, Fences</li>
+</ul>
+</li>
+<li><strong>Deterrence</strong>
+<ul>
+<li>Guards / Dogs</li>
+<li>Lighting (should be in protected, locked, and centralized areas).</li>
+</ul>
+</li>
+<li><strong>Delay</strong>
+<ul>
+<li>Barricades / Bollards</li>
+</ul>
+</li>
+<li><strong>Detection</strong>
+<ul>
+<li>Cameras</li>
+<li>Motion Detection</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lighting">Lighting<a href="#lighting" class="hash-link" aria-label="Direct link to Lighting" title="Direct link to Lighting">​</a></h3>
+<ul>
+<li><em>Continuous lighting</em>: even amount of illumination across an area.</li>
+<li><em>Controlled lighting</em>: such a way that does not blind its neighbors or any passing vehicles.</li>
+<li><em>Standby lighting</em>: configured to turn on/off at different times, so that potential intruders think that different areas of the facility are popualted.</li>
+<li><em>Redundant or backup lightning</em>: should be available in case of power failures or emergencies.</li>
+<li><em>Response Area Illumination</em>: takes place when an IDS detects suspicious activities and turns on lights within the specified area.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="perimeter-security">Perimeter Security<a href="#perimeter-security" class="hash-link" aria-label="Direct link to Perimeter Security" title="Direct link to Perimeter Security">​</a></h3>
+<ul>
+<li>Fencing, Gates and Cages.</li>
+<li>Varying heights, gauge, and mesh.</li>
+<li>Natural landscaping.</li>
+<li><em>CPTED: Crime Prevention Through Environmental Design</em>.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="safes--locking-cabinets">Safes / Locking Cabinets<a href="#safes--locking-cabinets" class="hash-link" aria-label="Direct link to Safes / Locking Cabinets" title="Direct link to Safes / Locking Cabinets">​</a></h3>
+<ul>
+<li>Safes<!-- -->
+<ul>
+<li>Control access</li>
+<li>Fireproof</li>
+<li>Tamper resistant and evident</li>
+</ul>
+</li>
+<li>Locking cabinets for paper &amp; electronics</li>
+<li>Computer cable locks</li>
+<li>Key management<!-- -->
+<ul>
+<li>Who has keys</li>
+<li>Where are they stored</li>
+<li>Key duplication</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="locks">Locks<a href="#locks" class="hash-link" aria-label="Direct link to Locks" title="Direct link to Locks">​</a></h3>
+<ul>
+<li>Combination locks &gt; keys</li>
+<li>Cipher locks / electronic locks</li>
+<li>Lock grades<!-- -->
+<ol>
+<li>Comercial</li>
+<li>Heavy duty residential / light commercial</li>
+<li>Residential throw away locks</li>
+</ol>
+</li>
+<li>Cylinder categories<!-- -->
+<ul>
+<li>Low: no pick or drill resistance provided</li>
+<li>Medium: a little pick resistance</li>
+<li>High: higher degree of pick resistance</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="physical-access-control">Physical Access Control<a href="#physical-access-control" class="hash-link" aria-label="Direct link to Physical Access Control" title="Direct link to Physical Access Control">​</a></h3>
+<ul>
+<li>Turnstiles</li>
+<li>Mantrap<!-- -->
+<ul>
+<li>Double doors, where only one can be opened at a time.</li>
+<li>Used to control personnel access.</li>
+<li>Manually operated or automatic.</li>
+<li>Only room for one person.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="faraday-cage--shielding">Faraday Cage / Shielding<a href="#faraday-cage--shielding" class="hash-link" aria-label="Direct link to Faraday Cage / Shielding" title="Direct link to Faraday Cage / Shielding">​</a></h3>
+<p><strong>Shielding</strong> is the process of preventing electronic emissions from your computer systems from being used to gather intelligence and preventing outside electronic emissions from disrupting information-rpocessing abilitiesl.</p>
+<p><strong>Faraday Cage/Shield</strong> is an enclosure used to block electromagnetic fields. It may be foremd by a continuous covering of conductivem aterial or by a mesh of such materials.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="personnel-access-controls">Personnel Access Controls<a href="#personnel-access-controls" class="hash-link" aria-label="Direct link to Personnel Access Controls" title="Direct link to Personnel Access Controls">​</a></h3>
+<p>Different technologies to grant access to a building.</p>
+<ul>
+<li><strong>User activated</strong>: user does something (Swipe cards, biometrics).</li>
+<li><strong>Proximity devices/transponders</strong>: system recognizes the presence of an object.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="site-access-controls-key-cards">Site Access Controls (Key Cards)<a href="#site-access-controls-key-cards" class="hash-link" aria-label="Direct link to Site Access Controls (Key Cards)" title="Direct link to Site Access Controls (Key Cards)">​</a></h4>
+<ul>
+<li>Centralized access control (card readers, central computer, and electronic door latches).</li>
+<li>Pros: easy to use, provides an audit record, easy to change access permissions.</li>
+<li>Cons: can be used by others if lost, people may &quot;tailgate&quot;.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="biometric-access-controls">Biometric Access Controls<a href="#biometric-access-controls" class="hash-link" aria-label="Direct link to Biometric Access Controls" title="Direct link to Biometric Access Controls">​</a></h4>
+<ul>
+<li>Based upon a specific biometric measurement.</li>
+<li>Fingerprints, iris scan, retina scan, hand scan, voice, facial recognition, others.</li>
+<li>Greater confidence of claimed identity.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="detection">Detection<a href="#detection" class="hash-link" aria-label="Direct link to Detection" title="Direct link to Detection">​</a></h3>
+<ul>
+<li><strong>Motion detection</strong>: location monitoring and alarms based on movement.</li>
+<li><strong>Infrared detection</strong>: detects changes in infrared radation, thermal heat.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="environmental-controls">Environmental Controls<a href="#environmental-controls" class="hash-link" aria-label="Direct link to Environmental Controls" title="Direct link to Environmental Controls">​</a></h3>
+<ul>
+<li>HVAC: Heating, Ventilation, Air Conditioning<!-- -->
+<ul>
+<li>Redundancy</li>
+<li>Backup power / UPS</li>
+<li>Zone-based heating &amp; cooling</li>
+</ul>
+</li>
+<li>Hot and cold aisles</li>
+<li>Fire suppression</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="fire-prevention-detection--suppression">Fire Prevention, Detection &amp; Suppression<a href="#fire-prevention-detection--suppression" class="hash-link" aria-label="Direct link to Fire Prevention, Detection &amp; Suppression" title="Direct link to Fire Prevention, Detection &amp; Suppression">​</a></h3>
+<ul>
+<li>Fire <em>Prevention</em> includes training employees on how to react, supplying the right equipment, enabling fire suppresion supply, proper storage of combustible elements, etc.</li>
+<li>Fire <em>Detection</em> includes alarms, manual detection pull boxes, automatic detection response systems with sensors, etc.</li>
+<li>Fire <em>Suppression</em> is the use of a suppression agent to put out a fire.<!-- -->
+<ul>
+<li>Fire extinguishers</li>
+<li>Fixed systems</li>
+<li>Water</li>
+<li>Halon and halon substitutes</li>
+<li>Foams</li>
+<li>Dry Powders</li>
+<li>CO2</li>
+<li>Soda Acid</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="fire-extinguisher-ratings">Fire Extinguisher Ratings<a href="#fire-extinguisher-ratings" class="hash-link" aria-label="Direct link to Fire Extinguisher Ratings" title="Direct link to Fire Extinguisher Ratings">​</a></h4>
+<ul>
+<li>A: Wood and paper</li>
+<li>B: Flammable liquids</li>
+<li>C: Electrical</li>
+<li>D: Flammable metals</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="sprinkler-systems">Sprinkler Systems<a href="#sprinkler-systems" class="hash-link" aria-label="Direct link to Sprinkler Systems" title="Direct link to Sprinkler Systems">​</a></h4>
+<ul>
+<li><em>Wet pipe</em>: filled with pressurized water.</li>
+<li><em>Dry pipe</em>: fills with water only when activated.</li>
+<li><em>Deluge</em>: discharges water from all sprinklers when activated.</li>
+<li><em>Pre-Action</em>: dry pipe that converts to a wet pipe when an alarm is activated.</li>
+<li><em>Foam water sprinkler</em>: uses water and fire-retardant foam.</li>
+<li><em>Gaseous fire suprresion</em>: displaces oxygen.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="video-surveillance--cameras">Video Surveillance / Cameras<a href="#video-surveillance--cameras" class="hash-link" aria-label="Direct link to Video Surveillance / Cameras" title="Direct link to Video Surveillance / Cameras">​</a></h3>
+<ul>
+<li>Supplements security guards and other monitoring mechanisms.</li>
+<li>Provide PoV (Point of view) not easily achieved with guards.</li>
+<li>Locations<!-- -->
+<ul>
+<li>Entrances</li>
+<li>Exits</li>
+<li>Loading bays</li>
+<li>Stairwells</li>
+<li>Refuse collection areas</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="cctv-closed-circuits-television-considerations">CCTV (Closed circuits television) considerations<a href="#cctv-closed-circuits-television-considerations" class="hash-link" aria-label="Direct link to CCTV (Closed circuits television) considerations" title="Direct link to CCTV (Closed circuits television) considerations">​</a></h4>
+<ul>
+<li>Purpose: detect, assess, and/or identify intruders.</li>
+<li>CCTV environment can be internal or external.</li>
+<li>Field of view: area to be monitored.</li>
+<li>Illumination: lighting, natural or artificial.</li>
+<li>Integration with other security controls.</li>
+</ul></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/cybersecurity-handbook/cert_notes/security+/2/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Domain 2: Technologies &amp; Tools</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/cybersecurity-handbook/cert_notes/security+/4/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Domain 4: Identity &amp; Access Management</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-frameworks-best-practices--secure-configurations" class="table-of-contents__link toc-highlight">1. Frameworks, best practices, &amp; secure configurations.</a><ul><li><a href="#frameworks" class="table-of-contents__link toc-highlight">Frameworks</a></li><li><a href="#benchmarks--secure-configuration-guides" class="table-of-contents__link toc-highlight">Benchmarks / Secure Configuration Guides</a></li><li><a href="#defense-in-depth--layered-security" class="table-of-contents__link toc-highlight">Defense in Depth / Layered Security</a></li></ul></li><li><a href="#2-network-architecture" class="table-of-contents__link toc-highlight">2. Network Architecture</a><ul><li><a href="#security-zones--topologies" class="table-of-contents__link toc-highlight">Security Zones / Topologies</a></li><li><a href="#security-device-placement" class="table-of-contents__link toc-highlight">Security device placement</a></li><li><a href="#vpn--tunneling" class="table-of-contents__link toc-highlight">VPN / Tunneling</a></li><li><a href="#sdn-software-defined-network" class="table-of-contents__link toc-highlight">SDN: Software Defined Network</a></li><li><a href="#honeypots--honeynets" class="table-of-contents__link toc-highlight">Honeypots / Honeynets</a></li></ul></li><li><a href="#3-secure-system-design" class="table-of-contents__link toc-highlight">3. Secure System Design</a><ul><li><a href="#hardware--firmware-security" class="table-of-contents__link toc-highlight">Hardware / Firmware security</a></li><li><a href="#os-types" class="table-of-contents__link toc-highlight">OS Types</a></li><li><a href="#os-security-hardening" class="table-of-contents__link toc-highlight">OS Security hardening</a></li></ul></li><li><a href="#4-secure-staging--deployment" class="table-of-contents__link toc-highlight">4. Secure Staging &amp; Deployment</a></li><li><a href="#5-embedded-systems" class="table-of-contents__link toc-highlight">5. Embedded Systems</a><ul><li><a href="#securing-embedded-devices" class="table-of-contents__link toc-highlight">Securing Embedded Devices</a></li></ul></li><li><a href="#6-secure-app-development" class="table-of-contents__link toc-highlight">6. Secure App Development</a><ul><li><a href="#devsecops" class="table-of-contents__link toc-highlight">DevSecOps</a></li><li><a href="#change-management--version-control" class="table-of-contents__link toc-highlight">Change Management / Version Control</a></li><li><a href="#secure-coding-techniques" class="table-of-contents__link toc-highlight">Secure coding techniques</a></li></ul></li><li><a href="#7-summarize-cloud-and-virtualization-concepts" class="table-of-contents__link toc-highlight">7. Summarize cloud and virtualization concepts</a><ul><li><a href="#cloud-computing-types" class="table-of-contents__link toc-highlight">Cloud Computing Types</a></li><li><a href="#essential-characteristics" class="table-of-contents__link toc-highlight">Essential Characteristics</a></li><li><a href="#cloud-computing-service-models" class="table-of-contents__link toc-highlight">Cloud Computing Service Models</a></li><li><a href="#virtualization" class="table-of-contents__link toc-highlight">Virtualization</a></li></ul></li><li><a href="#38-resiliency-and-automation-strategies" class="table-of-contents__link toc-highlight">3.8 Resiliency and Automation strategies</a><ul><li><a href="#automationscripting" class="table-of-contents__link toc-highlight">Automation/scripting</a></li><li><a href="#frameworks-and-templates" class="table-of-contents__link toc-highlight">Frameworks and Templates</a></li><li><a href="#master-image" class="table-of-contents__link toc-highlight">Master Image</a></li><li><a href="#managing-cloud-risk" class="table-of-contents__link toc-highlight">Managing Cloud Risk</a></li><li><a href="#fault-tolerance" class="table-of-contents__link toc-highlight">Fault Tolerance</a></li><li><a href="#raid-storage" class="table-of-contents__link toc-highlight">RAID Storage</a></li></ul></li><li><a href="#9-physical-security--environmental-controls" class="table-of-contents__link toc-highlight">9. Physical Security &amp; Environmental Controls</a><ul><li><a href="#concepts" class="table-of-contents__link toc-highlight">Concepts</a></li><li><a href="#lighting" class="table-of-contents__link toc-highlight">Lighting</a></li><li><a href="#perimeter-security" class="table-of-contents__link toc-highlight">Perimeter Security</a></li><li><a href="#safes--locking-cabinets" class="table-of-contents__link toc-highlight">Safes / Locking Cabinets</a></li><li><a href="#locks" class="table-of-contents__link toc-highlight">Locks</a></li><li><a href="#physical-access-control" class="table-of-contents__link toc-highlight">Physical Access Control</a></li><li><a href="#faraday-cage--shielding" class="table-of-contents__link toc-highlight">Faraday Cage / Shielding</a></li><li><a href="#personnel-access-controls" class="table-of-contents__link toc-highlight">Personnel Access Controls</a></li><li><a href="#detection" class="table-of-contents__link toc-highlight">Detection</a></li><li><a href="#environmental-controls" class="table-of-contents__link toc-highlight">Environmental Controls</a></li><li><a href="#fire-prevention-detection--suppression" class="table-of-contents__link toc-highlight">Fire Prevention, Detection &amp; Suppression</a></li><li><a href="#video-surveillance--cameras" class="table-of-contents__link toc-highlight">Video Surveillance / Cameras</a></li></ul></li></ul></div></div></div></div></main></div></div></div></div>
+</body>
+</html>
