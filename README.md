@@ -132,6 +132,7 @@ Each topic is only described in an introductory level. Learning how to apply tho
 - [Login brute forcing (hydra)](https://amber-laugh-fbc.notion.site/Login-Brute-Forcing-43815fe25e6340b684b35b8e5aa9f045?pvs=4)
 - [Network enumeration (nmap)](https://amber-laugh-fbc.notion.site/Nmap-657f7cb7625944bf8c15153405227089?pvs=4)
 - [SQLi (SQLMap)](https://amber-laugh-fbc.notion.site/SQLMap-d44df95aecbc46dea56d84788def23ef?pvs=4)
+- [Web Proxies](./offensive/web-proxies/README.md)
 
 ## 1.6. Networking & Telecommunications
 
