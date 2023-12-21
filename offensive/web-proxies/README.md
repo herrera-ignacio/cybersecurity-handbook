@@ -252,3 +252,65 @@ msf6 auxiliary(scanner/http/robots_txt) > run
 [*] Auxiliary module execution completed
 ```
 
+## Web fuzzer
+
+### Burp Intruder
+
+Burp Intrucer can be used to fuzz pages, directories, sub-domains, parameters, parameter values, and many other things.
+
+:::warning
+Burp community version is throttled at a speed of 1 request per second, making it extremely slow compared to CLI-based web fuzzing tools, which can usually read up to 10k requests per second. The Pro version has unlimited speed.
+:::
+
+#### Target
+
+Locate a request in the Proxy History, right-click on it and `Send to intruder` (or press `CTRL+I`). Then go to `Intruder` or press `CTRL+SHIFT+I`.
+
+![Intruder](image-17.png)
+
+#### Positions
+
+This is where we place the payload position pointer, which is the point where words from our wordlist will be placed and iterated over.
+
+For example, select `DIRECTORY` as the payload position, by either wrapping it with `§` or by selecting the word and clicking on the `Add §` button.
+
+![Positions](image-18.png)
+
+Finally, select in the target tab the `Attack Type` that defines how many payload pointers are used and determines which payload is assigned to which position. For simplicity, awe'll stick to the first type, `Sniper`, which uses only one position.
+
+#### Payloads
+
+On the third tab, `Payloads`, we get to choose and customize our payload/wordlists. There are four things to configure:
+
+- __Payload set__: Identifies the payload number, depending on the type and number of payloads we used in the payload position pointers.
+  - _Payload type_: Type of payloads/wordlists to use (e.g., simple list, runtime file, character substitution).
+
+![Payload sets](image-20.png)
+
+- __Payload options__: It's different for each payload type selected previously. For a _Simple List_, we have to create or load a wordlist (e.g., `/opt/useful/SecLists/Discovery/Web-Content/common.txt`).
+
+![payload options](image-19.png)
+
+- __Payload processing__: Determines fuzzing rules over the loaded wordlist. For example, if we wanted to add an extension after our payload item, or filter the wordlist based on specific criteria (e.g., skip any lines that start with a `.`).
+
+![payload processing](image-21.png)
+
+- __Payload encoding__: Enable or disable Payload URL-encoding.
+
+![Payload encoding](image-22.png)
+
+#### Options
+
+Customize attack options from the _Options_ tab.
+
+For example, set the number of `retried on failure` and `pause before retry` to 0.
+
+Another useful option is `Grep - Match`, to flag specific requests depending on their response. For example, match `200 OK` requests and `Exclude HTTP Headers` from string matching.
+
+You may also utilize `Grep - Extract`, which is useful in the HTTP responses are lengthy, and we're only interested in a certain part of the response (e.g., only responses with HTTP Code `200 OK` regardless of ttheir content).
+
+#### Attack
+
+Once everything is properly set up, we can click on `Start Attack` and wait for our attacks to finish.
+
+![Attack](image-23.png)
