@@ -44,8 +44,8 @@
       - [1.9.2.3. Active scanner](#1923-active-scanner)
       - [1.9.2.4. Reporting](#1924-reporting)
   - [1.10. Extensions](#110-extensions)
-    - [Burp - BApp Store](#burp---bapp-store)
-    - [ZAP Marketplace](#zap-marketplace)
+    - [1.10.1. Burp - BApp Store](#1101-burp---bapp-store)
+    - [1.10.2. ZAP Marketplace](#1102-zap-marketplace)
 
 ## 1.1. Introduction
 
@@ -142,7 +142,7 @@ Burp has a handy feature to `Unhide hidden form fields` under `Proxy>Options>Res
 
 ZAP intercepts the response by default, you just need to click on `Step` after intercepting a request.
 
-We can use ZAP HUD also to `Show/ENable` buttons/inputs without needing to intercept the response or refresh the page.
+We can use ZAP HUD also to `Show/Enable` buttons/inputs without needing to intercept the response or refresh the page.
 
 ## 1.4. Automatic modification
 
@@ -278,15 +278,14 @@ Using `msfconsole` you can se a proxy for any exploit within Metasplot by using 
 msfconsole
 
 msf6 > use auxiliary/scanner/http/robots_txt
-msf6 auxiliary(scanner/http/robots_txt) > set PROXIES HTTP:127.0.0.1:8080
+msf6 auxiliary(scanner/http/robots_txt) > set PROXIES HTTP://127.0.0.1:8080
 
-PROXIES => HTTP:127.0.0.1:8080
+PROXIES => HTTP://127.0.0.1:8080
 
 
 msf6 auxiliary(scanner/http/robots_txt) > set RHOST SERVER_IP
 
 RHOST => SERVER_IP
-
 
 msf6 auxiliary(scanner/http/robots_txt) > set RPORT PORT
 
@@ -446,13 +445,13 @@ Finally, you can select `Report>Generate HTML Report` from the top bar, which wo
 
 ## 1.10. Extensions
 
-### Burp - BApp Store
+### 1.10.1. Burp - BApp Store
 
 Burp allows extensibility through its `Extender` feature and its [BApp Store](https://portswigger.net/bappstore).
 
 ![BApp Store](image-31.png)
 
-### ZAP Marketplace
+### 1.10.2. ZAP Marketplace
 
 ZAP also has its own extensibility feature with the `Marketplace` that allows us to install various types of community-developed add-ons.
 
