@@ -1,4 +1,4 @@
-# 1. Cybersecurity Handbook
+# Cybersecurity Handbook
 
 ## 1.1. :pushpin: Description
 
@@ -6,7 +6,7 @@ This attemps to be a collection of Cybersecurity knowledge. I seek to encourage 
 
 Each topic is only described in an introductory level. Learning how to apply those concepts in real-life scenarios is up to you to research and experiment.
 
-- [1. Cybersecurity Handbook](#1-cybersecurity-handbook)
+- [Cybersecurity Handbook](#cybersecurity-handbook)
   - [1.1. :pushpin: Description](#11-pushpin-description)
   - [1.2. Fundamentals](#12-fundamentals)
   - [1.3. Tools](#13-tools)
@@ -20,6 +20,7 @@ Each topic is only described in an introductory level. Learning how to apply tho
     - [1.6.1. Concepts and practices](#161-concepts-and-practices)
     - [1.6.2. Standards](#162-standards)
     - [1.6.3. Protocols and specifications](#163-protocols-and-specifications)
+    - [1.6.4. Attacks](#164-attacks)
   - [1.7. Social Engineering](#17-social-engineering)
   - [1.8. docusaurus/docs/vulnerabilities Glossary](#18-docusaurusdocsvulnerabilities-glossary)
     - [1.8.1. Web](#181-web)
@@ -177,6 +178,10 @@ Each topic is only described in an introductory level. Learning how to apply tho
 - [SOP: Same-Origin-Policy](docusaurus/docs/networking/specs/sop/README.md)
 - [SPF: Sender Policy Framework](glossay/spf/README.md)
 - [TCP/IP Model](/docusaurus/docs/networking/specs/tcp-ip/README.md)
+
+### 1.6.4. Attacks
+
+- [Network Traffic Analysis (tcpdump + Wireshark)](/docusaurus/docs/networking/attacks/traffic-analysis/README.md)
 
 ## 1.7. Social Engineering
 
