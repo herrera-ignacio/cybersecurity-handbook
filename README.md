@@ -177,11 +177,12 @@ Each topic is only described in an introductory level. Learning how to apply tho
 - [Routing Protocols](docusaurus/docs/networking/specs/routing-protocols/README.md)
 - [SOP: Same-Origin-Policy](docusaurus/docs/networking/specs/sop/README.md)
 - [SPF: Sender Policy Framework](glossay/spf/README.md)
-- [TCP/IP Model](/docusaurus/docs/networking/specs/tcp-ip/README.md)
+- [TCP/IP Model](docusaurus/docs/networking/specs/tcp-ip/README.md)
 
 ### 1.6.4. Attacks
 
-- [Network Traffic Analysis (tcpdump + Wireshark)](/docusaurus/docs/networking/attacks/traffic-analysis/README.md)
+- [Network Traffic Analysis](docusaurus/docs/networking/attacks/traffic-analysis/README.md)
+  - [tcpdump](docusaurus/docs/networking/attacks/traffic-analysis/tcp-dump/README.md)
 
 ## 1.7. Social Engineering
 
