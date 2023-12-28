@@ -1,41 +1,42 @@
 # Cybersecurity Handbook
 
-## 1.1. :pushpin: Description
+## :pushpin: Description
 
 This attemps to be a collection of Cybersecurity knowledge. I seek to encourage you to persue your curiosity. It's up to you how deep you want to dive in any subject.
 
 Each topic is only described in an introductory level. Learning how to apply those concepts in real-life scenarios is up to you to research and experiment.
 
 - [Cybersecurity Handbook](#cybersecurity-handbook)
-  - [1.1. :pushpin: Description](#11-pushpin-description)
-  - [1.2. Fundamentals](#12-fundamentals)
-  - [1.3. Tools](#13-tools)
-  - [1.4. Cryptograpgy](#14-cryptograpgy)
-    - [1.4.1. Concepts and practices](#141-concepts-and-practices)
-    - [1.4.2. Schemes](#142-schemes)
-    - [1.4.3. Cryptosystems](#143-cryptosystems)
-    - [1.4.4. Crypto attacks](#144-crypto-attacks)
-  - [1.5. Offensive security](#15-offensive-security)
-  - [1.6. Networking \& Telecommunications](#16-networking--telecommunications)
-    - [1.6.1. Concepts and practices](#161-concepts-and-practices)
-    - [1.6.2. Standards](#162-standards)
-    - [1.6.3. Protocols and specifications](#163-protocols-and-specifications)
-    - [1.6.4. Attacks](#164-attacks)
-  - [1.7. Social Engineering](#17-social-engineering)
-  - [1.8. docusaurus/docs/vulnerabilities Glossary](#18-docusaurusdocsvulnerabilities-glossary)
-    - [1.8.1. Web](#181-web)
-    - [1.8.2. Server](#182-server)
-  - [1.9. :bomb: Other Resources](#19-bomb-other-resources)
-    - [1.9.1. Links](#191-links)
-    - [1.9.2. Books summaries](#192-books-summaries)
-    - [1.9.3. Certifications study notes](#193-certifications-study-notes)
-    - [1.9.4. Lectures](#194-lectures)
-      - [1.9.4.1. Pentesting \& Bug hunting](#1941-pentesting--bug-hunting)
-      - [1.9.4.2. SOC Analyst](#1942-soc-analyst)
+  - [:pushpin: Description](#pushpin-description)
+  - [Fundamentals](#fundamentals)
+  - [Tools](#tools)
+  - [Cryptograpgy](#cryptograpgy)
+    - [Concepts and practices](#concepts-and-practices)
+    - [Schemes](#schemes)
+    - [Cryptosystems](#cryptosystems)
+    - [Crypto attacks](#crypto-attacks)
+  - [Offensive security](#offensive-security)
+  - [Networking \& Telecommunications](#networking--telecommunications)
+    - [Concepts and practices](#concepts-and-practices-1)
+    - [Standards](#standards)
+    - [Protocols and specifications](#protocols-and-specifications)
+    - [Attacks](#attacks)
+  - [Social Engineering](#social-engineering)
+  - [Operating systems](#operating-systems)
+  - [Vulnerabilities Glossary](#vulnerabilities-glossary)
+    - [Web](#web)
+    - [Server](#server)
+  - [:bomb: Other Resources](#bomb-other-resources)
+    - [Links](#links)
+    - [Books summaries](#books-summaries)
+    - [Certifications study notes](#certifications-study-notes)
+    - [Lectures](#lectures)
+      - [Pentesting \& Bug hunting](#pentesting--bug-hunting)
+      - [SOC Analyst](#soc-analyst)
 
 ---
 
-## 1.2. Fundamentals
+## Fundamentals
 
 - [Ethical hacking](docusaurus/docs/fundamentals/ethical-hacking/README.md)
 - [Bug bounty](docusaurus/docs/fundamentals/bug-bounty/README.md)
@@ -49,7 +50,7 @@ Each topic is only described in an introductory level. Learning how to apply tho
   - [Architecture Review](docusaurus/docs/fundamentals/architectuer-review)
   - [Code Review (Source Code)](docusaurus/docs/fundamentals/code-review)
 
-## 1.3. Tools
+## Tools
 
 | Category              | Resource                                                              | Description                                                            |
 |-----------------------|-----------------------------------------------------------------------|------------------------------------------------------------------------|
@@ -97,9 +98,9 @@ Each topic is only described in an introductory level. Learning how to apply tho
 |                       | ffuf                                                                  | Web fuzzer (directory/vhost discovery).                                |
 | **Windows Security**  | Windows Security Infrastructure                                       | Overview of Windows security infrastructure.                           |
 
-## 1.4. Cryptograpgy
+## Cryptograpgy
 
-### 1.4.1. Concepts and practices
+### Concepts and practices
 
 - [Hashing](docusaurus/docs/cryptography/concepts/hashing/README.md)
 - [Message Authentication Code (MAC)](docusaurus/docs/cryptography/concepts/mac/README.mdc)
@@ -108,20 +109,20 @@ Each topic is only described in an introductory level. Learning how to apply tho
 - [Password Storage](docusaurus/docs/cryptography/concepts/pwd-storage/README.md)
 - [Key exchange](https://en.wikipedia.org/wiki/Key_exchange)
 
-### 1.4.2. Schemes
+### Schemes
 
 - [Asymmetric encryption (public-key)](docusaurus/docs/cryptography/schemes/asymmetric/README.md)
 - [Symmetric encryption](docusaurus/docs/cryptography/schemes/symmetric/README.md)
 - [End-to-end encrpytion (E2EE)](docusaurus/docs/cryptography/schemes/e2e/README.md)
 
-### 1.4.3. Cryptosystems
+### Cryptosystems
 
 - [Digital signature](docusaurus/docs/cryptography/cryptosystems/digital_signature/README.md)
 - [RSA](docusaurus/docs/cryptography/cryptosystems/rsa/README.md)
 - [SSL](docusaurus/docs/cryptography/cryptosystems/ssl/README.md)
 - [TLS](docusaurus/docs/cryptography/cryptosystems/tls/README.md)
 
-### 1.4.4. Crypto attacks
+### Crypto attacks
 
 - [ECB Block Reordering](docusaurus/docs/cryptography/attacks/ecb-block-reordering/README.md)
 - [Hash/Length Extension](docusaurus/docs/cryptography/attacks/hash-extension/README.md)
@@ -129,16 +130,16 @@ Each topic is only described in an introductory level. Learning how to apply tho
 - [Stream Cipher Reuse](docusaurus/docs/cryptography/attacks/stream-cipher-reuse/README.md)
 - [Password cracking](docusaurus/docs/cryptography/attacks/password-cracking/README.md)
 
-## 1.5. Offensive security
+## Offensive security
 
 - [Login brute forcing (hydra)](https://amber-laugh-fbc.notion.site/Login-Brute-Forcing-43815fe25e6340b684b35b8e5aa9f045?pvs=4)
 - [Network enumeration (nmap)](https://amber-laugh-fbc.notion.site/Nmap-657f7cb7625944bf8c15153405227089?pvs=4)
 - [SQLi (SQLMap)](https://amber-laugh-fbc.notion.site/SQLMap-d44df95aecbc46dea56d84788def23ef?pvs=4)
 - [Web Proxies](docusaurus/docs/offensive-security/web-proxies/README.md)
 
-## 1.6. Networking & Telecommunications
+## Networking & Telecommunications
 
-### 1.6.1. Concepts and practices
+### Concepts and practices
 
 - [Devices](docusaurus/docs/networking/concepts/devices/README.md)
 - [Duplex](docusaurus/docs/networking/concepts/duplex/README.md)
@@ -154,13 +155,13 @@ Each topic is only described in an introductory level. Learning how to apply tho
 - [User Agent](docusaurus/docs/networking/concepts/user-agent/README.md)
 - [WHATWG](docusaurus/docs/networking/concepts/whatwg/README.md)
 
-### 1.6.2. Standards
+### Standards
 
 - [OSI: Open Systems Interconnection](docusaurus/docs/networking/standards/osi)
 - [IEEE 802: Networking Industry Standards](docusaurus/docs/networking/standards/ieee802)
   - [IEE 802.3: Ethernet](networking/standards/ieee802/3)
 
-### 1.6.3. Protocols and specifications
+### Protocols and specifications
 
 - [Commonly Used Port Numbers](https://www.utilizewindows.com/list-of-common-network-port-numbers/)
 - [Cookies](docusaurus/docs/networking/specs/cookies/README.md)
@@ -179,12 +180,12 @@ Each topic is only described in an introductory level. Learning how to apply tho
 - [SPF: Sender Policy Framework](glossay/spf/README.md)
 - [TCP/IP Model](docusaurus/docs/networking/specs/tcp-ip/README.md)
 
-### 1.6.4. Attacks
+### Attacks
 
 - [Network Traffic Analysis](docusaurus/docs/networking/attacks/traffic-analysis/README.md)
   - [tcpdump](docusaurus/docs/networking/attacks/traffic-analysis/tcp-dump/README.md)
 
-## 1.7. Social Engineering
+## Social Engineering
 
 | Resource             | Description                                                                                        |
 |----------------------|----------------------------------------------------------------------------------------------------|
@@ -200,9 +201,15 @@ Each topic is only described in an introductory level. Learning how to apply tho
 | Fake Security Apps   | Applications that pretend to provide security but are actually malicious software.                   |
 | Baiting              | Offering something enticing to an end user in exchange for private information or access credentials.|
 
-## 1.8. docusaurus/docs/vulnerabilities Glossary
+## Operating systems
 
-### 1.8.1. Web
+- Linux
+  - [System information](docusaurus/docs/os/linux/system_information/README.md)
+  - [File management](docusaurus/docs/os/linux/file_management/README.md)
+
+## Vulnerabilities Glossary
+
+### Web
 
 - [Auth-Z: Forced Browsing/Improper Authorization](docusaurus/docs/vulnerabilities/web/auth-z)
 - [Clickjacking](docusaurus/docs/vulnerabilities/web/clickjacking)
@@ -227,15 +234,15 @@ Each topic is only described in an introductory level. Learning how to apply tho
 - [XSS: Cross-Site Scripting](docusaurus/docs/vulnerabilities/web/xss)
 - [XXE: XML External Entities](docusaurus/docs/vulnerabilities/web/xml-entities)
 
-### 1.8.2. Server
+### Server
 
 - [Shellshock](docusaurus/docs/vulnerabilities/server/shellshock)
 
 ---
 
-## 1.9. :bomb: Other Resources
+## :bomb: Other Resources
 
-### 1.9.1. Links
+### Links
 
 - Bug Bounty Programs
   - [Hackerone](https://www.hackerone.com/)
@@ -249,26 +256,26 @@ Each topic is only described in an introductory level. Learning how to apply tho
 - Exploits, Payloads, Resources
   - [Exploit DB](http://www.exploit-db.com/remote)
 
-### 1.9.2. Books summaries
+### Books summaries
 
 - [The Hacker Playbook 1](docusaurus/docs/books/hackerplaybook/README.md)
 
-### 1.9.3. Certifications study notes
+### Certifications study notes
 
 - [Network+](docusaurus/docs/cert_notes/net+/README.md)
 - [Security+](docusaurus/docs/cert_notes/security+/README.md)
 - [CCNA](docusaurus/docs/cert_notes/ccna/README.md)
 - [LPIC-1](docusaurus/docs/cert_notes/lpic-1/README.md)
 
-### 1.9.4. Lectures
+### Lectures
 
 - [HIPAA Training](docusaurus/docs/lectures/compliance/hipaa-training/README.md)
 
-#### 1.9.4.1. Pentesting & Bug hunting
+#### Pentesting & Bug hunting
 
 - [Defcon 23, Jason Haddix, How to Shot Web (2015)](docusaurus/docs/lectures/offensive/d23-how-to-shoot-web/README.md)
 
-#### 1.9.4.2. SOC Analyst
+#### SOC Analyst
 
 - [Cyber threat intelligence](docusaurus/docs/lectures/defensive/cyber-threat-intelligence/README.md)
 - [Vulnerabity Management Fundamentals](docusaurus/docs/lectures/defensive/vuln-management-fundamentals/README.md)
