@@ -12,6 +12,19 @@
     - [Redirect STDOUT to a file](#redirect-stdout-to-a-file)
     - [Redirect STDIN](#redirect-stdin)
     - [Pipes](#pipes)
+  - [Filter contents](#filter-contents)
+    - [`more`](#more)
+    - [`less`](#less)
+    - [`head`](#head)
+    - [`tail`](#tail)
+    - [`sort`](#sort)
+    - [`grep`](#grep)
+    - [`cut`](#cut)
+    - [`tr`](#tr)
+    - [`column`](#column)
+    - [`awk`](#awk)
+    - [`sed`](#sed)
+    - [`wc`](#wc)
 
 ## Hierarchy
 
@@ -165,3 +178,95 @@ For example, using `grep` to filter out results and specify that only the lines 
 ```console
 find /etc/ -name *.conf 2>/dev/null | grep systemd | wc -l
 ```
+
+## Filter contents
+
+### `more`
+
+This is a fundamental `pager` that allow us to scroll through a file in an interactive view. We can leave with the `[Q]` key.
+
+```console
+more /etc/passwd
+```
+
+### `less`
+
+Although `less` looks pretty much like `more`. It has many more features.
+
+```console
+less /etc/passwd
+```
+
+### `head`
+
+If we are only interested at the beginning of a file, use `head` to get the first lines of the file. By default, it prints the first ten.
+
+```console
+head /etc/passwd
+```
+
+### `tail`
+
+If we are only interested at the beginning of a file, use `tail` to get the last lines of the file. By default, it prints the first ten.
+
+### `sort`
+
+This tool can sort alphabetically or numerically.
+
+```console
+cat /etc/passwd | sort
+```
+
+### `grep`
+
+Use this tool to look for specific results that contain patterns we have defined.
+
+For example, search for users who have the default shell `/bin/bash` as an example:
+
+```console
+cat /etc/passwd | grep "/bin/bash"
+```
+
+### `cut`
+
+This tool removes specific characters (e.g., delimiters `:` using `cut -d":" -f1`).
+
+### `tr`
+
+This tool replaces certain characters.
+
+```console
+tr <character_to_replace> <replacement>
+```
+
+### `column`
+
+Column displays result in tabular form using `-t`.
+
+```console
+cat /etc/passwd | grep -v "false\|nologin" | tr ":" " " | column -t
+```
+
+### `awk`
+
+The `(g)awk` tool allows us to display the first (`$1`) and last (`$NF`) result of the line:
+
+```console
+$ cat /etc/passwd | grep -v "false\|nologin" | tr ":" " " | awk '{print $1, $NF}'
+
+root /bin/bash
+```
+
+### `sed`
+
+This tool is an _stream editor_ that allow you to change specirfic names in a whole file or standard input. It looks for patterns we have defined in the form of regular expressions and replaces them with another pattern.
+
+For example, if we want to replace `bin` with `HTB`:
+
+```console
+cat example.txt | sed 's/bin/HTB/g'
+```
+
+### `wc`
+
+This tool is useful to know how many successful matches we have. With the `-l` option, we specify that only lines are counted.
