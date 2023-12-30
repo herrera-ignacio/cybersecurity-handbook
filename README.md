@@ -204,8 +204,13 @@ Each topic is only described in an introductory level. Learning how to apply tho
 ## Operating systems
 
 - Linux
+  - [Philosophy](docusaurus/docs/os/linux/philosophy/README.md)
   - [System information](docusaurus/docs/os/linux/system_information/README.md)
+  - [System management](docusaurus/docs/os/linux/system_management/README.md)
   - [File management](docusaurus/docs/os/linux/file_management/README.md)
+  - [Permission management](docusaurus/docs/os/linux/permission_management/README.md)
+  - [Networking](docusaurus/docs/os/linux/networking/README.md)
+  - [Hardening](docusaurus/docs/os/linux/hardening/README.md)
 
 ## Vulnerabilities Glossary
 
