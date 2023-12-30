@@ -21,6 +21,9 @@
     - [Virtual Private Network (VPN)](#virtual-private-network-vpn)
   - [Backup and restore](#backup-and-restore)
   - [File system management](#file-system-management)
+    - [Disk \& drivers](#disk--drivers)
+    - [Mounting](#mounting)
+    - [SWAP](#swap)
 
 ## User management
 
@@ -217,3 +220,49 @@ There are many tools like:
 Rsync supports auto-synchronization using `rsync`, you can use a combination of `cron` and `rsync` to automate it.
 
 ## File system management
+
+Linux supports a wide range of file systems, including ext2, ext3, ext5, XFS, Btrfs, NTFS, and more.
+
+### Disk & drivers
+
+Disk management involves managing physical storage devices, including removable storage devices. The main tool on Linux is the `fdisk`, which allows us to create, delete, and manage partitions on a drive. It can also display information about the partition tabler.
+
+Each partition can be formatted with a specific file system, and can be mounted as a separate file system. The most common partitioning tools are `fdisk`, `gpart`, and `GParted`.
+
+```console
+$ sudo fdisk -l
+
+Disk /dev/vda: 160 GiB, 171798691840 bytes, 335544320 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x5223435f
+
+Device     Boot     Start       End   Sectors  Size Id Type
+/dev/vda1  *         2048 158974027 158971980 75.8G 83 Linux
+/dev/vda2       158974028 167766794   8792767  4.2G 82 Linux swap / Solaris
+
+Disk /dev/vdb: 452 KiB, 462848 bytes, 904 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+```
+
+### Mounting
+
+Each logical partition or drive needs to be assigned to a specific directory on Linux. Mounting involves attaching a drive to a specific directory, making it accessible to the file system hierarchy. The `mount` tool is used for this, and the `/etc/fstab` file is used to define the default file systems that are booted at boot time.
+
+For example, mount and unmount a usb drive:
+
+```console
+sudo mount /dev/sdb1 /mnt/usb
+cd /mnt/usb && ls -l
+sudo umount /mnt/usb
+```
+
+### SWAP
+
+When the system runs out of physical memory, the kernel transfers inactive pages of memory to the swap space, freeing up physical memory for use by active processes. This process is known as _swapping_.
+
+Swap space can be created either during the installation of the OS or at any time afterward using the `mkswap` (to set up a Linux swap area on a device or in a file) and `swapon` commands (used to activate a swap area).
