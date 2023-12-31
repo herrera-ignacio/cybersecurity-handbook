@@ -170,7 +170,7 @@ Each topic is only described in an introductory level. Learning how to apply tho
 - [CSP: Content Security Policy](docusaurus/docs/networking/specs/csp/README.md)
 - [DOM: Document Object Model](docusaurus/docs/networking/specs/dom/README.md)
 - [HTML](docusaurus/docs/networking/specs/html/README.md)
-- [HTTP](docusaurus/docs/networking/specs/http/README.md)
+- [HTTP / HTTPS](docusaurus/docs/networking/specs/http/README.md)
 - [HTTP Headers](docusaurus/docs/networking/specs/http-headers/README.md)
 - [HTTP Requests](docusaurus/docs/networking/specs/http-requests/README.md)
 - [IP Addressing](docusaurus/docs/networking/specs/ipaddressing/README.md)

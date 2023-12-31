@@ -53,6 +53,8 @@ The cypher suite is a set of algorithms that specifies details such as which sha
 
 A TLS connection is initiated using a sequence known as the __TLS Handshake__ which establishes a cypher suite for each communication session.
 
+![HTTPS flow](image.png)
+
 The handshake also handles authentication, which usually consists of the server providing its identity to the client. This is done using public keys. Public keys are encryption keys that use one-way encryption, meaning that anyone can unscramble data encrypted with the private key to ensure its authenticity, because only the original sender can encrypt data with the private key.
 
 Once data is encrypted and authenticated, it is then signed with a __Message Authentication Code__ (MAC) to ensure the integrity of the data.
@@ -69,14 +71,14 @@ __The private key is kept secret and secure__.
 
 #### Information it includes
 
-* Domain name that certificate was issued for
-* Which person, organization or device it was issued to
-* Which certificate authority issued it
-* Certificate authority's digital signature
-* Associated subdomains
-* Issue data of the certificate
-* Expiration data of the certificate
-* Public Key
+- Domain name that certificate was issued for
+- Which person, organization or device it was issued to
+- Which certificate authority issued it
+- Certificate authority's digital signature
+- Associated subdomains
+- Issue data of the certificate
+- Expiration data of the certificate
+- Public Key
 
 #### Public Key and Private Key
 
