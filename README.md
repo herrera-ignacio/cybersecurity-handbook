@@ -21,6 +21,7 @@ Each topic is only described in an introductory level. Learning how to apply tho
     - [Standards](#standards)
     - [Protocols and specifications](#protocols-and-specifications)
     - [Attacks](#attacks)
+  - [Information gathering](#information-gathering)
   - [Social Engineering](#social-engineering)
   - [Operating systems](#operating-systems)
   - [Vulnerabilities Glossary](#vulnerabilities-glossary)
@@ -184,6 +185,10 @@ Each topic is only described in an introductory level. Learning how to apply tho
 
 - [Network Traffic Analysis](docusaurus/docs/networking/attacks/traffic-analysis/README.md)
   - [tcpdump](docusaurus/docs/networking/attacks/traffic-analysis/tcp-dump/README.md)
+
+## [Information gathering](/docusaurus/docs/information_gathering/README.md)
+
+- [WHOIS](/docusaurus/docs/information_gathering/whois/README.md)
 
 ## Social Engineering
 
