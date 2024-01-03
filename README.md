@@ -189,6 +189,7 @@ Each topic is only described in an introductory level. Learning how to apply tho
 ## [Information gathering](/docusaurus/docs/information_gathering/README.md)
 
 - [WHOIS](/docusaurus/docs/information_gathering/whois/README.md)
+- [DNS](/docusaurus/docs/information_gathering/dns/README.md)
 
 ## Social Engineering
 
