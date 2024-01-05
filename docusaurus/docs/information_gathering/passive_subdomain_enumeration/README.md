@@ -49,3 +49,7 @@ Here are some modules:
 | Vhost | Bing virtual hosts search. |
 | Virustotal | Domain search. |
 | Zoomeye | A Chinese version of Shodan. |
+
+## Certificate Search
+
+[](https://crt.sh/) lets you enter a domain name and look for subdomain certificates.
