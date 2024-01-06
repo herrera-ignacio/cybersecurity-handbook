@@ -16,6 +16,7 @@ Each topic is only described in an introductory level. Learning how to apply tho
     - [Cryptosystems](#cryptosystems)
     - [Crypto attacks](#crypto-attacks)
   - [Offensive security](#offensive-security)
+    - [XSS](#xss)
   - [Networking \& Telecommunications](#networking--telecommunications)
     - [Concepts and practices](#concepts-and-practices-1)
     - [Standards](#standards)
@@ -133,10 +134,25 @@ Each topic is only described in an introductory level. Learning how to apply tho
 
 ## Offensive security
 
-- [Login brute forcing (hydra)](https://amber-laugh-fbc.notion.site/Login-Brute-Forcing-43815fe25e6340b684b35b8e5aa9f045?pvs=4)
+- [Login brute forcing (hydr2a)](https://amber-laugh-fbc.notion.site/Login-Brute-Forcing-43815fe5e6340b684b35b8e5aa9f045?pvs=4)
 - [Network enumeration (nmap)](https://amber-laugh-fbc.notion.site/Nmap-657f7cb7625944bf8c15153405227089?pvs=4)
 - [SQLi (SQLMap)](https://amber-laugh-fbc.notion.site/SQLMap-d44df95aecbc46dea56d84788def23ef?pvs=4)
 - [Web Proxies](docusaurus/docs/offensive-security/web-proxies/README.md)
+- [JavaScript Deobfuscation](docusaurus/docs/offensive-security/javascript_deobfuscation/README.md)
+
+### XSS
+
+- [XSS](docusaurus/docs/offensive-security/xss/README.md)
+- Types
+  - [Stored XSS](docusaurus/docs/offensive-security/xss/types/stored/README.md)
+  - [Reflected XSS](docusaurus/docs/offensive-security/xss/types/reflected/README.md)
+  - [DOM XSS](docusaurus/docs/offensive-security/xss/types/dom/README.md)
+- [Discovering XSS](docusaurus/docs/offensive-security/xss/discovery/README.md)
+- Attacks
+  - [Defacing](docusaurus/docs/offensive-security/xss/attacks/defacing/README.md)
+  - [Phishing](docusaurus/docs/offensive-security/xss/attacks/phishing/README.md)
+  - [Session hijacking](docusaurus/docs/offensive-security/xss/attacks/session_hijacking/README.md)
+- [Preventing XSS](docusaurus/docs/offensive-security/xss/preventing/README.md)
 
 ## Networking & Telecommunications
 
@@ -188,8 +204,15 @@ Each topic is only described in an introductory level. Learning how to apply tho
 
 ## [Information gathering](/docusaurus/docs/information_gathering/README.md)
 
-- [WHOIS](/docusaurus/docs/information_gathering/whois/README.md)
-- [DNS](/docusaurus/docs/information_gathering/dns/README.md)
+- [WHOIS](docusaurus/docs/information_gathering/whois/README.md)
+- [DNS](docusaurus/docs/information_gathering/dns/README.md)
+- [Virtual hosts](docusaurus/docs/information_gathering/virtual_hosts/README.md)
+- [Web crawling](docusaurus/docs/information_gathering/crawling/README.md)
+- [Passive infrastructure identification](docusaurus/docs/information_gathering/passive_infrastructure_identification/)
+- [Passive subdomain enumeration](docusaurus/docs/information_gathering/passive_subdomain_enumeration/)
+- [Active infrastructure identification](docusaurus/docs/information_gathering/active_infrastructure_identification/README.md)
+- [Active subdomain enumeration](docusaurus/docs/information_gathering/active_subdomain_enumeration/)
+
 
 ## Social Engineering
 
