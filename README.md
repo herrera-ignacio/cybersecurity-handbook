@@ -148,6 +148,7 @@ Each topic is only described in an introductory level. Learning how to apply tho
   - [Reflected XSS](docusaurus/docs/offensive-security/xss/types/reflected/README.md)
   - [DOM XSS](docusaurus/docs/offensive-security/xss/types/dom/README.md)
 - [Discovering XSS](docusaurus/docs/offensive-security/xss/discovery/README.md)
+- [Blind XSS](docusaurus/docs/offensive-security/xss/blind/README.md)
 - Attacks
   - [Defacing](docusaurus/docs/offensive-security/xss/attacks/defacing/README.md)
   - [Phishing](docusaurus/docs/offensive-security/xss/attacks/phishing/README.md)
@@ -212,7 +213,6 @@ Each topic is only described in an introductory level. Learning how to apply tho
 - [Passive subdomain enumeration](docusaurus/docs/information_gathering/passive_subdomain_enumeration/)
 - [Active infrastructure identification](docusaurus/docs/information_gathering/active_infrastructure_identification/README.md)
 - [Active subdomain enumeration](docusaurus/docs/information_gathering/active_subdomain_enumeration/)
-
 
 ## Social Engineering
 
