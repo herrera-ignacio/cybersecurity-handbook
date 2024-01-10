@@ -17,6 +17,7 @@ Each topic is only described in an introductory level. Learning how to apply tho
     - [Crypto attacks](#crypto-attacks)
   - [Offensive security](#offensive-security)
     - [XSS](#xss)
+  - [Bug Bounty](#bug-bounty)
   - [Networking \& Telecommunications](#networking--telecommunications)
     - [Concepts and practices](#concepts-and-practices-1)
     - [Standards](#standards)
@@ -41,7 +42,6 @@ Each topic is only described in an introductory level. Learning how to apply tho
 ## Fundamentals
 
 - [Ethical hacking](docusaurus/docs/fundamentals/ethical-hacking/README.md)
-- [Bug bounty](docusaurus/docs/fundamentals/bug-bounty/README.md)
 - [CID triad](docusaurus/docs/fundamentals/cid/README.md)
 - [DiD: Defense in depth](docusaurus/docs/fundamentals/did/README.md)
 - [IOC: Indicator of compromise](docusaurus/fundamentals/concepts/ioc/README.md)
@@ -154,6 +154,13 @@ Each topic is only described in an introductory level. Learning how to apply tho
   - [Phishing](docusaurus/docs/offensive-security/xss/attacks/phishing/README.md)
   - [Session hijacking](docusaurus/docs/offensive-security/xss/attacks/session_hijacking/README.md)
 - [Preventing XSS](docusaurus/docs/offensive-security/xss/preventing/README.md)
+
+## Bug Bounty
+
+- [Bug bounty](docusaurus/docs/bug_bounty/README.md)
+- [Bug severity](docusaurus/docs/bug_bounty/bug_severity/README.md)
+- [Reports](docusaurus/docs/bug_bounty/reports/README.md)
+- [CWE and CVSS](docusaurus/docs/bug_bounty/cwe_and_cvss/README.md)
 
 ## Networking & Telecommunications
 
