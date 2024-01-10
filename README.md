@@ -250,6 +250,8 @@ Each topic is only described in an introductory level. Learning how to apply tho
 
 ## Vulnerabilities Glossary
 
+> This is a list of vulnerabilities not included in the other sections.
+
 ### Web
 
 - [Auth-Z: Forced Browsing/Improper Authorization](docusaurus/docs/vulnerabilities/web/auth-z)
@@ -257,7 +259,7 @@ Each topic is only described in an introductory level. Learning how to apply tho
 - [Command Injection](docusaurus/docs/vulnerabilities/web/command-injection)
 - [Cookie Tampering](docusaurus/docs/vulnerabilities/web/cookie-tampering)
 - [CORS insecure configuration](docusaurus/docs/vulnerabilities/web/cors-insecure)
-- [CSRF: Cross-Site Request Forgery](docusaurus/docs/vulnerabilities/web/csrf)
+- [CSRF: Cross-Site Request Forgery](docusaurus/docs/vulnerabilities/web/csrf/README.md)
 - [File Inclusion](docusaurus/docs/vulnerabilities/web/file-inclusion)
 - [File Upload](.docusaurus/docs/vulnerabilities/web/file-upload)
 - [Host Header](docusaurus/docs/vulnerabilities/web/host-header)
@@ -272,7 +274,6 @@ Each topic is only described in an introductory level. Learning how to apply tho
 - [SSRF: Server-Side Request Forgery](docusaurus/docs/vulnerabilities/web/ssrf)
 - [Subdomain Takeover](docusaurus/docs/vulnerabilities/web/subdomain-takeover)
 - [Unchecked Redirects](docusaurus/docs/vulnerabilities/web/unchecked-redirects)
-- [XSS: Cross-Site Scripting](docusaurus/docs/vulnerabilities/web/xss)
 - [XXE: XML External Entities](docusaurus/docs/vulnerabilities/web/xml-entities)
 
 ### Server
