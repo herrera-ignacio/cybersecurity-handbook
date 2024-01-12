@@ -17,6 +17,7 @@ Each topic is only described in an introductory level. Learning how to apply tho
     - [Crypto attacks](#crypto-attacks)
   - [Offensive security](#offensive-security)
     - [XSS](#xss)
+    - [Wordpress](#wordpress)
   - [Bug Bounty](#bug-bounty)
   - [Networking \& Telecommunications](#networking--telecommunications)
     - [Concepts and practices](#concepts-and-practices-1)
@@ -154,6 +155,10 @@ Each topic is only described in an introductory level. Learning how to apply tho
   - [Phishing](docusaurus/docs/offensive-security/xss/attacks/phishing/README.md)
   - [Session hijacking](docusaurus/docs/offensive-security/xss/attacks/session_hijacking/README.md)
 - [Preventing XSS](docusaurus/docs/offensive-security/xss/preventing/README.md)
+
+### Wordpress
+
+- [Wordpress basics](docusaurus/docs/offensive-security/wordpress/basics/README.md)
 
 ## Bug Bounty
 
