@@ -5,6 +5,8 @@
   - [Default file structure](#default-file-structure)
     - [Configuration file](#configuration-file)
     - [Directories](#directories)
+      - [wp-content](#wp-content)
+      - [wp-includes](#wp-includes)
   - [User roles](#user-roles)
 
 ## Overview
@@ -103,6 +105,34 @@ These directories and files should be carefully enumerated as they may lead to c
 :::
 
 The `wp-includes` contains everything except for the administrative components and the themes that belong to the website. This is where core files are stored, such as certificates, fonts, JavaScript files, and widgets.
+
+#### wp-content
+
+```console
+$ tree -L 1 /var/www/html/wp-content
+.
+├── index.php
+├── plugins
+└── themes
+```
+
+#### wp-includes
+
+```console
+$ tree -L 1 /var/www/html/wp-includes
+.
+├── <SNIP>
+├── theme.php
+├── update.php
+├── user.php
+├── vars.php
+├── version.php
+├── widgets
+├── widgets.php
+├── wlwmanifest.xml
+├── wp-db.php
+└── wp-diff.php
+```
 
 ## User roles
 

@@ -159,6 +159,7 @@ Each topic is only described in an introductory level. Learning how to apply tho
 ### Wordpress
 
 - [Wordpress basics](docusaurus/docs/offensive-security/wordpress/basics/README.md)
+- [Enumeration](docusaurus/docs/offensive-security/wordpress/enumeration/README.md)
 
 ## Bug Bounty
 

