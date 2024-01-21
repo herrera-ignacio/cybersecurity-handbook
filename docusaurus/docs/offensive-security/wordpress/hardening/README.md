@@ -38,7 +38,7 @@ It provides 30+ ways to secure and protect a WordPress site such as:
 - Google reCAPTCHA.
 - User action logging.
 
-### Wordfence security.
+### Wordfence security
 
 It consists of an endpoint firewall and malware scanner.
 
